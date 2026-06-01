@@ -24,7 +24,6 @@ jobs:
         env:
           TODAY_DAILY_SOURCE_URL: ${{ secrets.TODAY_DAILY_SOURCE_URL }}
           WEEKLY_MARKET_SERIES_URL: ${{ secrets.WEEKLY_MARKET_SERIES_URL }}
-          WEEKLY_SOURCE_URL: ${{ secrets.WEEKLY_SOURCE_URL }}
         run: python scripts/build_daily_dashboard.py
 
       - name: Commit generated site
