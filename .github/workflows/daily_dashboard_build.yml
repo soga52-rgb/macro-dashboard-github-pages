@@ -1,0 +1,36 @@
+name: Build daily macro dashboard
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "30 0 * * 1-5"  # Taiwan 08:30, Monday-Friday
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Build static dashboard
+        env:
+          TODAY_DAILY_SOURCE_URL: ${{ secrets.TODAY_DAILY_SOURCE_URL }}
+          WEEKLY_MARKET_SERIES_URL: ${{ secrets.WEEKLY_MARKET_SERIES_URL }}
+          WEEKLY_SOURCE_URL: ${{ secrets.WEEKLY_SOURCE_URL }}
+        run: python scripts/build_daily_dashboard.py
+
+      - name: Commit generated site
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html history data assets README.md
+          git commit -m "Update daily macro dashboard" || echo "No changes to commit"
+          git push
