@@ -1,0 +1,64 @@
+{
+  "generated_at": "2026-06-01T21:46:37+08:00",
+  "source": "Google Sheets Today Daily Source",
+  "mode": "today_daily_source",
+  "data_status": "complete",
+  "daily_summary": {
+    "date": "2026-05-31",
+    "headline": "市場由「通膨定價」轉向「成長擔憂與避險」，導致殖利率下行與美元避險需求並存。",
+    "executive_summary": "當前處於「成長放緩預期」主導的定價體制。儘管油價上漲，但就業數據的邊際降溫壓低了長債殖利率，同時美元與黃金同步走強，顯示市場正透過避險資產對沖經濟不確定性。",
+    "market_signals": [
+      "美債殖利率下行反映成長擔憂",
+      "美元與黃金同步走強顯避險",
+      "亞洲貨幣承壓反映流動性壓力"
+    ],
+    "macro_chain": "[就業降溫預期] -> [美國10年期公債殖利率下行] -> [美元指數避險買盤] -> [亞洲貨幣承壓與黃金同步走強]",
+    "divergence": "今日最關鍵的背離在於「殖利率下行」與「美元走強」。主線為市場對經濟成長放緩的擔憂，修正因子則是油價上行帶來的通膨雜訊。美元與黃金同步上漲，證實了市場正進入防禦性配置，而非單純的利率平價交易。",
+    "market_snapshot": "US10Y｜4.453｜down｜就業降溫預期壓低長債利率\nDXY｜98.992｜up｜避險需求支撐強勢美元\nGold｜4565.5｜up｜避險情緒推升金價",
+    "news_evidence": [
+      "美國就業數據邊際降溫，引發市場對聯準會利率路徑的重新評估。",
+      "美債殖利率與美元指數出現脫鉤，顯示避險需求蓋過利差邏輯。",
+      "油價上行但殖利率回落，證實市場更關注成長風險而非通膨。",
+      "亞洲貨幣普遍承壓，反映美元流動性緊縮與區域資金流出壓力。"
+    ],
+    "watchpoints": [
+      "非農就業數據是否持續惡化，確認成長放緩趨勢。",
+      "油價若持續飆升，是否會迫使市場重新定價通膨風險。",
+      "聯準會官員對「高利率維持更久」的最新態度。"
+    ],
+    "visual_note": {
+      "title": "成長擔憂下的避險傳導：殖利率下行與美元黃金共振",
+      "file_id": "",
+      "url": "",
+      "model": "gemini-3-pro-image-preview"
+    },
+    "news_narrative": {
+      "title": "避險美元與成長放緩預期",
+      "support_level": "中",
+      "cards": [
+        {
+          "label": "驗證結果",
+          "text": "部分支持"
+        },
+        {
+          "label": "摘要",
+          "text": "市場目前處於「通膨預期與成長擔憂」的拉鋸中。儘管能源價格上行，但美債殖利率下行顯示投資人更關注就業邊際降溫帶來的成長風險，而非通膨壓力。美元指數與黃金同步走強，反映出市場在強勢美元利差支撐下，同時尋求避險資產以應對潛在的經濟不確定性，導致亞洲貨幣普遍承壓，整體傳導鏈呈現避險與利差交易並存的複雜格局。"
+        },
+        {
+          "label": "支持新聞",
+          "text": "1. 新聞重點：美國就業數據的潛在超預期表現，正引發市場對聯準會未來利率決策路徑的重新評估。\n2. 市場影響：壓低美國10年期公債殖利率，同時支撐美元指數維持強勢。\n3. 驗證結論：資產走勢顯示市場對成長放緩的擔憂已蓋過通膨壓力，傳導鏈呈現部分支持。"
+        },
+        {
+          "label": "異常訊號",
+          "text": "1. 美債殖利率下行與美元指數上行出現脫鉤，顯示市場可能正在交易避險需求，而非單純的利率平價理論。\n2. 黃金與美元同步上漲，屬於典型的避險情緒特徵，暗示市場對未來總體經濟環境的不確定性有所升溫。\n3. 亞洲貨幣承壓，反映出美元流動性緊縮與區域資金流出的壓力，為目前市場的主要修正因子。"
+        },
+        {
+          "label": "觀察重點",
+          "text": "1. 觀察美國非農就業數據是否持續降溫，這將是決定殖利率是否進一步下行的關鍵。\n2. 監控美元指數是否因避險需求而突破關鍵技術阻力，進而加劇亞洲貨幣的貶值壓力。\n3. 留意油價若持續上行，是否會迫使市場重新定價通膨風險，進而扭轉殖利率下行的趨勢。\n4. 關注聯準會官員對於「高利率維持更久」的最新表態，以確認市場對降息預期的修正幅度。"
+        }
+      ],
+      "news_links_json": "[\n  {\n    \"rank\": 1,\n    \"theme\": \"FX｜Dollar / FX / 美元與匯率\",\n    \"source\": \"news.cnyes.com\",\n    \"title\": \"〈紐約匯市〉風險偏好升溫美元走弱 高利率支撐下5月仍漲近1% - news.cnyes.com\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiW0FVX3lxTE1SU01BYVlTTm1ZRWk0UldWbFJHOFRGMWpocGFiNUtzVkhmcWxMQkJ6MVhvdXBrS3I3SzZHMzJFbWsxdG1RWm5kOC1pZVBpVUhJUUtVX0poREs3NDg?oc=5\",\n    \"published_at\": \"Sun, 31 May 2026 08:26:34 GMT\",\n    \"score\": 109.6,\n    \"matched_keywords\": \"美元與亞洲匯率:dollar | 變數:DOLLAR_FX | 類型:DATA | 來源角色:CNYES_MACRO\"\n  },\n  {\n    \"rank\": 2,\n    \"theme\": \"Fed Policy｜Fed / 聯準會\",\n    \"source\": \"news.cnyes.com\",\n    \"title\": \"美國就業數據若超預期，將如何影響聯準會利率決策？ | 鉅亨網 - AIGC - news.cnyes.com\",\n    \"url\": \"https://news.google.com/rss/articles/CBMipgFBVV95cUxNWUw1M252eDZCUVA3eFBBOVRvM2tHRjZNRl91NTVEZFZpQVliUVZuMk9KZ2gwaDhuYkxTYkk2SHhfNTVDRTZia2NGWlJqWE5yU3locGdCaGpRN3BxcldXMnFmTG1lY0wydTZPS25lYU9lbk9Xc09taUY2TnlnT0FkRjZ3MHNUdzJxT1VtenR4bnREeFM5NWMteE9nWHBoX3FiUlJYZ2JB?oc=5\",\n    \"published_at\": \"Sun, 31 May 2026 05:51:50 GMT\",\n    \"score\": 109.4,\n    \"matched_keywords\": \"聯準會政策:fed | 變數:FED | 類型:DATA | 來源角色:CNYES_MACRO\"\n  },\n  {\n    \"rank\": 3,\n    \"theme\": \"Rates｜Treasury Yields / 美債殖利率\",\n    \"source\": \"MarketWatch\",\n    \"title\": \"91282CQT17 | United States Treasury 7-Year Note 4.250% May 31, 2033 Advanced Charts - MarketWatch\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiigFBVV95cUxQRmwtWlBqanZqSGVoUmJFSjJmTFJwRXNCSS1vUmVsdHFRcmVlWFZZY3F3c0NkazlZOGF1cVVJb0VDemxUUVplU0QxVHZrTXBiOWdUYVY1VWtZeXpseGxOTXVTUFpKdU1aRWowaTdjcGljV0t5b2RBY25DenVYcmUzZThpLWNLeWxEWXc?oc=5\",\n    \"published_at\": \"Sun, 31 May 2026 04:12:46 GMT\",\n    \"score\": 108,\n    \"matched_keywords\": \"美債殖利率:treasury/yield/yields | 變數:TREASURY_YIELDS | 類型:REACTION | 來源角色:MARKET_REACTION\"\n  }\n]"
+    },
+    "raw_daily_summary_package": "日期：2026-05-31\n今日主線：市場由「通膨定價」轉向「成長擔憂與避險」，導致殖利率下行與美元避險需求並存。\n\nExecutive Summary：\n當前處於「成長放緩預期」主導的定價體制。儘管油價上漲，但就業數據的邊際降溫壓低了長債殖利率，同時美元與黃金同步走強，顯示市場正透過避險資產對沖經濟不確定性。\n\n今日核心訊號：\n- 美債殖利率下行反映成長擔憂\n- 美元與黃金同步走強顯避險\n- 亞洲貨幣承壓反映流動性壓力\n\n核心資產重點：\nUS10Y｜4.453｜down｜就業降溫預期壓低長債利率\nDXY｜98.992｜up｜避險需求支撐強勢美元\nGold｜4565.5｜up｜避險情緒推升金價\n\n矛盾 / 背離：\n今日最關鍵的背離在於「殖利率下行」與「美元走強」。主線為市場對經濟成長放緩的擔憂，修正因子則是油價上行帶來的通膨雜訊。美元與黃金同步上漲，證實了市場正進入防禦性配置，而非單純的利率平價交易。\n\n總經傳導鏈：\n[就業降溫預期] -> [美國10年期公債殖利率下行] -> [美元指數避險買盤] -> [亞洲貨幣承壓與黃金同步走強]\n\n新聞佐證：\n- 美國就業數據邊際降溫，引發市場對聯準會利率路徑的重新評估。\n- 美債殖利率與美元指數出現脫鉤，顯示避險需求蓋過利差邏輯。\n- 油價上行但殖利率回落，證實市場更關注成長風險而非通膨。\n- 亞洲貨幣普遍承壓，反映美元流動性緊縮與區域資金流出壓力。\n\n待觀察問題：\n- 非農就業數據是否持續惡化，確認成長放緩趨勢。\n- 油價若持續飆升，是否會迫使市場重新定價通膨風險。\n- 聯準會官員對「高利率維持更久」的最新態度。"
+  }
+}
