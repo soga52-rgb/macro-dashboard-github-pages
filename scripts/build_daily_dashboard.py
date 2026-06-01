@@ -21,7 +21,7 @@ TW_TZ = timezone(timedelta(hours=8))
 def fetch_json(url: str, name: str) -> Dict[str, Any]:
     if not url:
         raise RuntimeError(f"Missing required URL: {name}")
-    req = urllib.request.Request(url, headers={"User-Agent": "macro-dashboard-github-pages/1.0"})
+    req = urllib.request.Request(url, headers={"User-Agent": "macro-dashboard-github-pages/2.0"})
     with urllib.request.urlopen(req, timeout=90) as resp:
         raw = resp.read().decode("utf-8", errors="replace")
     try:
@@ -39,7 +39,7 @@ def esc(x: Any) -> str:
     return html.escape("" if x is None else str(x), quote=True)
 
 
-def today_tw() -> str:
+def now_tw() -> str:
     return datetime.now(TW_TZ).strftime("%Y-%m-%d %H:%M")
 
 
@@ -82,6 +82,35 @@ def sparkline_svg(points: List[Dict[str, Any]]) -> str:
     return f'<svg class="spark" viewBox="0 0 {w} {h}" preserveAspectRatio="none"><polyline fill="none" stroke="currentColor" stroke-width="3" points="{poly}"></polyline>{circles}</svg>'
 
 
+def parse_chain_nodes(chain: str) -> List[str]:
+    if not chain:
+        return []
+    text = chain.replace("→", "->")
+    nodes = []
+    for part in text.split("->"):
+        clean = part.strip().strip("[]").strip()
+        if clean:
+            nodes.append(clean)
+    return nodes[:6]
+
+
+def render_chain(summary: Dict[str, Any]) -> str:
+    nodes = parse_chain_nodes(str(summary.get("macro_chain") or ""))
+    if not nodes:
+        return ""
+    html_nodes = []
+    for i, node in enumerate(nodes, 1):
+        html_nodes.append(f'<div class="chain-node"><span class="num">{i}</span>{esc(node)}</div>')
+    return '<section class="section"><h2 class="section-title">🔗 總經傳導鏈</h2><div class="chain">' + "\n".join(html_nodes) + '</div>' + render_divergence(summary) + '</section>'
+
+
+def render_divergence(summary: Dict[str, Any]) -> str:
+    div = summary.get("divergence")
+    if not div:
+        return ""
+    return f'<div class="divergence"><strong>矛盾 / 背離</strong><br>{esc(div)}</div>'
+
+
 def render_asset_cards(market: Dict[str, Any]) -> str:
     cards = []
     for item in market.get("series") or []:
@@ -95,7 +124,7 @@ def render_asset_cards(market: Dict[str, Any]) -> str:
         except Exception:
             value_text = esc(value)
         cards.append(f"""
-        <article class="card asset">
+        <article class="asset">
           <h3>{esc(item.get("asset") or item.get("asset_key"))}（{esc(item.get("asset_key") or "")}）</h3>
           <div class="asset-value">{value_text}<span class="asset-unit">{esc(item.get("unit") or "")}</span></div>
           <div class="asset-date">資料日：{esc(lp.get("date") or "")}</div>
@@ -103,14 +132,14 @@ def render_asset_cards(market: Dict[str, Any]) -> str:
         </article>
         """)
     if not cards:
-        return '<section class="card"><h2>走勢圖</h2><p>尚無市場數據。</p></section>'
-    return '<section class="card"><h2>走勢圖</h2><div class="grid">' + "\\n".join(cards) + "</div></section>"
+        return '<section class="section"><h2 class="section-title">📊 走勢圖</h2><p>尚無市場數據。</p></section>'
+    return '<section class="section"><h2 class="section-title">📊 走勢圖</h2><div class="grid">' + "\n".join(cards) + "</div></section>"
 
 
 def render_block(title: str, content: Any) -> str:
     if not content:
         return ""
-    return f'<section class="card"><h2>{esc(title)}</h2><div>{esc(content).replace(chr(10), "<br>")}</div></section>'
+    return f'<section class="block"><h2>{esc(title)}</h2><div>{esc(content).replace(chr(10), "<br>")}</div></section>'
 
 
 def render_list(title: str, items: Any) -> str:
@@ -119,7 +148,7 @@ def render_list(title: str, items: Any) -> str:
     if not isinstance(items, list):
         items = [items]
     lis = "".join(f"<li>{esc(x)}</li>" for x in items if str(x).strip())
-    return f'<section class="card"><h2>{esc(title)}</h2><ul class="list">{lis}</ul></section>' if lis else ""
+    return f'<section class="block"><h2>{esc(title)}</h2><ul class="list">{lis}</ul></section>' if lis else ""
 
 
 def recent_history_dates(limit: int = 7) -> List[str]:
@@ -134,7 +163,7 @@ def render_history_links(current_date: str) -> str:
         dates = [current_date] + dates
     dates = sorted(set(dates), reverse=True)[:7]
     links = [f'<a class="history-link" href="history/{esc(d)}.html">{esc(d)}</a>' for d in dates]
-    return '<section class="card"><h2>歷史總經摘要</h2><div class="history-list">' + "\\n".join(links) + "</div></section>" if links else ""
+    return '<section class="section"><h2 class="section-title">📁 歷史總經摘要</h2><div class="history-list">' + "\n".join(links) + "</div></section>" if links else ""
 
 
 def page_shell(title: str, body: str, css_path: str = "assets/css/style.css") -> str:
@@ -151,34 +180,63 @@ def page_shell(title: str, body: str, css_path: str = "assets/css/style.css") ->
 """
 
 
-def render_dashboard(summary: Dict[str, Any], market: Dict[str, Any], history: bool = False) -> str:
-    date = str(summary.get("date") or "")
+def render_top_title(summary: Dict[str, Any]) -> str:
+    return f"""
+    <section class="top-title">
+      <h1>今日總經摘要</h1>
+      <div class="top-meta">
+        更新時間：{esc(now_tw())}<br>
+        主要資料日：{esc(summary.get("date") or "")}
+      </div>
+    </section>
+    """
+
+
+def render_visual(summary: Dict[str, Any]) -> str:
     visual = summary.get("visual_note") or {}
+    img = visual_image_url(summary)
+    if not img:
+        return ""
+    return f"""
+    <section class="section">
+      <h2 class="section-title">今日市場傳導圖解（Visual Market Note）</h2>
+      <img class="visual-img" src="{esc(img)}" alt="Visual Market Note" loading="lazy">
+    </section>
+    """
+
+
+def render_summary_card(summary: Dict[str, Any]) -> str:
     chips = "".join(f'<span class="chip">{esc(x)}</span>' for x in (summary.get("market_signals") or []))
+    return f"""
+    <section class="section">
+      <div class="summary-card">
+        <div>
+          <h2 class="main-headline">{esc(summary.get("headline") or "今日重點摘要")}</h2>
+          <div class="summary-text">{esc(summary.get("executive_summary") or "")}</div>
+        </div>
+        <div>
+          <div class="chip-title">今日核心訊號</div>
+          <div class="chips">{chips}</div>
+        </div>
+      </div>
+    </section>
+    """
+
+
+def render_dashboard(summary: Dict[str, Any], market: Dict[str, Any], history: bool = False) -> str:
     body = ""
     if history:
         body += '<a class="back" href="../index.html">← 返回首頁</a>'
-    body += f"""
-    <section class="hero">
-      <div class="kicker">{'HISTORY SNAPSHOT' if history else 'MARKET SNAPSHOT'}</div>
-      <h1>{esc(summary.get("headline") or "今日總經摘要")}</h1>
-      <div class="meta">資料日：{esc(date)}｜頁面產生：{esc(today_tw())}</div>
-      <div class="chips">{chips}</div>
-    </section>
-    """
-    body += render_block("總經傳導鏈", summary.get("macro_chain"))
-    body += render_block("矛盾 / 背離", summary.get("divergence"))
+    body += render_top_title(summary)
+    body += render_visual(summary)
+    body += render_summary_card(summary)
+    body += render_chain(summary)
     body += render_asset_cards(market)
-    img = visual_image_url(summary)
-    if img:
-        body += f'<section class="card"><h2>Visual Note</h2><h3>{esc(visual.get("title") or "")}</h3><img class="visual-img" src="{esc(img)}" alt="Visual Note" loading="lazy"></section>'
-    body += render_block("Executive Summary", summary.get("executive_summary"))
-    body += render_list("今日核心訊號", summary.get("market_signals"))
     body += render_block("核心資產重點", summary.get("market_snapshot"))
     body += render_list("新聞佐證", summary.get("news_evidence"))
     body += render_list("觀察重點", summary.get("watchpoints"))
     if not history:
-        body += render_history_links(date)
+        body += render_history_links(str(summary.get("date") or ""))
     return body
 
 
@@ -199,7 +257,7 @@ def main() -> None:
     write_json(DATA_DIR / "market_history_series.json", market_payload)
     write_json(HISTORY_DATA_DIR / f"{date}.json", today_payload)
 
-    (ROOT / "index.html").write_text(page_shell("全球總經摘要", render_dashboard(summary, market_payload, False)), encoding="utf-8")
+    (ROOT / "index.html").write_text(page_shell("今日總經摘要", render_dashboard(summary, market_payload, False)), encoding="utf-8")
     (HISTORY_HTML_DIR / f"{date}.html").write_text(page_shell(f"歷史總經摘要｜{date}", render_dashboard(summary, market_payload, True), "../assets/css/style.css"), encoding="utf-8")
     print(f"Built dashboard for {date}")
 
