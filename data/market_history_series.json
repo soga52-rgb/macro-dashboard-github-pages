@@ -2,7 +2,7 @@
   "meta": {
     "source": "Google Sheets Market_Source_Test",
     "mode": "market_history_series",
-    "generated_at": "2026-06-01T21:46:42+08:00",
+    "generated_at": "2026-06-01T21:59:55+08:00",
     "data_status": "complete",
     "range": {
       "start": "2026-05-15",
