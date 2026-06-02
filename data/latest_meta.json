@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-02T15:16:42+08:00",
+  "generated_at": "2026-06-02T15:38:32+08:00",
   "date": "2026-06-01",
   "history_dates": [
     "2026-06-01",
@@ -7,7 +7,7 @@
   ],
   "source": "Apps Script dashboard_html_source",
   "html_length": 956913,
-  "index_html_length": 966526,
+  "index_html_length": 966859,
   "ai_presenter": "macro_pricing_logic_v4",
   "gemini_model": "gemini-3.5-flash"
 }
