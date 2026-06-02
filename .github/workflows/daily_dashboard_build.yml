@@ -24,6 +24,8 @@ jobs:
         env:
           DASHBOARD_HTML_SOURCE_URL: ${{ secrets.DASHBOARD_HTML_SOURCE_URL }}
           TODAY_DAILY_SOURCE_URL: ${{ secrets.TODAY_DAILY_SOURCE_URL }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_MODEL: gemini-3.5-flash
         run: python scripts/build_daily_dashboard.py
 
       - name: Commit generated site
