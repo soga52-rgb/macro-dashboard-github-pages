@@ -1,24 +1,15 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-
 """
-GitHub Pages：直接抓 Apps Script 完整 HTML，不重新組版。
-並在 GitHub 端插入「歷史回顧」下拉選單。
+GitHub Pages build script｜Daily Macro Dashboard + AI Presenter v4
 
-需要 GitHub Secrets：
-- DASHBOARD_HTML_SOURCE_URL
-
-選配：
-- TODAY_DAILY_SOURCE_URL
-  只用來取得 date，方便保存 history/YYYY-MM-DD.html。
-  如果沒有設定，會用台北時間今天日期。
-
-輸出：
-- index.html
-- history/YYYY-MM-DD.html
-- data/latest_meta.json
-- data/latest.json（若 TODAY_DAILY_SOURCE_URL 可用）
-- data/history/YYYY-MM-DD.json（若 TODAY_DAILY_SOURCE_URL 可用）
+v4 = Macro Pricing Logic Mode
+- Fetch Apps Script dashboard HTML.
+- Fetch daily_summary JSON.
+- Ask Gemini to produce macro_pricing_logic first.
+- Ask Gemini to produce AI Presenter sections from that logic.
+- Inject AI Presenter and GitHub history nav into static HTML.
+- Save index.html, history/YYYY-MM-DD.html, data/macro_pricing_logic, data/presenter_guides.
 """
 
 from __future__ import annotations
@@ -32,86 +23,59 @@ from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from typing import Any, Dict, List
 
-
 ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data"
-HISTORY_DATA_DIR = DATA_DIR / "history"
 HISTORY_HTML_DIR = ROOT / "history"
+HISTORY_DATA_DIR = DATA_DIR / "history"
+PRICING_DIR = DATA_DIR / "macro_pricing_logic"
+PRESENTER_DIR = DATA_DIR / "presenter_guides"
 TW_TZ = timezone(timedelta(hours=8))
 
 
 def fetch_text(url: str, name: str) -> str:
     if not url:
         raise RuntimeError(f"Missing required URL: {name}")
-
-    req = urllib.request.Request(
-        url,
-        headers={
-            "User-Agent": "macro-dashboard-github-pages-html-snapshot/1.1",
-            "Accept": "text/html,application/xhtml+xml,text/plain,*/*",
-        },
-    )
-
+    req = urllib.request.Request(url, headers={"User-Agent": "macro-dashboard-ai-presenter-v4"})
     with urllib.request.urlopen(req, timeout=120) as resp:
         return resp.read().decode("utf-8", errors="replace")
 
 
-def fetch_json_optional(url: str) -> Dict[str, Any]:
-    if not url:
-        return {}
-
+def fetch_json(url: str, name: str) -> Dict[str, Any]:
+    raw = fetch_text(url, name)
     try:
-        req = urllib.request.Request(
-            url,
-            headers={
-                "User-Agent": "macro-dashboard-github-pages-html-snapshot/1.1",
-                "Accept": "application/json,text/plain,*/*",
-            },
-        )
-
-        with urllib.request.urlopen(req, timeout=90) as resp:
-            raw = resp.read().decode("utf-8", errors="replace")
-
         return json.loads(raw)
-
-    except Exception as exc:
-        print(f"WARN: unable to fetch optional JSON: {exc}", file=sys.stderr)
-        return {}
+    except json.JSONDecodeError as exc:
+        raise RuntimeError(f"{name} did not return valid JSON. Preview:\n{raw[:800]}") from exc
 
 
-def infer_date(today_payload: Dict[str, Any], html: str) -> str:
-    daily = today_payload.get("daily_summary") if isinstance(today_payload, dict) else None
-
-    if isinstance(daily, dict) and daily.get("date"):
-        return str(daily["date"])
-
-    patterns = [
-        r"主要資料日\s*[：:]\s*(\d{4}-\d{2}-\d{2})",
-        r"資料日\s*[：:]\s*(\d{4}-\d{2}-\d{2})",
-        r"data-date=[\"'](\d{4}-\d{2}-\d{2})[\"']",
-    ]
-
-    for pattern in patterns:
-        m = re.search(pattern, html)
-        if m:
-            return m.group(1)
-
-    return datetime.now(TW_TZ).strftime("%Y-%m-%d")
+def post_json(url: str, payload: Dict[str, Any], name: str) -> Dict[str, Any]:
+    req = urllib.request.Request(
+        url,
+        data=json.dumps(payload, ensure_ascii=False).encode("utf-8"),
+        headers={"Content-Type": "application/json", "User-Agent": "macro-dashboard-ai-presenter-v4"},
+        method="POST",
+    )
+    with urllib.request.urlopen(req, timeout=150) as resp:
+        raw = resp.read().decode("utf-8", errors="replace")
+    try:
+        return json.loads(raw)
+    except json.JSONDecodeError as exc:
+        raise RuntimeError(f"{name} did not return valid JSON. Preview:\n{raw[:800]}") from exc
 
 
-def write_text(path: Path, content: str) -> None:
+def write_text(path: Path, text: str) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(content, encoding="utf-8")
+    path.write_text(text, encoding="utf-8")
 
 
-def write_json(path: Path, payload: Dict[str, Any]) -> None:
+def write_json(path: Path, payload: Any) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
-def escape_html(value: str) -> str:
+def escape_html(value: Any) -> str:
     return (
-        str(value)
+        str(value if value is not None else "")
         .replace("&", "&amp;")
         .replace("<", "&lt;")
         .replace(">", "&gt;")
@@ -120,231 +84,374 @@ def escape_html(value: str) -> str:
     )
 
 
-def get_existing_history_dates(current_date: str, limit: int = 7) -> List[str]:
-    dates = set()
+def clean_text(value: Any, max_len: int = 280) -> str:
+    s = re.sub(r"\s+", " ", str(value or "")).strip()
+    return s[:max_len].rstrip() + "…" if len(s) > max_len else s
 
-    if HISTORY_HTML_DIR.exists():
-        for path in HISTORY_HTML_DIR.glob("*.html"):
-            if re.fullmatch(r"\d{4}-\d{2}-\d{2}", path.stem):
-                dates.add(path.stem)
 
-    if HISTORY_DATA_DIR.exists():
-        for path in HISTORY_DATA_DIR.glob("*.json"):
-            if re.fullmatch(r"\d{4}-\d{2}-\d{2}", path.stem):
-                dates.add(path.stem)
+def remove_block(html: str, start: str, end: str) -> str:
+    return re.sub(r"\n?" + re.escape(start) + r"[\s\S]*?" + re.escape(end) + r"\n?", "\n", html)
 
-    if current_date:
-        dates.add(current_date)
 
+def daily_summary(payload: Dict[str, Any]) -> Dict[str, Any]:
+    d = payload.get("daily_summary") if isinstance(payload, dict) else None
+    return d if isinstance(d, dict) else {}
+
+
+def as_list(value: Any) -> List[Any]:
+    return value if isinstance(value, list) else []
+
+
+def infer_date(payload: Dict[str, Any], html: str) -> str:
+    d = daily_summary(payload)
+    if d.get("date"):
+        return str(d["date"])
+    for pat in [r"主要資料日\s*[：:]\s*(\d{4}-\d{2}-\d{2})", r"資料日\s*[：:]\s*(\d{4}-\d{2}-\d{2})"]:
+        m = re.search(pat, html)
+        if m:
+            return m.group(1)
+    return datetime.now(TW_TZ).strftime("%Y-%m-%d")
+
+
+def history_dates(current_date: str, limit: int = 7) -> List[str]:
+    dates = {current_date} if current_date else set()
+    for folder, suffix in [(HISTORY_HTML_DIR, ".html"), (HISTORY_DATA_DIR, ".json")]:
+        if folder.exists():
+            for p in folder.glob("*" + suffix):
+                if re.fullmatch(r"\d{4}-\d{2}-\d{2}", p.stem):
+                    dates.add(p.stem)
     return sorted(dates, reverse=True)[:limit]
 
 
-def remove_old_github_history_nav(html: str) -> str:
-    pattern = re.compile(
-        r"\n?<!-- GITHUB_HISTORY_NAV_START -->[\s\S]*?<!-- GITHUB_HISTORY_NAV_END -->\n?",
-        re.MULTILINE,
-    )
-    return pattern.sub("\n", html)
+# =============================================================================
+# Gemini helpers
+# =============================================================================
+
+def gemini_json(prompt: str, fallback: Any, task: str, temperature: float = 0.55) -> Any:
+    api_key = os.environ.get("GEMINI_API_KEY", "").strip()
+    model = os.environ.get("GEMINI_MODEL", "").strip() or "gemini-3.5-flash"
+    if not api_key:
+        print(f"WARN: missing GEMINI_API_KEY, fallback used for {task}", file=sys.stderr)
+        return fallback
+
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={api_key}"
+    payload = {
+        "contents": [{"parts": [{"text": prompt}]}],
+        "generationConfig": {"temperature": temperature, "topP": 0.9, "responseMimeType": "application/json"},
+    }
+    try:
+        data = post_json(url, payload, task)
+        text = data.get("candidates", [{}])[0].get("content", {}).get("parts", [{}])[0].get("text", "")
+        if not text:
+            raise RuntimeError("empty Gemini text")
+        return json.loads(text)
+    except Exception as exc:
+        print(f"WARN: Gemini failed for {task}: {exc}; fallback used", file=sys.stderr)
+        return fallback
 
 
-def inject_github_history_nav(html: str, current_date: str, dates: List[str], is_history_page: bool) -> str:
-    html = remove_old_github_history_nav(html)
+# =============================================================================
+# Step 1: Macro Pricing Logic
+# =============================================================================
 
+def fallback_pricing_logic(payload: Dict[str, Any]) -> Dict[str, Any]:
+    d = daily_summary(payload)
+    return {
+        "pricing_context": {
+            "market_was_pricing": "資料不足，暫以今日摘要主線判斷。",
+            "new_information": clean_text(d.get("headline"), 160),
+            "pricing_question": clean_text(d.get("headline"), 160) or "今天市場真正交易的是哪一股力量？",
+        },
+        "inflation_expectation": {
+            "energy": {"direction": "unclear", "importance": "medium", "evidence": [], "judgment": ""},
+            "supply_chain": {"direction": "unclear", "importance": "low", "evidence": [], "judgment": ""},
+            "price_data": {"direction": "unclear", "importance": "medium", "evidence": [], "judgment": ""},
+            "demand": {"direction": "unclear", "importance": "medium", "evidence": [], "judgment": ""},
+            "labor_market": {"direction": "unclear", "importance": "medium", "evidence": [], "judgment": ""},
+            "policy_expectation": {"direction": "unclear", "importance": "medium", "evidence": [], "judgment": ""},
+            "summary": {"overall_direction": "unclear", "strength": "weak", "dominant_force": "", "offsetting_force": "", "judgment": clean_text(d.get("executive_summary"), 220)},
+        },
+        "rate_pricing": {
+            "direction": "unclear",
+            "inflation_link": "",
+            "non_inflation_drivers": {"fed_policy": "", "treasury_supply_demand": "", "safe_haven_bond_buying": "", "growth_concern": "", "term_premium": ""},
+            "dominant_force": "",
+            "judgment": "",
+        },
+        "dollar_pricing": {"direction": "unclear", "rate_link": "", "other_drivers": [], "judgment": ""},
+        "asset_reaction": {"asia_fx": {"twd": "", "jpy": "", "krw": ""}, "gold": {"rate_pressure": "", "safe_haven_support": "", "dominant_force": "", "judgment": ""}},
+        "pricing_assessment": {
+            "dominant_market_force": clean_text(d.get("headline"), 160),
+            "offsetting_force": "",
+            "most_non_obvious_signal": clean_text(d.get("divergence"), 220),
+            "market_question": clean_text(d.get("headline"), 160) or "今天市場最值得追問的是什麼？",
+            "one_sentence_takeaway": clean_text(d.get("macro_chain") or d.get("executive_summary"), 220),
+            "next_watch": "觀察今日摘要列出的後續風險與數據。",
+        },
+    }
+
+
+def pricing_prompt(payload: Dict[str, Any]) -> str:
+    d = daily_summary(payload)
+    compact = {
+        "date": d.get("date"),
+        "headline": d.get("headline"),
+        "executive_summary": d.get("executive_summary"),
+        "market_signals": as_list(d.get("market_signals"))[:6],
+        "macro_chain": d.get("macro_chain"),
+        "divergence": d.get("divergence"),
+        "market_snapshot": d.get("market_snapshot"),
+        "news_evidence": as_list(d.get("news_evidence"))[:6],
+        "watchpoints": as_list(d.get("watchpoints"))[:6],
+    }
+    return f"""
+你是機構級總經策略分析師。請根據 daily_summary 產生「每日總經定價邏輯」。
+
+核心觀念：
+- 總經不是數學公式，不是 A 上升就必然 B 上升。
+- 你要用「市場預期、資金流向、政策訊號」三者交集來判斷今天市場最後在定價什麼。
+- 固定基準框架是：通膨預期 → 利率預期 → 美元指數 → 亞洲貨幣 / 黃金。
+- 但這只是基準路徑，不是鐵律。每一段都可能被其他力量修正或抵銷。
+
+限制：不可新增 daily_summary 沒有的數字；不可創造新聞；不可給投資建議；資料不足就寫 unclear / 待確認；只輸出 JSON。
+
+請拆解通膨預期通道：
+energy、supply_chain、price_data、demand、labor_market、policy_expectation。
+再判斷利率是否跟通膨同向；若不同向，檢查 Fed 政策、公債供需、避險買債、成長擔憂、期限溢價。
+最後檢查美元、亞幣、黃金反應，找出最不直覺的市場訊號，作為 AI Presenter 開場。
+
+請輸出固定 JSON：
+{{
+  "pricing_context": {{"market_was_pricing":"", "new_information":"", "pricing_question":""}},
+  "inflation_expectation": {{
+    "energy": {{"direction":"up / down / mixed / unclear", "importance":"high / medium / low", "evidence":[], "judgment":""}},
+    "supply_chain": {{"direction":"up / down / mixed / unclear", "importance":"high / medium / low", "evidence":[], "judgment":""}},
+    "price_data": {{"direction":"up / down / mixed / unclear", "importance":"high / medium / low", "evidence":[], "judgment":""}},
+    "demand": {{"direction":"up / down / mixed / unclear", "importance":"high / medium / low", "evidence":[], "judgment":""}},
+    "labor_market": {{"direction":"up / down / mixed / unclear", "importance":"high / medium / low", "evidence":[], "judgment":""}},
+    "policy_expectation": {{"direction":"up / down / mixed / unclear", "importance":"high / medium / low", "evidence":[], "judgment":""}},
+    "summary": {{"overall_direction":"up / down / mixed / unclear", "strength":"strong / medium / weak", "dominant_force":"", "offsetting_force":"", "judgment":""}}
+  }},
+  "rate_pricing": {{"direction":"up / down / mixed / unclear", "inflation_link":"", "non_inflation_drivers":{{"fed_policy":"", "treasury_supply_demand":"", "safe_haven_bond_buying":"", "growth_concern":"", "term_premium":""}}, "dominant_force":"", "judgment":""}},
+  "dollar_pricing": {{"direction":"up / down / mixed / unclear", "rate_link":"", "other_drivers":[], "judgment":""}},
+  "asset_reaction": {{"asia_fx":{{"twd":"", "jpy":"", "krw":""}}, "gold":{{"rate_pressure":"", "safe_haven_support":"", "dominant_force":"", "judgment":""}}}},
+  "pricing_assessment": {{"dominant_market_force":"", "offsetting_force":"", "most_non_obvious_signal":"", "market_question":"", "one_sentence_takeaway":"", "next_watch":""}}
+}}
+
+daily_summary:
+{json.dumps(compact, ensure_ascii=False, indent=2)}
+""".strip()
+
+
+def generate_pricing_logic(payload: Dict[str, Any]) -> Dict[str, Any]:
+    fallback = fallback_pricing_logic(payload)
+    raw = gemini_json(pricing_prompt(payload), fallback, "Macro Pricing Logic", 0.45)
+    if not isinstance(raw, dict):
+        return fallback
+    for k, v in fallback.items():
+        raw.setdefault(k, v)
+    if not isinstance(raw.get("pricing_assessment"), dict):
+        raw["pricing_assessment"] = fallback["pricing_assessment"]
+    return raw
+
+
+# =============================================================================
+# Step 2: Presenter sections
+# =============================================================================
+
+def fallback_presenter_sections(logic: Dict[str, Any], payload: Dict[str, Any]) -> List[Dict[str, str]]:
+    d = daily_summary(payload)
+    a = logic.get("pricing_assessment", {}) if isinstance(logic, dict) else {}
+    q = clean_text(a.get("market_question") or d.get("headline"), 170)
+    non_obvious = clean_text(a.get("most_non_obvious_signal") or d.get("divergence"), 200)
+    takeaway = clean_text(a.get("one_sentence_takeaway") or d.get("macro_chain") or d.get("executive_summary"), 220)
+    watch = clean_text(a.get("next_watch") or "觀察後續數據與政策訊號是否驗證今日主線。", 170)
+    return [
+        {"title": "Opening Hook", "target": "top", "narration": f"今天先抓一個問題：{q} 這個問題的重點不是單一數字，而是市場最後把哪一股力量放在第一順位。"},
+        {"title": "Visual Note", "target": "visual", "narration": "先看 Visual Market Note。這張圖要幫我們確認通膨、利率、美元，再到亞洲貨幣與黃金的傳導，是順著走，還是中間被政策、資金流或避險需求修正。"},
+        {"title": "Market Evidence", "target": "market", "narration": f"接著看價格證據。今天最值得追問的不是漲跌本身，而是這個不直覺訊號：{non_obvious}"},
+        {"title": "Narrative Check", "target": "news", "narration": "再看新聞敘事驗證。這一步是確認新聞、政策與資金流，能不能解釋剛剛看到的價格反應，而不是單純補新聞標題。"},
+        {"title": "Closing Takeaway", "target": "bottom", "narration": f"最後收斂成一句話：{takeaway} 下一步要看的是：{watch}"},
+    ]
+
+
+def presenter_prompt(logic: Dict[str, Any], payload: Dict[str, Any]) -> str:
+    d = daily_summary(payload)
+    compact_daily = {
+        "date": d.get("date"),
+        "headline": d.get("headline"),
+        "executive_summary": d.get("executive_summary"),
+        "market_signals": as_list(d.get("market_signals"))[:5],
+        "macro_chain": d.get("macro_chain"),
+        "divergence": d.get("divergence"),
+        "market_snapshot": d.get("market_snapshot"),
+        "news_evidence": as_list(d.get("news_evidence"))[:5],
+        "watchpoints": as_list(d.get("watchpoints"))[:5],
+    }
+    return f"""
+你是 AI Presenter，一位具備千萬訂閱級敘事能力的機構級總經導讀主持人。
+你的任務不是朗讀網頁，也不是重新分析市場，而是根據「每日總經定價邏輯」做 3 分鐘簡報導讀。
+
+風格：有 Hook、有節奏、有問題意識；像 YouTuber 一樣會抓注意力，像總經分析師一樣講邏輯。
+限制：不喊單、不誇大、不創造新聞、不新增數字、不推翻 macro_pricing_logic。
+
+請輸出 5 段 JSON 陣列：
+[
+  {{"title":"Opening Hook","target":"top","narration":"..."}},
+  {{"title":"Visual Note","target":"visual","narration":"..."}},
+  {{"title":"Market Evidence","target":"market","narration":"..."}},
+  {{"title":"Narrative Check","target":"news","narration":"..."}},
+  {{"title":"Closing Takeaway","target":"bottom","narration":"..."}}
+]
+每段 80～150 字。不要 Markdown，不要註解。
+
+任務：
+1. Opening Hook：用 pricing_assessment.market_question 或 most_non_obvious_signal 開場。
+2. Visual Note：說明基準傳導路徑，但提醒市場是多股力量交集，不是機械公式。
+3. Market Evidence：用價格證據檢查哪一段最順或最不直覺。
+4. Narrative Check：說明新聞、政策與資金流如何解釋價格。
+5. Closing Takeaway：收斂一句話與下一個驗證點。
+
+daily_summary:
+{json.dumps(compact_daily, ensure_ascii=False, indent=2)}
+
+macro_pricing_logic:
+{json.dumps(logic, ensure_ascii=False, indent=2)}
+""".strip()
+
+
+def normalize_sections(raw: Any, fallback: List[Dict[str, str]]) -> List[Dict[str, str]]:
+    if isinstance(raw, dict) and isinstance(raw.get("sections"), list):
+        raw = raw["sections"]
+    if not isinstance(raw, list):
+        return fallback
+    targets = ["top", "visual", "market", "news", "bottom"]
+    out = []
+    for i, item in enumerate(raw[:5]):
+        if not isinstance(item, dict):
+            continue
+        title = clean_text(item.get("title") or f"Section {i+1}", 50)
+        target = clean_text(item.get("target") or targets[min(i, 4)], 20)
+        text = clean_text(item.get("narration") or item.get("text"), 340)
+        if target not in targets:
+            target = targets[min(i, 4)]
+        if text:
+            out.append({"title": title, "target": target, "narration": text})
+    return out if len(out) == 5 else fallback
+
+
+def generate_presenter_sections(logic: Dict[str, Any], payload: Dict[str, Any]) -> List[Dict[str, str]]:
+    fallback = fallback_presenter_sections(logic, payload)
+    raw = gemini_json(presenter_prompt(logic, payload), fallback, "AI Presenter", 0.65)
+    return normalize_sections(raw, fallback)
+
+
+# =============================================================================
+# HTML Injection
+# =============================================================================
+
+def inject_ai_presenter(html: str, sections: List[Dict[str, str]]) -> str:
+    html = remove_block(html, "<!-- GITHUB_AI_PRESENTER_START -->", "<!-- GITHUB_AI_PRESENTER_END -->")
+    sections_json = json.dumps(sections, ensure_ascii=False)
+    presenter = f'''
+<!-- GITHUB_AI_PRESENTER_START -->
+<style id="github-ai-presenter-style-v4">
+.github-ai-presenter-v4{{max-width:980px;margin:0 auto 18px;padding:18px 20px;background:#fff;border:1px solid var(--theme-border,#CEE7D7);border-radius:18px;box-shadow:0 10px 28px rgba(15,23,42,.035)}}
+.github-ai-presenter-head-v4{{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;margin-bottom:12px}}
+.github-ai-presenter-title-v4{{font-size:22px;font-weight:950;color:var(--theme-accent-text,#35724F);line-height:1.35}}
+.github-ai-presenter-subtitle-v4{{color:#64748b;font-size:13px;line-height:1.6;margin-top:4px}}
+.github-ai-presenter-badge-v4{{white-space:nowrap;border:1px solid var(--theme-border,#CEE7D7);border-radius:999px;padding:6px 10px;color:var(--theme-accent-text,#35724F);font-weight:850;font-size:12px;background:#fff}}
+.github-ai-presenter-body-v4{{border:1px solid var(--theme-border,#CEE7D7);border-radius:14px;background:#fbfcfb;padding:14px 15px}}
+.github-ai-presenter-step-title-v4{{font-weight:900;color:#172033;margin-bottom:7px;font-size:15px}}
+.github-ai-presenter-text-v4{{color:#374151;font-size:15px;line-height:1.8}}
+.github-ai-presenter-controls-v4{{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}}
+.github-ai-presenter-button-v4{{border:1px solid var(--theme-border,#CEE7D7);border-radius:999px;padding:8px 13px;background:#fff;color:var(--theme-accent-text,#35724F);font-weight:850;cursor:pointer;font-size:14px}}
+.github-ai-presenter-progress-v4{{color:#64748b;font-size:13px;margin-top:8px}}
+.github-ai-presenter-highlight-v4{{outline:3px solid rgba(53,114,79,.16);outline-offset:4px;transition:outline .25s ease}}
+@media(max-width:760px){{.github-ai-presenter-v4{{margin:0 auto 14px;padding:14px;border-radius:16px}}.github-ai-presenter-head-v4{{display:block}}.github-ai-presenter-title-v4{{font-size:19px}}.github-ai-presenter-badge-v4{{display:inline-block;margin-top:8px}}.github-ai-presenter-button-v4{{flex:1 1 auto}}}}
+</style>
+<section class="github-ai-presenter-v4" id="githubAiPresenterV4" aria-label="AI Presenter">
+  <div class="github-ai-presenter-head-v4"><div><div class="github-ai-presenter-title-v4">AI Presenter｜3 分鐘看懂今日市場</div><div class="github-ai-presenter-subtitle-v4">先判斷今日總經定價邏輯，再用簡報方式帶你看主線、證據與分歧。</div></div><div class="github-ai-presenter-badge-v4">Macro Pricing Logic</div></div>
+  <div class="github-ai-presenter-body-v4"><div class="github-ai-presenter-step-title-v4" id="githubAiPresenterStepTitleV4"></div><div class="github-ai-presenter-text-v4" id="githubAiPresenterTextV4"></div><div class="github-ai-presenter-controls-v4"><button type="button" class="github-ai-presenter-button-v4" onclick="githubAiPresenterStartV4()">開始導讀</button><button type="button" class="github-ai-presenter-button-v4" onclick="githubAiPresenterPrevV4()">上一段</button><button type="button" class="github-ai-presenter-button-v4" onclick="githubAiPresenterNextV4()">下一段</button><button type="button" class="github-ai-presenter-button-v4" onclick="githubAiPresenterStopV4()">結束</button></div><div class="github-ai-presenter-progress-v4" id="githubAiPresenterProgressV4"></div></div>
+</section>
+<script id="github-ai-presenter-script-v4">
+window.__githubAiPresenterSectionsV4={sections_json};window.__githubAiPresenterIndexV4=0;window.__githubAiPresenterLastTargetV4=null;
+function githubAiPresenterFindByTextV4(tags,texts){{for(var t=0;t<tags.length;t++){{var nodes=document.getElementsByTagName(tags[t]);for(var i=0;i<nodes.length;i++){{var tx=(nodes[i].textContent||'').trim();for(var j=0;j<texts.length;j++){{if(tx.indexOf(texts[j])>=0)return nodes[i];}}}}}}return null;}}
+function githubAiPresenterFindTargetV4(kind){{if(kind==='top')return document.querySelector('.top-date-meta-bar')||githubAiPresenterFindByTextV4(['section','div'],['今日總經摘要']);if(kind==='visual')return githubAiPresenterFindByTextV4(['section','div','h1','h2'],['Visual Market Note','市場傳導圖解']);if(kind==='market')return githubAiPresenterFindByTextV4(['section','div','h1','h2'],['走勢圖','Market Snapshot']);if(kind==='news')return document.querySelector('.news-narrative-section')||githubAiPresenterFindByTextV4(['section','div','h1','h2'],['新聞敘事驗證']);if(kind==='bottom')return document.querySelector('.github-history-nav-v1')||document.querySelector('.footer')||document.body;return null;}}
+function githubAiPresenterClearHighlightV4(){{var last=window.__githubAiPresenterLastTargetV4;if(last&&last.classList)last.classList.remove('github-ai-presenter-highlight-v4');window.__githubAiPresenterLastTargetV4=null;}}
+function githubAiPresenterRenderV4(scroll){{var s=window.__githubAiPresenterSectionsV4||[];var idx=window.__githubAiPresenterIndexV4||0;if(!s.length)return;if(idx<0)idx=0;if(idx>=s.length)idx=s.length-1;window.__githubAiPresenterIndexV4=idx;var item=s[idx];var title=document.getElementById('githubAiPresenterStepTitleV4');var text=document.getElementById('githubAiPresenterTextV4');var progress=document.getElementById('githubAiPresenterProgressV4');if(title)title.textContent=(idx+1)+'. '+item.title;if(text)text.textContent=item.narration||item.text||'';if(progress)progress.textContent='第 '+(idx+1)+' / '+s.length+' 段';if(scroll){{githubAiPresenterClearHighlightV4();var target=githubAiPresenterFindTargetV4(item.target);if(target&&target.scrollIntoView){{target.scrollIntoView({{behavior:'smooth',block:'start'}});if(target.classList){{target.classList.add('github-ai-presenter-highlight-v4');window.__githubAiPresenterLastTargetV4=target;}}}}}}}}
+function githubAiPresenterStartV4(){{window.__githubAiPresenterIndexV4=0;githubAiPresenterRenderV4(true);}}
+function githubAiPresenterNextV4(){{var s=window.__githubAiPresenterSectionsV4||[];window.__githubAiPresenterIndexV4=Math.min((window.__githubAiPresenterIndexV4||0)+1,s.length-1);githubAiPresenterRenderV4(true);}}
+function githubAiPresenterPrevV4(){{window.__githubAiPresenterIndexV4=Math.max((window.__githubAiPresenterIndexV4||0)-1,0);githubAiPresenterRenderV4(true);}}
+function githubAiPresenterStopV4(){{githubAiPresenterClearHighlightV4();var p=document.getElementById('githubAiPresenterV4');if(p&&p.scrollIntoView)p.scrollIntoView({{behavior:'smooth',block:'start'}});}}
+document.addEventListener('DOMContentLoaded',function(){{githubAiPresenterRenderV4(false);}});
+</script>
+<!-- GITHUB_AI_PRESENTER_END -->
+'''
+    marker = 'class="top-date-meta-bar"'
+    if marker in html:
+        start = html.find(marker)
+        end = html.find('</section>', start)
+        if end >= 0:
+            insert_at = end + len('</section>')
+            return html[:insert_at] + '\n' + presenter + html[insert_at:]
+    m = re.search(r'<body[^>]*>', html, flags=re.I)
+    return html[:m.end()] + '\n' + presenter + html[m.end():] if m else presenter + html
+
+
+def inject_history_nav(html: str, current_date: str, dates: List[str], is_history: bool) -> str:
+    html = remove_block(html, "<!-- GITHUB_HISTORY_NAV_START -->", "<!-- GITHUB_HISTORY_NAV_END -->")
     if not dates:
         return html
-
-    home_href = "../index.html" if is_history_page else "index.html"
-    history_prefix = "../history/" if is_history_page else "history/"
-
-    options = []
-    for d in dates:
-        label = d + ("（最新）" if d == dates[0] else "")
-        selected = " selected" if d == current_date else ""
-        value = history_prefix + d + ".html"
-        options.append(
-            f'<option value="{escape_html(value)}"{selected}>{escape_html(label)}</option>'
-        )
-
-    section = f"""
+    home = "../index.html" if is_history else "index.html"
+    prefix = "../history/" if is_history else "history/"
+    opts = "".join([f'<option value="{escape_html(prefix+d+".html")}"{" selected" if d==current_date else ""}>{escape_html(d + ("（最新）" if d==dates[0] else ""))}</option>' for d in dates])
+    section = f'''
 <!-- GITHUB_HISTORY_NAV_START -->
 <style id="github-history-nav-style-v1">
-  .github-history-nav-v1 {{
-    max-width: 980px;
-    margin: 18px auto 28px;
-    padding: 18px 20px;
-    background: #ffffff;
-    border: 1px solid var(--theme-border, #CEE7D7);
-    border-radius: 18px;
-    box-shadow: 0 10px 28px rgba(15,23,42,.035);
-  }}
-  .github-history-nav-v1 * {{
-    box-sizing: border-box;
-  }}
-  .github-history-nav-head-v1 {{
-    display: flex;
-    gap: 14px;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 12px;
-  }}
-  .github-history-nav-title-v1 {{
-    font-size: 20px;
-    font-weight: 900;
-    color: var(--theme-accent-text, #35724F);
-  }}
-  .github-history-nav-controls-v1 {{
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-  }}
-  .github-history-select-v1 {{
-    min-width: 220px;
-    max-width: 100%;
-    border: 1px solid var(--theme-border, #CEE7D7);
-    border-radius: 999px;
-    padding: 8px 12px;
-    background: #fff;
-    color: var(--theme-text, #111827);
-    font-weight: 750;
-    font-size: 14px;
-  }}
-  .github-history-button-v1 {{
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid var(--theme-border, #CEE7D7);
-    border-radius: 999px;
-    padding: 8px 13px;
-    background: #fff;
-    color: var(--theme-accent-text, #35724F);
-    text-decoration: none;
-    font-weight: 850;
-    font-size: 14px;
-    cursor: pointer;
-  }}
-  .github-history-note-v1 {{
-    color: #64748b;
-    font-size: 13px;
-    line-height: 1.6;
-  }}
-
-  /* GitHub 正式前台不再使用 Apps Script 原本歷史下拉區 */
-  .history-lite-section-v1,
-  .historical-daily-summary-dropdown-section,
-  .history-daily-summary-dropdown-section,
-  .history-panel-v2,
-  .history-card {{
-    display: none !important;
-  }}
-
-  @media (max-width: 760px) {{
-    .github-history-nav-v1 {{
-      margin: 14px auto 22px;
-      padding: 14px;
-      border-radius: 16px;
-    }}
-    .github-history-nav-head-v1 {{
-      display: block;
-    }}
-    .github-history-nav-title-v1 {{
-      margin-bottom: 10px;
-      font-size: 18px;
-    }}
-    .github-history-nav-controls-v1 {{
-      justify-content: flex-start;
-    }}
-    .github-history-select-v1 {{
-      width: 100%;
-    }}
-  }}
+.github-history-nav-v1{{max-width:980px;margin:18px auto 28px;padding:18px 20px;background:#fff;border:1px solid var(--theme-border,#CEE7D7);border-radius:18px;box-shadow:0 10px 28px rgba(15,23,42,.035)}}.github-history-nav-v1 *{{box-sizing:border-box}}.github-history-nav-head-v1{{display:flex;gap:14px;align-items:center;justify-content:space-between;margin-bottom:12px}}.github-history-nav-title-v1{{font-size:20px;font-weight:900;color:var(--theme-accent-text,#35724F)}}.github-history-nav-controls-v1{{display:flex;gap:10px;align-items:center;flex-wrap:wrap;justify-content:flex-end}}.github-history-select-v1{{min-width:220px;max-width:100%;border:1px solid var(--theme-border,#CEE7D7);border-radius:999px;padding:8px 12px;background:#fff;color:var(--theme-text,#111827);font-weight:750;font-size:14px}}.github-history-button-v1{{display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--theme-border,#CEE7D7);border-radius:999px;padding:8px 13px;background:#fff;color:var(--theme-accent-text,#35724F);text-decoration:none;font-weight:850;font-size:14px;cursor:pointer}}.github-history-note-v1{{color:#64748b;font-size:13px;line-height:1.6}}.history-lite-section-v1,.historical-daily-summary-dropdown-section,.history-daily-summary-dropdown-section,.history-panel-v2,.history-card{{display:none!important}}@media(max-width:760px){{.github-history-nav-v1{{margin:14px auto 22px;padding:14px;border-radius:16px}}.github-history-nav-head-v1{{display:block}}.github-history-nav-title-v1{{margin-bottom:10px;font-size:18px}}.github-history-nav-controls-v1{{justify-content:flex-start}}.github-history-select-v1{{width:100%}}}}
 </style>
-
-<section class="github-history-nav-v1" aria-label="歷史回顧">
-  <div class="github-history-nav-head-v1">
-    <div class="github-history-nav-title-v1">📅 歷史回顧</div>
-    <div class="github-history-nav-controls-v1">
-      <select id="githubHistorySelectV1" class="github-history-select-v1" aria-label="選擇歷史日期">
-        {''.join(options)}
-      </select>
-      <button type="button" class="github-history-button-v1" onclick="openGithubHistoryV1()">開啟</button>
-      <a class="github-history-button-v1" href="{escape_html(home_href)}">回今日</a>
-    </div>
-  </div>
-  <div class="github-history-note-v1">
-    GitHub Pages 會保存每日完整頁面快照；目前顯示最近 7 天。
-  </div>
-</section>
-
-<script id="github-history-nav-script-v1">
-  function openGithubHistoryV1() {{
-    var select = document.getElementById('githubHistorySelectV1');
-    if (!select || !select.value) return;
-    window.location.href = select.value;
-  }}
-</script>
+<section class="github-history-nav-v1" aria-label="歷史回顧"><div class="github-history-nav-head-v1"><div class="github-history-nav-title-v1">🗂️ 歷史回顧</div><div class="github-history-nav-controls-v1"><select id="githubHistorySelectV1" class="github-history-select-v1" aria-label="選擇歷史日期">{opts}</select><button type="button" class="github-history-button-v1" onclick="openGithubHistoryV1()">開啟</button><a class="github-history-button-v1" href="{escape_html(home)}">回今日</a></div></div><div class="github-history-note-v1">GitHub Pages 會保存每日完整頁面快照；目前顯示最近 7 天。</div></section>
+<script id="github-history-nav-script-v1">function openGithubHistoryV1(){{var s=document.getElementById('githubHistorySelectV1');if(!s||!s.value)return;window.location.href=s.value;}}</script>
 <!-- GITHUB_HISTORY_NAV_END -->
-"""
-
-    if "</body>" in html:
-        return html.replace("</body>", section + "\n</body>", 1)
-
-    return html + section
+'''
+    m = re.search(r'</body>', html, flags=re.I)
+    return html[:m.start()] + section + '\n' + html[m.start():] if m else html + section
 
 
 def main() -> None:
     dashboard_url = os.environ.get("DASHBOARD_HTML_SOURCE_URL", "").strip()
     today_url = os.environ.get("TODAY_DAILY_SOURCE_URL", "").strip()
-
     raw_html = fetch_text(dashboard_url, "DASHBOARD_HTML_SOURCE_URL")
-    today_payload = fetch_json_optional(today_url)
-
+    today_payload = fetch_json(today_url, "TODAY_DAILY_SOURCE_URL")
     current_date = infer_date(today_payload, raw_html)
 
-    DATA_DIR.mkdir(exist_ok=True)
-    HISTORY_DATA_DIR.mkdir(parents=True, exist_ok=True)
-    HISTORY_HTML_DIR.mkdir(exist_ok=True)
+    for folder in [DATA_DIR, HISTORY_HTML_DIR, HISTORY_DATA_DIR, PRICING_DIR, PRESENTER_DIR]:
+        folder.mkdir(parents=True, exist_ok=True)
 
-    dates = get_existing_history_dates(current_date, limit=7)
+    dates = history_dates(current_date, 7)
+    pricing_logic = generate_pricing_logic(today_payload)
+    sections = generate_presenter_sections(pricing_logic, today_payload)
 
-    index_html = inject_github_history_nav(
-        raw_html,
-        current_date=current_date,
-        dates=dates,
-        is_history_page=False,
-    )
-
-    history_html = inject_github_history_nav(
-        raw_html,
-        current_date=current_date,
-        dates=dates,
-        is_history_page=True,
-    )
+    index_html = inject_history_nav(inject_ai_presenter(raw_html, sections), current_date, dates, False)
+    history_html = inject_history_nav(inject_ai_presenter(raw_html, sections), current_date, dates, True)
 
     write_text(ROOT / "index.html", index_html)
     write_text(HISTORY_HTML_DIR / f"{current_date}.html", history_html)
-
-    meta = {
-        "generated_at": datetime.now(TW_TZ).isoformat(timespec="seconds"),
-        "date": current_date,
-        "history_dates": dates,
-        "source": "Apps Script dashboard_html_source",
-        "html_length": len(raw_html),
-        "index_html_length": len(index_html),
-    }
-
-    write_json(DATA_DIR / "latest_meta.json", meta)
-
-    if today_payload:
-        write_json(DATA_DIR / "latest.json", today_payload)
-        write_json(HISTORY_DATA_DIR / f"{current_date}.json", today_payload)
+    write_json(DATA_DIR / "latest.json", today_payload)
+    write_json(HISTORY_DATA_DIR / f"{current_date}.json", today_payload)
+    write_json(PRICING_DIR / "latest.json", {"generated_at": datetime.now(TW_TZ).isoformat(timespec="seconds"), "date": current_date, "mode": "macro_pricing_logic_v4", "logic": pricing_logic})
+    write_json(PRICING_DIR / f"{current_date}.json", {"generated_at": datetime.now(TW_TZ).isoformat(timespec="seconds"), "date": current_date, "mode": "macro_pricing_logic_v4", "logic": pricing_logic})
+    write_json(PRESENTER_DIR / "latest.json", {"generated_at": datetime.now(TW_TZ).isoformat(timespec="seconds"), "date": current_date, "mode": "macro_pricing_logic_presenter_v4", "sections": sections})
+    write_json(PRESENTER_DIR / f"{current_date}.json", {"generated_at": datetime.now(TW_TZ).isoformat(timespec="seconds"), "date": current_date, "mode": "macro_pricing_logic_presenter_v4", "sections": sections})
+    write_json(DATA_DIR / "latest_meta.json", {"generated_at": datetime.now(TW_TZ).isoformat(timespec="seconds"), "date": current_date, "history_dates": dates, "source": "Apps Script dashboard_html_source", "html_length": len(raw_html), "index_html_length": len(index_html), "ai_presenter": "macro_pricing_logic_v4", "gemini_model": os.environ.get("GEMINI_MODEL", "gemini-3.5-flash")})
 
     print("Saved Apps Script dashboard HTML as static GitHub Pages index.html")
     print(f"date = {current_date}")
     print(f"history_dates = {', '.join(dates)}")
     print(f"raw_html_length = {len(raw_html)}")
     print(f"index_html_length = {len(index_html)}")
+    print("ai_presenter = macro_pricing_logic_v4")
 
 
 if __name__ == "__main__":
