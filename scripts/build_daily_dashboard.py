@@ -19,6 +19,7 @@ import os
 import re
 import sys
 import urllib.request
+import urllib.error
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from typing import Any, Dict, List
@@ -128,8 +129,11 @@ def history_dates(current_date: str, limit: int = 7) -> List[str]:
 # =============================================================================
 
 def gemini_json(prompt: str, fallback: Any, task: str, temperature: float = 0.55) -> Any:
+    import time
+
     api_key = os.environ.get("GEMINI_API_KEY", "").strip()
     model = os.environ.get("GEMINI_MODEL", "").strip() or "gemini-3.5-flash"
+
     if not api_key:
         print(f"WARN: missing GEMINI_API_KEY, fallback used for {task}", file=sys.stderr)
         return fallback
@@ -137,17 +141,58 @@ def gemini_json(prompt: str, fallback: Any, task: str, temperature: float = 0.55
     url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={api_key}"
     payload = {
         "contents": [{"parts": [{"text": prompt}]}],
-        "generationConfig": {"temperature": temperature, "topP": 0.9, "responseMimeType": "application/json"},
+        "generationConfig": {
+            "temperature": temperature,
+            "topP": 0.9,
+            "responseMimeType": "application/json",
+        },
     }
-    try:
-        data = post_json(url, payload, task)
-        text = data.get("candidates", [{}])[0].get("content", {}).get("parts", [{}])[0].get("text", "")
-        if not text:
-            raise RuntimeError("empty Gemini text")
-        return json.loads(text)
-    except Exception as exc:
-        print(f"WARN: Gemini failed for {task}: {exc}; fallback used", file=sys.stderr)
-        return fallback
+
+    retry_waits = [10, 25, 45, 75, 110]
+    last_error = None
+
+    for attempt, wait_seconds in enumerate(retry_waits, start=1):
+        try:
+            data = post_json(url, payload, task)
+            text = (
+                data.get("candidates", [{}])[0]
+                .get("content", {})
+                .get("parts", [{}])[0]
+                .get("text", "")
+            )
+
+            if not text:
+                raise RuntimeError("empty Gemini text")
+
+            return json.loads(text)
+
+        except urllib.error.HTTPError as exc:
+            detail = exc.read().decode("utf-8", errors="replace")
+            last_error = f"HTTP Error {exc.code}: {detail[:500]}"
+
+            if exc.code in (429, 500, 503, 504):
+                print(
+                    f"WARN: Gemini {task} temporary error on attempt {attempt}/{len(retry_waits)}: "
+                    f"HTTP {exc.code}. Retry in {wait_seconds}s.",
+                    file=sys.stderr,
+                )
+                time.sleep(wait_seconds)
+                continue
+
+            print(f"WARN: Gemini failed for {task}: {last_error}; fallback used", file=sys.stderr)
+            return fallback
+
+        except Exception as exc:
+            last_error = str(exc)
+            print(
+                f"WARN: Gemini {task} failed on attempt {attempt}/{len(retry_waits)}: "
+                f"{last_error}. Retry in {wait_seconds}s.",
+                file=sys.stderr,
+            )
+            time.sleep(wait_seconds)
+
+    print(f"WARN: Gemini failed for {task} after retries: {last_error}; fallback used", file=sys.stderr)
+    return fallback
 
 
 # =============================================================================
@@ -263,15 +308,36 @@ def fallback_presenter_sections(logic: Dict[str, Any], payload: Dict[str, Any]) 
     d = daily_summary(payload)
     a = logic.get("pricing_assessment", {}) if isinstance(logic, dict) else {}
     q = clean_text(a.get("market_question") or d.get("headline"), 170)
-    non_obvious = clean_text(a.get("most_non_obvious_signal") or d.get("divergence"), 200)
-    takeaway = clean_text(a.get("one_sentence_takeaway") or d.get("macro_chain") or d.get("executive_summary"), 220)
-    watch = clean_text(a.get("next_watch") or "觀察後續數據與政策訊號是否驗證今日主線。", 170)
+    non_obvious = clean_text(a.get("most_non_obvious_signal") or d.get("divergence"), 220)
+    takeaway = clean_text(a.get("one_sentence_takeaway") or d.get("macro_chain") or d.get("executive_summary"), 240)
+    watch = clean_text(a.get("next_watch") or "觀察後續數據與政策訊號是否驗證今日主線。", 180)
+
     return [
-        {"title": "Opening Hook", "target": "top", "narration": f"今天先抓一個問題：{q} 這個問題的重點不是單一數字，而是市場最後把哪一股力量放在第一順位。"},
-        {"title": "Visual Note", "target": "visual", "narration": "先看 Visual Market Note。這張圖要幫我們確認通膨、利率、美元，再到亞洲貨幣與黃金的傳導，是順著走，還是中間被政策、資金流或避險需求修正。"},
-        {"title": "Market Evidence", "target": "market", "narration": f"接著看價格證據。今天最值得追問的不是漲跌本身，而是這個不直覺訊號：{non_obvious}"},
-        {"title": "Narrative Check", "target": "news", "narration": "再看新聞敘事驗證。這一步是確認新聞、政策與資金流，能不能解釋剛剛看到的價格反應，而不是單純補新聞標題。"},
-        {"title": "Closing Takeaway", "target": "bottom", "narration": f"最後收斂成一句話：{takeaway} 下一步要看的是：{watch}"},
+        {
+            "title": "Opening Hook",
+            "target": "top",
+            "narration": f"今天市場表面上有一條主線，但真正值得追問的是：{q} 如果只看 headline，會以為答案很直接；但把價格反應放進來看，最關鍵的是這個不直覺訊號：{non_obvious}",
+        },
+        {
+            "title": "Transmission Setup",
+            "target": "visual",
+            "narration": "照理說，市場會先從通膨預期看起，再傳到利率、美元，最後反映在亞洲貨幣與黃金。但今天不能把這條鏈當成公式，因為政策訊號、資金流向與避險需求，都可能在中間改變傳導方向。",
+        },
+        {
+            "title": "Market Evidence",
+            "target": "market",
+            "narration": f"價格證據的重點不是誰漲誰跌，而是哪一段沒有照劇本走。今天最需要盯住的是：{non_obvious} 這代表主線沒有消失，但在局部市場出現了修正。",
+        },
+        {
+            "title": "Narrative Check",
+            "target": "news",
+            "narration": "新聞與政策訊號要回答的是：這個分歧是雜訊，還是有基本面支撐？如果新聞只支持主線，分歧可能短暫；如果新聞也能解釋資金流，那它就可能成為新的定價線索。",
+        },
+        {
+            "title": "Closing Takeaway",
+            "target": "bottom",
+            "narration": f"今天可以先記住一句話：{takeaway} 接下來要驗證的是：{watch} 也就是看這個修正只是短期反應，還是會變成新的市場主線。",
+        },
     ]
 
 
@@ -290,27 +356,120 @@ def presenter_prompt(logic: Dict[str, Any], payload: Dict[str, Any]) -> str:
     }
     return f"""
 你是 AI Presenter，一位具備千萬訂閱級敘事能力的機構級總經導讀主持人。
-你的任務不是朗讀網頁，也不是重新分析市場，而是根據「每日總經定價邏輯」做 3 分鐘簡報導讀。
 
-風格：有 Hook、有節奏、有問題意識；像 YouTuber 一樣會抓注意力，像總經分析師一樣講邏輯。
-限制：不喊單、不誇大、不創造新聞、不新增數字、不推翻 macro_pricing_logic。
+你的任務不是朗讀網頁，也不是重新分析市場。
+你的任務是根據「每日總經定價邏輯 macro_pricing_logic」，像人類簡報者一樣，帶使用者看懂今天市場真正交易的主線。
 
-請輸出 5 段 JSON 陣列：
+最重要的原則：
+- 你不是在介紹網頁區塊。
+- 你是在帶觀眾理解「今天市場哪裡不直覺」。
+- 每一段都要圍繞 macro_pricing_logic.pricing_assessment.most_non_obvious_signal。
+- 不要平均導覽所有內容；今天只抓一個最值得追問的傳導斷點來說清楚。
+- 每段都要有「問題感」，不是摘要感。
+
+基準總經框架：
+通膨預期 → 利率預期 → 美元指數 → 亞洲貨幣 / 黃金
+
+但這不是公式，不是 A 上升就必然 B 上升。
+你要用「市場預期、資金流向、政策訊號」三者交集來解釋今天市場定價。
+
+口吻：
+- 專業，但要像人類主持人。
+- 有 Hook、有節奏、有問題意識。
+- 可以像 YouTuber 一樣抓注意力，但不能浮誇。
+- 像總經分析師一樣講邏輯，但不能像報告摘要。
+- 不喊單、不誇大、不給投資建議。
+
+硬性限制：
+1. 不可新增 daily_summary 或 pricing_logic 沒有的數字。
+2. 不可創造新聞。
+3. 不可推翻 pricing_logic 的判斷。
+4. 不可使用聳動詞，例如「崩盤、暴漲、史詩級、必看、翻倍」。
+5. 不要說「本頁包含」、「這個區塊是」、「先看 Visual Note」、「再看新聞敘事驗證」這種網頁說明員語氣。
+6. 每段 90～170 字，繁體中文。
+7. 只輸出 JSON，不要 Markdown，不要註解。
+
+敘事硬規則：
+1. Opening Hook 必須從「最不直覺的傳導斷點」開場。
+   - 不要重寫 headline。
+   - 不要直接說今天主線是什麼。
+   - 必須先丟出一個市場問題。
+   - 句型方向：
+     「今天市場表面上很好懂：A 發生，所以 B 跟著走。但真正值得追問的是，為什麼 C 沒有照劇本走？」
+
+2. 每段都要先講「為什麼這一段值得看」，不要只說「看哪一頁」。
+   - 禁止：「先看 Visual Market Note」
+   - 改成：「如果照正常傳導鏈，強勁數據應該先推升通膨預期，再帶動利率與美元；但今天真正要看的，是這條鏈走到哪裡開始出現修正。」
+
+3. 必須先講正常劇本，再講今天偏離劇本的地方。
+   - 正常劇本：通膨預期 / 利率 / 美元 / 亞幣 / 黃金理論上應該如何反應。
+   - 今日偏離：哪個資產、哪個訊號、哪段傳導沒有照常走。
+   - 解釋：是政策、資金流、避險需求，還是區域因素造成修正。
+
+4. Presenter 要像在做一場 3 分鐘簡報。
+   - 第一段：丟矛盾。
+   - 第二段：建立正常傳導劇本。
+   - 第三段：用市場價格指出斷點。
+   - 第四段：用新聞與政策解釋為什麼斷點存在。
+   - 第五段：收斂成一句人類聽得懂的結論與下一個驗證點。
+
+5. 不要把五段寫成五個互不相干的摘要。
+   - 每一段都要接續同一個核心問題。
+   - 例如若核心問題是「強美元下台幣為什麼逆勢」，五段都要圍繞這個問題推進。
+
+6. 不要只說「資金流」三個字。
+   - 若提到資金流，必須說明它是在修正哪一段傳導。
+   - 例：「它不是推翻強美元主線，而是在亞洲貨幣這一段形成局部修正。」
+
+7. Narrative Check 不能寫空話。
+   - 禁止：「確認新聞、政策與資金流能否解釋價格反應」
+   - 必須具體寫出：
+     - 哪個新聞支持主線
+     - 哪個新聞或訊號解釋分歧
+     - 這是推翻主線，還是修正主線
+
+請產生 5 段 JSON 陣列，欄位固定：
 [
   {{"title":"Opening Hook","target":"top","narration":"..."}},
-  {{"title":"Visual Note","target":"visual","narration":"..."}},
+  {{"title":"Transmission Setup","target":"visual","narration":"..."}},
   {{"title":"Market Evidence","target":"market","narration":"..."}},
   {{"title":"Narrative Check","target":"news","narration":"..."}},
   {{"title":"Closing Takeaway","target":"bottom","narration":"..."}}
 ]
-每段 80～150 字。不要 Markdown，不要註解。
 
-任務：
-1. Opening Hook：用 pricing_assessment.market_question 或 most_non_obvious_signal 開場。
-2. Visual Note：說明基準傳導路徑，但提醒市場是多股力量交集，不是機械公式。
-3. Market Evidence：用價格證據檢查哪一段最順或最不直覺。
-4. Narrative Check：說明新聞、政策與資金流如何解釋價格。
-5. Closing Takeaway：收斂一句話與下一個驗證點。
+每段任務：
+
+1. Opening Hook：
+   用 pricing_assessment.most_non_obvious_signal 或 pricing_assessment.market_question 開場。
+   必須指出今天市場「表面上合理，但真正奇怪的是什麼」。
+
+2. Transmission Setup：
+   說明正常總經傳導劇本應該如何走。
+   再指出今天這條鏈在哪裡可能被修正。
+   不要說「先看 Visual Note」。
+
+3. Market Evidence：
+   用 pricing_logic 中的價格與資產反應，指出哪一段傳導順、哪一段不順。
+   必須明確講出「最不直覺的價格反應」。
+
+4. Narrative Check：
+   用 pricing_logic 的 new_information、inflation_expectation、rate_pricing、dollar_pricing、asset_reaction 解釋：
+   - 哪些新聞 / 數據支持主線
+   - 哪些力量形成修正
+   - 這是主線被推翻，還是主線中的局部修正
+
+5. Closing Takeaway：
+   用 pricing_assessment.one_sentence_takeaway 收斂。
+   但不能只是複製原句，要改成自然口語。
+   最後用 pricing_assessment.next_watch 指出下一個驗證點。
+
+輸出品質要求：
+- 每段都必須像人類在講話，不要像 JSON 摘要。
+- 不要使用箭頭符號「->」。
+- 不要逐字複製 macro_chain。
+- 不要寫「這個問題的重點不是單一數字」這種抽象套話。
+- 儘量使用「照理說」、「但今天真正奇怪的是」、「換句話說」、「這代表」這類口語化邏輯銜接。
+- 如果資料不足，請說「這一點還需要後續數據確認」，不要硬補。
 
 daily_summary:
 {json.dumps(compact_daily, ensure_ascii=False, indent=2)}
