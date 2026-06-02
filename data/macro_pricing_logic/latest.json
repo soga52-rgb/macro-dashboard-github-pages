@@ -1,97 +1,111 @@
 {
-  "generated_at": "2026-06-02T15:02:06+08:00",
+  "generated_at": "2026-06-02T15:16:42+08:00",
   "date": "2026-06-01",
   "mode": "macro_pricing_logic_v4",
   "logic": {
     "pricing_context": {
-      "market_was_pricing": "資料不足，暫以今日摘要主線判斷。",
-      "new_information": "美國經濟韌性強化再通膨預期，推升美債殖利率與美元，壓抑非美資產。",
-      "pricing_question": "美國經濟韌性強化再通膨預期，推升美債殖利率與美元，壓抑非美資產。"
+      "market_was_pricing": "美國經濟韌性與再通膨預期",
+      "new_information": "美國5月ISM製造業指數衝上4年新高，反映強勁的AI投資需求；同時油價上行與地緣政治風險並存。",
+      "pricing_question": "強勁的經濟數據與再通膨預期是否會使高利率維持更久，進而徹底壓抑非美資產，以及台幣的逆勢強勢是否能持續作為亞洲貨幣的修正因子？"
     },
     "inflation_expectation": {
       "energy": {
-        "direction": "unclear",
+        "direction": "up",
         "importance": "medium",
-        "evidence": [],
-        "judgment": ""
+        "evidence": [
+          "油價上行與地緣政治風險並未引發避險買盤",
+          "中東地緣政治風險對油價的推升效應及通膨傳導"
+        ],
+        "judgment": "油價呈現上行趨勢，且存在地緣政治推升通膨的潛在傳導風險，但目前市場對利率的敏感度高於此因素。"
       },
       "supply_chain": {
         "direction": "unclear",
         "importance": "low",
         "evidence": [],
-        "judgment": ""
+        "judgment": "daily_summary 未提及供應鏈具體數據，狀況待確認。"
       },
       "price_data": {
-        "direction": "unclear",
-        "importance": "medium",
-        "evidence": [],
-        "judgment": ""
+        "direction": "up",
+        "importance": "high",
+        "evidence": [
+          "美國經濟韌性強化再通膨預期"
+        ],
+        "judgment": "經濟數據強勁重新點燃市場的再通膨預期。"
       },
       "demand": {
-        "direction": "unclear",
-        "importance": "medium",
-        "evidence": [],
-        "judgment": ""
+        "direction": "up",
+        "importance": "high",
+        "evidence": [
+          "美國5月ISM製造業指數衝上4年新高，反映AI投資需求強勁"
+        ],
+        "judgment": "AI投資需求極為強勁，直接拉動製造業需求創下四年新高。"
       },
       "labor_market": {
         "direction": "unclear",
         "importance": "medium",
-        "evidence": [],
-        "judgment": ""
+        "evidence": [
+          "美國後續就業數據是否進一步強化經濟過熱預期"
+        ],
+        "judgment": "就業市場狀況為後續觀察重點，目前資訊不足，待後續數據確認。"
       },
       "policy_expectation": {
-        "direction": "unclear",
-        "importance": "medium",
-        "evidence": [],
-        "judgment": ""
+        "direction": "up",
+        "importance": "high",
+        "evidence": [
+          "經濟韌性強化高利率維持更久預期",
+          "美債殖利率上行與美元走強，顯示市場交易經濟韌性與高利率環境"
+        ],
+        "judgment": "強勁的經濟與需求數據，顯著強化了聯準會將維持高利率更久（Higher for longer）的政策預期。"
       },
       "summary": {
-        "overall_direction": "unclear",
-        "strength": "weak",
-        "dominant_force": "",
-        "offsetting_force": "",
-        "judgment": "市場正處於「再通膨定價」體制，ISM數據強勁引發利率上行壓力。儘管油價與地緣風險提供避險背景，但高利率對金價的壓制力顯著，且台幣的逆勢表現顯示區域資金流動存在結構性分歧。"
+        "overall_direction": "up",
+        "strength": "strong",
+        "dominant_force": "美國5月ISM製造業指數創四年新高所反映的AI強勁需求與再通膨預期",
+        "offsetting_force": "無明顯抵銷力量，油價與地緣風險僅作為背景，未削弱再通膨主線",
+        "judgment": "實體經濟需求強勁，主導了再通膨與高利率預期的全面回升。"
       }
     },
     "rate_pricing": {
-      "direction": "unclear",
-      "inflation_link": "",
+      "direction": "up",
+      "inflation_link": "同向。再通膨預期與強勁的經濟數據直接推升美債殖利率。",
       "non_inflation_drivers": {
-        "fed_policy": "",
-        "treasury_supply_demand": "",
-        "safe_haven_bond_buying": "",
-        "growth_concern": "",
-        "term_premium": ""
+        "fed_policy": "強化高利率維持更久的預期，推升殖利率。",
+        "treasury_supply_demand": "unclear / 待確認",
+        "safe_haven_bond_buying": "地緣政治風險並未引發避險買債，避險需求被高利率壓制。",
+        "growth_concern": "無成長擔憂，市場反而關注經濟韌性與過熱風險。",
+        "term_premium": "unclear / 待確認"
       },
-      "dominant_force": "",
-      "judgment": ""
+      "dominant_force": "經濟韌性強化高利率維持更久預期，推升美國10年期公債殖利率至4.475%。",
+      "judgment": "美債殖利率上行主要由經濟基本面與政策預期驅動，避險買盤並未對債市形成支撐。"
     },
     "dollar_pricing": {
-      "direction": "unclear",
-      "rate_link": "",
-      "other_drivers": [],
-      "judgment": ""
+      "direction": "up",
+      "rate_link": "正相關。美債殖利率上行帶來的利差優勢支撐美元走強。",
+      "other_drivers": [
+        "經濟韌性交易"
+      ],
+      "judgment": "美元指數（DXY）維持在99.181強勢格局，主因美債殖利率上揚與美國經濟相對韌性。"
     },
     "asset_reaction": {
       "asia_fx": {
-        "twd": "",
-        "jpy": "",
-        "krw": ""
+        "twd": "逆勢升值。顯示區域匯市存在結構性支撐，與日韓貨幣走勢脫鉤，受特定產業基本面或資金流動獨立定價影響。",
+        "jpy": "承壓走低。受強美元壓抑，日圓匯率是否跌破關鍵心理關卡引發亞洲貨幣競貶為後續看點。",
+        "krw": "承壓走低。受強美元壓抑，與日圓同步走弱。"
       },
       "gold": {
-        "rate_pressure": "",
-        "safe_haven_support": "",
-        "dominant_force": "",
-        "judgment": ""
+        "rate_pressure": "高。高利率環境削弱無息資產吸引力，金價下跌至4514。",
+        "safe_haven_support": "低。儘管有地緣政治風險與油價上行，但避險買盤未顯現，利率敏感度高於避險需求。",
+        "dominant_force": "高利率環境（美債殖利率上行）對無息資產的壓制力。",
+        "judgment": "金價下跌，顯示當前市場對利率的敏感度顯著高於地緣政治的避險需求。"
       }
     },
     "pricing_assessment": {
-      "dominant_market_force": "美國經濟韌性強化再通膨預期，推升美債殖利率與美元，壓抑非美資產。",
-      "offsetting_force": "",
-      "most_non_obvious_signal": "今日核心背離在於台幣與日韓貨幣的走勢分歧。主線為強美元導致日韓貨幣承壓，但台幣逆勢升值，顯示市場對特定產業基本面或資金流動存在獨立定價，屬於強美元傳導鏈中的修正因子。",
-      "market_question": "美國經濟韌性強化再通膨預期，推升美債殖利率與美元，壓抑非美資產。",
-      "one_sentence_takeaway": "美國ISM製造業數據強勁(再通膨預期) -> 美國10年期公債殖利率上行 -> 美元指數走強 -> 壓抑金價與日韓貨幣，台幣則因特定資金流動呈現修正因子特徵。",
-      "next_watch": "觀察今日摘要列出的後續風險與數據。"
+      "dominant_market_force": "美國經濟韌性（ISM製造業強勁）觸發的再通膨與高利率預期。",
+      "offsetting_force": "台幣因特定產業資金流入而逆勢升值，成為強美元傳導鏈中的修正因子。",
+      "most_non_obvious_signal": "台幣與日韓貨幣走勢分歧。在強美元與美債殖利率上行背景下，台幣逆勢升值，顯示特定產業基本面（如AI投資需求）帶來的資金流動打破了傳統的亞洲貨幣集體走弱規律。",
+      "market_question": "在強勁經濟數據與再通膨預期下，高利率環境將維持多久？台幣的結構性強勢能否持續抵抗強美元的壓力？",
+      "one_sentence_takeaway": "強勁ISM數據啟動再通膨定價，推升美債殖利率與美元並壓制金價，但台幣逆勢走強揭示了AI浪潮下亞洲貨幣的結構性分歧。",
+      "next_watch": "美國後續就業數據、中東地緣政治對油價的傳導，以及日圓是否跌破關鍵心理關卡。"
     }
   }
 }
