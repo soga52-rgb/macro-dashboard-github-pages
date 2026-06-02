@@ -1,0 +1,32 @@
+{
+  "generated_at": "2026-06-02T15:02:06+08:00",
+  "date": "2026-06-01",
+  "mode": "macro_pricing_logic_presenter_v4",
+  "sections": [
+    {
+      "title": "Opening Hook",
+      "target": "top",
+      "narration": "今天先抓一個問題：美國經濟韌性強化再通膨預期，推升美債殖利率與美元，壓抑非美資產。 這個問題的重點不是單一數字，而是市場最後把哪一股力量放在第一順位。"
+    },
+    {
+      "title": "Visual Note",
+      "target": "visual",
+      "narration": "先看 Visual Market Note。這張圖要幫我們確認通膨、利率、美元，再到亞洲貨幣與黃金的傳導，是順著走，還是中間被政策、資金流或避險需求修正。"
+    },
+    {
+      "title": "Market Evidence",
+      "target": "market",
+      "narration": "接著看價格證據。今天最值得追問的不是漲跌本身，而是這個不直覺訊號：今日核心背離在於台幣與日韓貨幣的走勢分歧。主線為強美元導致日韓貨幣承壓，但台幣逆勢升值，顯示市場對特定產業基本面或資金流動存在獨立定價，屬於強美元傳導鏈中的修正因子。"
+    },
+    {
+      "title": "Narrative Check",
+      "target": "news",
+      "narration": "再看新聞敘事驗證。這一步是確認新聞、政策與資金流，能不能解釋剛剛看到的價格反應，而不是單純補新聞標題。"
+    },
+    {
+      "title": "Closing Takeaway",
+      "target": "bottom",
+      "narration": "最後收斂成一句話：美國ISM製造業數據強勁(再通膨預期) -> 美國10年期公債殖利率上行 -> 美元指數走強 -> 壓抑金價與日韓貨幣，台幣則因特定資金流動呈現修正因子特徵。 下一步要看的是：觀察今日摘要列出的後續風險與數據。"
+    }
+  ]
+}

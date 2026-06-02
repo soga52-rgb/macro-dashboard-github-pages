@@ -1,0 +1,97 @@
+{
+  "generated_at": "2026-06-02T15:02:06+08:00",
+  "date": "2026-06-01",
+  "mode": "macro_pricing_logic_v4",
+  "logic": {
+    "pricing_context": {
+      "market_was_pricing": "資料不足，暫以今日摘要主線判斷。",
+      "new_information": "美國經濟韌性強化再通膨預期，推升美債殖利率與美元，壓抑非美資產。",
+      "pricing_question": "美國經濟韌性強化再通膨預期，推升美債殖利率與美元，壓抑非美資產。"
+    },
+    "inflation_expectation": {
+      "energy": {
+        "direction": "unclear",
+        "importance": "medium",
+        "evidence": [],
+        "judgment": ""
+      },
+      "supply_chain": {
+        "direction": "unclear",
+        "importance": "low",
+        "evidence": [],
+        "judgment": ""
+      },
+      "price_data": {
+        "direction": "unclear",
+        "importance": "medium",
+        "evidence": [],
+        "judgment": ""
+      },
+      "demand": {
+        "direction": "unclear",
+        "importance": "medium",
+        "evidence": [],
+        "judgment": ""
+      },
+      "labor_market": {
+        "direction": "unclear",
+        "importance": "medium",
+        "evidence": [],
+        "judgment": ""
+      },
+      "policy_expectation": {
+        "direction": "unclear",
+        "importance": "medium",
+        "evidence": [],
+        "judgment": ""
+      },
+      "summary": {
+        "overall_direction": "unclear",
+        "strength": "weak",
+        "dominant_force": "",
+        "offsetting_force": "",
+        "judgment": "市場正處於「再通膨定價」體制，ISM數據強勁引發利率上行壓力。儘管油價與地緣風險提供避險背景，但高利率對金價的壓制力顯著，且台幣的逆勢表現顯示區域資金流動存在結構性分歧。"
+      }
+    },
+    "rate_pricing": {
+      "direction": "unclear",
+      "inflation_link": "",
+      "non_inflation_drivers": {
+        "fed_policy": "",
+        "treasury_supply_demand": "",
+        "safe_haven_bond_buying": "",
+        "growth_concern": "",
+        "term_premium": ""
+      },
+      "dominant_force": "",
+      "judgment": ""
+    },
+    "dollar_pricing": {
+      "direction": "unclear",
+      "rate_link": "",
+      "other_drivers": [],
+      "judgment": ""
+    },
+    "asset_reaction": {
+      "asia_fx": {
+        "twd": "",
+        "jpy": "",
+        "krw": ""
+      },
+      "gold": {
+        "rate_pressure": "",
+        "safe_haven_support": "",
+        "dominant_force": "",
+        "judgment": ""
+      }
+    },
+    "pricing_assessment": {
+      "dominant_market_force": "美國經濟韌性強化再通膨預期，推升美債殖利率與美元，壓抑非美資產。",
+      "offsetting_force": "",
+      "most_non_obvious_signal": "今日核心背離在於台幣與日韓貨幣的走勢分歧。主線為強美元導致日韓貨幣承壓，但台幣逆勢升值，顯示市場對特定產業基本面或資金流動存在獨立定價，屬於強美元傳導鏈中的修正因子。",
+      "market_question": "美國經濟韌性強化再通膨預期，推升美債殖利率與美元，壓抑非美資產。",
+      "one_sentence_takeaway": "美國ISM製造業數據強勁(再通膨預期) -> 美國10年期公債殖利率上行 -> 美元指數走強 -> 壓抑金價與日韓貨幣，台幣則因特定資金流動呈現修正因子特徵。",
+      "next_watch": "觀察今日摘要列出的後續風險與數據。"
+    }
+  }
+}
