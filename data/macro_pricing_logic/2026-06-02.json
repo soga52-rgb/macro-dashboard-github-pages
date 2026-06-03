@@ -1,12 +1,34 @@
 {
-  "generated_at": "2026-06-03T12:32:35+08:00",
+  "generated_at": "2026-06-03T15:06:19+08:00",
   "date": "2026-06-02",
   "mode": "macro_pricing_logic_v4",
   "logic": {
     "pricing_context": {
-      "market_was_pricing": "先前市場主要定價Fed鷹派言論與通膨擔憂。",
-      "new_information": "Fed官員哈瑪克警告升息但市場反應冷淡；美伊談判不確定性推升避險情緒；油價上行反映能源壓力但殖利率不升反降。",
-      "pricing_question": "在通膨壓力（油價上漲）與Fed官員釋放鷹派訊號之際，市場為何選擇忽視通膨，轉向定價經濟成長放緩與地緣政治避險？"
+      "market_was_pricing": "聯準會官員釋放鷹派升息警告，且油價上行帶來潛在通膨與升息壓力。",
+      "new_information": "美伊談判不確定性顯著推升地緣政治風險，市場對經濟成長放緩的擔憂壓過通膨與升息預期。",
+      "pricing_question": "為何在聯準會官員警告升息且油價上漲的背景下，美債殖利率不升反降，而美元與黃金卻能同步逆勢暴漲？"
+    },
+    "input_material_mapping": {
+      "inflation_materials": [
+        "Fed官員哈瑪克警告升息",
+        "油價上行反映能源通膨壓力"
+      ],
+      "rate_materials": [
+        "Fed官員哈瑪克警告升息，但美債殖利率反而下行",
+        "US10Y殖利率下行至4.455，反映市場對經濟成長放緩的預期壓過通膨擔憂"
+      ],
+      "dollar_materials": [
+        "美伊談判不確定性推升避險需求，支撐美元",
+        "DXY上行至99.224"
+      ],
+      "gold_materials": [
+        "美伊談判不確定性推升避險需求，支撐黃金",
+        "Gold上行至4518，避險溢價與強美元共存"
+      ],
+      "asia_fx_materials": [
+        "亞洲貨幣在強勢美元壓力下普遍承壓"
+      ],
+      "mapping_summary": "市場定價重心已由傳統的通膨與利差邏輯，轉向地緣政治風險溢價與經濟成長放緩擔憂，導致傳統資產傳導鏈條出現分歧與重組。"
     },
     "inflation_expectation": {
       "energy": {
@@ -15,94 +37,138 @@
         "evidence": [
           "油價上行反映能源通膨壓力"
         ],
-        "judgment": "油價雖然上行，但其對通膨預期的推升作用被市場對經濟成長放緩的擔憂所壓制，未能傳導至債市殖利率。"
+        "judgment": "油價上漲帶來潛在通膨壓力，但在今日定價體制中未被債市視為主要矛盾。"
       },
       "supply_chain": {
         "direction": "unclear",
         "importance": "low",
         "evidence": [],
-        "judgment": "今日資訊未提及供應鏈相關變動。"
+        "judgment": "今日無相關供應鏈數據或新聞提及。"
       },
       "price_data": {
         "direction": "unclear",
         "importance": "low",
         "evidence": [],
-        "judgment": "今日資訊未提及具體價格數據。"
+        "judgment": "今日無具體通膨數據公布。"
       },
       "demand": {
         "direction": "down",
         "importance": "high",
         "evidence": [
-          "美債殖利率下行反映成長擔憂",
           "市場對經濟成長放緩的預期壓過通膨擔憂"
         ],
-        "judgment": "市場對經濟成長放緩的預期顯著升溫，成為主導今日資產定價的核心修正因子。"
+        "judgment": "市場預期經濟成長動能放緩，壓制整體需求與通膨預期。"
       },
       "labor_market": {
         "direction": "unclear",
-        "importance": "low",
+        "importance": "medium",
         "evidence": [
           "後續就業數據是否證實經濟成長動能惡化"
         ],
-        "judgment": "勞動市場狀況尚待後續就業數據進一步確認。"
+        "judgment": "就業市場狀況尚待後續數據驗證。"
       },
       "policy_expectation": {
-        "direction": "mixed",
+        "direction": "up",
         "importance": "medium",
         "evidence": [
-          "Fed官員哈瑪克警告升息，但美債殖利率反而下行"
+          "Fed官員哈瑪克警告升息"
         ],
-        "judgment": "儘管政策官員釋放鷹派升息訊號，但市場反應冷淡，顯示緊縮政策預期對市場定價的邊際影響力已減弱。"
+        "judgment": "官方政策態度偏鷹，但市場對此反應冷淡，顯示政策預期與市場實質定價出現脫鉤。"
       },
       "summary": {
         "overall_direction": "mixed",
-        "strength": "weak",
-        "dominant_force": "經濟成長放緩預期",
-        "offsetting_force": "油價上行帶來的能源通膨壓力、Fed官員鷹派言論",
-        "judgment": "通膨預期本身雖有油價支撐，但其作為定價主線的地位已被市場對成長降溫的修正因子完全抵銷。"
+        "strength": "medium",
+        "dominant_force": "經濟成長放緩擔憂壓過能源通膨壓力",
+        "offsetting_force": "油價上行與Fed官員鷹派言論",
+        "judgment": "通膨預期本身因油價與官員言論而有上行支撐，但已被更強烈的經濟成長放緩擔憂所掩蓋，導致通膨預期對今日市場的實質影響力下降。"
       }
     },
     "rate_pricing": {
       "direction": "down",
-      "inflation_link": "不同向。儘管油價上行反映能源通膨壓力，美債殖利率卻下行，顯示利率定價已與通膨預期脫鉤。",
-      "non_inflation_drivers": {
-        "fed_policy": "Fed官員哈瑪克警告升息，但市場反應冷淡，未能阻止殖利率下行。",
-        "treasury_supply_demand": "unclear",
-        "safe_haven_bond_buying": "美伊談判不確定性引發避險資金流入美債，壓低殖利率。",
-        "growth_concern": "市場對經濟成長放緩的預期壓過通膨擔憂，是殖利率下行的主因。",
-        "term_premium": "unclear"
-      },
-      "dominant_force": "經濟成長放緩擔憂與地緣政治避險買盤",
-      "judgment": "美債殖利率（US10Y）下行至 4.455%，主因在於市場對成長放緩的擔憂以及美伊談判不確定性引發的避險買盤，完全壓過了Fed鷹派言論與油價上行的推升力量。"
+      "link_with_inflation_expectation": "不同向。雖然油價上行且Fed官員釋放鷹派訊號，但美債殖利率並未上升，反而因成長擔憂而下行。",
+      "fed_policy_signal": "Fed官員哈瑪克警告升息，屬鷹派訊號，但市場對此反應冷淡。",
+      "treasury_supply_demand": "unclear",
+      "term_premium": "unclear",
+      "safe_haven_bond_buying": "美伊談判不確定性引發的地緣政治風險，促使避險資金流入美債，推低殖利率。",
+      "growth_concern_or_cut_expectation": "市場對經濟成長放緩的預期轉強，壓過通膨與升息擔憂，成為主導殖利率下行的核心因子。",
+      "dominant_force": "經濟成長放緩擔憂與避險買債需求",
+      "judgment": "美債殖利率下行至4.455%，主因市場交易重心轉向成長風險，避險與成長擔憂完全壓過了Fed鷹派言論與油價上漲的通膨效應。"
     },
     "dollar_pricing": {
       "direction": "up",
-      "rate_link": "不同向。通常美債殖利率下行利空美元，但今日美元指數（DXY）卻上漲至 99.224，顯示利率利差已非主導力量。",
-      "other_drivers": [
-        "美伊談判不確定性推升避險需求"
-      ],
-      "judgment": "美元今日走強並非由利差驅動，而是受美伊談判不確定性帶來的地緣政治避險需求支撐。"
+      "link_with_rates": "不同向。美債殖利率下行通常利空美元，但美元指數卻逆勢上漲至99.224。",
+      "safe_haven_dollar": "美伊談判不確定性引發強烈的地緣政治避險需求，成為美元走強的主因。",
+      "liquidity_demand": "unclear",
+      "other_currency_weakness": "unclear",
+      "us_relative_growth_or_policy": "儘管美國自身有成長擔憂，但地緣政治避險需求壓倒了利差與成長因素。",
+      "dominant_force": "地緣政治避險需求",
+      "judgment": "美元與利率走勢背離，顯示利差交易讓位於避險交易。美伊談判的不確定性推升了美元的避險溢價。"
     },
-    "asset_reaction": {
-      "asia_fx": {
-        "twd": "unclear / 隨亞洲貨幣在強勢美元壓力下普遍承壓",
-        "jpy": "unclear / 隨亞洲貨幣在強勢美元壓力下普遍承壓",
-        "krw": "unclear / 隨亞洲貨幣在強勢美元壓力下普遍承壓"
+    "gold_pricing": {
+      "direction": "up",
+      "rate_or_real_rate_pressure": "美債殖利率下行降低了持有黃金的機會成本，利多黃金。",
+      "dollar_effect": "美元指數上漲通常利空黃金，但今日黃金與美元同步走強，顯示美元的壓制作用被更強烈的避險需求所抵銷。",
+      "safe_haven_demand": "美伊談判不確定性帶來的地緣政治避險需求，是推升金價的核心驅動力。",
+      "central_bank_buying": "unclear",
+      "geopolitical_risk": "美伊談判不確定性顯著推升地緣政治風險溢價。",
+      "dominant_force": "地緣政治避險需求與美債殖利率下行",
+      "judgment": "黃金上漲至4518，呈現與強勢美元共存的罕見格局，主因地緣政治風險溢價與殖利率下行形成共振，完全抵銷了強勢美元的負面影響。"
+    },
+    "asia_fx_pricing": {
+      "twd": {
+        "reaction": "承壓貶值",
+        "consistent_with_dollar_pressure": "yes",
+        "local_correction_factor": "待確認",
+        "judgment": "台幣隨整體亞幣在強勢美元壓力下承壓，本地修正因子資料不足，尚待確認。"
       },
-      "gold": {
-        "rate_pressure": "美債殖利率下行（US10Y降至4.455）減輕了黃金的無息資產持有成本壓力。",
-        "safe_haven_support": "美伊談判不確定性推升避險溢價，強烈支撐金價。",
-        "dominant_force": "地緣政治避險需求",
-        "judgment": "金價上漲至 4518，展現強勁的避險溢價，成功克服了強勢美元的壓制效應，與美元呈現同步走強的罕見格局。"
+      "jpy": {
+        "reaction": "承壓貶值",
+        "consistent_with_dollar_pressure": "yes",
+        "local_correction_factor": "待確認",
+        "judgment": "日圓隨整體亞幣在強勢美元壓力下承壓，避險屬性並未使其脫離美元強勢的壓制，具體本地因子待確認。"
+      },
+      "krw": {
+        "reaction": "承壓貶值",
+        "consistent_with_dollar_pressure": "yes",
+        "local_correction_factor": "待確認",
+        "judgment": "韓圜隨整體亞幣在強勢美元壓力下承壓，具體本地因子待確認。"
+      }
+    },
+    "market_contradiction": {
+      "baseline_expectation": "正常基準傳導下，Fed官員釋放鷹派升息警告且油價上行，美債殖利率應上升；且殖利率下行時，美元指數應因利差縮窄而走弱。",
+      "actual_reaction": "美債殖利率不升反降（US10Y下行至4.455），而美元指數與黃金卻同步逆勢上漲。",
+      "most_non_obvious_link": "美債殖利率下行（反映成長擔憂）與美元指數上行（反映避險需求）同時發生，打破了傳統的利差定價邏輯。",
+      "possible_explanation": "美伊談判不確定性引發的強烈地緣政治避險需求，同時推升了美元與黃金；而市場對經濟成長放緩的擔憂，壓過了Fed鷹派言論與油價上漲的通膨效應，主導了債市定價。",
+      "is_correction_or_new_mainline": "new_mainline_signal",
+      "how_to_integrate_into_main_theme": "將市場定價邏輯從「通膨-利率-利差」框架切換至「成長擔憂-地緣避險」框架，解釋為何美債殖利率下行（成長降溫修正因子）能與美元、黃金同步走強（避險主線）並存。",
+      "presenter_story_angle": {
+        "opening_question": "為什麼在聯準會官員警告升息、油價上漲的背景下，美債殖利率不升反降，而美元和黃金竟然還能同步暴漲？",
+        "normal_script": "按照常理，Fed鷹派發言加上油價上漲，應該推升美債殖利率，進而支撐美元、壓抑黃金。",
+        "where_it_breaks": "但今天這個邏輯完全失效：10年期美債殖利率跌到4.455%，而美元指數和黃金卻攜手大漲，黃金甚至衝上4518歷史高位。",
+        "why_it_matters": "這意味著市場的定價主線已經徹底切換。投資人不再關心通膨和升息，而是把所有籌碼押在美伊談判不確定性帶來的地緣政治避險，以及對經濟成長放緩的極度擔憂上。",
+        "next_watch": "接下來必須密切關注美伊談判進展與後續就業數據。若地緣風險緩解或就業數據並未惡化，這種避險共振的異常定價將會迅速回吐。"
       }
     },
     "pricing_assessment": {
-      "dominant_market_force": "地緣政治風險（美伊談判不確定性）與經濟成長放緩擔憂",
-      "offsetting_force": "Fed官員鷹派言論、油價上行",
-      "most_non_obvious_signal": "美債殖利率下行（通常利空美元）與美元、黃金同步走強的「避險共振」現象。這顯示市場已脫離傳統利率利差定價，轉由地緣政治避險溢價主導。",
-      "market_question": "當美伊談判不確定性消除，或後續就業數據公布時，避險溢價是否會迅速回吐，導致美元與黃金同步回檔？",
-      "one_sentence_takeaway": "市場已進入避險主導體制，成長擔憂壓低殖利率，而地緣政治風險則推升美元與黃金同步走強。",
-      "next_watch": "後續就業數據是否證實經濟成長動能惡化、美伊談判進展，以及美元指數技術位表現。"
+      "dominant_market_force": "美伊談判不確定性引發的地緣政治避險需求，以及市場對經濟成長放緩的擔憂。",
+      "offsetting_force": "Fed官員的鷹派升息警告與油價上行帶來的通膨壓力。",
+      "most_non_obvious_signal": "美元與黃金同步走強，且與美債殖利率下行並存，顯示利差邏輯被避險與成長邏輯完全取代。",
+      "market_question": "若未來就業數據證實經濟並未惡化，且美伊談判意外達成和解，目前由避險溢價支撐的美元與黃金是否會面臨劇烈修正？",
+      "one_sentence_takeaway": "今日市場已進入避險主導體制，成長擔憂壓低殖利率，而地緣風險推升美元與黃金共振走強。",
+      "next_watch": "美伊談判進展及即將公布的就業數據。"
+    },
+    "asset_reaction": {
+      "asia_fx": {
+        "twd": "",
+        "jpy": "",
+        "krw": ""
+      },
+      "gold": {
+        "rate_pressure": "",
+        "safe_haven_support": "",
+        "dominant_force": "",
+        "judgment": ""
+      }
     }
   }
 }
