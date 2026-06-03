@@ -252,22 +252,146 @@ def pricing_prompt(payload: Dict[str, Any]) -> str:
     return f"""
 你是機構級總經策略分析師。請根據 daily_summary 產生「每日總經定價邏輯」。
 
-核心觀念：
+本任務只做分析層，不寫導讀稿。
+後續 AI Presenter 會讀取你的分析結果，所以你必須把市場判斷拆清楚，不要只輸出 headline 摘要。
+
+核心原則：
 - 總經不是數學公式，不是 A 上升就必然 B 上升。
-- 你要用「市場預期、資金流向、政策訊號」三者交集來判斷今天市場最後在定價什麼。
-- 固定基準框架是：通膨預期 → 利率預期 → 美元指數 → 亞洲貨幣 / 黃金。
-- 但這只是基準路徑，不是鐵律。每一段都可能被其他力量修正或抵銷。
+- 固定基準檢查路徑是：通膨預期 → 利率預期 → 美元指數 → 亞洲貨幣 / 黃金。
+- 這只是基準路徑，不是鐵律；市場預期、資金流向、政策訊號會共同決定最後定價。
+- 每一層都必須先看 daily_summary 提供的新聞、價格與市場訊號，再判斷 up / down / mixed / unclear，不得預設方向。
+- 市場矛盾不是錯誤；若價格與基準傳導不一致，請保留矛盾，並解釋它是修正因子、抵銷力量、資料不足，或新主線早期訊號。
+- 不可新增 daily_summary 沒有的數字。
+- 不可創造新聞。
+- 不可給投資建議。
+- 資料不足請寫 unclear / 待確認。
+- 請只輸出 JSON，不要 Markdown，不要註解。
 
-限制：不可新增 daily_summary 沒有的數字；不可創造新聞；不可給投資建議；資料不足就寫 unclear / 待確認；只輸出 JSON。
+分析順序必須固定：
 
-請拆解通膨預期通道：
-energy、supply_chain、price_data、demand、labor_market、policy_expectation。
-再判斷利率是否跟通膨同向；若不同向，檢查 Fed 政策、公債供需、避險買債、成長擔憂、期限溢價。
-最後檢查美元、亞幣、黃金反應，找出最不直覺的市場訊號，作為 AI Presenter 開場。
+一、新聞與市場素材盤點
+請先整理 daily_summary 中可用的新聞、政策訊號與市場價格反應。
+本段只歸類，不直接下今日主線結論。
+
+請分成：
+1. 通膨相關素材：
+   油價、能源、CPI / PPI / PCE、PMI / NMI、零售銷售、就業、Fed 通膨說法、地緣政治。
+2. 利率相關素材：
+   Fed 政策、公債供需、期限溢價、避險買債、成長擔憂、降息 / 升息預期變化。
+3. 美元相關素材：
+   利差、避險美元、美元流動性需求、其他貨幣自身弱點、美國相對經濟韌性。
+4. 黃金相關素材：
+   利率 / 實質利率、美元方向、避險需求、央行買盤、地緣政治。
+5. 亞洲貨幣相關素材：
+   美元壓力、本地資金流、央行政策、出口 / 科技產業、區域風險。
+
+二、通膨預期形成
+請先判斷今日通膨預期如何形成。
+CPI / PPI / PCE、油價、PMI / NMI、就業與 Fed 通膨說法，應先進入本段，不可直接跳去解釋利率。
+
+請檢查：
+- energy：油價、OPEC、EIA、IEA、頁岩油、戰略儲備、荷姆茲海峽、戰爭供給風險。
+- supply_chain：運價、原物料、制裁、港口、航道、供應瓶頸。
+- price_data：CPI、PPI、PCE、核心 PCE、物價分項。
+- demand：PMI、NMI、零售銷售、消費信心、企業訂單。
+- labor_market：非農、ADP、初領失業金、續領失業金、薪資成長、聘僱或裁員新聞。
+- policy_expectation：Fed 談話、通膨預期調查、關稅、財政刺激、政策不確定性。
+
+請判斷：
+- 哪些通道推升通膨預期？
+- 哪些通道緩解或抵銷通膨預期？
+- 今日通膨預期是 up / down / mixed / unclear？
+- 強度是 strong / medium / weak？
+
+三、利率定價
+請承接第二段「通膨預期形成」的結論，分析今日利率偏強、偏弱或分歧的來源。
+
+請先回答：
+- 利率是否與通膨預期同向？
+- 如果同向，是通膨預期如何傳導到利率？
+- 如果不同向，是不是利率自身因子主導？
+
+利率自身因子至少檢查：
+1. Fed 政策訊號
+2. 公債供需 / 長債賣壓
+3. 期限溢價
+4. 避險買債需求
+5. 成長擔憂或降息預期變化
+
+注意：
+- CPI / PPI / PCE 只能作為第二段通膨預期判斷的背景，不應在本段重新獨立判斷通膨方向。
+- 不可只寫「Fed 偏鷹」或「市場避險」，必須說明具體內容。
+- 不得預設利率一定偏強。
+- 若利率方向 mixed / unclear，請說明是哪幾股力量訊號交錯。
+
+四、美元定價
+請承接第三段「利率定價」，分析美元。
+
+請回答：
+- 美元是否與利率方向同向？
+- 若同向，是利差 / 高利率預期如何影響美元？
+- 若不同向，是否受到避險美元、美元流動性需求、其他貨幣自身弱點或美國相對經濟韌性修正？
+- 不可預設美元一定受高利率支撐。
+- 若 mixed / unclear，請說明是哪幾股力量訊號交錯。
+
+五、黃金定價
+請承接第三段「利率定價」與第四段「美元定價」，分析黃金。
+
+請檢查：
+1. 高利率 / 實質利率壓力
+2. 美元方向
+3. 避險需求
+4. 央行買盤
+5. 地緣政治
+
+請回答：
+- 黃金主要受哪一股力量主導？
+- 若黃金與利率 / 美元不同向，是哪個因素修正？
+- 不可預設黃金一定受高利率壓抑，也不可預設一定受避險推升。
+
+六、亞洲貨幣：台幣、日圓、韓圜
+請承接第四段「美元定價」，分別分析台幣、日圓、韓圜，不可只寫「亞幣」。
+
+請回答：
+- 台幣是否與美元壓力同向？若不同向，是本地資金流、央行政策、出口 / 科技產業、區域風險或其他因素修正？
+- 日圓是否與美元壓力同向？若不同向，是日本自身政策、利差、避險需求或其他因素修正？
+- 韓圜是否與美元壓力同向？若不同向，是韓國出口、股市資金、區域風險或其他因素修正？
+- 若資料不足，請標示待確認。
+
+七、市場矛盾與修正因子
+請根據第二段到第六段，找出今日最值得追問的市場矛盾。
+
+請回答：
+- 正常基準傳導劇本應該怎麼走？
+- 今日實際市場反應哪一段最不直覺？
+- 這個矛盾是修正因子、抵銷力量、資料不足，還是新主線早期訊號？
+- 它如何嵌入今日主線，避免敘事前後自我打架？
+- AI Presenter 應該用哪個問題開場？
+
+八、今日主線與下一個驗證點
+請根據前面分析，收斂今日主線。
+
+請回答：
+- 今日市場最後最主導的定價力量是什麼？
+- 主要抵銷或修正力量是什麼？
+- 今日真正要記住的一句話是什麼？
+- 下一個要觀察什麼來驗證？
 
 請輸出固定 JSON：
 {{
-  "pricing_context": {{"market_was_pricing":"", "new_information":"", "pricing_question":""}},
+  "pricing_context": {{
+    "market_was_pricing": "",
+    "new_information": "",
+    "pricing_question": ""
+  }},
+  "input_material_mapping": {{
+    "inflation_materials": [],
+    "rate_materials": [],
+    "dollar_materials": [],
+    "gold_materials": [],
+    "asia_fx_materials": [],
+    "mapping_summary": ""
+  }},
   "inflation_expectation": {{
     "energy": {{"direction":"up / down / mixed / unclear", "importance":"high / medium / low", "evidence":[], "judgment":""}},
     "supply_chain": {{"direction":"up / down / mixed / unclear", "importance":"high / medium / low", "evidence":[], "judgment":""}},
@@ -275,17 +399,79 @@ energy、supply_chain、price_data、demand、labor_market、policy_expectation�
     "demand": {{"direction":"up / down / mixed / unclear", "importance":"high / medium / low", "evidence":[], "judgment":""}},
     "labor_market": {{"direction":"up / down / mixed / unclear", "importance":"high / medium / low", "evidence":[], "judgment":""}},
     "policy_expectation": {{"direction":"up / down / mixed / unclear", "importance":"high / medium / low", "evidence":[], "judgment":""}},
-    "summary": {{"overall_direction":"up / down / mixed / unclear", "strength":"strong / medium / weak", "dominant_force":"", "offsetting_force":"", "judgment":""}}
+    "summary": {{
+      "overall_direction":"up / down / mixed / unclear",
+      "strength":"strong / medium / weak",
+      "dominant_force":"",
+      "offsetting_force":"",
+      "judgment":""
+    }}
   }},
-  "rate_pricing": {{"direction":"up / down / mixed / unclear", "inflation_link":"", "non_inflation_drivers":{{"fed_policy":"", "treasury_supply_demand":"", "safe_haven_bond_buying":"", "growth_concern":"", "term_premium":""}}, "dominant_force":"", "judgment":""}},
-  "dollar_pricing": {{"direction":"up / down / mixed / unclear", "rate_link":"", "other_drivers":[], "judgment":""}},
-  "asset_reaction": {{"asia_fx":{{"twd":"", "jpy":"", "krw":""}}, "gold":{{"rate_pressure":"", "safe_haven_support":"", "dominant_force":"", "judgment":""}}}},
-  "pricing_assessment": {{"dominant_market_force":"", "offsetting_force":"", "most_non_obvious_signal":"", "market_question":"", "one_sentence_takeaway":"", "next_watch":""}}
+  "rate_pricing": {{
+    "direction":"up / down / mixed / unclear",
+    "link_with_inflation_expectation":"",
+    "fed_policy_signal":"",
+    "treasury_supply_demand":"",
+    "term_premium":"",
+    "safe_haven_bond_buying":"",
+    "growth_concern_or_cut_expectation":"",
+    "dominant_force":"",
+    "judgment":""
+  }},
+  "dollar_pricing": {{
+    "direction":"up / down / mixed / unclear",
+    "link_with_rates":"",
+    "safe_haven_dollar":"",
+    "liquidity_demand":"",
+    "other_currency_weakness":"",
+    "us_relative_growth_or_policy":"",
+    "dominant_force":"",
+    "judgment":""
+  }},
+  "gold_pricing": {{
+    "direction":"up / down / mixed / unclear",
+    "rate_or_real_rate_pressure":"",
+    "dollar_effect":"",
+    "safe_haven_demand":"",
+    "central_bank_buying":"",
+    "geopolitical_risk":"",
+    "dominant_force":"",
+    "judgment":""
+  }},
+  "asia_fx_pricing": {{
+    "twd": {{"reaction":"", "consistent_with_dollar_pressure":"yes / no / mixed / unclear", "local_correction_factor":"", "judgment":""}},
+    "jpy": {{"reaction":"", "consistent_with_dollar_pressure":"yes / no / mixed / unclear", "local_correction_factor":"", "judgment":""}},
+    "krw": {{"reaction":"", "consistent_with_dollar_pressure":"yes / no / mixed / unclear", "local_correction_factor":"", "judgment":""}}
+  }},
+  "market_contradiction": {{
+    "baseline_expectation":"",
+    "actual_reaction":"",
+    "most_non_obvious_link":"",
+    "possible_explanation":"",
+    "is_correction_or_new_mainline":"correction_factor / offsetting_force / data_uncertainty / new_mainline_signal / unclear",
+    "how_to_integrate_into_main_theme":"",
+    "presenter_story_angle": {{
+      "opening_question":"",
+      "normal_script":"",
+      "where_it_breaks":"",
+      "why_it_matters":"",
+      "next_watch":""
+    }}
+  }},
+  "pricing_assessment": {{
+    "dominant_market_force":"",
+    "offsetting_force":"",
+    "most_non_obvious_signal":"",
+    "market_question":"",
+    "one_sentence_takeaway":"",
+    "next_watch":""
+  }}
 }}
 
 daily_summary:
 {json.dumps(compact, ensure_ascii=False, indent=2)}
 """.strip()
+
 
 
 def generate_pricing_logic(payload: Dict[str, Any]) -> Dict[str, Any]:
