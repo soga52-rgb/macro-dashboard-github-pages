@@ -3,7 +3,7 @@ name: Build daily macro dashboard
 on:
   workflow_dispatch:
   schedule:
-    - cron: "30 0 * * 1-5"  # Taiwan 08:30, Monday-Friday
+    - cron: "43 0 * * 1-6"  # Taiwan 08:43, Monday-Saturday
 
 permissions:
   contents: write
