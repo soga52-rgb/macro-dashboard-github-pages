@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-GitHub Pages build script｜Daily Macro Dashboard + AI Presenter v4
+GitHub Pages build script｜Daily Macro Dashboard + AI Presenter Podcast v5
 
 v4 = Macro Pricing Logic Mode
 - Fetch Apps Script dashboard HTML.
 - Fetch daily_summary JSON.
 - Ask Gemini to produce macro_pricing_logic first.
-- Ask Gemini to produce AI Presenter sections from that logic.
-- Inject AI Presenter and GitHub history nav into static HTML.
+- Ask Gemini to produce AI Presenter Podcast script from that logic.
+- Inject Podcast player / transcript and GitHub history nav into static HTML.
 - Save index.html, history/YYYY-MM-DD.html, data/macro_pricing_logic, data/presenter_guides.
 """
 
@@ -224,7 +224,6 @@ def fallback_pricing_logic(payload: Dict[str, Any]) -> Dict[str, Any]:
             "judgment": "",
         },
         "dollar_pricing": {"direction": "unclear", "rate_link": "", "other_drivers": [], "judgment": ""},
-        "asset_reaction": {"asia_fx": {"twd": "", "jpy": "", "krw": ""}, "gold": {"rate_pressure": "", "safe_haven_support": "", "dominant_force": "", "judgment": ""}},
         "pricing_assessment": {
             "dominant_market_force": clean_text(d.get("headline"), 160),
             "offsetting_force": "",
@@ -261,6 +260,9 @@ def pricing_prompt(payload: Dict[str, Any]) -> str:
 - 這只是基準路徑，不是鐵律；市場預期、資金流向、政策訊號會共同決定最後定價。
 - 每一層都必須先看 daily_summary 提供的新聞、價格與市場訊號，再判斷 up / down / mixed / unclear，不得預設方向。
 - 市場矛盾不是錯誤；若價格與基準傳導不一致，請保留矛盾，並解釋它是修正因子、抵銷力量、資料不足，或新主線早期訊號。
+- 分析語氣應採中性、客觀、機構級研究口吻。即使訊號明顯，也應使用「主導、壓過、支撐、削弱、修正、尚待驗證、可能代表」等分析語言描述，不把單日訊號直接定調為確定的新趨勢。
+- 對市場轉向、共振或異常訊號，應說明其「目前可能代表的定價變化」與「後續仍需驗證的條件」。若資料只支持短期判斷，請避免將其延伸為長期結論。
+- 結論應保留不確定性層次，例如「目前較像」、「短線主導」、「仍需觀察」、「資料不足以確認」；分析語氣應避免過度戲劇化或絕對化。
 - 不可新增 daily_summary 沒有的數字。
 - 不可創造新聞。
 - 不可給投資建議。
@@ -480,7 +482,10 @@ def generate_pricing_logic(payload: Dict[str, Any]) -> Dict[str, Any]:
     if not isinstance(raw, dict):
         return fallback
     for k, v in fallback.items():
+        if k == "asset_reaction":
+            continue
         raw.setdefault(k, v)
+    raw.pop("asset_reaction", None)
     if not isinstance(raw.get("pricing_assessment"), dict):
         raw["pricing_assessment"] = fallback["pricing_assessment"]
     return raw
@@ -490,41 +495,93 @@ def generate_pricing_logic(payload: Dict[str, Any]) -> Dict[str, Any]:
 # Step 2: Presenter sections
 # =============================================================================
 
-def fallback_presenter_sections(logic: Dict[str, Any], payload: Dict[str, Any]) -> List[Dict[str, str]]:
+def fallback_presenter_podcast(logic: Dict[str, Any], payload: Dict[str, Any]) -> Dict[str, Any]:
     d = daily_summary(payload)
     a = logic.get("pricing_assessment", {}) if isinstance(logic, dict) else {}
-    q = clean_text(a.get("market_question") or d.get("headline"), 170)
-    non_obvious = clean_text(a.get("most_non_obvious_signal") or d.get("divergence"), 220)
-    takeaway = clean_text(a.get("one_sentence_takeaway") or d.get("macro_chain") or d.get("executive_summary"), 240)
-    watch = clean_text(a.get("next_watch") or "觀察後續數據與政策訊號是否驗證今日主線。", 180)
+    contradiction = logic.get("market_contradiction", {}) if isinstance(logic, dict) else {}
 
-    return [
+    title = clean_text("AI Presenter Podcast｜3 分鐘聽懂今日市場", 80)
+    opening_question = clean_text(
+        (contradiction.get("presenter_story_angle") or {}).get("opening_question")
+        or a.get("market_question")
+        or d.get("headline")
+        or "今天市場真正交易的是什麼？",
+        180,
+    )
+    normal_script = clean_text(
+        (contradiction.get("presenter_story_angle") or {}).get("normal_script")
+        or "一般來說，市場會從通膨預期出發，再傳導到利率、美元，最後反映在黃金與亞洲貨幣。",
+        240,
+    )
+    where_breaks = clean_text(
+        (contradiction.get("presenter_story_angle") or {}).get("where_it_breaks")
+        or a.get("most_non_obvious_signal")
+        or d.get("divergence")
+        or "今天真正值得注意的是，部分價格反應並沒有完全照基準傳導路徑走。",
+        260,
+    )
+    why_matters = clean_text(
+        (contradiction.get("presenter_story_angle") or {}).get("why_it_matters")
+        or contradiction.get("how_to_integrate_into_main_theme")
+        or a.get("dominant_market_force")
+        or "這代表市場可能正在用另一股力量修正原本的總經傳導。",
+        260,
+    )
+    takeaway = clean_text(
+        a.get("one_sentence_takeaway")
+        or d.get("macro_chain")
+        or d.get("executive_summary")
+        or "今日市場主線仍需搭配後續數據與政策訊號驗證。",
+        260,
+    )
+    watch = clean_text(
+        a.get("next_watch")
+        or (contradiction.get("presenter_story_angle") or {}).get("next_watch")
+        or "觀察後續數據與政策訊號是否驗證今日主線。",
+        200,
+    )
+
+    segments = [
         {
-            "title": "Opening Hook",
-            "target": "top",
-            "narration": f"今天市場表面上有一條主線，但真正值得追問的是：{q} 如果只看 headline，會以為答案很直接；但把價格反應放進來看，最關鍵的是這個不直覺訊號：{non_obvious}",
+            "title": "開場問題",
+            "narration": f"今天先抓一個問題：{opening_question} 這不是要追逐單一價格，而是要看市場最後把哪一股力量放在第一順位。",
+            "pause_after_seconds": 1.0,
         },
         {
-            "title": "Transmission Setup",
-            "target": "visual",
-            "narration": "照理說，市場會先從通膨預期看起，再傳到利率、美元，最後反映在亞洲貨幣與黃金。但今天不能把這條鏈當成公式，因為政策訊號、資金流向與避險需求，都可能在中間改變傳導方向。",
+            "title": "正常劇本",
+            "narration": f"先建立基準劇本。{normal_script} 但這條鏈不是公式，政策訊號、資金流向與避險需求，都可能在中間改變傳導方向。",
+            "pause_after_seconds": 0.8,
         },
         {
-            "title": "Market Evidence",
-            "target": "market",
-            "narration": f"價格證據的重點不是誰漲誰跌，而是哪一段沒有照劇本走。今天最需要盯住的是：{non_obvious} 這代表主線沒有消失，但在局部市場出現了修正。",
+            "title": "今日斷點",
+            "narration": f"今天最值得看的斷點是：{where_breaks} 換句話說，市場不是沒有主線，而是在某一段傳導上出現修正。",
+            "pause_after_seconds": 0.8,
         },
         {
-            "title": "Narrative Check",
-            "target": "news",
-            "narration": "新聞與政策訊號要回答的是：這個分歧是雜訊，還是有基本面支撐？如果新聞只支持主線，分歧可能短暫；如果新聞也能解釋資金流，那它就可能成為新的定價線索。",
+            "title": "背後原因",
+            "narration": f"這個修正之所以重要，是因為：{why_matters} 目前較像是市場定價重心的短線調整，仍需要後續數據驗證。",
+            "pause_after_seconds": 0.8,
         },
         {
-            "title": "Closing Takeaway",
-            "target": "bottom",
-            "narration": f"今天可以先記住一句話：{takeaway} 接下來要驗證的是：{watch} 也就是看這個修正只是短期反應，還是會變成新的市場主線。",
+            "title": "收斂與觀察",
+            "narration": f"今天可以先記住：{takeaway} 下一步要觀察的是：{watch} 這會決定今天的修正是短期反應，還是會延伸成更明確的市場主線。",
+            "pause_after_seconds": 1.0,
         },
     ]
+    full_script = "\n\n".join([item["narration"] for item in segments])
+    return {
+        "title": title,
+        "summary": clean_text(takeaway, 180),
+        "duration_target_seconds": 180,
+        "segments": segments,
+        "full_script": full_script,
+        "tts_notes": {
+            "tone": "中性、沉浸式、機構級市場導讀",
+            "speaking_rate": "medium",
+            "pause_style": "自然停頓；段落之間保留約 0.8 到 1 秒",
+            "number_reading": "數字前後保留短暫停頓，避免連續快速朗讀",
+        },
+    }
 
 
 def presenter_prompt(logic: Dict[str, Any], payload: Dict[str, Any]) -> str:
@@ -541,121 +598,92 @@ def presenter_prompt(logic: Dict[str, Any], payload: Dict[str, Any]) -> str:
         "watchpoints": as_list(d.get("watchpoints"))[:5],
     }
     return f"""
-你是 AI Presenter，一位具備千萬訂閱級敘事能力的機構級總經導讀主持人。
+你是 AI Presenter Podcast 的總經導讀主持人。
 
 你的任務不是朗讀網頁，也不是重新分析市場。
-你的任務是根據「每日總經定價邏輯 macro_pricing_logic」，像人類簡報者一樣，帶使用者看懂今天市場真正交易的主線。
+你的任務是根據「每日總經定價邏輯 macro_pricing_logic」，寫出一段適合 TTS 朗讀、約 3 分鐘的沉浸式市場導讀稿。
 
-最重要的原則：
-- 你不是在介紹網頁區塊。
-- 你是在帶觀眾理解「今天市場哪裡不直覺」。
-- 每一段都要圍繞 macro_pricing_logic.pricing_assessment.most_non_obvious_signal。
-- 不要平均導覽所有內容；今天只抓一個最值得追問的傳導斷點來說清楚。
-- 每段都要有「問題感」，不是摘要感。
+分工原則：
+- pricing_logic 已經完成市場判斷。
+- 你不得重新判斷市場主線。
+- 你只能把 pricing_logic 的判斷轉成自然、可聽、連貫的 Podcast 腳本。
+- 如果 pricing_logic 有不確定或待確認，請保留不確定性，不要改成確定結論。
 
-基準總經框架：
-通膨預期 → 利率預期 → 美元指數 → 亞洲貨幣 / 黃金
-
-但這不是公式，不是 A 上升就必然 B 上升。
-你要用「市場預期、資金流向、政策訊號」三者交集來解釋今天市場定價。
-
-口吻：
-- 專業，但要像人類主持人。
-- 有 Hook、有節奏、有問題意識。
-- 可以像 YouTuber 一樣抓注意力，但不能浮誇。
-- 像總經分析師一樣講邏輯，但不能像報告摘要。
+語氣原則：
+- 中性、客觀、機構級研究口吻。
+- 有節奏、有問題意識，但不要戲劇化。
+- 像專業市場導讀，不像新聞播報，也不像財經節目標題。
+- 即使訊號明顯，也使用「主導、壓過、支撐、削弱、修正、尚待驗證、可能代表」等分析語言。
+- 不把單日訊號直接定調為長期趨勢。
 - 不喊單、不誇大、不給投資建議。
+
+聽感原則：
+- 這是一段要被播放的 Podcast，不是給人逐字閱讀的報告。
+- 句子要自然，避免過長。
+- 每段只處理一個核心問題。
+- 數字前後應有語氣停頓，避免連續堆數字。
+- 轉場要自然，讓聽眾知道「為什麼下一段值得聽」。
+- 避免密集名詞堆疊；必要時用一句白話解釋總經含義。
+
+敘事結構固定：
+1. 開場問題：從今日最不直覺的市場矛盾或價格斷點開場。
+2. 正常劇本：說明基準傳導理論上應該怎麼走。
+3. 今日斷點：指出今天哪一段沒有照劇本走，或哪一段特別順。
+4. 背後原因：說明這是修正因子、抵銷力量、資料不足，還是新主線早期訊號。
+5. 收斂與觀察：用一句話收斂今日主線，並說明下一個驗證點。
 
 硬性限制：
 1. 不可新增 daily_summary 或 pricing_logic 沒有的數字。
 2. 不可創造新聞。
 3. 不可推翻 pricing_logic 的判斷。
-4. 不可使用聳動詞，例如「崩盤、暴漲、史詩級、必看、翻倍」。
-5. 不要說「本頁包含」、「這個區塊是」、「先看 Visual Note」、「再看新聞敘事驗證」這種網頁說明員語氣。
-6. 每段 90～170 字，繁體中文。
-7. 只輸出 JSON，不要 Markdown，不要註解。
+4. 不要說「本頁包含」、「這個區塊是」、「先看 Visual Note」這種網頁說明員語氣。
+5. 不要使用箭頭符號。
+6. 不要逐字複製 macro_chain。
+7. 不要輸出 Markdown。
+8. 只輸出合法 JSON。
 
-敘事硬規則：
-1. Opening Hook 必須從「最不直覺的傳導斷點」開場。
-   - 不要重寫 headline。
-   - 不要直接說今天主線是什麼。
-   - 必須先丟出一個市場問題。
-   - 句型方向：
-     「今天市場表面上很好懂：A 發生，所以 B 跟著走。但真正值得追問的是，為什麼 C 沒有照劇本走？」
-
-2. 每段都要先講「為什麼這一段值得看」，不要只說「看哪一頁」。
-   - 禁止：「先看 Visual Market Note」
-   - 改成：「如果照正常傳導鏈，強勁數據應該先推升通膨預期，再帶動利率與美元；但今天真正要看的，是這條鏈走到哪裡開始出現修正。」
-
-3. 必須先講正常劇本，再講今天偏離劇本的地方。
-   - 正常劇本：通膨預期 / 利率 / 美元 / 亞幣 / 黃金理論上應該如何反應。
-   - 今日偏離：哪個資產、哪個訊號、哪段傳導沒有照常走。
-   - 解釋：是政策、資金流、避險需求，還是區域因素造成修正。
-
-4. Presenter 要像在做一場 3 分鐘簡報。
-   - 第一段：丟矛盾。
-   - 第二段：建立正常傳導劇本。
-   - 第三段：用市場價格指出斷點。
-   - 第四段：用新聞與政策解釋為什麼斷點存在。
-   - 第五段：收斂成一句人類聽得懂的結論與下一個驗證點。
-
-5. 不要把五段寫成五個互不相干的摘要。
-   - 每一段都要接續同一個核心問題。
-   - 例如若核心問題是「強美元下台幣為什麼逆勢」，五段都要圍繞這個問題推進。
-
-6. 不要只說「資金流」三個字。
-   - 若提到資金流，必須說明它是在修正哪一段傳導。
-   - 例：「它不是推翻強美元主線，而是在亞洲貨幣這一段形成局部修正。」
-
-7. Narrative Check 不能寫空話。
-   - 禁止：「確認新聞、政策與資金流能否解釋價格反應」
-   - 必須具體寫出：
-     - 哪個新聞支持主線
-     - 哪個新聞或訊號解釋分歧
-     - 這是推翻主線，還是修正主線
-
-請產生 5 段 JSON 陣列，欄位固定：
-[
-  {{"title":"Opening Hook","target":"top","narration":"..."}},
-  {{"title":"Transmission Setup","target":"visual","narration":"..."}},
-  {{"title":"Market Evidence","target":"market","narration":"..."}},
-  {{"title":"Narrative Check","target":"news","narration":"..."}},
-  {{"title":"Closing Takeaway","target":"bottom","narration":"..."}}
-]
-
-每段任務：
-
-1. Opening Hook：
-   用 pricing_assessment.most_non_obvious_signal 或 pricing_assessment.market_question 開場。
-   必須指出今天市場「表面上合理，但真正奇怪的是什麼」。
-
-2. Transmission Setup：
-   說明正常總經傳導劇本應該如何走。
-   再指出今天這條鏈在哪裡可能被修正。
-   不要說「先看 Visual Note」。
-
-3. Market Evidence：
-   用 pricing_logic 中的價格與資產反應，指出哪一段傳導順、哪一段不順。
-   必須明確講出「最不直覺的價格反應」。
-
-4. Narrative Check：
-   用 pricing_logic 的 new_information、inflation_expectation、rate_pricing、dollar_pricing、asset_reaction 解釋：
-   - 哪些新聞 / 數據支持主線
-   - 哪些力量形成修正
-   - 這是主線被推翻，還是主線中的局部修正
-
-5. Closing Takeaway：
-   用 pricing_assessment.one_sentence_takeaway 收斂。
-   但不能只是複製原句，要改成自然口語。
-   最後用 pricing_assessment.next_watch 指出下一個驗證點。
-
-輸出品質要求：
-- 每段都必須像人類在講話，不要像 JSON 摘要。
-- 不要使用箭頭符號「->」。
-- 不要逐字複製 macro_chain。
-- 不要寫「這個問題的重點不是單一數字」這種抽象套話。
-- 儘量使用「照理說」、「但今天真正奇怪的是」、「換句話說」、「這代表」這類口語化邏輯銜接。
-- 如果資料不足，請說「這一點還需要後續數據確認」，不要硬補。
+請輸出固定 JSON：
+{{
+  "podcast": {{
+    "title": "",
+    "summary": "",
+    "duration_target_seconds": 180,
+    "segments": [
+      {{
+        "title": "開場問題",
+        "narration": "",
+        "pause_after_seconds": 1.0
+      }},
+      {{
+        "title": "正常劇本",
+        "narration": "",
+        "pause_after_seconds": 0.8
+      }},
+      {{
+        "title": "今日斷點",
+        "narration": "",
+        "pause_after_seconds": 0.8
+      }},
+      {{
+        "title": "背後原因",
+        "narration": "",
+        "pause_after_seconds": 0.8
+      }},
+      {{
+        "title": "收斂與觀察",
+        "narration": "",
+        "pause_after_seconds": 1.0
+      }}
+    ],
+    "full_script": "",
+    "tts_notes": {{
+      "tone": "中性、沉浸式、機構級市場導讀",
+      "speaking_rate": "medium",
+      "pause_style": "自然停頓",
+      "number_reading": "數字前後保留停頓"
+    }}
+  }}
+}}
 
 daily_summary:
 {json.dumps(compact_daily, ensure_ascii=False, indent=2)}
@@ -665,74 +693,127 @@ macro_pricing_logic:
 """.strip()
 
 
-def normalize_sections(raw: Any, fallback: List[Dict[str, str]]) -> List[Dict[str, str]]:
-    if isinstance(raw, dict) and isinstance(raw.get("sections"), list):
-        raw = raw["sections"]
-    if not isinstance(raw, list):
-        return fallback
-    targets = ["top", "visual", "market", "news", "bottom"]
-    out = []
-    for i, item in enumerate(raw[:5]):
-        if not isinstance(item, dict):
-            continue
-        title = clean_text(item.get("title") or f"Section {i+1}", 50)
-        target = clean_text(item.get("target") or targets[min(i, 4)], 20)
-        text = clean_text(item.get("narration") or item.get("text"), 340)
-        if target not in targets:
-            target = targets[min(i, 4)]
-        if text:
-            out.append({"title": title, "target": target, "narration": text})
-    return out if len(out) == 5 else fallback
+def normalize_podcast(raw: Any, fallback: Dict[str, Any]) -> Dict[str, Any]:
+    if isinstance(raw, dict) and isinstance(raw.get("podcast"), dict):
+        raw = raw["podcast"]
+
+    if isinstance(raw, dict):
+        segments = raw.get("segments")
+        if not isinstance(segments, list):
+            segments = raw.get("sections")
+
+        normalized_segments = []
+        if isinstance(segments, list):
+            for i, item in enumerate(segments[:5]):
+                if not isinstance(item, dict):
+                    continue
+                title = clean_text(item.get("title") or f"第 {i+1} 段", 40)
+                narration = clean_text(item.get("narration") or item.get("text") or "", 520)
+                pause = item.get("pause_after_seconds", 0.8)
+                try:
+                    pause = float(pause)
+                except (TypeError, ValueError):
+                    pause = 0.8
+                if narration:
+                    normalized_segments.append({
+                        "title": title,
+                        "narration": narration,
+                        "pause_after_seconds": pause,
+                    })
+
+        if len(normalized_segments) >= 3:
+            full_script = clean_text(raw.get("full_script") or "\n\n".join([s["narration"] for s in normalized_segments]), 3200)
+            return {
+                "title": clean_text(raw.get("title") or fallback.get("title"), 80),
+                "summary": clean_text(raw.get("summary") or fallback.get("summary"), 220),
+                "duration_target_seconds": int(raw.get("duration_target_seconds") or 180),
+                "segments": normalized_segments,
+                "full_script": full_script,
+                "tts_notes": raw.get("tts_notes") if isinstance(raw.get("tts_notes"), dict) else fallback.get("tts_notes", {}),
+            }
+
+    return fallback
 
 
-def generate_presenter_sections(logic: Dict[str, Any], payload: Dict[str, Any]) -> List[Dict[str, str]]:
-    fallback = fallback_presenter_sections(logic, payload)
-    raw = gemini_json(presenter_prompt(logic, payload), fallback, "AI Presenter", 0.65)
-    return normalize_sections(raw, fallback)
+def generate_presenter_podcast(logic: Dict[str, Any], payload: Dict[str, Any]) -> Dict[str, Any]:
+    fallback = fallback_presenter_podcast(logic, payload)
+    raw = gemini_json(presenter_prompt(logic, payload), {"podcast": fallback}, "AI Presenter Podcast", 0.55)
+    return normalize_podcast(raw, fallback)
 
 
 # =============================================================================
 # HTML Injection
 # =============================================================================
 
-def inject_ai_presenter(html: str, sections: List[Dict[str, str]]) -> str:
+def inject_ai_presenter(html: str, podcast: Dict[str, Any], current_date: str, is_history: bool) -> str:
     html = remove_block(html, "<!-- GITHUB_AI_PRESENTER_START -->", "<!-- GITHUB_AI_PRESENTER_END -->")
-    sections_json = json.dumps(sections, ensure_ascii=False)
-    presenter = f'''
+
+    segments = podcast.get("segments") if isinstance(podcast.get("segments"), list) else []
+    title = escape_html(clean_text(podcast.get("title") or "AI Presenter Podcast｜3 分鐘聽懂今日市場", 80))
+    summary = escape_html(clean_text(podcast.get("summary") or "", 220))
+    full_script = escape_html(clean_text(podcast.get("full_script") or "\n\n".join([str(s.get("narration") or "") for s in segments]), 3600))
+
+    audio_file = ROOT / "assets" / "audio" / f"daily_ai_presenter_{current_date}.mp3"
+    audio_src = ("../assets/audio/" if is_history else "assets/audio/") + f"daily_ai_presenter_{current_date}.mp3"
+    audio_html = (
+        f'<audio class="github-ai-presenter-audio-v5" controls preload="metadata" src="{escape_html(audio_src)}"></audio>'
+        if audio_file.exists()
+        else '<div class="github-ai-presenter-audio-missing-v5">今日語音尚未產生；目前先提供 Podcast 逐字稿預覽。</div>'
+    )
+
+    segment_items = []
+    for i, item in enumerate(segments[:6]):
+        title_i = escape_html(clean_text(item.get("title") or f"第 {i+1} 段", 40))
+        narration_i = escape_html(clean_text(item.get("narration") or "", 700))
+        if narration_i:
+            segment_items.append(f'<li><strong>{title_i}</strong><p>{narration_i}</p></li>')
+    segments_html = "\n".join(segment_items)
+
+    presenter = f"""
 <!-- GITHUB_AI_PRESENTER_START -->
-<style id="github-ai-presenter-style-v4">
-.github-ai-presenter-v4{{max-width:980px;margin:0 auto 18px;padding:18px 20px;background:#fff;border:1px solid var(--theme-border,#CEE7D7);border-radius:18px;box-shadow:0 10px 28px rgba(15,23,42,.035)}}
-.github-ai-presenter-head-v4{{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;margin-bottom:12px}}
-.github-ai-presenter-title-v4{{font-size:22px;font-weight:950;color:var(--theme-accent-text,#35724F);line-height:1.35}}
-.github-ai-presenter-subtitle-v4{{color:#64748b;font-size:13px;line-height:1.6;margin-top:4px}}
-.github-ai-presenter-badge-v4{{white-space:nowrap;border:1px solid var(--theme-border,#CEE7D7);border-radius:999px;padding:6px 10px;color:var(--theme-accent-text,#35724F);font-weight:850;font-size:12px;background:#fff}}
-.github-ai-presenter-body-v4{{border:1px solid var(--theme-border,#CEE7D7);border-radius:14px;background:#fbfcfb;padding:14px 15px}}
-.github-ai-presenter-step-title-v4{{font-weight:900;color:#172033;margin-bottom:7px;font-size:15px}}
-.github-ai-presenter-text-v4{{color:#374151;font-size:15px;line-height:1.8}}
-.github-ai-presenter-controls-v4{{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}}
-.github-ai-presenter-button-v4{{border:1px solid var(--theme-border,#CEE7D7);border-radius:999px;padding:8px 13px;background:#fff;color:var(--theme-accent-text,#35724F);font-weight:850;cursor:pointer;font-size:14px}}
-.github-ai-presenter-progress-v4{{color:#64748b;font-size:13px;margin-top:8px}}
-.github-ai-presenter-highlight-v4{{outline:3px solid rgba(53,114,79,.16);outline-offset:4px;transition:outline .25s ease}}
-@media(max-width:760px){{.github-ai-presenter-v4{{margin:0 auto 14px;padding:14px;border-radius:16px}}.github-ai-presenter-head-v4{{display:block}}.github-ai-presenter-title-v4{{font-size:19px}}.github-ai-presenter-badge-v4{{display:inline-block;margin-top:8px}}.github-ai-presenter-button-v4{{flex:1 1 auto}}}}
+<style id="github-ai-presenter-style-v5">
+.github-ai-presenter-v5{{max-width:980px;margin:0 auto 18px;padding:18px 20px;background:#fff;border:1px solid var(--theme-border,#E6CFA5);border-radius:18px;box-shadow:0 10px 28px rgba(15,23,42,.035)}}
+.github-ai-presenter-head-v5{{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;margin-bottom:12px}}
+.github-ai-presenter-title-v5{{font-size:22px;font-weight:950;color:var(--theme-accent-text,#8A5A12);line-height:1.35}}
+.github-ai-presenter-subtitle-v5{{color:#64748b;font-size:13px;line-height:1.6;margin-top:4px}}
+.github-ai-presenter-badge-v5{{white-space:nowrap;border:1px solid var(--theme-border,#E6CFA5);border-radius:999px;padding:6px 10px;color:var(--theme-accent-text,#8A5A12);font-weight:850;font-size:12px;background:#fff}}
+.github-ai-presenter-player-v5{{border:1px solid var(--theme-border,#E6CFA5);border-radius:14px;background:#fffaf0;padding:14px 15px;margin-top:10px}}
+.github-ai-presenter-audio-v5{{width:100%;display:block}}
+.github-ai-presenter-audio-missing-v5{{border:1px dashed var(--theme-border,#E6CFA5);border-radius:12px;padding:12px 13px;background:#fff;color:#8A5A12;font-size:14px;line-height:1.6;font-weight:750}}
+.github-ai-presenter-summary-v5{{color:#374151;font-size:15px;line-height:1.8;margin-top:12px}}
+.github-ai-presenter-details-v5{{margin-top:12px;border:1px solid var(--theme-border,#E6CFA5);border-radius:14px;background:#fff;overflow:hidden}}
+.github-ai-presenter-details-v5 summary{{cursor:pointer;padding:12px 14px;color:var(--theme-accent-text,#8A5A12);font-weight:900;list-style:none}}
+.github-ai-presenter-details-v5 summary::-webkit-details-marker{{display:none}}
+.github-ai-presenter-transcript-v5{{padding:0 14px 14px;color:#374151;font-size:15px;line-height:1.85;white-space:pre-wrap}}
+.github-ai-presenter-segments-v5{{padding:0 18px 14px 34px;margin:0;color:#374151}}
+.github-ai-presenter-segments-v5 li{{margin:10px 0}}
+.github-ai-presenter-segments-v5 strong{{color:#172033}}
+.github-ai-presenter-segments-v5 p{{margin:5px 0 0;line-height:1.75}}
+@media(max-width:760px){{.github-ai-presenter-v5{{margin:0 auto 14px;padding:14px;border-radius:16px}}.github-ai-presenter-head-v5{{display:block}}.github-ai-presenter-title-v5{{font-size:19px}}.github-ai-presenter-badge-v5{{display:inline-block;margin-top:8px}}}}
 </style>
-<section class="github-ai-presenter-v4" id="githubAiPresenterV4" aria-label="AI Presenter">
-  <div class="github-ai-presenter-head-v4"><div><div class="github-ai-presenter-title-v4">AI Presenter｜3 分鐘看懂今日市場</div><div class="github-ai-presenter-subtitle-v4">先判斷今日總經定價邏輯，再用簡報方式帶你看主線、證據與分歧。</div></div><div class="github-ai-presenter-badge-v4">Macro Pricing Logic</div></div>
-  <div class="github-ai-presenter-body-v4"><div class="github-ai-presenter-step-title-v4" id="githubAiPresenterStepTitleV4"></div><div class="github-ai-presenter-text-v4" id="githubAiPresenterTextV4"></div><div class="github-ai-presenter-controls-v4"><button type="button" class="github-ai-presenter-button-v4" onclick="githubAiPresenterStartV4()">開始導讀</button><button type="button" class="github-ai-presenter-button-v4" onclick="githubAiPresenterPrevV4()">上一段</button><button type="button" class="github-ai-presenter-button-v4" onclick="githubAiPresenterNextV4()">下一段</button><button type="button" class="github-ai-presenter-button-v4" onclick="githubAiPresenterStopV4()">結束</button></div><div class="github-ai-presenter-progress-v4" id="githubAiPresenterProgressV4"></div></div>
+<section class="github-ai-presenter-v5" id="githubAiPresenterV5" aria-label="AI Presenter Podcast">
+  <div class="github-ai-presenter-head-v5">
+    <div>
+      <div class="github-ai-presenter-title-v5">{title}</div>
+      <div class="github-ai-presenter-subtitle-v5">以 Podcast 聽感呈現今日總經定價邏輯：先抓主線，再理解證據與分歧。</div>
+    </div>
+    <div class="github-ai-presenter-badge-v5">Macro Pricing Logic</div>
+  </div>
+  <div class="github-ai-presenter-player-v5">
+    {audio_html}
+    <div class="github-ai-presenter-summary-v5">{summary}</div>
+  </div>
+  <details class="github-ai-presenter-details-v5">
+    <summary>▶ 展開 Podcast 逐字稿</summary>
+    <div class="github-ai-presenter-transcript-v5">{full_script}</div>
+  </details>
+  <details class="github-ai-presenter-details-v5">
+    <summary>▶ 展開分段重點</summary>
+    <ol class="github-ai-presenter-segments-v5">{segments_html}</ol>
+  </details>
 </section>
-<script id="github-ai-presenter-script-v4">
-window.__githubAiPresenterSectionsV4={sections_json};window.__githubAiPresenterIndexV4=0;window.__githubAiPresenterLastTargetV4=null;
-function githubAiPresenterFindByTextV4(tags,texts){{for(var t=0;t<tags.length;t++){{var nodes=document.getElementsByTagName(tags[t]);for(var i=0;i<nodes.length;i++){{var tx=(nodes[i].textContent||'').trim();for(var j=0;j<texts.length;j++){{if(tx.indexOf(texts[j])>=0)return nodes[i];}}}}}}return null;}}
-function githubAiPresenterFindTargetV4(kind){{if(kind==='top')return document.querySelector('.top-date-meta-bar')||githubAiPresenterFindByTextV4(['section','div'],['今日總經摘要']);if(kind==='visual')return githubAiPresenterFindByTextV4(['section','div','h1','h2'],['Visual Market Note','市場傳導圖解']);if(kind==='market')return githubAiPresenterFindByTextV4(['section','div','h1','h2'],['走勢圖','Market Snapshot']);if(kind==='news')return document.querySelector('.news-narrative-section')||githubAiPresenterFindByTextV4(['section','div','h1','h2'],['新聞敘事驗證']);if(kind==='bottom')return document.querySelector('.github-history-nav-v1')||document.querySelector('.footer')||document.body;return null;}}
-function githubAiPresenterClearHighlightV4(){{var last=window.__githubAiPresenterLastTargetV4;if(last&&last.classList)last.classList.remove('github-ai-presenter-highlight-v4');window.__githubAiPresenterLastTargetV4=null;}}
-function githubAiPresenterRenderV4(scroll){{var s=window.__githubAiPresenterSectionsV4||[];var idx=window.__githubAiPresenterIndexV4||0;if(!s.length)return;if(idx<0)idx=0;if(idx>=s.length)idx=s.length-1;window.__githubAiPresenterIndexV4=idx;var item=s[idx];var title=document.getElementById('githubAiPresenterStepTitleV4');var text=document.getElementById('githubAiPresenterTextV4');var progress=document.getElementById('githubAiPresenterProgressV4');if(title)title.textContent=(idx+1)+'. '+item.title;if(text)text.textContent=item.narration||item.text||'';if(progress)progress.textContent='第 '+(idx+1)+' / '+s.length+' 段';if(scroll){{githubAiPresenterClearHighlightV4();var target=githubAiPresenterFindTargetV4(item.target);if(target&&target.scrollIntoView){{target.scrollIntoView({{behavior:'smooth',block:'start'}});if(target.classList){{target.classList.add('github-ai-presenter-highlight-v4');window.__githubAiPresenterLastTargetV4=target;}}}}}}}}
-function githubAiPresenterStartV4(){{window.__githubAiPresenterIndexV4=0;githubAiPresenterRenderV4(true);}}
-function githubAiPresenterNextV4(){{var s=window.__githubAiPresenterSectionsV4||[];window.__githubAiPresenterIndexV4=Math.min((window.__githubAiPresenterIndexV4||0)+1,s.length-1);githubAiPresenterRenderV4(true);}}
-function githubAiPresenterPrevV4(){{window.__githubAiPresenterIndexV4=Math.max((window.__githubAiPresenterIndexV4||0)-1,0);githubAiPresenterRenderV4(true);}}
-function githubAiPresenterStopV4(){{githubAiPresenterClearHighlightV4();var p=document.getElementById('githubAiPresenterV4');if(p&&p.scrollIntoView)p.scrollIntoView({{behavior:'smooth',block:'start'}});}}
-document.addEventListener('DOMContentLoaded',function(){{githubAiPresenterRenderV4(false);}});
-</script>
 <!-- GITHUB_AI_PRESENTER_END -->
-'''
+"""
     marker = 'class="top-date-meta-bar"'
     if marker in html:
         start = html.find(marker)
@@ -742,7 +823,6 @@ document.addEventListener('DOMContentLoaded',function(){{githubAiPresenterRender
             return html[:insert_at] + '\n' + presenter + html[insert_at:]
     m = re.search(r'<body[^>]*>', html, flags=re.I)
     return html[:m.end()] + '\n' + presenter + html[m.end():] if m else presenter + html
-
 
 def inject_history_nav(html: str, current_date: str, dates: List[str], is_history: bool) -> str:
     html = remove_block(html, "<!-- GITHUB_HISTORY_NAV_START -->", "<!-- GITHUB_HISTORY_NAV_END -->")
@@ -776,10 +856,10 @@ def main() -> None:
 
     dates = history_dates(current_date, 7)
     pricing_logic = generate_pricing_logic(today_payload)
-    sections = generate_presenter_sections(pricing_logic, today_payload)
+    podcast = generate_presenter_podcast(pricing_logic, today_payload)
 
-    index_html = inject_history_nav(inject_ai_presenter(raw_html, sections), current_date, dates, False)
-    history_html = inject_history_nav(inject_ai_presenter(raw_html, sections), current_date, dates, True)
+    index_html = inject_history_nav(inject_ai_presenter(raw_html, podcast, current_date, False), current_date, dates, False)
+    history_html = inject_history_nav(inject_ai_presenter(raw_html, podcast, current_date, True), current_date, dates, True)
 
     write_text(ROOT / "index.html", index_html)
     write_text(HISTORY_HTML_DIR / f"{current_date}.html", history_html)
@@ -787,16 +867,16 @@ def main() -> None:
     write_json(HISTORY_DATA_DIR / f"{current_date}.json", today_payload)
     write_json(PRICING_DIR / "latest.json", {"generated_at": datetime.now(TW_TZ).isoformat(timespec="seconds"), "date": current_date, "mode": "macro_pricing_logic_v4", "logic": pricing_logic})
     write_json(PRICING_DIR / f"{current_date}.json", {"generated_at": datetime.now(TW_TZ).isoformat(timespec="seconds"), "date": current_date, "mode": "macro_pricing_logic_v4", "logic": pricing_logic})
-    write_json(PRESENTER_DIR / "latest.json", {"generated_at": datetime.now(TW_TZ).isoformat(timespec="seconds"), "date": current_date, "mode": "macro_pricing_logic_presenter_v4", "sections": sections})
-    write_json(PRESENTER_DIR / f"{current_date}.json", {"generated_at": datetime.now(TW_TZ).isoformat(timespec="seconds"), "date": current_date, "mode": "macro_pricing_logic_presenter_v4", "sections": sections})
-    write_json(DATA_DIR / "latest_meta.json", {"generated_at": datetime.now(TW_TZ).isoformat(timespec="seconds"), "date": current_date, "history_dates": dates, "source": "Apps Script dashboard_html_source", "html_length": len(raw_html), "index_html_length": len(index_html), "ai_presenter": "macro_pricing_logic_v4", "gemini_model": os.environ.get("GEMINI_MODEL", "gemini-3.5-flash")})
+    write_json(PRESENTER_DIR / "latest.json", {"generated_at": datetime.now(TW_TZ).isoformat(timespec="seconds"), "date": current_date, "mode": "daily_macro_podcast_v1", "podcast": podcast})
+    write_json(PRESENTER_DIR / f"{current_date}.json", {"generated_at": datetime.now(TW_TZ).isoformat(timespec="seconds"), "date": current_date, "mode": "daily_macro_podcast_v1", "podcast": podcast})
+    write_json(DATA_DIR / "latest_meta.json", {"generated_at": datetime.now(TW_TZ).isoformat(timespec="seconds"), "date": current_date, "history_dates": dates, "source": "Apps Script dashboard_html_source", "html_length": len(raw_html), "index_html_length": len(index_html), "ai_presenter": "daily_macro_podcast_v1", "gemini_model": os.environ.get("GEMINI_MODEL", "gemini-3.5-flash")})
 
     print("Saved Apps Script dashboard HTML as static GitHub Pages index.html")
     print(f"date = {current_date}")
     print(f"history_dates = {', '.join(dates)}")
     print(f"raw_html_length = {len(raw_html)}")
     print(f"index_html_length = {len(index_html)}")
-    print("ai_presenter = macro_pricing_logic_v4")
+    print("ai_presenter = daily_macro_podcast_v1")
 
 
 if __name__ == "__main__":
