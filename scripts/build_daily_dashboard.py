@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-GitHub Pages build script｜Daily Macro Dashboard + AI Presenter Podcast v5
+GitHub Pages build script｜Daily Macro Dashboard + AI Presenter Podcast v7
 
 v4 = Macro Pricing Logic Mode
 - Fetch Apps Script dashboard HTML.
@@ -615,6 +615,7 @@ def presenter_prompt(logic: Dict[str, Any], payload: Dict[str, Any]) -> str:
 - 像專業市場導讀，不像新聞播報，也不像財經節目標題。
 - 即使訊號明顯，也使用「主導、壓過、支撐、削弱、修正、尚待驗證、可能代表」等分析語言。
 - 不把單日訊號直接定調為長期趨勢。
+- 對任何市場敘事、價格共振或傳導斷點，請以「市場目前較像在定價」、「短線主導因素」、「可能代表」、「仍需後續數據驗證」等方式描述；不得把單日市場反應直接寫成已確認的長期結構性事實。
 - 不喊單、不誇大、不給投資建議。
 
 聽感原則：
@@ -675,7 +676,7 @@ def presenter_prompt(logic: Dict[str, Any], payload: Dict[str, Any]) -> str:
         "pause_after_seconds": 1.0
       }}
     ],
-    "full_script": "",
+    "full_script": "請用 segments narration 之間的雙換行組成，不要接成單一大段",
     "tts_notes": {{
       "tone": "中性、沉浸式、機構級市場導讀",
       "speaking_rate": "medium",
@@ -722,7 +723,7 @@ def normalize_podcast(raw: Any, fallback: Dict[str, Any]) -> Dict[str, Any]:
                     })
 
         if len(normalized_segments) >= 3:
-            full_script = clean_text(raw.get("full_script") or "\n\n".join([s["narration"] for s in normalized_segments]), 3200)
+            full_script = clean_text("\n\n".join([s["narration"] for s in normalized_segments]), 3200)
             return {
                 "title": clean_text(raw.get("title") or fallback.get("title"), 80),
                 "summary": clean_text(raw.get("summary") or fallback.get("summary"), 220),
@@ -748,69 +749,37 @@ def generate_presenter_podcast(logic: Dict[str, Any], payload: Dict[str, Any]) -
 def inject_ai_presenter(html: str, podcast: Dict[str, Any], current_date: str, is_history: bool) -> str:
     html = remove_block(html, "<!-- GITHUB_AI_PRESENTER_START -->", "<!-- GITHUB_AI_PRESENTER_END -->")
 
-    segments = podcast.get("segments") if isinstance(podcast.get("segments"), list) else []
-    title = escape_html(clean_text(podcast.get("title") or "AI Presenter Podcast｜3 分鐘聽懂今日市場", 80))
-    summary = escape_html(clean_text(podcast.get("summary") or "", 220))
-    full_script = escape_html(clean_text(podcast.get("full_script") or "\n\n".join([str(s.get("narration") or "") for s in segments]), 3600))
-
     audio_file = ROOT / "assets" / "audio" / f"daily_ai_presenter_{current_date}.mp3"
     audio_src = ("../assets/audio/" if is_history else "assets/audio/") + f"daily_ai_presenter_{current_date}.mp3"
-    audio_html = (
-        f'<audio class="github-ai-presenter-audio-v5" controls preload="metadata" src="{escape_html(audio_src)}"></audio>'
-        if audio_file.exists()
-        else '<div class="github-ai-presenter-audio-missing-v5">今日語音尚未產生；目前先提供 Podcast 逐字稿預覽。</div>'
-    )
 
-    segment_items = []
-    for i, item in enumerate(segments[:6]):
-        title_i = escape_html(clean_text(item.get("title") or f"第 {i+1} 段", 40))
-        narration_i = escape_html(clean_text(item.get("narration") or "", 700))
-        if narration_i:
-            segment_items.append(f'<li><strong>{title_i}</strong><p>{narration_i}</p></li>')
-    segments_html = "\n".join(segment_items)
+    if audio_file.exists():
+        player_html = f'<audio class="github-ai-podcast-audio-v7" controls preload="metadata" src="{escape_html(audio_src)}"></audio>'
+    else:
+        player_html = '<span class="github-ai-podcast-pending-v7">語音尚未產生</span>'
 
     presenter = f"""
 <!-- GITHUB_AI_PRESENTER_START -->
-<style id="github-ai-presenter-style-v5">
-.github-ai-presenter-v5{{max-width:980px;margin:0 auto 18px;padding:18px 20px;background:#fff;border:1px solid var(--theme-border,#E6CFA5);border-radius:18px;box-shadow:0 10px 28px rgba(15,23,42,.035)}}
-.github-ai-presenter-head-v5{{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;margin-bottom:12px}}
-.github-ai-presenter-title-v5{{font-size:22px;font-weight:950;color:var(--theme-accent-text,#8A5A12);line-height:1.35}}
-.github-ai-presenter-subtitle-v5{{color:#64748b;font-size:13px;line-height:1.6;margin-top:4px}}
-.github-ai-presenter-badge-v5{{white-space:nowrap;border:1px solid var(--theme-border,#E6CFA5);border-radius:999px;padding:6px 10px;color:var(--theme-accent-text,#8A5A12);font-weight:850;font-size:12px;background:#fff}}
-.github-ai-presenter-player-v5{{border:1px solid var(--theme-border,#E6CFA5);border-radius:14px;background:#fffaf0;padding:14px 15px;margin-top:10px}}
-.github-ai-presenter-audio-v5{{width:100%;display:block}}
-.github-ai-presenter-audio-missing-v5{{border:1px dashed var(--theme-border,#E6CFA5);border-radius:12px;padding:12px 13px;background:#fff;color:#8A5A12;font-size:14px;line-height:1.6;font-weight:750}}
-.github-ai-presenter-summary-v5{{color:#374151;font-size:15px;line-height:1.8;margin-top:12px}}
-.github-ai-presenter-details-v5{{margin-top:12px;border:1px solid var(--theme-border,#E6CFA5);border-radius:14px;background:#fff;overflow:hidden}}
-.github-ai-presenter-details-v5 summary{{cursor:pointer;padding:12px 14px;color:var(--theme-accent-text,#8A5A12);font-weight:900;list-style:none}}
-.github-ai-presenter-details-v5 summary::-webkit-details-marker{{display:none}}
-.github-ai-presenter-transcript-v5{{padding:0 14px 14px;color:#374151;font-size:15px;line-height:1.85;white-space:pre-wrap}}
-.github-ai-presenter-segments-v5{{padding:0 18px 14px 34px;margin:0;color:#374151}}
-.github-ai-presenter-segments-v5 li{{margin:10px 0}}
-.github-ai-presenter-segments-v5 strong{{color:#172033}}
-.github-ai-presenter-segments-v5 p{{margin:5px 0 0;line-height:1.75}}
-@media(max-width:760px){{.github-ai-presenter-v5{{margin:0 auto 14px;padding:14px;border-radius:16px}}.github-ai-presenter-head-v5{{display:block}}.github-ai-presenter-title-v5{{font-size:19px}}.github-ai-presenter-badge-v5{{display:inline-block;margin-top:8px}}}}
+<style id="github-ai-presenter-style-v7">
+.github-ai-podcast-v7{{max-width:980px;margin:0 auto 14px;padding:12px 18px;background:#fff;border:1px solid var(--theme-border,#E6CFA5);border-radius:999px;box-shadow:0 8px 22px rgba(15,23,42,.03)}}
+.github-ai-podcast-row-v7{{display:flex;align-items:center;justify-content:space-between;gap:16px}}
+.github-ai-podcast-left-v7{{display:flex;align-items:center;gap:12px;min-width:0;flex:1}}
+.github-ai-podcast-icon-v7{{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#fff7e8;border:1px solid var(--theme-border,#E6CFA5);color:var(--theme-accent-text,#8A5A12);font-size:20px;font-weight:950;flex:0 0 auto}}
+.github-ai-podcast-title-v7{{font-size:18px;font-weight:950;color:#172033;line-height:1.35;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}}
+.github-ai-podcast-controls-v7{{display:flex;align-items:center;justify-content:flex-end;flex:0 0 auto;min-width:270px}}
+.github-ai-podcast-audio-v7{{width:270px;height:34px;display:block}}
+.github-ai-podcast-pending-v7{{display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--theme-border,#E6CFA5);border-radius:999px;background:#fffaf0;color:var(--theme-accent-text,#8A5A12);font-weight:900;font-size:13px;padding:8px 14px;white-space:nowrap}}
+@media(max-width:760px){{.github-ai-podcast-v7{{border-radius:18px;padding:12px 13px}}.github-ai-podcast-row-v7{{display:block}}.github-ai-podcast-title-v7{{font-size:17px;white-space:normal}}.github-ai-podcast-controls-v7{{margin-top:10px;justify-content:flex-start;min-width:0}}.github-ai-podcast-audio-v7{{width:100%}}}}
 </style>
-<section class="github-ai-presenter-v5" id="githubAiPresenterV5" aria-label="AI Presenter Podcast">
-  <div class="github-ai-presenter-head-v5">
-    <div>
-      <div class="github-ai-presenter-title-v5">{title}</div>
-      <div class="github-ai-presenter-subtitle-v5">以 Podcast 聽感呈現今日總經定價邏輯：先抓主線，再理解證據與分歧。</div>
+<section class="github-ai-podcast-v7" id="githubAiPresenterV7" aria-label="AI 市場導讀 Podcast">
+  <div class="github-ai-podcast-row-v7">
+    <div class="github-ai-podcast-left-v7">
+      <div class="github-ai-podcast-icon-v7">🎙️</div>
+      <div class="github-ai-podcast-title-v7">AI 市場導讀</div>
     </div>
-    <div class="github-ai-presenter-badge-v5">Macro Pricing Logic</div>
+    <div class="github-ai-podcast-controls-v7">
+      {player_html}
+    </div>
   </div>
-  <div class="github-ai-presenter-player-v5">
-    {audio_html}
-    <div class="github-ai-presenter-summary-v5">{summary}</div>
-  </div>
-  <details class="github-ai-presenter-details-v5">
-    <summary>▶ 展開 Podcast 逐字稿</summary>
-    <div class="github-ai-presenter-transcript-v5">{full_script}</div>
-  </details>
-  <details class="github-ai-presenter-details-v5">
-    <summary>▶ 展開分段重點</summary>
-    <ol class="github-ai-presenter-segments-v5">{segments_html}</ol>
-  </details>
 </section>
 <!-- GITHUB_AI_PRESENTER_END -->
 """
@@ -869,14 +838,14 @@ def main() -> None:
     write_json(PRICING_DIR / f"{current_date}.json", {"generated_at": datetime.now(TW_TZ).isoformat(timespec="seconds"), "date": current_date, "mode": "macro_pricing_logic_v4", "logic": pricing_logic})
     write_json(PRESENTER_DIR / "latest.json", {"generated_at": datetime.now(TW_TZ).isoformat(timespec="seconds"), "date": current_date, "mode": "daily_macro_podcast_v1", "podcast": podcast})
     write_json(PRESENTER_DIR / f"{current_date}.json", {"generated_at": datetime.now(TW_TZ).isoformat(timespec="seconds"), "date": current_date, "mode": "daily_macro_podcast_v1", "podcast": podcast})
-    write_json(DATA_DIR / "latest_meta.json", {"generated_at": datetime.now(TW_TZ).isoformat(timespec="seconds"), "date": current_date, "history_dates": dates, "source": "Apps Script dashboard_html_source", "html_length": len(raw_html), "index_html_length": len(index_html), "ai_presenter": "daily_macro_podcast_v1", "gemini_model": os.environ.get("GEMINI_MODEL", "gemini-3.5-flash")})
+    write_json(DATA_DIR / "latest_meta.json", {"generated_at": datetime.now(TW_TZ).isoformat(timespec="seconds"), "date": current_date, "history_dates": dates, "source": "Apps Script dashboard_html_source", "html_length": len(raw_html), "index_html_length": len(index_html), "ai_presenter": "daily_macro_podcast_v1_compact_ui_v7", "gemini_model": os.environ.get("GEMINI_MODEL", "gemini-3.5-flash")})
 
     print("Saved Apps Script dashboard HTML as static GitHub Pages index.html")
     print(f"date = {current_date}")
     print(f"history_dates = {', '.join(dates)}")
     print(f"raw_html_length = {len(raw_html)}")
     print(f"index_html_length = {len(index_html)}")
-    print("ai_presenter = daily_macro_podcast_v1")
+    print("ai_presenter = daily_macro_podcast_v1_compact_ui_v7")
 
 
 if __name__ == "__main__":
