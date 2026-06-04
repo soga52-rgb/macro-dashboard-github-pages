@@ -1,12 +1,14 @@
 name: Build daily macro dashboard
 
 on:
-  workflow_dispatch:
-  schedule:
+    schedule:
     - cron: "43 0 * * 1-6"  # Taiwan 08:43, Monday-Saturday
-
+    workflow_dispatch:
+    
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 jobs:
   build:
