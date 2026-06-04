@@ -1,161 +1,161 @@
 {
-  "generated_at": "2026-06-04T13:05:50+08:00",
+  "generated_at": "2026-06-04T13:28:49+08:00",
   "date": "2026-06-03",
   "mode": "macro_pricing_logic_v4",
   "logic": {
     "pricing_context": {
-      "market_was_pricing": "市場目前處於「再通膨定價」體制，聚焦於AI結構性通膨與能源價格上漲對Fed降息空間的封鎖。",
-      "new_information": "AI意外成為通膨推手，與油價上行壓力共振，推升美債殖利率至4.49%，美元指數突破99.55，黃金下跌至4456.10。",
-      "pricing_question": "AI結構性通膨與油價的共振，是否會徹底封死Fed的降息空間，並使高利率與強美元成為長期常態？"
+      "market_was_pricing": "The market was pricing in a reflation regime where structural inflation and cyclical energy pressures block the Federal Reserve's path to rate cuts.",
+      "new_information": "The AI narrative is unexpectedly acting as a structural inflation driver, which, combined with rising oil prices, has reinforced the Fed's higher-for-longer interest rate outlook.",
+      "pricing_question": "Will the dual forces of AI-driven structural inflation and rising oil prices permanently prevent the Fed from cutting rates, and can upcoming labor data offer any cooling relief?"
     },
     "input_material_mapping": {
       "inflation_materials": [
-        "AI意外成為通膨推手，引發市場對通膨黏性的重新定價。",
-        "油價上行壓力強化了再通膨預期，推升美債殖利率。"
+        "AI unexpectedly acts as an inflation driver, triggering repricing of inflation stickiness.",
+        "Oil price upward pressure strengthens reflation expectation."
       ],
       "rate_materials": [
-        "美債殖利率上行至4.49%",
-        "反映再通膨與高利率維持更久預期"
+        "US 10-year Treasury yield rose to 4.49%, reflecting reflation and higher-for-longer expectations.",
+        "Oil price upward pressure pushes up US yields."
       ],
       "dollar_materials": [
-        "美元指數強勢突破99.55",
-        "利差優勢支撐美元走強"
+        "DXY strongly broke above 99.55 supported by yield advantages.",
+        "Strong USD and high rates cause Asia FX depreciation pressure."
       ],
       "gold_materials": [
-        "Gold 4456.10 down",
-        "高利率與強美元雙重壓抑"
+        "Gold fell to 4456.10, suppressed by high rates and a strong USD."
       ],
       "asia_fx_materials": [
-        "強勢美元與高利率環境導致亞洲貨幣普遍面臨貶值壓力。"
+        "Strong USD and high rates cause Asian currencies to face depreciation pressure.",
+        "Watchpoint: Asian central banks' potential policy intervention signals."
       ],
-      "mapping_summary": "今日市場呈現強烈的再通膨共振，通膨預期（AI與油價）直接傳導至利率與美元，對黃金及亞洲貨幣形成全面壓制。"
+      "mapping_summary": "Today's market signals show a highly synchronized reflation trade where AI and energy drive inflation expectations, pushing up yields and the dollar, which subsequently pressures gold and Asian currencies."
     },
     "inflation_expectation": {
       "energy": {
         "direction": "up",
         "importance": "high",
         "evidence": [
-          "油價上行壓力強化了再通膨預期"
+          "Oil price upward pressure strengthens reflation expectation"
         ],
-        "judgment": "油價上漲是今日強化再通膨預期的核心實體因素。"
+        "judgment": "Rising oil prices directly fuel cyclical reflation expectations and push up yields."
       },
       "supply_chain": {
         "direction": "unclear",
         "importance": "low",
         "evidence": [],
-        "judgment": "今日無具體供應鏈數據提及。"
+        "judgment": "No specific supply chain data provided in the daily summary."
       },
       "price_data": {
         "direction": "up",
         "importance": "high",
         "evidence": [
-          "AI意外成為通膨推手，引發市場對通膨黏性的重新定價"
+          "AI unexpectedly acts as an inflation driver, triggering repricing of inflation stickiness."
         ],
-        "judgment": "AI帶來的結構性通膨敘事，成為市場重新評估通膨黏性的新型驅動力。"
+        "judgment": "The market is actively repricing AI as a structural cost-push inflation factor."
       },
       "demand": {
         "direction": "unclear",
         "importance": "low",
         "evidence": [],
-        "judgment": "今日無具體實體需求或PMI/零售數據提及。"
+        "judgment": "No specific demand or retail sales data provided in the daily summary."
       },
       "labor_market": {
         "direction": "unclear",
         "importance": "medium",
         "evidence": [
-          "美國勞動力市場數據是否出現降溫以修正通膨預期"
+          "Watchpoint: US labor market data whether it shows cooling to correct inflation expectations."
         ],
-        "judgment": "勞動力市場狀況目前不明，列為後續修正通膨預期的關鍵觀察點。"
+        "judgment": "Labor market data is a critical upcoming watchpoint, but current state is unclear from today's summary."
       },
       "policy_expectation": {
         "direction": "up",
         "importance": "high",
         "evidence": [
-          "強化Fed高利率維持更久預期"
+          "AI inflation narrative and oil price resonance reinforce Fed higher-for-longer expectations."
         ],
-        "judgment": "通膨黏性預期走高，直接封鎖了Fed的降息空間。"
+        "judgment": "Inflation expectations are shifting hawkishly, blocking the Fed's near-term rate cut path."
       },
       "summary": {
         "overall_direction": "up",
         "strength": "strong",
-        "dominant_force": "AI結構性通膨敘事與油價上行的雙重共振。",
-        "offsetting_force": "無，今日未見任何成長降溫或通膨緩解的修正因子。",
-        "judgment": "今日通膨預期顯著上行，市場完全聚焦於通膨黏性的重新定價。"
+        "dominant_force": "The resonance of AI structural inflation and rising oil prices.",
+        "offsetting_force": "None. No growth-cooling or deflationary factors were observed today.",
+        "judgment": "Inflation expectations are strongly up, driven by a powerful mix of structural technological costs and cyclical energy pressures."
       }
     },
     "rate_pricing": {
       "direction": "up",
-      "link_with_inflation_expectation": "高度同向。通膨預期（AI與油價）直接轉化為高利率維持更久的預期，推升美債殖利率。",
-      "fed_policy_signal": "市場預期Fed將因通膨黏性而維持高利率更久，降息空間受阻。",
+      "link_with_inflation_expectation": "Directly and strongly positive. Rising inflation expectations from AI and oil are the primary drivers pushing US10Y yields higher.",
+      "fed_policy_signal": "Market expects the Fed to maintain high interest rates for longer, reducing the likelihood of rate cuts.",
       "treasury_supply_demand": "unclear",
       "term_premium": "unclear",
-      "safe_haven_bond_buying": "unclear",
-      "growth_concern_or_cut_expectation": "降息預期顯著受壓，今日市場未展現對經濟成長降溫的擔憂。",
-      "dominant_force": "再通膨預期與高利率維持更久（Higher for Longer）的政策預期。",
-      "judgment": "美債殖利率上行至4.49%，完全由通膨黏性與Fed降息空間受阻的邏輯主導。"
+      "safe_haven_bond_buying": "down",
+      "growth_concern_or_cut_expectation": "Rate cut expectations are heavily suppressed; no growth concerns are currently tempering the rise in yields.",
+      "dominant_force": "Reflation pricing and hawkish Fed policy expectations.",
+      "judgment": "US10Y yields rose to 4.49% as the market priced in persistent inflation and a prolonged hawkish pause by the Fed."
     },
     "dollar_pricing": {
       "direction": "up",
-      "link_with_rates": "高度同向。美債殖利率上行擴大了美債的利差優勢，直接支撐美元走強。",
+      "link_with_rates": "Strongly positive. Higher US yields provide a clear yield advantage that directly supports the USD.",
       "safe_haven_dollar": "unclear",
       "liquidity_demand": "unclear",
       "other_currency_weakness": "unclear",
-      "us_relative_growth_or_policy": "美債利差優勢與Fed維持高利率更久的政策預期，是美元走強的主因。",
-      "dominant_force": "美債殖利率上行帶來的利差優勢。",
-      "judgment": "美元指數強勢突破99.55，其強勢與美債殖利率的上行邏輯高度一致。"
+      "us_relative_growth_or_policy": "US policy rates are expected to remain higher for longer relative to other regions due to domestic inflation pressures.",
+      "dominant_force": "Yield advantage driven by the hawkish Fed outlook.",
+      "judgment": "DXY strongly broke above 99.55, fully reflecting the yield advantage from the higher-for-longer rate outlook."
     },
     "gold_pricing": {
       "direction": "down",
-      "rate_or_real_rate_pressure": "高。美債殖利率上行至4.49%，對無息資產黃金形成強烈壓制。",
-      "dollar_effect": "高。美元指數突破99.55，強勢美元直接壓抑黃金價格。",
-      "safe_haven_demand": "無明顯避險買盤發揮作用，避險資產今日同步受壓於高利率環境。",
+      "rate_or_real_rate_pressure": "High interest rates (US10Y at 4.49%) exert heavy downward pressure on non-yielding gold.",
+      "dollar_effect": "A strong USD (DXY at 99.55) directly suppresses gold prices.",
+      "safe_haven_demand": "Suppressed as high yields make safe-haven bonds more attractive relative to gold.",
       "central_bank_buying": "unclear",
       "geopolitical_risk": "unclear",
-      "dominant_force": "高利率與強勢美元的雙重壓抑。",
-      "judgment": "黃金下跌至4456.10，在美債殖利率與美元雙雙走強的環境下，黃金多頭毫無抵抗力。"
+      "dominant_force": "The dual pressure of rising US yields and a stronger USD.",
+      "judgment": "Gold fell to 4456.10, heavily suppressed by the strong dollar and high-yield environment."
     },
     "asia_fx_pricing": {
       "twd": {
-        "reaction": "面臨貶值壓力",
+        "reaction": "depreciation pressure",
         "consistent_with_dollar_pressure": "yes",
-        "local_correction_factor": "待確認",
-        "judgment": "台幣表現符合美元走強與高美債殖利率帶來的資金外流壓力。"
+        "local_correction_factor": "unclear",
+        "judgment": "TWD faces depreciation pressure in line with overall Asian currency weakness under a strong USD."
       },
       "jpy": {
-        "reaction": "面臨貶值壓力",
+        "reaction": "depreciation pressure",
         "consistent_with_dollar_pressure": "yes",
-        "local_correction_factor": "待確認",
-        "judgment": "日圓因美日利差持續維持高位而承壓，需關注日本央行是否口頭或實質干預。"
+        "local_correction_factor": "Potential Japanese central bank intervention to defend the currency.",
+        "judgment": "JPY is pressured by the wide US-Japan yield gap; watch closely for BoJ intervention signals."
       },
       "krw": {
-        "reaction": "面臨貶值壓力",
+        "reaction": "depreciation pressure",
         "consistent_with_dollar_pressure": "yes",
-        "local_correction_factor": "待確認",
-        "judgment": "韓圜同樣受制於強勢美元與高利率環境，呈現貶值態勢。"
+        "local_correction_factor": "unclear",
+        "judgment": "KRW depreciates under the weight of the strong USD and high US rates."
       }
     },
     "market_contradiction": {
-      "baseline_expectation": "AI通常被視為提高生產力、長期降低成本的通縮因子；且高通膨預期有時會激發黃金的抗通膨避險需求。",
-      "actual_reaction": "AI被定價為結構性通膨的推手（可能源於龐大的電力與基礎建設需求），且黃金並未發揮抗通膨功能，反而因高利率與強美元而大跌。",
-      "most_non_obvious_link": "AI科技敘事與實體能源（油價）共振，共同轉化為債市的「再通膨黏性」定價。",
-      "possible_explanation": "市場意識到AI基礎建設對能源與資源的消耗巨大，導致科技進步在短期內呈現「高通膨、高資源消耗」特徵，進而推升實質利率，壓制黃金。",
+      "baseline_expectation": "Typically, technological revolutions like AI are viewed as long-term deflationary forces that boost productivity and lower costs.",
+      "actual_reaction": "The market is currently pricing AI as an immediate structural inflation driver, pushing yields and the USD higher.",
+      "most_non_obvious_link": "The transition of the AI narrative from a productivity/growth booster to a structural cost-push inflation driver.",
+      "possible_explanation": "Massive capital expenditure on AI infrastructure, energy-hungry data centers, and talent acquisition are driving up immediate structural costs, fueling inflation expectations before productivity gains can materialize.",
       "is_correction_or_new_mainline": "new_mainline_signal",
-      "how_to_integrate_into_main_theme": "將AI從單純的「成長/科技股」敘事，納入「結構性通膨/資源高消耗」的總經供給端框架中。",
+      "how_to_integrate_into_main_theme": "Integrate AI as a structural cost-push factor alongside cyclical oil prices, creating a powerful 'double engine' for reflation.",
       "presenter_story_angle": {
-        "opening_question": "當全世界都在期待AI帶來生產力奇蹟時，你有想過它可能先變成推升通膨的『幕後黑手』嗎？",
-        "normal_script": "傳統上科技進步應該帶來降價，但今天市場卻在定價一個全新故事：AI的龐大需求正與油價共振，成為結構性通膨的新推手。",
-        "where_it_breaks": "這項通膨黏性預期直接封鎖了Fed的降息空間，推升美債殖利率至4.49%，美元衝上99.55。這一次，連黃金都無法避險，與亞洲貨幣一同被強勢美元與高利率無情壓制。",
-        "why_it_matters": "這代表市場已進入毫無修正因子的『再通膨強共振』定價，任何降息的幻想在AI與能源的雙重夾擊下都顯得不切實際。",
-        "next_watch": "我們接下來必須緊盯美國勞動力市場數據，看就業降溫是否能成為修正這波瘋狂通膨定價的唯一解藥。"
+        "opening_question": "What if the AI revolution, instead of making everything cheaper, is actually making inflation stickier?",
+        "normal_script": "Usually, we expect technological advances to boost productivity and lower prices over time.",
+        "where_it_breaks": "But today, the market is pricing AI as a structural inflation driver. Combined with rising oil prices, it is locking the Fed into a higher-for-longer stance.",
+        "why_it_matters": "This flips the macro playbook: US yields are up to 4.49%, DXY is above 99.55, and both gold and Asian currencies are being crushed under the weight of this new inflation narrative.",
+        "next_watch": "We must watch if upcoming US labor market data shows any cooling to challenge this aggressive reflation narrative."
       }
     },
     "pricing_assessment": {
-      "dominant_market_force": "AI結構性通膨與油價共振引發的「再通膨定價」，強化Fed維持高利率更久的預期。",
-      "offsetting_force": "今日無明顯抵銷力量，市場呈現強烈的單邊共振。",
-      "most_non_obvious_signal": "AI意外被市場作為通膨黏性的重新定價驅因，而非通縮因子。",
-      "market_question": "美國勞動力市場是否會及時降溫，以打斷這波由AI與油價主導的再通膨定價鏈條？",
-      "one_sentence_takeaway": "AI與油價共振引發再通膨強定價，美債與美元攜手狂飆，黃金與亞幣全面退守。",
-      "next_watch": "美國勞動力市場數據、Fed官員對AI通膨效應的表態、亞洲央行針對貨幣貶值的干預訊號。"
+      "dominant_market_force": "The AI-inflation narrative coupled with rising oil prices driving US yields and the USD higher.",
+      "offsetting_force": "None currently active; the market lacks growth-cooling signals.",
+      "most_non_obvious_signal": "AI transitioning from a productivity/growth narrative to a structural inflation narrative.",
+      "market_question": "Can the US labor market cool fast enough to offset this new AI-driven structural inflation pressure?",
+      "one_sentence_takeaway": "AI and oil have formed a powerful reflation alliance, pushing US yields and the dollar up while crushing gold and Asian currencies.",
+      "next_watch": "US labor market data, Fed officials' comments on AI-driven inflation, and Asian central bank intervention signals."
     },
     "asset_reaction": {
       "asia_fx": {
