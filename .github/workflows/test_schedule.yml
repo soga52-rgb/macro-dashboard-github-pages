@@ -1,9 +1,10 @@
 name: Test schedule trigger
 
+# Test: align with old working workflow structure
 on:
-  workflow_dispatch:
   schedule:
-    - cron: "*/10 * * * *"  # resync schedule test
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -13,6 +14,7 @@ permissions:
 jobs:
   test:
     runs-on: ubuntu-latest
+
     steps:
       - name: Print schedule test time
         run: |
