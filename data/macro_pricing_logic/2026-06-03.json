@@ -1,174 +1,162 @@
 {
-  "generated_at": "2026-06-04T13:28:49+08:00",
+  "generated_at": "2026-06-04T15:12:22+08:00",
   "date": "2026-06-03",
   "mode": "macro_pricing_logic_v4",
   "logic": {
     "pricing_context": {
-      "market_was_pricing": "The market was pricing in a reflation regime where structural inflation and cyclical energy pressures block the Federal Reserve's path to rate cuts.",
-      "new_information": "The AI narrative is unexpectedly acting as a structural inflation driver, which, combined with rising oil prices, has reinforced the Fed's higher-for-longer interest rate outlook.",
-      "pricing_question": "Will the dual forces of AI-driven structural inflation and rising oil prices permanently prevent the Fed from cutting rates, and can upcoming labor data offer any cooling relief?"
+      "market_was_pricing": "The market was navigating a complex balance of growth and inflation, but has now pivoted heavily into a 're-inflation pricing' regime where structural factors block the path to rate cuts.",
+      "new_information": "The emergence of AI as a structural inflation driver, combined with rising oil prices, has reinforced the Federal Reserve's 'higher-for-longer' interest rate outlook, pushing the US 10-year yield to 4.49% and the Dollar Index to 99.55.",
+      "pricing_question": "Will the structural inflation pressures from AI and energy permanently prevent the Fed from easing, or will upcoming labor market data provide a cooling counterweight?"
     },
     "input_material_mapping": {
       "inflation_materials": [
-        "AI unexpectedly acts as an inflation driver, triggering repricing of inflation stickiness.",
-        "Oil price upward pressure strengthens reflation expectation."
+        "AI unexpectedly drives inflation, causing market repricing of inflation stickiness.",
+        "Oil price upward pressure strengthens re-inflation expectations, boosting US yields.",
+        "Oil prices up (market signal)."
       ],
       "rate_materials": [
-        "US 10-year Treasury yield rose to 4.49%, reflecting reflation and higher-for-longer expectations.",
-        "Oil price upward pressure pushes up US yields."
+        "US 10-year Treasury yield rises to 4.49% reflecting re-inflation and higher-for-longer expectations.",
+        "Oil price upward pressure strengthens re-inflation expectations, boosting US yields."
       ],
       "dollar_materials": [
-        "DXY strongly broke above 99.55 supported by yield advantages.",
-        "Strong USD and high rates cause Asia FX depreciation pressure."
+        "DXY strong breakout to 99.55 supported by rate differential advantage.",
+        "Strong USD and high rates put depreciation pressure on Asian currencies."
       ],
       "gold_materials": [
-        "Gold fell to 4456.10, suppressed by high rates and a strong USD."
+        "Gold down to 4456.10, suppressed by high rates and a strong USD."
       ],
       "asia_fx_materials": [
-        "Strong USD and high rates cause Asian currencies to face depreciation pressure.",
-        "Watchpoint: Asian central banks' potential policy intervention signals."
+        "Strong USD and high rates put depreciation pressure on Asian currencies."
       ],
-      "mapping_summary": "Today's market signals show a highly synchronized reflation trade where AI and energy drive inflation expectations, pushing up yields and the dollar, which subsequently pressures gold and Asian currencies."
+      "mapping_summary": "The market is experiencing a highly synchronized re-inflation trade where supply-side and structural inflation drivers are pushing up yields and the dollar, systematically depressing gold and Asian currencies."
     },
     "inflation_expectation": {
       "energy": {
         "direction": "up",
         "importance": "high",
         "evidence": [
-          "Oil price upward pressure strengthens reflation expectation"
+          "Oil price upward pressure strengthens re-inflation expectations",
+          "Oil prices up"
         ],
-        "judgment": "Rising oil prices directly fuel cyclical reflation expectations and push up yields."
+        "judgment": "Rising oil prices are acting as a traditional accelerator for re-inflation expectations, directly feeding into bond yields."
       },
       "supply_chain": {
         "direction": "unclear",
         "importance": "low",
         "evidence": [],
-        "judgment": "No specific supply chain data provided in the daily summary."
+        "judgment": "No specific supply chain or shipping data was provided in today's summary."
       },
       "price_data": {
         "direction": "up",
         "importance": "high",
         "evidence": [
-          "AI unexpectedly acts as an inflation driver, triggering repricing of inflation stickiness."
+          "AI unexpectedly drives inflation, causing market repricing of inflation stickiness."
         ],
-        "judgment": "The market is actively repricing AI as a structural cost-push inflation factor."
+        "judgment": "AI is being priced not just as a technology boom, but as a structural, sticky contributor to inflation."
       },
       "demand": {
         "direction": "unclear",
         "importance": "low",
         "evidence": [],
-        "judgment": "No specific demand or retail sales data provided in the daily summary."
+        "judgment": "No specific PMI or retail demand data was provided in today's summary."
       },
       "labor_market": {
         "direction": "unclear",
         "importance": "medium",
         "evidence": [
-          "Watchpoint: US labor market data whether it shows cooling to correct inflation expectations."
+          "Watchpoint: US labor market data cooling to correct inflation expectations."
         ],
-        "judgment": "Labor market data is a critical upcoming watchpoint, but current state is unclear from today's summary."
+        "judgment": "Labor market data is identified as the key future variable to watch, but no new data was released today to alter current pricing."
       },
       "policy_expectation": {
         "direction": "up",
         "importance": "high",
         "evidence": [
-          "AI inflation narrative and oil price resonance reinforce Fed higher-for-longer expectations."
+          "AI通膨敘事與油價共振，強化Fed高利率維持更久預期"
         ],
-        "judgment": "Inflation expectations are shifting hawkishly, blocking the Fed's near-term rate cut path."
+        "judgment": "The combination of AI structural inflation and energy costs has strengthened the market's expectation that the Fed will keep rates elevated for a prolonged period."
       },
       "summary": {
         "overall_direction": "up",
         "strength": "strong",
-        "dominant_force": "The resonance of AI structural inflation and rising oil prices.",
-        "offsetting_force": "None. No growth-cooling or deflationary factors were observed today.",
-        "judgment": "Inflation expectations are strongly up, driven by a powerful mix of structural technological costs and cyclical energy pressures."
+        "dominant_force": "The resonance between the new AI structural inflation narrative and traditional oil price increases.",
+        "offsetting_force": "None. There are currently no growth-cooling factors or dovish signals to offset this momentum.",
+        "judgment": "Inflation expectations are rising strongly as the market prices in a dual-engine inflation threat (AI + Energy), effectively shutting down immediate rate cut hopes."
       }
     },
     "rate_pricing": {
       "direction": "up",
-      "link_with_inflation_expectation": "Directly and strongly positive. Rising inflation expectations from AI and oil are the primary drivers pushing US10Y yields higher.",
-      "fed_policy_signal": "Market expects the Fed to maintain high interest rates for longer, reducing the likelihood of rate cuts.",
+      "link_with_inflation_expectation": "Highly consistent. The surge in inflation expectations is the primary driver behind the US 10-year yield climbing to 4.49%.",
+      "fed_policy_signal": "The market is pricing in a 'higher-for-longer' policy path, believing the Fed's hands are tied by sticky inflation.",
       "treasury_supply_demand": "unclear",
       "term_premium": "unclear",
       "safe_haven_bond_buying": "down",
-      "growth_concern_or_cut_expectation": "Rate cut expectations are heavily suppressed; no growth concerns are currently tempering the rise in yields.",
-      "dominant_force": "Reflation pricing and hawkish Fed policy expectations.",
-      "judgment": "US10Y yields rose to 4.49% as the market priced in persistent inflation and a prolonged hawkish pause by the Fed."
+      "growth_concern_or_cut_expectation": "Rate cut expectations are being actively priced out; growth concerns are non-existent in today's pricing, allowing yields to rise unimpeded.",
+      "dominant_force": "Re-pricing of inflation stickiness and the resulting hawkish shift in Fed policy expectations.",
+      "judgment": "Rates are pricing in a prolonged period of restrictive policy, with the 10-year yield rising to reflect a higher neutral rate driven by structural inflation."
     },
     "dollar_pricing": {
       "direction": "up",
-      "link_with_rates": "Strongly positive. Higher US yields provide a clear yield advantage that directly supports the USD.",
+      "link_with_rates": "Highly consistent. The rise in US yields to 4.49% widens the interest rate differential in favor of the US, driving the DXY to break above 99.55.",
       "safe_haven_dollar": "unclear",
       "liquidity_demand": "unclear",
-      "other_currency_weakness": "unclear",
-      "us_relative_growth_or_policy": "US policy rates are expected to remain higher for longer relative to other regions due to domestic inflation pressures.",
-      "dominant_force": "Yield advantage driven by the hawkish Fed outlook.",
-      "judgment": "DXY strongly broke above 99.55, fully reflecting the yield advantage from the higher-for-longer rate outlook."
+      "other_currency_weakness": "Non-US currencies, particularly in Asia, are experiencing passive depreciation pressure due to the widening yield gap.",
+      "us_relative_growth_or_policy": "The US policy path of keeping rates higher for longer relative to other central banks is the primary driver of dollar strength.",
+      "dominant_force": "US interest rate advantage and the hawkish Fed policy outlook.",
+      "judgment": "The US Dollar is capitalizing on the upward shift in the US yield curve, establishing a strong upward momentum against major currencies."
     },
     "gold_pricing": {
       "direction": "down",
-      "rate_or_real_rate_pressure": "High interest rates (US10Y at 4.49%) exert heavy downward pressure on non-yielding gold.",
-      "dollar_effect": "A strong USD (DXY at 99.55) directly suppresses gold prices.",
-      "safe_haven_demand": "Suppressed as high yields make safe-haven bonds more attractive relative to gold.",
+      "rate_or_real_rate_pressure": "High. The rise in the US 10-year yield to 4.49% increases the opportunity cost of holding non-yielding gold, exerting strong downward pressure.",
+      "dollar_effect": "Negative. The breakout of the DXY to 99.55 directly suppresses gold prices.",
+      "safe_haven_demand": "Weakened. Safe-haven demand is being entirely overwhelmed by the high interest rate and strong dollar environment.",
       "central_bank_buying": "unclear",
       "geopolitical_risk": "unclear",
-      "dominant_force": "The dual pressure of rising US yields and a stronger USD.",
-      "judgment": "Gold fell to 4456.10, heavily suppressed by the strong dollar and high-yield environment."
+      "dominant_force": "The double headwind of rising US yields and a surging US Dollar.",
+      "judgment": "Gold fell to 4456.10 as the massive pressure from higher yields and a stronger dollar completely dominated the asset's pricing, neutralizing any potential support."
     },
     "asia_fx_pricing": {
       "twd": {
         "reaction": "depreciation pressure",
         "consistent_with_dollar_pressure": "yes",
         "local_correction_factor": "unclear",
-        "judgment": "TWD faces depreciation pressure in line with overall Asian currency weakness under a strong USD."
+        "judgment": "TWD is facing depreciation pressure due to capital outflows driven by the wide US-Taiwan interest rate differential; local factors are currently insufficient to offset this."
       },
       "jpy": {
         "reaction": "depreciation pressure",
         "consistent_with_dollar_pressure": "yes",
-        "local_correction_factor": "Potential Japanese central bank intervention to defend the currency.",
-        "judgment": "JPY is pressured by the wide US-Japan yield gap; watch closely for BoJ intervention signals."
+        "local_correction_factor": "unclear",
+        "judgment": "JPY remains highly sensitive to the US 10-year yield; as US yields rise to 4.49%, JPY faces renewed weakening pressure, keeping the market alert for potential BOJ intervention."
       },
       "krw": {
         "reaction": "depreciation pressure",
         "consistent_with_dollar_pressure": "yes",
         "local_correction_factor": "unclear",
-        "judgment": "KRW depreciates under the weight of the strong USD and high US rates."
+        "judgment": "KRW is weakening in line with general Asian currency depreciation under the weight of a strong USD and high global yields."
       }
     },
     "market_contradiction": {
-      "baseline_expectation": "Typically, technological revolutions like AI are viewed as long-term deflationary forces that boost productivity and lower costs.",
-      "actual_reaction": "The market is currently pricing AI as an immediate structural inflation driver, pushing yields and the USD higher.",
-      "most_non_obvious_link": "The transition of the AI narrative from a productivity/growth booster to a structural cost-push inflation driver.",
-      "possible_explanation": "Massive capital expenditure on AI infrastructure, energy-hungry data centers, and talent acquisition are driving up immediate structural costs, fueling inflation expectations before productivity gains can materialize.",
+      "baseline_expectation": "Typically, a technology-driven boom (like AI) is viewed as a long-term productivity booster that should lower structural costs and inflation over time.",
+      "actual_reaction": "The market is currently pricing the AI boom as an immediate, structural inflation threat that drives yields higher.",
+      "most_non_obvious_link": "The direct transmission from the AI narrative to sticky inflation expectations, which then drives the 10-year yield up, rather than being treated purely as a growth or equity story.",
+      "possible_explanation": "The massive energy consumption and capital expenditure required for AI infrastructure are creating immediate supply-side bottlenecks, compounding the inflation pressures from rising oil prices.",
       "is_correction_or_new_mainline": "new_mainline_signal",
-      "how_to_integrate_into_main_theme": "Integrate AI as a structural cost-push factor alongside cyclical oil prices, creating a powerful 'double engine' for reflation.",
+      "how_to_integrate_into_main_theme": "AI is transitioning from a pure equity growth story into a macroeconomic factor that actively shapes the inflation and interest rate landscape.",
       "presenter_story_angle": {
-        "opening_question": "What if the AI revolution, instead of making everything cheaper, is actually making inflation stickier?",
-        "normal_script": "Usually, we expect technological advances to boost productivity and lower prices over time.",
-        "where_it_breaks": "But today, the market is pricing AI as a structural inflation driver. Combined with rising oil prices, it is locking the Fed into a higher-for-longer stance.",
-        "why_it_matters": "This flips the macro playbook: US yields are up to 4.49%, DXY is above 99.55, and both gold and Asian currencies are being crushed under the weight of this new inflation narrative.",
-        "next_watch": "We must watch if upcoming US labor market data shows any cooling to challenge this aggressive reflation narrative."
+        "opening_question": "What if the AI revolution isn't just boosting productivity, but is actually keeping your interest rates higher for longer?",
+        "normal_script": "Usually, we expect technological progress to make things cheaper and help central banks lower interest rates.",
+        "where_it_breaks": "However, today the market did the exact opposite: it priced AI as a structural inflation threat. Combined with rising oil prices, this pushed US yields to 4.49% and the dollar to 99.55.",
+        "why_it_matters": "This means the Fed is locked into a higher-for-longer stance. As a result, traditional safe havens like Gold and major Asian currencies are falling because the cost of fighting this high-yield dollar is simply too high.",
+        "next_watch": "To see if this aggressive re-inflation trade holds, we must watch if upcoming US labor market data shows signs of cooling to break this feedback loop."
       }
     },
     "pricing_assessment": {
-      "dominant_market_force": "The AI-inflation narrative coupled with rising oil prices driving US yields and the USD higher.",
-      "offsetting_force": "None currently active; the market lacks growth-cooling signals.",
-      "most_non_obvious_signal": "AI transitioning from a productivity/growth narrative to a structural inflation narrative.",
-      "market_question": "Can the US labor market cool fast enough to offset this new AI-driven structural inflation pressure?",
-      "one_sentence_takeaway": "AI and oil have formed a powerful reflation alliance, pushing US yields and the dollar up while crushing gold and Asian currencies.",
-      "next_watch": "US labor market data, Fed officials' comments on AI-driven inflation, and Asian central bank intervention signals."
-    },
-    "asset_reaction": {
-      "asia_fx": {
-        "twd": "",
-        "jpy": "",
-        "krw": ""
-      },
-      "gold": {
-        "rate_pressure": "",
-        "safe_haven_support": "",
-        "dominant_force": "",
-        "judgment": ""
-      }
+      "dominant_market_force": "The synchronized re-inflation trade driven by the dual engines of AI structural inflation and rising oil prices.",
+      "offsetting_force": "None. The market lacks any growth-cooling data or dovish Fed commentary to temper the rise in yields.",
+      "most_non_obvious_signal": "AI being priced as a hawkish macro variable (inflation driver) rather than just a bullish micro variable (corporate earnings).",
+      "market_question": "Can the global economy withstand this renewed rise in US yields and the dollar, or will it trigger a growth shock before the labor market can cool?",
+      "one_sentence_takeaway": "AI and oil are fueling a structural inflation narrative that has locked the Fed into a higher-for-longer stance, pushing yields and the dollar up while leaving gold and Asian currencies with nowhere to hide.",
+      "next_watch": "US labor market data for signs of cooling, and Fed officials' commentary on the AI-inflation connection."
     }
   }
 }

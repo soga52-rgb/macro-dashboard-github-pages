@@ -997,37 +997,51 @@ details[open] summary{
 </section>
 
 <!-- GITHUB_AI_PRESENTER_START -->
-<style id="github-ai-presenter-style-v4">
-.github-ai-presenter-v4{max-width:980px;margin:0 auto 18px;padding:18px 20px;background:#fff;border:1px solid var(--theme-border,#CEE7D7);border-radius:18px;box-shadow:0 10px 28px rgba(15,23,42,.035)}
-.github-ai-presenter-head-v4{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;margin-bottom:12px}
-.github-ai-presenter-title-v4{font-size:22px;font-weight:950;color:var(--theme-accent-text,#35724F);line-height:1.35}
-.github-ai-presenter-subtitle-v4{color:#64748b;font-size:13px;line-height:1.6;margin-top:4px}
-.github-ai-presenter-badge-v4{white-space:nowrap;border:1px solid var(--theme-border,#CEE7D7);border-radius:999px;padding:6px 10px;color:var(--theme-accent-text,#35724F);font-weight:850;font-size:12px;background:#fff}
-.github-ai-presenter-body-v4{border:1px solid var(--theme-border,#CEE7D7);border-radius:14px;background:#fbfcfb;padding:14px 15px}
-.github-ai-presenter-step-title-v4{font-weight:900;color:#172033;margin-bottom:7px;font-size:15px}
-.github-ai-presenter-text-v4{color:#374151;font-size:15px;line-height:1.8}
-.github-ai-presenter-controls-v4{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
-.github-ai-presenter-button-v4{border:1px solid var(--theme-border,#CEE7D7);border-radius:999px;padding:8px 13px;background:#fff;color:var(--theme-accent-text,#35724F);font-weight:850;cursor:pointer;font-size:14px}
-.github-ai-presenter-progress-v4{color:#64748b;font-size:13px;margin-top:8px}
-.github-ai-presenter-highlight-v4{outline:3px solid rgba(53,114,79,.16);outline-offset:4px;transition:outline .25s ease}
-@media(max-width:760px){.github-ai-presenter-v4{margin:0 auto 14px;padding:14px;border-radius:16px}.github-ai-presenter-head-v4{display:block}.github-ai-presenter-title-v4{font-size:19px}.github-ai-presenter-badge-v4{display:inline-block;margin-top:8px}.github-ai-presenter-button-v4{flex:1 1 auto}}
+<style id="github-ai-presenter-style-v5">
+.github-ai-presenter-v5{max-width:980px;margin:0 auto 18px;padding:18px 20px;background:#fff;border:1px solid var(--theme-border,#E6CFA5);border-radius:18px;box-shadow:0 10px 28px rgba(15,23,42,.035)}
+.github-ai-presenter-head-v5{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;margin-bottom:12px}
+.github-ai-presenter-title-v5{font-size:22px;font-weight:950;color:var(--theme-accent-text,#8A5A12);line-height:1.35}
+.github-ai-presenter-subtitle-v5{color:#64748b;font-size:13px;line-height:1.6;margin-top:4px}
+.github-ai-presenter-badge-v5{white-space:nowrap;border:1px solid var(--theme-border,#E6CFA5);border-radius:999px;padding:6px 10px;color:var(--theme-accent-text,#8A5A12);font-weight:850;font-size:12px;background:#fff}
+.github-ai-presenter-player-v5{border:1px solid var(--theme-border,#E6CFA5);border-radius:14px;background:#fffaf0;padding:14px 15px;margin-top:10px}
+.github-ai-presenter-audio-v5{width:100%;display:block}
+.github-ai-presenter-audio-missing-v5{border:1px dashed var(--theme-border,#E6CFA5);border-radius:12px;padding:12px 13px;background:#fff;color:#8A5A12;font-size:14px;line-height:1.6;font-weight:750}
+.github-ai-presenter-summary-v5{color:#374151;font-size:15px;line-height:1.8;margin-top:12px}
+.github-ai-presenter-details-v5{margin-top:12px;border:1px solid var(--theme-border,#E6CFA5);border-radius:14px;background:#fff;overflow:hidden}
+.github-ai-presenter-details-v5 summary{cursor:pointer;padding:12px 14px;color:var(--theme-accent-text,#8A5A12);font-weight:900;list-style:none}
+.github-ai-presenter-details-v5 summary::-webkit-details-marker{display:none}
+.github-ai-presenter-transcript-v5{padding:0 14px 14px;color:#374151;font-size:15px;line-height:1.85;white-space:pre-wrap}
+.github-ai-presenter-segments-v5{padding:0 18px 14px 34px;margin:0;color:#374151}
+.github-ai-presenter-segments-v5 li{margin:10px 0}
+.github-ai-presenter-segments-v5 strong{color:#172033}
+.github-ai-presenter-segments-v5 p{margin:5px 0 0;line-height:1.75}
+@media(max-width:760px){.github-ai-presenter-v5{margin:0 auto 14px;padding:14px;border-radius:16px}.github-ai-presenter-head-v5{display:block}.github-ai-presenter-title-v5{font-size:19px}.github-ai-presenter-badge-v5{display:inline-block;margin-top:8px}}
 </style>
-<section class="github-ai-presenter-v4" id="githubAiPresenterV4" aria-label="AI Presenter">
-  <div class="github-ai-presenter-head-v4"><div><div class="github-ai-presenter-title-v4">AI Presenter｜3 分鐘看懂今日市場</div><div class="github-ai-presenter-subtitle-v4">先判斷今日總經定價邏輯，再用簡報方式帶你看主線、證據與分歧。</div></div><div class="github-ai-presenter-badge-v4">Macro Pricing Logic</div></div>
-  <div class="github-ai-presenter-body-v4"><div class="github-ai-presenter-step-title-v4" id="githubAiPresenterStepTitleV4"></div><div class="github-ai-presenter-text-v4" id="githubAiPresenterTextV4"></div><div class="github-ai-presenter-controls-v4"><button type="button" class="github-ai-presenter-button-v4" onclick="githubAiPresenterStartV4()">開始導讀</button><button type="button" class="github-ai-presenter-button-v4" onclick="githubAiPresenterPrevV4()">上一段</button><button type="button" class="github-ai-presenter-button-v4" onclick="githubAiPresenterNextV4()">下一段</button><button type="button" class="github-ai-presenter-button-v4" onclick="githubAiPresenterStopV4()">結束</button></div><div class="github-ai-presenter-progress-v4" id="githubAiPresenterProgressV4"></div></div>
+<section class="github-ai-presenter-v5" id="githubAiPresenterV5" aria-label="AI Presenter Podcast">
+  <div class="github-ai-presenter-head-v5">
+    <div>
+      <div class="github-ai-presenter-title-v5">AI 革命的另一面：當科技繁榮變成通膨推手</div>
+      <div class="github-ai-presenter-subtitle-v5">以 Podcast 聽感呈現今日總經定價邏輯：先抓主線，再理解證據與分歧。</div>
+    </div>
+    <div class="github-ai-presenter-badge-v5">Macro Pricing Logic</div>
+  </div>
+  <div class="github-ai-presenter-player-v5">
+    <div class="github-ai-presenter-audio-missing-v5">今日語音尚未產生；目前先提供 Podcast 逐字稿預覽。</div>
+    <div class="github-ai-presenter-summary-v5">今日市場呈現強烈的再通膨共振。AI 結構性通膨與油價上漲，強化了聯準會高利率維持更久的預期，推升美債殖利率至 4.49% 與美元指數至 99.55，進而壓抑黃金與非美貨幣表現。</div>
+  </div>
+  <details class="github-ai-presenter-details-v5">
+    <summary>▶ 展開 Podcast 逐字稿</summary>
+    <div class="github-ai-presenter-transcript-v5">歡迎收聽今天的總經導讀。我們通常認為，人工智慧的突破會帶來生產力革命，進而降低生產成本。但是，如果這場 AI 革命，非但沒有讓物價變便宜，反而成為把利率鎖在高位、甚至推升通膨的新引擎呢？按照傳統的經濟學邏輯，技術進步應該是具有通縮特性的。當企業生產效率提高、長期生產成本下降，央行通常會有更大的空間來調降利率，釋放更多流動性。這也是過去市場對科技繁榮的基準想像。然而，今天的市場定價卻完全打破了這個劇本。市場非但沒有定價科技帶來的降息空間，反而將 AI 視為一個結構性的通膨威脅。在 AI 通膨敘事與油價走高的共振下，美國 十年期 公債殖利率 一路攀升到了 4.49 %，美元指數也強勢突破了 99.55。這顯示市場正在進行一場劇烈的再通膨定價。為什麼會這樣？因為 AI 基礎建設背後龐大的電力需求與資本支出，在短期內造成了實質的供給側瓶頸，這與近期上漲的能源價格產生了共振。這個雙引擎通膨效應，強化了聯準會必須將高利率維持更久的預期。在強勢美元與高美債殖利率的雙重壓制下，黃金價格下跌到了 4456.10 美元，亞洲貨幣也普遍承受著沉重的貶值壓力。總結來說，AI 已經從單純的科技成長故事，轉變為直接影響全球貨幣政策的總經變數。接下來，市場的關鍵驗證點在於即將公布的美國勞動力市場數據，我們需要觀察就業市場是否會出現降溫，來修正這份強烈的通膨預期。</div>
+  </details>
+  <details class="github-ai-presenter-details-v5">
+    <summary>▶ 展開分段重點</summary>
+    <ol class="github-ai-presenter-segments-v5"><li><strong>開場問題</strong><p>歡迎收聽今天的總經導讀。我們通常認為，人工智慧的突破會帶來生產力革命，進而降低生產成本。但是，如果這場 AI 革命，非但沒有讓物價變便宜，反而成為把利率鎖在高位、甚至推升通膨的新引擎呢？</p></li>
+<li><strong>正常劇本</strong><p>按照傳統的經濟學邏輯，技術進步應該是具有通縮特性的。當企業生產效率提高、長期生產成本下降，央行通常會有更大的空間來調降利率，釋放更多流動性。這也是過去市場對科技繁榮的基準想像。</p></li>
+<li><strong>今日斷點</strong><p>然而，今天的市場定價卻完全打破了這個劇本。市場非但沒有定價科技帶來的降息空間，反而將 AI 視為一個結構性的通膨威脅。在 AI 通膨敘事與油價走高的共振下，美國 十年期 公債殖利率 一路攀升到了 4.49 %，美元指數也強勢突破了 99.55。這顯示市場正在進行一場劇烈的再通膨定價。</p></li>
+<li><strong>背後原因</strong><p>為什麼會這樣？因為 AI 基礎建設背後龐大的電力需求與資本支出，在短期內造成了實質的供給側瓶頸，這與近期上漲的能源價格產生了共振。這個雙引擎通膨效應，強化了聯準會必須將高利率維持更久的預期。在強勢美元與高美債殖利率的雙重壓制下，黃金價格下跌到了 4456.10 美元，亞洲貨幣也普遍承受著沉重的貶值壓力。</p></li>
+<li><strong>收斂與觀察</strong><p>總結來說，AI 已經從單純的科技成長故事，轉變為直接影響全球貨幣政策的總經變數。接下來，市場的關鍵驗證點在於即將公布的美國勞動力市場數據，我們需要觀察就業市場是否會出現降溫，來修正這份強烈的通膨預期。</p></li></ol>
+  </details>
 </section>
-<script id="github-ai-presenter-script-v4">
-window.__githubAiPresenterSectionsV4=[{"title": "Opening Hook", "target": "top", "narration": "今天市場表面上很好懂：油價上漲推升通膨預期，美債殖利率跟著走高。但真正值得追問的是，為什麼本該釋放生產力、降低成本的 AI 革命，現在反而變成了推高通膨的元凶？通常我們認為新技術會帶來去通膨效應，但市場現在的定價邏輯卻完全相反，這正是今天最不直覺的傳導斷點。"}, {"title": "Transmission Setup", "target": "visual", "narration": "照正常傳導鏈來看，科技變革應該透過提高效率來壓低物價，進而放寬貨幣政策。然而，今天這條路徑在起點就出現修正。市場將 AI 基礎建設的龐大資本支出與高耗能需求，解讀為即時的結構性成本通膨。當這個新敘事與上升的油價共振，直接卡死了聯準會的降息空間，也重塑了整個資產傳導鏈。"}, {"title": "Market Evidence", "target": "market", "narration": "這種不直覺的通膨定價，正反映在價格上。美國 10 年期公債殖利率上行至 4.49%，強勢推升美元指數突破 99.55。在強美元與高利率的雙重夾擊下，黃金下跌至 4456.10，亞洲貨幣也同步承壓。市場正用真金白銀為「高利率維持更久」買單，這條再通膨傳導鏈運作得異常順暢。"}, {"title": "Narrative Check", "target": "news", "narration": "為什麼市場會出現這種轉變？最新資訊顯示，AI 基礎建設對電力與資源的極度飢渴，加上油價上行的週期性壓力，共同形成了結構性與週期性的雙引擎通膨。這不是短期雜訊，而是一個正在成形的新主線。它成功說服了市場，在生產力奇蹟出現前，我們得先承受科技擴張帶來的昂貴代價，進而支撐了美元的利差優勢。"}, {"title": "Closing Takeaway", "target": "bottom", "narration": "簡單來說，AI 與油價已結盟為強大的再通膨力量，在推升美債殖利率與美元的同時，也正全力壓制黃金與亞洲貨幣。接下來，我們需要密切觀察美國勞動力市場數據是否釋放降溫訊號，以此驗證這波由 AI 驅動的結構性通膨預期，是否會遭到實體經濟走弱的實質挑戰，這將是下一個關鍵的傳導修正點。"}];window.__githubAiPresenterIndexV4=0;window.__githubAiPresenterLastTargetV4=null;
-function githubAiPresenterFindByTextV4(tags,texts){for(var t=0;t<tags.length;t++){var nodes=document.getElementsByTagName(tags[t]);for(var i=0;i<nodes.length;i++){var tx=(nodes[i].textContent||'').trim();for(var j=0;j<texts.length;j++){if(tx.indexOf(texts[j])>=0)return nodes[i];}}}return null;}
-function githubAiPresenterFindTargetV4(kind){if(kind==='top')return document.querySelector('.top-date-meta-bar')||githubAiPresenterFindByTextV4(['section','div'],['今日總經摘要']);if(kind==='visual')return githubAiPresenterFindByTextV4(['section','div','h1','h2'],['Visual Market Note','市場傳導圖解']);if(kind==='market')return githubAiPresenterFindByTextV4(['section','div','h1','h2'],['走勢圖','Market Snapshot']);if(kind==='news')return document.querySelector('.news-narrative-section')||githubAiPresenterFindByTextV4(['section','div','h1','h2'],['新聞敘事驗證']);if(kind==='bottom')return document.querySelector('.github-history-nav-v1')||document.querySelector('.footer')||document.body;return null;}
-function githubAiPresenterClearHighlightV4(){var last=window.__githubAiPresenterLastTargetV4;if(last&&last.classList)last.classList.remove('github-ai-presenter-highlight-v4');window.__githubAiPresenterLastTargetV4=null;}
-function githubAiPresenterRenderV4(scroll){var s=window.__githubAiPresenterSectionsV4||[];var idx=window.__githubAiPresenterIndexV4||0;if(!s.length)return;if(idx<0)idx=0;if(idx>=s.length)idx=s.length-1;window.__githubAiPresenterIndexV4=idx;var item=s[idx];var title=document.getElementById('githubAiPresenterStepTitleV4');var text=document.getElementById('githubAiPresenterTextV4');var progress=document.getElementById('githubAiPresenterProgressV4');if(title)title.textContent=(idx+1)+'. '+item.title;if(text)text.textContent=item.narration||item.text||'';if(progress)progress.textContent='第 '+(idx+1)+' / '+s.length+' 段';if(scroll){githubAiPresenterClearHighlightV4();var target=githubAiPresenterFindTargetV4(item.target);if(target&&target.scrollIntoView){target.scrollIntoView({behavior:'smooth',block:'start'});if(target.classList){target.classList.add('github-ai-presenter-highlight-v4');window.__githubAiPresenterLastTargetV4=target;}}}}
-function githubAiPresenterStartV4(){window.__githubAiPresenterIndexV4=0;githubAiPresenterRenderV4(true);}
-function githubAiPresenterNextV4(){var s=window.__githubAiPresenterSectionsV4||[];window.__githubAiPresenterIndexV4=Math.min((window.__githubAiPresenterIndexV4||0)+1,s.length-1);githubAiPresenterRenderV4(true);}
-function githubAiPresenterPrevV4(){window.__githubAiPresenterIndexV4=Math.max((window.__githubAiPresenterIndexV4||0)-1,0);githubAiPresenterRenderV4(true);}
-function githubAiPresenterStopV4(){githubAiPresenterClearHighlightV4();var p=document.getElementById('githubAiPresenterV4');if(p&&p.scrollIntoView)p.scrollIntoView({behavior:'smooth',block:'start'});}
-document.addEventListener('DOMContentLoaded',function(){githubAiPresenterRenderV4(false);});
-</script>
 <!-- GITHUB_AI_PRESENTER_END -->
 
 <section class="visual-note-section">
