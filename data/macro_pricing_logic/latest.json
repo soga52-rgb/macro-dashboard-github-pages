@@ -1,56 +1,54 @@
 {
-  "generated_at": "2026-06-05T09:24:21+08:00",
+  "generated_at": "2026-06-05T13:05:26+08:00",
   "date": "2026-06-04",
   "mode": "macro_pricing_logic_v4",
   "logic": {
     "pricing_context": {
-      "market_was_pricing": "市場先前主要定價通膨黏性與高利率維持更長時間（Higher for longer）的預期。",
-      "new_information": "美國上周初領失業金人數升至三個月高點，顯示勞動市場出現邊際降溫訊號；同時油價下行反映能源需求擔憂。",
-      "pricing_question": "就業市場的邊際轉弱，是否足以推動市場主線從「通膨黏性」轉向「成長降溫下的降息空間定價」？"
+      "market_was_pricing": "市場先前主要定價通膨黏性，維持高利率預期。",
+      "new_information": "美國上周初領失業金人數升至三個月高點，顯示勞動市場邊際降溫；同時油價下行反映能源需求擔憂。",
+      "pricing_question": "勞動市場的邊際降溫是否足以在不引發衰退恐慌的前提下，重塑聯準會的降息預期並引導美元走弱？"
     },
     "input_material_mapping": {
       "inflation_materials": [
         "油價下行反映能源需求擔憂",
-        "美國上周初領失業金人數升至三個月高點（勞動市場邊際降溫）"
+        "美國上周初領失業金人數升至三個月高點，勞動市場邊際降溫"
       ],
       "rate_materials": [
         "美國上周初領失業金人數升至三個月高點",
         "勞動市場邊際降溫強化市場對Fed降息預期",
-        "美債殖利率回落（US10Y降至4.477%）"
+        "美債殖利率回落（US10Y降至4.477）"
       ],
       "dollar_materials": [
-        "美債殖利率回落導致美元指數走弱（DXY降至99.432）",
-        "利差優勢收斂導致美元走弱"
+        "美債殖利率回落導致美元指數走弱（DXY降至99.432）"
       ],
       "gold_materials": [
-        "黃金受惠於利率下行環境（Gold升至4504.5）",
-        "利率下行支撐無息資產吸引力"
+        "黃金受惠於利率下行環境，上漲至4504.5，利率下行支撐無息資產吸引力"
       ],
       "asia_fx_materials": [
-        "美元指數走弱推動日圓/台幣偏強"
+        "美元走弱推動日圓與台幣表現偏強"
       ],
-      "mapping_summary": "今日市場核心素材圍繞「初領失業金人數上升」這一關鍵就業數據。該數據觸發了美債殖利率與美元的同步回落，並為黃金及亞洲貨幣（日圓、台幣）提供了上行支撐，整體呈現經典的降息預期升溫傳導鏈。"
+      "mapping_summary": "初領失業金數據超預期為今日核心驅動因子，透過就業降溫與降息預期升溫渠道，傳導至美債殖利率下行與美元走弱，進而支撐黃金與主要亞幣。"
     },
     "inflation_expectation": {
       "energy": {
         "direction": "down",
         "importance": "medium",
         "evidence": [
-          "油價下行反映能源需求擔憂但未引發避險拋售"
+          "油價下行反映能源需求擔憂"
         ],
-        "judgment": "油價因需求擔憂而走軟，從成本端削弱了通膨預期，但並未引發市場對系統性衰退的恐慌。"
+        "judgment": "油價下跌反映需求端隱憂，對整體通膨預期提供下行壓力，但並未引發市場對系統性通膨失控或惡性衰退的極端定價。"
       },
       "supply_chain": {
         "direction": "unclear",
         "importance": "low",
         "evidence": [],
-        "judgment": "今日無相關供應鏈數據或新聞提及，影響尚待確認。"
+        "judgment": "今日無相關供應鏈或運價數據揭露。"
       },
       "price_data": {
         "direction": "unclear",
         "importance": "low",
         "evidence": [],
-        "judgment": "今日無最新CPI、PPI或PCE等直接物價數據公布。"
+        "judgment": "今日無直接物價指數（CPI/PPI/PCE）數據公布。"
       },
       "demand": {
         "direction": "down",
@@ -58,7 +56,7 @@
         "evidence": [
           "油價下行反映能源需求擔憂"
         ],
-        "judgment": "能源需求擔憂暗示實體經濟需求可能出現邊際放緩跡象。"
+        "judgment": "能源需求擔憂與就業市場降溫相互印證，顯示實體經濟需求端出現邊際放緩跡象。"
       },
       "labor_market": {
         "direction": "down",
@@ -67,7 +65,7 @@
           "美國上周初領失業金人數升至三個月高點",
           "勞動市場邊際降溫"
         ],
-        "judgment": "初領失業金人數超預期上升，提供勞動市場邊際降溫的實質證據，成為今日壓低通膨與利率預期的主導因子。"
+        "judgment": "初領失業金人數上升為今日最關鍵的實體經濟訊號，確認就業市場緊張狀況有所緩解。"
       },
       "policy_expectation": {
         "direction": "down",
@@ -75,89 +73,89 @@
         "evidence": [
           "勞動市場邊際降溫強化市場對Fed降息預期"
         ],
-        "judgment": "就業數據轉弱直接削弱了聯準會維持高利率的政策底氣，推升市場對降息空間的預期。"
+        "judgment": "就業數據走弱直接轉化為對聯準會限制性政策放寬的預期，壓低遠端通膨補償與政策利率預期。"
       },
       "summary": {
         "overall_direction": "down",
         "strength": "medium",
-        "dominant_force": "勞動市場邊際降溫（初領失業金人數升至三個月高點）",
-        "offsetting_force": "無明顯推升通膨之力量",
-        "judgment": "今日通膨預期在就業市場降溫與油價走軟的共同作用下呈現下行態勢，市場定價重心由「通膨黏性」向「成長降溫」轉移。"
+        "dominant_force": "勞動市場邊際降溫（初領失業金人數上升）",
+        "offsetting_force": "無明顯推升通膨之抵銷力量，油價下行與就業走弱方向一致",
+        "judgment": "今日通膨預期在就業市場降溫與油價下跌的共振下走弱，市場定價重心由通膨黏性轉向成長動能邊際放緩。"
       }
     },
     "rate_pricing": {
       "direction": "down",
-      "link_with_inflation_expectation": "同向。就業降溫削弱通膨預期，進而強化降息預期，引導美債殖利率回落。",
-      "fed_policy_signal": "勞動市場邊際降溫強化了市場對聯準會啟動降息的預期，壓低政策利率路徑展望。",
-      "treasury_supply_demand": "unclear",
-      "term_premium": "unclear",
-      "safe_haven_bond_buying": "unclear",
-      "growth_concern_or_cut_expectation": "市場目前主要交易「軟著陸下的降息空間」，而非衰退恐慌，這使長端利率（US10Y至4.477%）因降息預期升溫而承壓。",
-      "dominant_force": "初領失業金數據超預期引發的降息預期升溫。",
-      "judgment": "美債殖利率走勢與通膨預期降溫同向。就業數據轉弱成為美債殖利率下行的主要驅動力，市場正積極定價聯準會的降息路徑。"
+      "link_with_inflation_expectation": "同向。就業降溫削弱通膨黏性預期，進而強化降息空間，引導美債殖利率回落。",
+      "fed_policy_signal": "就業數據邊際惡化強化了市場對聯準會重啟降息路徑的政策預期。",
+      "treasury_supply_demand": "無特別提及公債供需變化。",
+      "term_premium": "無特別提及期限溢價變動。",
+      "safe_haven_bond_buying": "無明顯避險買債跡象，市場並非定價衰退恐慌，而是定價軟著陸下的降息空間。",
+      "growth_concern_or_cut_expectation": "降息預期升溫主導長債利率壓低，美債10年期殖利率回落至4.477。",
+      "dominant_force": "初領失業金人數超預期引發的降息預期重估",
+      "judgment": "利率定價與通膨預期下行同向，主要由就業走弱帶動的降息預期升溫主導，美債殖利率呈現顯著回落。"
     },
     "dollar_pricing": {
       "direction": "down",
-      "link_with_rates": "同向。美債殖利率回落收斂了美元與其他主要貨幣的利差優勢，直接導致美元指數走弱。",
-      "safe_haven_dollar": "unclear",
-      "liquidity_demand": "unclear",
-      "other_currency_weakness": "unclear",
-      "us_relative_growth_or_policy": "美國就業數據邊際走軟，削弱了美國經濟相對其他經濟體的極端強韌性，利差優勢的收斂主導了美元的跌勢（DXY降至99.432）。",
-      "dominant_force": "美債殖利率回落與利差優勢收斂。",
-      "judgment": "美元定價與利率方向高度一致。就業降溫引發的利差優勢收斂是壓低美元的主要力量，市場並未出現因衰退擔憂而湧入避險美元的跡象。"
+      "link_with_rates": "同向。美債殖利率回落削弱了美德、美日等主要利差優勢，導致美元指數走弱。",
+      "safe_haven_dollar": "無，市場未出現衰退恐慌，避險美元需求未啟動。",
+      "liquidity_demand": "無特別流動性緊張跡象。",
+      "other_currency_weakness": "無，今日主要受美元自身利差優勢收斂走弱影響，非他國貨幣主動走弱。",
+      "us_relative_growth_or_policy": "美國勞動市場邊際降溫，相較於先前的強勁經濟韌性有所修正，降低了美國相對成長優勢。",
+      "dominant_force": "美債殖利率回落及利差優勢收斂",
+      "judgment": "美元定價與利率同向走弱，DXY跌至99.432，主因美債殖利率下滑削弱美元資產的利差吸引力。"
     },
     "gold_pricing": {
       "direction": "up",
-      "rate_or_real_rate_pressure": "美債殖利率回落降低了持有黃金的機會成本，顯著支撐無息資產的吸引力。",
-      "dollar_effect": "美元指數走弱（DXY降至99.432）對以美元計價的黃金形成直接的價格支撐。",
-      "safe_haven_demand": "unclear",
-      "central_bank_buying": "unclear",
-      "geopolitical_risk": "unclear",
-      "dominant_force": "美債殖利率與美元指數同步回落。",
-      "judgment": "金價上漲至4504.5，主要由利率下行與美元走弱共同驅動。在市場未交易衰退恐慌的背景下，黃金主要發揮其作為無息資產對利率敏感的定價屬性。"
+      "rate_or_real_rate_pressure": "美債殖利率下行（US10Y降至4.477）降低了持有黃金的機會成本，支撐無息資產吸引力。",
+      "dollar_effect": "美元指數走弱（DXY降至99.432）對以美元計價的黃金提供直接上行動能。",
+      "safe_haven_demand": "無明顯避險需求主導，油價下行未引發衰退恐慌。",
+      "central_bank_buying": "無特別提及央行買盤。",
+      "geopolitical_risk": "無特別提及地緣政治風險升溫。",
+      "dominant_force": "美債殖利率與美元同步回落帶來的機會成本下降與計價效應",
+      "judgment": "黃金定價與利率/美元反向，價格上漲至4504.5，完美符合利率下行與美元走弱的基準傳導路徑。"
     },
     "asia_fx_pricing": {
       "twd": {
         "reaction": "偏強",
         "consistent_with_dollar_pressure": "yes",
-        "local_correction_factor": "unclear",
-        "judgment": "台幣走勢與美元走弱的壓力方向一致，主要受美元指數回落推動而呈現偏強態勢。"
+        "local_correction_factor": "無特別提及本地因子，主要隨美元走弱與整體非美貨幣反彈而升值。",
+        "judgment": "台幣走勢與美元壓力減輕同向，呈現偏強態勢。"
       },
       "jpy": {
         "reaction": "偏強",
         "consistent_with_dollar_pressure": "yes",
-        "local_correction_factor": "美日利差收斂",
-        "judgment": "美債殖利率下行導致美日利差邊際收斂，為日圓提供升值動能，走勢與美元走弱一致。"
+        "local_correction_factor": "美日利差收斂預期提供日圓回升動能。",
+        "judgment": "日圓隨美債殖利率及美元回落而走強，符合利差收斂邏輯。"
       },
       "krw": {
         "reaction": "待確認",
         "consistent_with_dollar_pressure": "unclear",
-        "local_correction_factor": "資料不足",
-        "judgment": "今日素材未提及韓圜具體表現，其對美元壓力的反應尚待確認。"
+        "local_correction_factor": "今日數據未提及韓圜具體表現與本地因子。",
+        "judgment": "資料不足，暫標示為待確認。"
       }
     },
     "market_contradiction": {
-      "baseline_expectation": "在正常基準傳導下，若油價下跌反映能源需求擔憂，且就業市場降溫，市場可能因擔憂經濟衰退而觸發避險情緒，進而推升避險美元並壓抑風險資產與非美貨幣。",
-      "actual_reaction": "今日市場並未陷入衰退恐慌，反而積極交易「軟著陸下的降息空間」，呈現美元走弱、黃金上行、日圓與台幣偏強的樂觀傳導。",
-      "most_non_obvious_link": "油價下跌與就業轉弱同時發生，但市場選擇忽略「衰退風險」，僅將其解讀為「通膨壓力減輕與降息空間打開」的利多。",
-      "possible_explanation": "初領失業金人數僅是「邊際降溫」而非「失速墜落」，尚未達到觸發衰退定價的臨界點。因此，市場將其視為促使聯準會轉向的溫和催化劑，而非經濟崩潰的訊號。",
+      "baseline_expectation": "就業市場降溫與油價下行（反映需求擔憂）若同時發生，通常可能引發市場對經濟衰退的恐慌，進而推升避險美元並壓抑風險資產與黃金。",
+      "actual_reaction": "市場並未交易衰退恐慌，反而積極交易「軟著陸下的降息空間」，導致美元走弱、黃金與主要亞幣偏強。",
+      "most_non_obvious_link": "油價疲軟並未觸發避險買盤流入美元，反而與就業降溫共振，被市場解讀為有利於降息的正面訊號。",
+      "possible_explanation": "市場目前的定價主線高度聚焦於「尋求聯準會降息的契機」。只要就業數據未出現斷崖式崩跌，邊際降溫與油價下跌都會被解讀為通膨壓力減輕、政策放寬空間打開的利多，而非衰退訊號。",
       "is_correction_or_new_mainline": "offsetting_force",
-      "how_to_integrate_into_main_theme": "就業降溫作為修正因子，成功壓制了通膨預期，並在油價下跌未引發避險情緒的情況下，引導市場聚焦於降息路徑的通暢，使整體宏觀敘事維持在軟著陸的軌道上。",
+      "how_to_integrate_into_main_theme": "將油價下跌與就業降溫共同歸類為「通膨與成長雙降溫」的輔助因子，強化降息預期的合理性，從而與「就業降溫 -> 降息預期升溫」的主線融合。",
       "presenter_story_angle": {
-        "opening_question": "當就業數據與油價雙雙下滑，市場為什麼沒有陷入衰退恐慌，反而開心地交易起降息行情？",
-        "normal_script": "按照常理，經濟數據轉弱與油價下跌往往暗示著需求不振，可能引發市場對衰退的擔憂，進而推升避險美元並壓抑非美貨幣與黃金。",
-        "where_it_breaks": "然而今天，初領失業金人數升至三個月高點，美元卻不升反降，黃金與日圓、台幣反而同步走強。",
-        "why_it_matters": "這表明市場目前正處於「壞消息就是好消息」的軟著陸定價階段。市場將就業降溫視為打開聯準會降息大門的鑰匙，而非經濟衰退的警訊。",
-        "next_watch": "接下來的關鍵在於即將公布的非農就業報告，這將驗證勞動市場究竟是溫和降溫，還是正在失速墜落。"
+        "opening_question": "當初領失業金人數創下三個月新高、油價同步下跌時，市場為什麼沒有陷入衰退恐慌，反而開心地交易降息？",
+        "normal_script": "按照常理，就業市場走弱與能源需求疲軟往往是經濟衰退的前兆，這通常會刺激避險資金湧入美元並壓抑大宗商品。",
+        "where_it_breaks": "但今天市場卻反其道而行，美元指數跌破100關卡至99.432，美債殖利率回落，黃金與亞幣同步走強。",
+        "why_it_matters": "這表明市場目前的定價邏輯極度渴望「降息空間」。只要就業是『邊際降溫』而非『失速墜落』，市場就會將其定性為軟著陸的黃金劇本。",
+        "next_watch": "接下來的非農就業報告（NFP）將是關鍵。如果就業數據進一步惡化，市場是否會從現在的『降息狂歡』轉向『衰退恐慌』，將是下一個定價分水嶺。"
       }
     },
     "pricing_assessment": {
       "dominant_market_force": "勞動市場邊際降溫（初領失業金人數上升）推升聯準會降息預期。",
-      "offsetting_force": "油價下行帶來的能源需求擔憂（但今日並未轉化為避險拋售或衰退交易）。",
-      "most_non_obvious_signal": "油價下跌並未激發美元的避險買盤，顯示市場風險偏好仍由「降息預期升溫」主導。",
-      "market_question": "勞動市場的邊際降溫是否會進一步惡化為實質性的經濟衰退，從而破壞目前的軟著陸定價？",
-      "one_sentence_takeaway": "市場正沉浸於「就業溫和降溫、降息空間打開」的軟著陸劇本，壓低美債殖利率與美元並推升黃金。",
-      "next_watch": "非農就業報告（NFP）是否確認勞動市場趨勢性轉弱，以及美元指數在關鍵支撐位的買盤強度。"
+      "offsetting_force": "油價下行反映的需求擔憂，但目前被解讀為通膨降溫的助力，而非衰退恐慌。",
+      "most_non_obvious_signal": "油價下跌並未引發避險資金流入美元，顯示市場風險偏好仍維持在「軟著陸」框架內。",
+      "market_question": "勞動市場的降溫是通往軟著陸的及時雨，還是經濟失速的早期訊號？",
+      "one_sentence_takeaway": "市場正熱烈交易「就業降溫帶來的降息空間」，在未見衰退恐慌前，美債殖利率與美元雙雙承壓，黃金與亞幣順勢走強。",
+      "next_watch": "即將公布的非農就業報告（NFP），用以驗證勞動市場是否確認趨勢性轉弱，並觀察油價疲軟是否會觸發衰退交易。"
     }
   }
 }
