@@ -1,57 +1,54 @@
 {
-  "generated_at": "2026-06-08T08:59:15+08:00",
+  "generated_at": "2026-06-08T13:20:12+08:00",
   "date": "2026-06-07",
   "mode": "macro_pricing_logic_v4",
   "logic": {
     "pricing_context": {
-      "market_was_pricing": "強勁就業數據與高利率維持更久的再通膨預期",
-      "new_information": "非農就業數據表現強勁，引發市場重新定價聯準會升息風險，美債殖利率與美元同步走高，同時金價與油價逆勢上行。",
-      "pricing_question": "在強勁就業推升利率與美元的背景下，黃金與油價的同步上行究竟是反映再通膨，還是對未來政策失誤的防禦性避險？"
+      "market_was_pricing": "聯聯準會降息預期與通膨放緩路徑。",
+      "new_information": "非農就業數據表現強勁，引發市場重新定價聯準會升息風險，推升美債殖利率與美元。",
+      "pricing_question": "在強勁就業數據封鎖降息空間、推升美債殖利率與美元的同時，黃金與油價為何同步上行？市場是在定價再通膨還是防範政策失誤？"
     },
     "input_material_mapping": {
       "inflation_materials": [
-        "非農數據表現強勁",
-        "油價同步上行"
+        "非農數據表現強勁，促使市場重新定價聯準會升息風險",
+        "金價與油價同步上行，顯示市場對未來政策失誤的避險溢價上升"
       ],
       "rate_materials": [
-        "美國10年期公債殖利率上行至4.536",
-        "非農數據強勁引發升息擔憂",
-        "市場重新定價聯準會升息風險"
+        "非農數據表現強勁，促使市場重新定價聯準會升息風險",
+        "美國10年期公債殖利率上行至4.536，反映高利率維持更久預期"
       ],
       "dollar_materials": [
-        "美元指數走強至100.11",
-        "利差優勢推升美元匯率"
+        "美元指數走強至100.11，導致亞幣普遍承壓"
       ],
       "gold_materials": [
-        "金價上行至4352.5",
-        "市場對未來政策失誤的避險溢價上升",
-        "金價與油價同步上行避險"
+        "金價與油價同步上行，顯示市場對未來政策失誤的避險溢價上升",
+        "金價上漲至4352.5，反映避險需求抵銷高利率壓力"
       ],
       "asia_fx_materials": [
-        "美元指數走強導致亞幣普遍承壓"
+        "美元指數走強至100.11，導致亞幣普遍承壓"
       ],
-      "mapping_summary": "今日核心素材圍繞強勁非農就業數據展開，該數據同時觸發了利率與美元的上行，但傳統的『高利率壓抑黃金』傳導路徑出現分歧，黃金與油價同步走高反映了避險與政策不確定性溢價。"
+      "mapping_summary": "強勁非農就業數據作為核心驅動，推升殖利率與美元，但同時激發黃金與油價的避險與再通膨定價，導致傳統傳導路徑出現分歧。"
     },
     "inflation_expectation": {
       "energy": {
         "direction": "up",
         "importance": "medium",
         "evidence": [
-          "油價同步上行"
+          "金價與油價同步上行"
         ],
-        "judgment": "油價上行與金價共振，可能反映地緣政治風險或再通膨預期，但缺乏具體供需數據，主要作為避險與通膨預期的共振訊號。"
+        "judgment": "油價上行可能反映再通膨預期或地緣政治風險，但資料未提供具體供需細節，主要與黃金同步作為避險與通膨對沖工具。"
       },
       "supply_chain": {
         "direction": "unclear",
         "importance": "low",
         "evidence": [],
-        "judgment": "今日無具體供應鏈、運價或制裁相關數據提及。"
+        "judgment": "資料不足，未提及供應鏈相關數據。"
       },
       "price_data": {
         "direction": "unclear",
         "importance": "low",
         "evidence": [],
-        "judgment": "今日無直接CPI、PPI或PCE等物價數據公佈，主要由就業數據間接推導通膨預期。"
+        "judgment": "資料不足，未提及具體CPI、PPI或PCE數據。"
       },
       "demand": {
         "direction": "up",
@@ -59,105 +56,106 @@
         "evidence": [
           "非農數據表現強勁"
         ],
-        "judgment": "強勁的就業市場間接反映美國內需依然具有韌性，支撐再通膨定價。"
+        "judgment": "強勁的就業市場間接反映美國內需韌性，支持再通膨與高利率維持更久的定價。"
       },
       "labor_market": {
         "direction": "up",
         "importance": "high",
         "evidence": [
-          "非農數據表現強勁"
+          "非農數據表現強勁，促使市場重新定價聯準會升息風險"
         ],
-        "judgment": "非農數據表現強勁為今日核心驅動力，強化就業市場韌性並封鎖降息空間。"
+        "judgment": "非農數據異常強勁，為今日市場最核心的實體經濟驅動因子，封鎖降息空間並引發升息擔憂。"
       },
       "policy_expectation": {
         "direction": "up",
         "importance": "high",
         "evidence": [
-          "促使市場重新定價聯準會升息風險"
+          "非農數據表現強勁，促使市場重新定價聯準會升息風險",
+          "華許首場Fed會議的政策指引是否強化升息預期"
         ],
-        "judgment": "就業強勁推升市場對聯準會重啟升息或維持高利率更久的預期。"
+        "judgment": "就業數據強勁導致市場重新定價聯準會升息風險，政策預期顯著偏鷹。"
       },
       "summary": {
         "overall_direction": "up",
         "strength": "strong",
-        "dominant_force": "強勁的非農就業數據",
-        "offsetting_force": "無明顯抵銷力量，僅有黃金上行暗示的政策失誤隱憂",
-        "judgment": "今日通膨與政策緊縮預期受強勁就業數據顯著推升，市場重新定價升息風險，整體通膨預期偏強。"
+        "dominant_force": "強勁的非農就業數據引發的再通膨與升息預期。",
+        "offsetting_force": "無明顯抵銷通膨預期的因子。",
+        "judgment": "非農數據的強勁表現全面推升了市場對通膨與政策利率維持高檔（甚至升息）的預期。"
       }
     },
     "rate_pricing": {
       "direction": "up",
-      "link_with_inflation_expectation": "同向。強勁就業引發的再通膨與緊縮預期，直接傳導至美債殖利率上行。",
-      "fed_policy_signal": "非農數據促使市場重新定價聯準會升息風險，高利率維持更久（Higher for longer）預期強化。",
+      "link_with_inflation_expectation": "同向。強勁的就業數據推升通膨與再通膨預期，進而推升美債殖利率。",
+      "fed_policy_signal": "非農數據促使市場重新定價聯準會升息風險，市場關注華許首場Fed會議政策指引是否強化升息預期。",
       "treasury_supply_demand": "unclear",
       "term_premium": "unclear",
       "safe_haven_bond_buying": "down",
-      "growth_concern_or_cut_expectation": "降息空間遭封鎖，升息擔憂升溫，同時伴隨對未來政策失誤或硬著陸的隱憂。",
-      "dominant_force": "就業韌性帶動的聯準會升息與高利率維持更久預期",
-      "judgment": "美債10年期殖利率上行至4.536，完全由強勁就業數據及緊縮預期主導，避險買債需求並未顯現，資金轉向黃金避險。"
+      "growth_concern_or_cut_expectation": "降息預期遭到封鎖，市場轉而定價高利率維持更久（Higher for longer）甚至升息風險。",
+      "dominant_force": "強勁非農就業數據導致的聯準會升息風險重新定價。",
+      "judgment": "美債10年期殖利率上行至4.536%，完全由強勁就業數據及隨之而來的緊縮政策預期所主導。"
     },
     "dollar_pricing": {
       "direction": "up",
-      "link_with_rates": "同向。美債殖利率上行擴大美外利差，利差優勢吸引資金流入美元。",
-      "safe_haven_dollar": "mixed",
+      "link_with_rates": "同向。美債殖利率上行擴大美外利差，推升美元指數至100.112。",
+      "safe_haven_dollar": "unclear",
       "liquidity_demand": "unclear",
-      "other_currency_weakness": "亞幣普遍承壓，相對顯現美元強勢",
-      "us_relative_growth_or_policy": "美國就業韌性與高利率預期相較於其他經濟體更具優勢",
-      "dominant_force": "美債殖利率上行帶來的利差優勢與高利率維持更久預期",
-      "judgment": "美元指數走強至100.112，主要受美債殖利率上行與利差優勢推升，呈現強勢定價。"
+      "other_currency_weakness": "unclear",
+      "us_relative_growth_or_policy": "強勁非農顯示美國經濟韌性與高利率維持更久的政策預期，強化美元相對利差優勢。",
+      "dominant_force": "美債殖利率上行帶來的利差優勢與美國經濟韌性。",
+      "judgment": "美元指數走強至100.112，主要受美債殖利率上行與強勁就業數據帶來的相對利差優勢支撐。"
     },
     "gold_pricing": {
       "direction": "up",
-      "rate_or_real_rate_pressure": "down",
-      "dollar_effect": "down",
-      "safe_haven_demand": "up",
+      "rate_or_real_rate_pressure": "理論上高利率（US10Y至4.536%）應壓抑金價，但今日此傳導失靈。",
+      "dollar_effect": "理論上強勢美元（DXY至100.112）應壓抑金價，但今日兩者同步走強。",
+      "safe_haven_demand": "強。市場對未來政策失誤或硬著陸的隱憂，激發了防禦性配置需求。",
       "central_bank_buying": "unclear",
-      "geopolitical_risk": "up",
-      "dominant_force": "防禦性配置與政策失誤避險溢價",
-      "judgment": "金價上行至4352.5，無視高利率與強美元的雙重壓抑，顯示市場對未來政策失誤的避險需求已壓過傳統的利差傳導邏輯。"
+      "geopolitical_risk": "強。地緣政治與政策不確定性帶來的防禦心理，推升避險溢價。",
+      "dominant_force": "對未來政策失誤、硬著陸風險及地緣政治的防禦性避險需求。",
+      "judgment": "金價上漲至4352.5，成功抵銷了高利率與強美元的壓抑，顯示市場情緒已轉向防禦性配置，避險溢價主導金價。"
     },
     "asia_fx_pricing": {
       "twd": {
         "reaction": "承壓",
         "consistent_with_dollar_pressure": "yes",
-        "local_correction_factor": "待確認",
-        "judgment": "受美元指數走強至100.112影響，台幣面臨資金外流壓力，表現與美元強勢一致。"
+        "local_correction_factor": "資料未提及台灣本地特定因子，主要受美元走強被動承壓。",
+        "judgment": "台幣隨整體亞幣承壓，後續需觀察台灣央行是否因美元持續強勢而進行干預。"
       },
       "jpy": {
         "reaction": "承壓",
         "consistent_with_dollar_pressure": "yes",
-        "local_correction_factor": "待確認",
-        "judgment": "美日利差擴大令日圓承壓，需觀察後續日本央行是否進行口頭或實質干預。"
+        "local_correction_factor": "資料未提及日本本地特定因子，主要受美元走強與美日利差擴大被動承壓。",
+        "judgment": "日圓隨亞幣普遍承壓，美日利差擴大加劇日圓貶值壓力。"
       },
       "krw": {
         "reaction": "承壓",
         "consistent_with_dollar_pressure": "yes",
-        "local_correction_factor": "待確認",
-        "judgment": "受美元強勢與亞幣整體走弱拖累，韓圜表現疲軟。"
+        "local_correction_factor": "資料未提及韓國本地特定因子，主要受美元走強被動承壓。",
+        "judgment": "韓圜隨整體亞幣承壓，後續需觀察資金流出壓力。"
       }
     },
     "market_contradiction": {
-      "baseline_expectation": "強勁就業 -> 利率/美元雙升 -> 壓抑無息資產黃金。",
-      "actual_reaction": "利率與美元走高，但黃金與油價同步上行。",
-      "most_non_obvious_link": "黃金與美債殖利率同步走高（Divergence）。",
-      "possible_explanation": "強勁就業雖延後降息，但也加劇了市場對聯準會可能過度緊縮（政策失誤）或未來硬著陸的擔憂，促使資金流入黃金進行防禦性配置。",
+      "baseline_expectation": "強勁就業數據 -> 利率與美元雙升 -> 壓抑無息資產黃金。",
+      "actual_reaction": "利率與美元雙升的同時，黃金與油價亦同步走強。",
+      "most_non_obvious_link": "「高利率/強美元 -> 黃金上漲」的傳導失靈。",
+      "possible_explanation": "市場在定價「再通膨/高利率」的同時，高度擔憂聯準會可能因過度緊縮導致政策失誤或經濟硬著陸，加上地緣政治風險，導致資金流入黃金進行防禦性配置。",
       "is_correction_or_new_mainline": "offsetting_force",
-      "how_to_integrate_into_main_theme": "將其定性為『帶著防禦面具的再通膨交易』：市場一方面定價經濟韌性帶來的高利率，另一方面買入黃金防範高利率維持過久引發的系統性風險。",
+      "how_to_integrate_into_main_theme": "將其定調為「分裂的定價體制」：實體經濟數據支持「高利率維持更久」（主導美債與美元），但金融市場情緒則在防範「政策失誤與硬著陸風險」（主導黃金與油價），兩者並存反映了市場對未來的防禦性防禦。",
       "presenter_story_angle": {
-        "opening_question": "為什麼在非農數據如此強勁、美債殖利率與美元雙雙飆升的今天，黃金卻依然創下新高？",
-        "normal_script": "按照常理，就業強勁意味著聯準會可能重啟升息，這會推高美債殖利率並支撐美元，進而對無息資產黃金造成沉重打擊。",
-        "where_it_breaks": "但今天這個公式失靈了。美債殖利率升至4.536，美元突破100.11，黃金卻同步大漲至4352.5。",
-        "why_it_matters": "這表明市場不僅在定價『高利率維持更久』，更在對聯準會可能發生『政策失誤』或經濟硬著陸進行防禦性買入。這不是單純的樂觀再通膨，而是夾雜著恐懼的防禦性配置。",
-        "next_watch": "後續需觀察黃金與美債殖利率是否會同步下行。若同步下行，代表避險情緒消退，市場回歸純粹的總經基本面定價。"
+        "opening_question": "為什麼在非農數據異常強勁、美債殖利率與美元雙雙飆升的背後，黃金與油價卻不跌反漲，甚至創下新高？",
+        "normal_script": "按照常理，強勁的就業數據會封鎖降息空間，推升殖利率與美元，這對無息資產黃金來說是沉重的利空。",
+        "where_it_breaks": "但今天這個經典邏輯失靈了。美債殖利率升至4.536%，美元指數突破100.11，黃金卻同步上行至4352.5。",
+        "why_it_matters": "這表明市場不僅在定價再通膨，更在為『聯準會可能政策失誤或硬著陸』買保險。這是一種極具防禦性的配置特徵，說明市場對實體經濟的強勁感到焦慮，而非單純的樂觀。",
+        "next_watch": "未來需密切關注華許首場Fed會議的政策指引。如果黃金與美債殖利率同步下行，才代表這種政策失誤的避險情緒開始消退。"
       }
     },
     "pricing_assessment": {
-      "dominant_market_force": "強勁非農就業數據引發的緊縮與再通膨定價",
-      "offsetting_force": "對政策失誤與硬著陸隱憂帶動的防禦性避險需求",
-      "most_non_obvious_signal": "美債殖利率與黃金同步走強",
-      "market_question": "黃金的強勢究竟是反映通膨失控的預期，還是對高利率終將捏碎經濟的防禦？",
-      "one_sentence_takeaway": "強勁就業封鎖降息空間，但黃金的逆勢暴漲揭示了市場在再通膨狂歡背後，對政策失誤的深深焦慮。",
-      "next_watch": "華許首場Fed會議的政策指引，以及美元走強是否引發亞洲央行實質干預。"
+      "dominant_market_force": "強勁非農數據推升的「高利率維持更久」與升息風險重新定價。",
+      "offsetting_force": "市場對政策失誤、硬著陸及地緣政治風險的防禦性避險需求（推升黃金與油價）。",
+      "most_non_obvious_signal": "美債殖利率、美元與黃金同步走高，傳統負相關關係破裂。",
+      "market_question": "聯準會未來的政策指引是否會證實市場對『政策失誤』的擔憂，進而將黃金的避險定價推向新高度？",
+      "one_sentence_takeaway": "強勁非農封鎖降息空間，但黃金與美元同漲揭示了市場在再通膨與政策失誤防範間的分裂定價。",
+      "next_watch": "華許首場Fed會議的政策指引、美元強勢下亞洲央行的干預動態，以及黃金與美債殖利率是否同步回落。"
     }
   }
 }
