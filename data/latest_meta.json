@@ -1,7 +1,8 @@
 {
-  "generated_at": "2026-06-06T12:43:30+08:00",
-  "date": "2026-06-05",
+  "generated_at": "2026-06-08T08:59:15+08:00",
+  "date": "2026-06-07",
   "history_dates": [
+    "2026-06-07",
     "2026-06-05",
     "2026-06-04",
     "2026-06-03",
@@ -10,8 +11,8 @@
     "2026-05-31"
   ],
   "source": "Apps Script dashboard_html_source",
-  "html_length": 1187740,
-  "index_html_length": 1192745,
+  "html_length": 1130058,
+  "index_html_length": 1135122,
   "ai_presenter": "daily_macro_podcast_v1_compact_ui_v7",
   "gemini_model": "gemini-3.5-flash"
 }
