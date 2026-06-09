@@ -813,6 +813,88 @@ def inject_history_nav(html: str, current_date: str, dates: List[str], is_histor
     return html[:m.start()] + section + '\n' + html[m.start():] if m else html + section
 
 
+
+def inject_mobile_overflow_fix(html: str) -> str:
+    """
+    GitHub Pages mobile safeguard.
+
+    The Apps Script dashboard HTML is fetched as raw_html, so if any upstream
+    news/evidence/source block contains fixed width, long English strings, URLs,
+    or nowrap text, it can create horizontal overflow on mobile. This injected
+    CSS keeps the page inside the viewport without changing the data pipeline.
+    """
+    html = remove_block(html, "<!-- GITHUB_MOBILE_OVERFLOW_FIX_START -->", "<!-- GITHUB_MOBILE_OVERFLOW_FIX_END -->")
+
+    style = """
+<!-- GITHUB_MOBILE_OVERFLOW_FIX_START -->
+<style id="github-mobile-overflow-fix-v1">
+html,body{max-width:100%;overflow-x:hidden}
+*,*::before,*::after{box-sizing:border-box}
+img,svg,canvas,video{max-width:100%;height:auto}
+table{max-width:100%}
+a{overflow-wrap:anywhere;word-break:break-word}
+
+@media(max-width:760px){
+  body{width:100%;max-width:100%;overflow-x:hidden!important}
+  main,section,article,div{max-width:100%}
+
+  [class*="news"],[class*="News"],
+  [class*="headline"],[class*="Headline"],
+  [class*="evidence"],[class*="Evidence"],
+  [class*="source"],[class*="Source"],
+  [class*="article"],[class*="Article"],
+  [class*="event"],[class*="Event"],
+  [class*="focus"],[class*="Focus"]{
+    max-width:100%!important;
+    min-width:0!important;
+    overflow-wrap:anywhere!important;
+    word-break:break-word!important;
+    white-space:normal!important;
+  }
+
+  [class*="news"] *,[class*="News"] *,
+  [class*="headline"] *,[class*="Headline"] *,
+  [class*="evidence"] *,[class*="Evidence"] *,
+  [class*="source"] *,[class*="Source"] *,
+  [class*="article"] *,[class*="Article"] *,
+  [class*="event"] *,[class*="Event"] *,
+  [class*="focus"] *,[class*="Focus"] *{
+    max-width:100%!important;
+    min-width:0!important;
+    overflow-wrap:anywhere!important;
+    word-break:break-word!important;
+    white-space:normal!important;
+  }
+
+  [class*="card"],[class*="Card"],
+  [class*="grid"],[class*="Grid"],
+  [class*="list"],[class*="List"],
+  [class*="row"],[class*="Row"],
+  [class*="item"],[class*="Item"]{
+    min-width:0!important;
+    max-width:100%!important;
+  }
+
+  table{
+    display:block;
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+  }
+}
+</style>
+<!-- GITHUB_MOBILE_OVERFLOW_FIX_END -->
+"""
+
+    if re.search(r"</head>", html, flags=re.I):
+        return re.sub(r"</head>", style + "\n</head>", html, count=1, flags=re.I)
+
+    m = re.search(r"<body[^>]*>", html, flags=re.I)
+    if m:
+        return html[:m.end()] + "\n" + style + html[m.end():]
+
+    return style + html
+
+
 def main() -> None:
     dashboard_url = os.environ.get("DASHBOARD_HTML_SOURCE_URL", "").strip()
     today_url = os.environ.get("TODAY_DAILY_SOURCE_URL", "").strip()
@@ -827,8 +909,18 @@ def main() -> None:
     pricing_logic = generate_pricing_logic(today_payload)
     podcast = generate_presenter_podcast(pricing_logic, today_payload)
 
-    index_html = inject_history_nav(inject_ai_presenter(raw_html, podcast, current_date, False), current_date, dates, False)
-    history_html = inject_history_nav(inject_ai_presenter(raw_html, podcast, current_date, True), current_date, dates, True)
+    index_html = inject_history_nav(
+        inject_mobile_overflow_fix(inject_ai_presenter(raw_html, podcast, current_date, False)),
+        current_date,
+        dates,
+        False,
+    )
+    history_html = inject_history_nav(
+        inject_mobile_overflow_fix(inject_ai_presenter(raw_html, podcast, current_date, True)),
+        current_date,
+        dates,
+        True,
+    )
 
     write_text(ROOT / "index.html", index_html)
     write_text(HISTORY_HTML_DIR / f"{current_date}.html", history_html)
