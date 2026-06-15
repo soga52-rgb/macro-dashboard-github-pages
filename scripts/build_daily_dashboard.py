@@ -814,6 +814,333 @@ def inject_history_nav(html: str, current_date: str, dates: List[str], is_histor
 
 
 
+
+def inject_mobile_chart_tap_tooltips(html: str) -> str:
+    """
+    Mobile chart tap tooltip safeguard, styled after the weekly macro summary page.
+
+    The weekly page uses .chart-tooltip + .spark-dot[data-tooltip] to let mobile
+    users tap a data point and see a small rounded tooltip. This injection applies
+    the same interaction feeling to the daily dashboard export. It supports:
+    1) Existing SVG points that already have data-tooltip attributes.
+    2) Chart.js canvas charts by reading the nearest active data point.
+    """
+    html = remove_block(html, "<!-- GITHUB_MOBILE_CHART_TAP_TOOLTIP_START -->", "<!-- GITHUB_MOBILE_CHART_TAP_TOOLTIP_END -->")
+
+    block = """
+<!-- GITHUB_MOBILE_CHART_TAP_TOOLTIP_START -->
+<style id="github-mobile-chart-tap-tooltip-style-v2">
+.chart-tooltip,
+.github-mobile-chart-tooltip-v2{
+  position:fixed;
+  z-index:9999;
+  display:none;
+  max-width:min(260px, calc(100vw - 28px));
+  padding:8px 11px;
+  border-radius:999px;
+  color:#fff;
+  background:rgba(15,42,68,.92);
+  box-shadow:0 12px 28px rgba(15,23,42,.18);
+  font-size:13px;
+  font-weight:800;
+  line-height:1.45;
+  pointer-events:none;
+  transform:translate(-50%,-120%);
+  white-space:normal;
+}
+.chart-tooltip.show,
+.github-mobile-chart-tooltip-v2.show{
+  display:block;
+}
+.spark-node{
+  pointer-events:auto;
+}
+.spark-dot,
+[data-tooltip]{
+  cursor:pointer;
+}
+.spark-dot:hover,
+.spark-dot:focus{
+  outline:none;
+}
+@media(max-width:760px){
+  canvas{
+    touch-action:manipulation;
+  }
+}
+</style>
+<script id="github-mobile-chart-tap-tooltip-script-v2">
+(function(){
+  if (window.__githubMobileChartTapTooltipV2) return;
+  window.__githubMobileChartTapTooltipV2 = true;
+
+  var hideTimer = null;
+
+  function isMobileLike(){
+    return window.matchMedia && window.matchMedia("(max-width: 760px)").matches;
+  }
+
+  function ensureTooltip(){
+    var el = document.getElementById("chartTooltip");
+    if (el) return el;
+
+    el = document.createElement("div");
+    el.id = "chartTooltip";
+    el.className = "chart-tooltip github-mobile-chart-tooltip-v2";
+    el.setAttribute("aria-hidden", "true");
+    document.body.appendChild(el);
+    return el;
+  }
+
+  function safeText(value){
+    if (value === null || value === undefined) return "";
+    return String(value).replace(/\\s+/g, " ").trim();
+  }
+
+  function formatNumber(value){
+    if (value === null || value === undefined || value === "") return "";
+    var n = Number(value);
+    if (!isFinite(n)) return safeText(value);
+
+    if (Math.abs(n) >= 1000) return n.toLocaleString(undefined, {maximumFractionDigits: 2});
+    if (Math.abs(n) >= 100) return n.toLocaleString(undefined, {maximumFractionDigits: 2});
+    if (Math.abs(n) >= 10) return n.toLocaleString(undefined, {maximumFractionDigits: 3});
+    return n.toLocaleString(undefined, {maximumFractionDigits: 4});
+  }
+
+  function showTooltip(text, eventLike){
+    text = safeText(text);
+    if (!text) return;
+
+    var tooltip = ensureTooltip();
+    tooltip.textContent = text;
+    tooltip.classList.add("show");
+    tooltip.setAttribute("aria-hidden", "false");
+
+    var x = eventLike && eventLike.clientX ? eventLike.clientX : window.innerWidth / 2;
+    var y = eventLike && eventLike.clientY ? eventLike.clientY : window.innerHeight / 2;
+
+    var safeX = Math.min(Math.max(x, 70), window.innerWidth - 70);
+    var safeY = Math.max(y - 10, 34);
+    tooltip.style.left = safeX + "px";
+    tooltip.style.top = safeY + "px";
+
+    clearTimeout(hideTimer);
+    hideTimer = setTimeout(hideTooltip, 4200);
+  }
+
+  function hideTooltip(){
+    var tooltip = ensureTooltip();
+    tooltip.classList.remove("show");
+    tooltip.setAttribute("aria-hidden", "true");
+  }
+
+  function getChartFromCanvas(canvas){
+    if (!window.Chart || !canvas) return null;
+
+    if (typeof window.Chart.getChart === "function") {
+      try {
+        var chart = window.Chart.getChart(canvas);
+        if (chart) return chart;
+      } catch(e) {}
+    }
+
+    var instances = window.Chart.instances;
+    if (instances) {
+      if (Array.isArray(instances)) {
+        for (var i = 0; i < instances.length; i++) {
+          if (instances[i] && instances[i].canvas === canvas) return instances[i];
+        }
+      } else {
+        for (var key in instances) {
+          if (instances[key] && instances[key].canvas === canvas) return instances[key];
+        }
+      }
+    }
+    return null;
+  }
+
+  function readY(parsed){
+    if (parsed === null || parsed === undefined) return null;
+    if (typeof parsed === "number") return parsed;
+    if (typeof parsed === "object") {
+      if (parsed.y !== undefined) return parsed.y;
+      if (parsed.r !== undefined) return parsed.r;
+      if (parsed.value !== undefined) return parsed.value;
+    }
+    return null;
+  }
+
+  function tooltipTextForChartPoint(chart, point){
+    var dataset = chart.data && chart.data.datasets ? chart.data.datasets[point.datasetIndex] : null;
+    var labels = chart.data && chart.data.labels ? chart.data.labels : [];
+    var xLabel = labels[point.index] !== undefined ? labels[point.index] : "";
+    var dsLabel = dataset && dataset.label ? dataset.label : "";
+
+    var parsed = point.element && point.element.$context ? point.element.$context.parsed : null;
+    var value = readY(parsed);
+
+    if ((value === null || value === undefined) && dataset && dataset.data) {
+      var raw = dataset.data[point.index];
+      if (typeof raw === "number") value = raw;
+      else if (raw && typeof raw === "object") value = readY(raw);
+    }
+
+    var parts = [];
+    if (dsLabel) parts.push(dsLabel);
+    if (xLabel) parts.push(xLabel);
+    if (value !== null && value !== undefined && value !== "") parts.push(formatNumber(value));
+
+    return parts.join("｜") || "資料點";
+  }
+
+  function canvasTapHandler(evt){
+    if (!isMobileLike()) return;
+
+    var canvas = evt.currentTarget;
+    var chart = getChartFromCanvas(canvas);
+    if (!chart || typeof chart.getElementsAtEventForMode !== "function") return;
+
+    var nativeEvt = evt.touches && evt.touches[0] ? evt.touches[0] : evt;
+    var active = [];
+
+    try {
+      active = chart.getElementsAtEventForMode(evt, "nearest", {intersect:false}, true);
+    } catch(e) {
+      try {
+        active = chart.getElementsAtEventForMode(nativeEvt, "nearest", {intersect:false}, true);
+      } catch(err) {
+        active = [];
+      }
+    }
+
+    if (!active || !active.length) return;
+    var point = active[0];
+
+    try {
+      if (typeof chart.setActiveElements === "function") {
+        chart.setActiveElements([{datasetIndex: point.datasetIndex, index: point.index}]);
+      }
+      if (chart.tooltip && typeof chart.tooltip.setActiveElements === "function") {
+        chart.tooltip.setActiveElements(
+          [{datasetIndex: point.datasetIndex, index: point.index}],
+          {x: nativeEvt.offsetX || 0, y: nativeEvt.offsetY || 0}
+        );
+      }
+      chart.update();
+    } catch(e) {}
+
+    showTooltip(tooltipTextForChartPoint(chart, point), nativeEvt);
+  }
+
+  function bindSvgTooltipNodes(){
+    document.querySelectorAll("[data-tooltip]").forEach(function(node){
+      if (node.dataset.githubMobileTapTooltipBound === "1") return;
+      node.dataset.githubMobileTapTooltipBound = "1";
+
+      node.addEventListener("pointerenter", function(event){
+        if (!isMobileLike()) showTooltip(node.getAttribute("data-tooltip"), event);
+      });
+      node.addEventListener("pointermove", function(event){
+        if (!isMobileLike()) showTooltip(node.getAttribute("data-tooltip"), event);
+      });
+      node.addEventListener("pointerleave", hideTooltip);
+      node.addEventListener("focus", function(event){
+        showTooltip(node.getAttribute("data-tooltip"), event);
+      });
+      node.addEventListener("blur", hideTooltip);
+      node.addEventListener("click", function(event){
+        event.stopPropagation();
+        showTooltip(node.getAttribute("data-tooltip"), event);
+      });
+      node.addEventListener("touchstart", function(event){
+        event.stopPropagation();
+        var touch = event.touches && event.touches[0];
+        showTooltip(node.getAttribute("data-tooltip"), touch || event);
+      }, {passive:true});
+    });
+  }
+
+  function patchChartDefaults(){
+    if (!window.Chart || !window.Chart.defaults) return;
+
+    try {
+      window.Chart.defaults.interaction = window.Chart.defaults.interaction || {};
+      window.Chart.defaults.interaction.mode = window.Chart.defaults.interaction.mode || "nearest";
+      window.Chart.defaults.interaction.intersect = false;
+
+      if (window.Chart.defaults.plugins && window.Chart.defaults.plugins.tooltip) {
+        window.Chart.defaults.plugins.tooltip.enabled = true;
+      }
+    } catch(e) {}
+  }
+
+  function bindCanvasCharts(){
+    if (!isMobileLike()) return;
+
+    patchChartDefaults();
+
+    document.querySelectorAll("canvas").forEach(function(canvas){
+      if (canvas.dataset.githubMobileCanvasTooltipBound === "1") return;
+
+      var chart = getChartFromCanvas(canvas);
+      if (!chart) return;
+
+      canvas.dataset.githubMobileCanvasTooltipBound = "1";
+      canvas.style.touchAction = "manipulation";
+      canvas.addEventListener("click", canvasTapHandler, {passive:true});
+      canvas.addEventListener("touchstart", canvasTapHandler, {passive:true});
+    });
+  }
+
+  function bindAll(){
+    bindSvgTooltipNodes();
+    bindCanvasCharts();
+  }
+
+  document.addEventListener("click", function(event){
+    if (!event.target || !event.target.closest || !event.target.closest("[data-tooltip],canvas")) {
+      clearTimeout(hideTimer);
+      hideTimer = setTimeout(hideTooltip, 500);
+    }
+  }, true);
+
+  document.addEventListener("touchstart", function(event){
+    if (!event.target || !event.target.closest || !event.target.closest("[data-tooltip],canvas")) {
+      clearTimeout(hideTimer);
+      hideTimer = setTimeout(hideTooltip, 500);
+    }
+  }, {passive:true});
+
+  window.addEventListener("scroll", hideTooltip, {passive:true});
+  window.addEventListener("resize", hideTooltip, {passive:true});
+  document.addEventListener("visibilitychange", function(){
+    if (document.hidden) hideTooltip();
+    else setTimeout(bindAll, 500);
+  });
+
+  var tries = 0;
+  var timer = setInterval(function(){
+    tries += 1;
+    bindAll();
+    if (tries >= 20) clearInterval(timer);
+  }, 700);
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", function(){ setTimeout(bindAll, 400); });
+  } else {
+    setTimeout(bindAll, 400);
+  }
+})();
+</script>
+<!-- GITHUB_MOBILE_CHART_TAP_TOOLTIP_END -->
+"""
+
+    if re.search(r"</body>", html, flags=re.I):
+        return re.sub(r"</body>", block + "\n</body>", html, count=1, flags=re.I)
+
+    return html + block
+
 def inject_mobile_overflow_fix(html: str) -> str:
     """
     GitHub Pages mobile safeguard.
@@ -910,13 +1237,21 @@ def main() -> None:
     podcast = generate_presenter_podcast(pricing_logic, today_payload)
 
     index_html = inject_history_nav(
-        inject_mobile_overflow_fix(inject_ai_presenter(raw_html, podcast, current_date, False)),
+        inject_mobile_chart_tap_tooltips(
+            inject_mobile_overflow_fix(
+                inject_ai_presenter(raw_html, podcast, current_date, False)
+            )
+        ),
         current_date,
         dates,
         False,
     )
     history_html = inject_history_nav(
-        inject_mobile_overflow_fix(inject_ai_presenter(raw_html, podcast, current_date, True)),
+        inject_mobile_chart_tap_tooltips(
+            inject_mobile_overflow_fix(
+                inject_ai_presenter(raw_html, podcast, current_date, True)
+            )
+        ),
         current_date,
         dates,
         True,
