@@ -14,6 +14,7 @@ v4 = Macro Pricing Logic Mode
 
 from __future__ import annotations
 
+import asyncio
 import json
 import os
 import re
@@ -742,6 +743,136 @@ def generate_presenter_podcast(logic: Dict[str, Any], payload: Dict[str, Any]) -
     return normalize_podcast(raw, fallback)
 
 
+
+# =============================================================================
+# Daily AI Presenter Audio｜edge-tts
+# =============================================================================
+
+def daily_tts_enabled() -> bool:
+    return os.environ.get("ENABLE_DAILY_TTS", "true").strip().lower() not in {"0", "false", "no", "n"}
+
+
+def daily_tts_force_rebuild() -> bool:
+    return os.environ.get("FORCE_REBUILD_DAILY_AUDIO", "false").strip().lower() in {"1", "true", "yes", "y"}
+
+
+def clean_tts_text_for_audio(value: Any) -> str:
+    s = str(value or "")
+    s = s.replace("→", "，到，")
+    s = s.replace("｜", "，")
+    s = re.sub(r"[ \t]+", " ", s)
+    s = re.sub(r"\n{3,}", "\n\n", s)
+    return s.strip()
+
+
+def build_daily_tts_script(podcast: Dict[str, Any]) -> str:
+    segments = podcast.get("segments") if isinstance(podcast, dict) else None
+    if isinstance(segments, list) and segments:
+        parts = []
+        for item in segments:
+            if not isinstance(item, dict):
+                continue
+            narration = clean_tts_text_for_audio(item.get("narration") or item.get("text") or "")
+            if narration:
+                parts.append(narration)
+        if parts:
+            return "\n\n".join(parts)
+
+    return clean_tts_text_for_audio(podcast.get("full_script", "") if isinstance(podcast, dict) else "")
+
+
+async def synthesize_daily_presenter_audio(
+    text: str,
+    out_path: Path,
+    voice: str,
+    rate: str,
+    volume: str,
+    pitch: str,
+) -> None:
+    import edge_tts
+
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    communicate = edge_tts.Communicate(
+        text=text,
+        voice=voice,
+        rate=rate,
+        volume=volume,
+        pitch=pitch,
+    )
+    await communicate.save(str(out_path))
+
+
+def maybe_generate_daily_presenter_audio(current_date: str, podcast: Dict[str, Any]) -> Dict[str, Any]:
+    """
+    Generate daily presenter MP3 before HTML injection.
+
+    inject_ai_presenter() checks whether assets/audio/daily_ai_presenter_YYYY-MM-DD.mp3
+    already exists. Running this before HTML generation makes the player appear
+    immediately in the same workflow run.
+    """
+    AUDIO_DIR = ROOT / "assets" / "audio"
+    out_path = AUDIO_DIR / f"daily_ai_presenter_{current_date}.mp3"
+
+    voice = os.environ.get("DAILY_TTS_VOICE", "zh-TW-YunJheNeural").strip() or "zh-TW-YunJheNeural"
+    rate = os.environ.get("DAILY_TTS_RATE", "-8%").strip() or "-8%"
+    volume = os.environ.get("DAILY_TTS_VOLUME", "+0%").strip() or "+0%"
+    pitch = os.environ.get("DAILY_TTS_PITCH", "-5Hz").strip() or "-5Hz"
+
+    meta = {
+        "generated_at": datetime.now(TW_TZ).isoformat(timespec="seconds"),
+        "date": current_date,
+        "audio_file": str(out_path.relative_to(ROOT)),
+        "audio_exists": out_path.exists(),
+        "audio_generated_this_run": False,
+        "enabled": daily_tts_enabled(),
+        "voice": voice,
+        "rate": rate,
+        "volume": volume,
+        "pitch": pitch,
+        "status": "pending",
+    }
+
+    if not daily_tts_enabled():
+        meta["status"] = "disabled"
+        return meta
+
+    if out_path.exists() and not daily_tts_force_rebuild():
+        meta["audio_exists"] = True
+        meta["status"] = "skipped_existing"
+        return meta
+
+    tts_script = build_daily_tts_script(podcast)
+    if not tts_script:
+        meta["status"] = "skipped_no_text"
+        return meta
+
+    try:
+        print(f"[INFO] Generating daily presenter audio: {out_path}")
+        asyncio.run(
+            synthesize_daily_presenter_audio(
+                text=tts_script,
+                out_path=out_path,
+                voice=voice,
+                rate=rate,
+                volume=volume,
+                pitch=pitch,
+            )
+        )
+        meta["audio_exists"] = out_path.exists()
+        meta["audio_generated_this_run"] = True
+        meta["status"] = "ok"
+        print(f"[OK] Created daily presenter audio: {out_path}")
+    except ModuleNotFoundError as exc:
+        meta["status"] = "edge_tts_not_installed"
+        meta["error"] = str(exc)
+        print("WARN: edge-tts is not installed; daily audio skipped.", file=sys.stderr)
+    except Exception as exc:
+        meta["status"] = "failed"
+        meta["error"] = str(exc)
+        print(f"WARN: daily audio generation failed: {exc}", file=sys.stderr)
+
+    return meta
+
 # =============================================================================
 # HTML Injection
 # =============================================================================
@@ -819,11 +950,10 @@ def inject_mobile_chart_tap_tooltips(html: str) -> str:
     """
     Mobile chart tap tooltip safeguard, styled after the weekly macro summary page.
 
-    This version supports both tooltip attribute styles used across the project:
-    - Weekly page: .spark-dot[data-tooltip]
-    - Daily Apps Script page: .spark-point[data-tip]
-
-    It also enlarges SVG point hit areas on mobile so that tapping a point is easier.
+    Supports:
+    - Weekly-style .spark-dot[data-tooltip]
+    - Daily Apps Script .spark-point[data-tip]
+    - Chart.js canvas charts
     """
     html = remove_block(html, "<!-- GITHUB_MOBILE_CHART_TAP_TOOLTIP_START -->", "<!-- GITHUB_MOBILE_CHART_TAP_TOOLTIP_END -->")
 
@@ -1280,6 +1410,7 @@ def main() -> None:
     dates = history_dates(current_date, 7)
     pricing_logic = generate_pricing_logic(today_payload)
     podcast = generate_presenter_podcast(pricing_logic, today_payload)
+    audio_meta = maybe_generate_daily_presenter_audio(current_date, podcast)
 
     index_html = inject_history_nav(
         inject_mobile_chart_tap_tooltips(
@@ -1310,7 +1441,9 @@ def main() -> None:
     write_json(PRICING_DIR / f"{current_date}.json", {"generated_at": datetime.now(TW_TZ).isoformat(timespec="seconds"), "date": current_date, "mode": "macro_pricing_logic_v4", "logic": pricing_logic})
     write_json(PRESENTER_DIR / "latest.json", {"generated_at": datetime.now(TW_TZ).isoformat(timespec="seconds"), "date": current_date, "mode": "daily_macro_podcast_v1", "podcast": podcast})
     write_json(PRESENTER_DIR / f"{current_date}.json", {"generated_at": datetime.now(TW_TZ).isoformat(timespec="seconds"), "date": current_date, "mode": "daily_macro_podcast_v1", "podcast": podcast})
-    write_json(DATA_DIR / "latest_meta.json", {"generated_at": datetime.now(TW_TZ).isoformat(timespec="seconds"), "date": current_date, "history_dates": dates, "source": "Apps Script dashboard_html_source", "html_length": len(raw_html), "index_html_length": len(index_html), "ai_presenter": "daily_macro_podcast_v1_compact_ui_v7", "gemini_model": os.environ.get("GEMINI_MODEL", "gemini-3.5-flash")})
+    write_json(PRESENTER_DIR / "audio_latest.json", audio_meta)
+    write_json(PRESENTER_DIR / f"{current_date}_audio.json", audio_meta)
+    write_json(DATA_DIR / "latest_meta.json", {"generated_at": datetime.now(TW_TZ).isoformat(timespec="seconds"), "date": current_date, "history_dates": dates, "source": "Apps Script dashboard_html_source", "html_length": len(raw_html), "index_html_length": len(index_html), "ai_presenter": "daily_macro_podcast_v1_compact_ui_v7", "daily_audio": audio_meta, "gemini_model": os.environ.get("GEMINI_MODEL", "gemini-3.5-flash")})
 
     print("Saved Apps Script dashboard HTML as static GitHub Pages index.html")
     print(f"date = {current_date}")
@@ -1318,6 +1451,7 @@ def main() -> None:
     print(f"raw_html_length = {len(raw_html)}")
     print(f"index_html_length = {len(index_html)}")
     print("ai_presenter = daily_macro_podcast_v1_compact_ui_v7")
+    print(f"daily_audio_status = {audio_meta.get('status')}")
 
 
 if __name__ == "__main__":
