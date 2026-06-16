@@ -1137,7 +1137,7 @@ def inject_mobile_chart_tap_tooltips(html: str) -> str:
 """
 
     if re.search(r"</body>", html, flags=re.I):
-        return re.sub(r"</body>", block + "\n</body>", html, count=1, flags=re.I)
+        return re.sub(r"</body>", lambda m: block + "\\n" + m.group(0), html, count=1, flags=re.I)
 
     return html + block
 
