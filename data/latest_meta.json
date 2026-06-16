@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-06-15T14:09:55+08:00",
-  "date": "2026-06-14",
+  "generated_at": "2026-06-16T14:27:54+08:00",
+  "date": "2026-06-15",
   "history_dates": [
+    "2026-06-15",
     "2026-06-14",
     "2026-06-12",
     "2026-06-11",
     "2026-06-10",
     "2026-06-09",
-    "2026-06-08",
-    "2026-06-07"
+    "2026-06-08"
   ],
   "source": "Apps Script dashboard_html_source",
-  "html_length": 1078851,
-  "index_html_length": 1085638,
+  "html_length": 1078336,
+  "index_html_length": 1094935,
   "ai_presenter": "daily_macro_podcast_v1_compact_ui_v7",
   "gemini_model": "gemini-3.5-flash"
 }
