@@ -819,23 +819,23 @@ def inject_mobile_chart_tap_tooltips(html: str) -> str:
     """
     Mobile chart tap tooltip safeguard, styled after the weekly macro summary page.
 
-    The weekly page uses .chart-tooltip + .spark-dot[data-tooltip] to let mobile
-    users tap a data point and see a small rounded tooltip. This injection applies
-    the same interaction feeling to the daily dashboard export. It supports:
-    1) Existing SVG points that already have data-tooltip attributes.
-    2) Chart.js canvas charts by reading the nearest active data point.
+    This version supports both tooltip attribute styles used across the project:
+    - Weekly page: .spark-dot[data-tooltip]
+    - Daily Apps Script page: .spark-point[data-tip]
+
+    It also enlarges SVG point hit areas on mobile so that tapping a point is easier.
     """
     html = remove_block(html, "<!-- GITHUB_MOBILE_CHART_TAP_TOOLTIP_START -->", "<!-- GITHUB_MOBILE_CHART_TAP_TOOLTIP_END -->")
 
     block = """
 <!-- GITHUB_MOBILE_CHART_TAP_TOOLTIP_START -->
-<style id="github-mobile-chart-tap-tooltip-style-v2">
+<style id="github-mobile-chart-tap-tooltip-style-v3">
 .chart-tooltip,
-.github-mobile-chart-tooltip-v2{
+.github-mobile-chart-tooltip-v3{
   position:fixed;
-  z-index:9999;
+  z-index:2147483647;
   display:none;
-  max-width:min(260px, calc(100vw - 28px));
+  max-width:min(280px, calc(100vw - 28px));
   padding:8px 11px;
   border-radius:999px;
   color:#fff;
@@ -849,32 +849,36 @@ def inject_mobile_chart_tap_tooltips(html: str) -> str:
   white-space:normal;
 }
 .chart-tooltip.show,
-.github-mobile-chart-tooltip-v2.show{
+.github-mobile-chart-tooltip-v3.show{
   display:block;
 }
 .spark-node{
   pointer-events:auto;
 }
 .spark-dot,
-[data-tooltip]{
+.spark-point,
+[data-tooltip],
+[data-tip]{
   cursor:pointer;
-}
-.spark-dot:hover,
-.spark-dot:focus{
-  outline:none;
 }
 @media(max-width:760px){
   canvas{
     touch-action:manipulation;
   }
+  .spark-dot,
+  .spark-point{
+    pointer-events:auto;
+    touch-action:manipulation;
+  }
 }
 </style>
-<script id="github-mobile-chart-tap-tooltip-script-v2">
+<script id="github-mobile-chart-tap-tooltip-script-v3">
 (function(){
-  if (window.__githubMobileChartTapTooltipV2) return;
-  window.__githubMobileChartTapTooltipV2 = true;
+  if (window.__githubMobileChartTapTooltipV3) return;
+  window.__githubMobileChartTapTooltipV3 = true;
 
   var hideTimer = null;
+  var POINT_SELECTOR = ".spark-dot[data-tooltip],.spark-point[data-tip],[data-tooltip],[data-tip]";
 
   function isMobileLike(){
     return window.matchMedia && window.matchMedia("(max-width: 760px)").matches;
@@ -886,7 +890,7 @@ def inject_mobile_chart_tap_tooltips(html: str) -> str:
 
     el = document.createElement("div");
     el.id = "chartTooltip";
-    el.className = "chart-tooltip github-mobile-chart-tooltip-v2";
+    el.className = "chart-tooltip github-mobile-chart-tooltip-v3";
     el.setAttribute("aria-hidden", "true");
     document.body.appendChild(el);
     return el;
@@ -895,6 +899,17 @@ def inject_mobile_chart_tap_tooltips(html: str) -> str:
   function safeText(value){
     if (value === null || value === undefined) return "";
     return String(value).replace(/\\s+/g, " ").trim();
+  }
+
+  function getTipText(node){
+    if (!node) return "";
+    return safeText(
+      node.getAttribute("data-tooltip") ||
+      node.getAttribute("data-tip") ||
+      node.getAttribute("aria-label") ||
+      node.getAttribute("title") ||
+      ""
+    );
   }
 
   function formatNumber(value){
@@ -1033,30 +1048,46 @@ def inject_mobile_chart_tap_tooltips(html: str) -> str:
     showTooltip(tooltipTextForChartPoint(chart, point), nativeEvt);
   }
 
+  function enlargeSvgPointHitAreas(){
+    if (!isMobileLike()) return;
+
+    document.querySelectorAll(".spark-dot,.spark-point").forEach(function(node){
+      try {
+        var tag = (node.tagName || "").toLowerCase();
+        if (tag === "circle") {
+          var r = Number(node.getAttribute("r") || "0");
+          if (!isFinite(r) || r < 7) node.setAttribute("r", "7");
+        }
+      } catch(e) {}
+    });
+  }
+
   function bindSvgTooltipNodes(){
-    document.querySelectorAll("[data-tooltip]").forEach(function(node){
+    enlargeSvgPointHitAreas();
+
+    document.querySelectorAll(POINT_SELECTOR).forEach(function(node){
       if (node.dataset.githubMobileTapTooltipBound === "1") return;
       node.dataset.githubMobileTapTooltipBound = "1";
 
       node.addEventListener("pointerenter", function(event){
-        if (!isMobileLike()) showTooltip(node.getAttribute("data-tooltip"), event);
+        if (!isMobileLike()) showTooltip(getTipText(node), event);
       });
       node.addEventListener("pointermove", function(event){
-        if (!isMobileLike()) showTooltip(node.getAttribute("data-tooltip"), event);
+        if (!isMobileLike()) showTooltip(getTipText(node), event);
       });
       node.addEventListener("pointerleave", hideTooltip);
       node.addEventListener("focus", function(event){
-        showTooltip(node.getAttribute("data-tooltip"), event);
+        showTooltip(getTipText(node), event);
       });
       node.addEventListener("blur", hideTooltip);
       node.addEventListener("click", function(event){
         event.stopPropagation();
-        showTooltip(node.getAttribute("data-tooltip"), event);
+        showTooltip(getTipText(node), event);
       });
       node.addEventListener("touchstart", function(event){
         event.stopPropagation();
         var touch = event.touches && event.touches[0];
-        showTooltip(node.getAttribute("data-tooltip"), touch || event);
+        showTooltip(getTipText(node), touch || event);
       }, {passive:true});
     });
   }
@@ -1099,14 +1130,28 @@ def inject_mobile_chart_tap_tooltips(html: str) -> str:
   }
 
   document.addEventListener("click", function(event){
-    if (!event.target || !event.target.closest || !event.target.closest("[data-tooltip],canvas")) {
+    var point = event.target && event.target.closest ? event.target.closest(POINT_SELECTOR) : null;
+    if (point) {
+      showTooltip(getTipText(point), event);
+      event.stopPropagation();
+      return;
+    }
+
+    if (!event.target || !event.target.closest || !event.target.closest("canvas")) {
       clearTimeout(hideTimer);
       hideTimer = setTimeout(hideTooltip, 500);
     }
   }, true);
 
   document.addEventListener("touchstart", function(event){
-    if (!event.target || !event.target.closest || !event.target.closest("[data-tooltip],canvas")) {
+    var point = event.target && event.target.closest ? event.target.closest(POINT_SELECTOR) : null;
+    if (point) {
+      var touch = event.touches && event.touches[0];
+      showTooltip(getTipText(point), touch || event);
+      return;
+    }
+
+    if (!event.target || !event.target.closest || !event.target.closest("canvas")) {
       clearTimeout(hideTimer);
       hideTimer = setTimeout(hideTooltip, 500);
     }
