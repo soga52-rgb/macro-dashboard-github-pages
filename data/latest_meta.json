@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-06-26T13:11:23+08:00",
-  "date": "2026-06-25",
+  "generated_at": "2026-06-27T12:42:51+08:00",
+  "date": "2026-06-26",
   "history_dates": [
+    "2026-06-26",
     "2026-06-25",
     "2026-06-24",
     "2026-06-23",
     "2026-06-22",
     "2026-06-21",
-    "2026-06-19",
-    "2026-06-18"
+    "2026-06-19"
   ],
   "source": "Apps Script dashboard_html_source",
-  "html_length": 1051408,
-  "index_html_length": 1062330,
+  "html_length": 1296035,
+  "index_html_length": 1306957,
   "ai_presenter": "daily_macro_podcast_v1_compact_ui_v7",
   "daily_audio": {
-    "generated_at": "2026-06-26T13:11:07+08:00",
-    "date": "2026-06-25",
-    "audio_file": "assets/audio/daily_ai_presenter_2026-06-25.mp3",
+    "generated_at": "2026-06-27T12:42:18+08:00",
+    "date": "2026-06-26",
+    "audio_file": "assets/audio/daily_ai_presenter_2026-06-26.mp3",
     "audio_exists": true,
     "audio_generated_this_run": true,
     "enabled": true,
