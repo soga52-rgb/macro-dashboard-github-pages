@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-07-27T12:27:55+08:00",
+  "generated_at": "2026-07-28T11:52:49+08:00",
   "date": "2026-07-26",
   "audio_file": "assets/audio/daily_ai_presenter_2026-07-26.mp3",
   "audio_exists": true,
-  "audio_generated_this_run": true,
+  "audio_generated_this_run": false,
   "enabled": true,
   "voice": "zh-TW-YunJheNeural",
   "rate": "-8%",
   "volume": "+0%",
   "pitch": "-5Hz",
-  "status": "ok"
+  "status": "skipped_existing"
 }
