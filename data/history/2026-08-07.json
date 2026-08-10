@@ -1,64 +1,64 @@
 {
-  "generated_at": "2026-08-08T10:36:22+08:00",
+  "generated_at": "2026-08-10T11:00:27+08:00",
   "source": "Google Sheets Today Daily Source",
   "mode": "today_daily_source",
   "data_status": "complete",
   "daily_summary": {
     "date": "2026-08-07",
-    "headline": "就業降溫主導降息預期",
-    "executive_summary": "今日市場核心矛盾在於地緣風險降溫但黃金依然大漲，顯示市場焦點已從避險轉向實質利率下行。美國小非農就業創半年新低，勞動降溫成為壓低美債殖利率與美元的主導力量，並蓋過潛在的通膨擔憂。油價下行作為修正因子，進一步緩和了能源通膨壓力，整體資產傳導邏輯由就業降溫與降息預期主導。",
+    "headline": "勞動降溫重塑政策預期",
+    "executive_summary": "今日市場呈現通膨預期多空拉鋸，核心矛盾在於油價上行與美債殖利率下行的分歧。市場目前最重視勞動市場降溫訊號，7月非農轉弱與財政部減發長債預期成為壓低利率的主導力量，帶動美元走弱並推升黃金與日圓。油價走高雖增加能源通膨壓力，但暫時被視為修正因子，降息預期上升抵銷了部分通膨擔憂。",
     "market_signals": [
-      "小非農增幅創半年低",
-      "美債殖利率顯著回落",
-      "實質利率預期推升金價"
+      "非農就業數據轉弱",
+      "美債殖利率顯著下行",
+      "油價上行修正因子"
     ],
-    "macro_chain": "[小非農就業降溫與地緣風險緩解] -> [美國10年期公債殖利率下行] -> [美元指數走弱] -> [黃金大漲與日圓偏強，油價回落]",
-    "divergence": "今日最關鍵的背離在於『地緣風險降溫與黃金大漲並存』以及『通膨預期傳導失效』。荷姆茲海峽協議進展理應削弱避險買盤，但黃金卻強勢上行，這表明黃金的定價邏輯已轉向『實質利率下行與美元走弱』的主線。同時，小非農就業疲軟作為強大的修正因子，直接截斷了通膨推升利率的傳導鏈，使得美債殖利率與美元同步下行，帶動日圓走強。",
-    "market_snapshot": "WTI｜77.08｜下行｜油價下行，可能緩和能源通膨壓力；若由需求疲弱造成，亦需視為成長降溫訊號。\nUS10Y｜4.66%｜下行｜反映勞動市場降溫，市場重新評估降息預期，帶動長端利率下行。\nDXY｜99.60｜下行｜受美債殖利率回落拖累，利差優勢削弱，給予日圓等亞洲貨幣喘息空間。\nGold｜4401.30｜上行｜在避險情緒降溫下逆勢大漲，主要反映實質利率下行與美元走弱的預期。",
+    "macro_chain": "[非農就業轉弱與減發長債預期] -> [美國10年期公債殖利率下行] -> [美元指數偏弱] -> [黃金上漲與日圓走強]",
+    "divergence": "今日最關鍵的資產聯動背離出現在油價與美債殖利率。通常油價上行會推升通膨預期與長端利率，但今日非農就業轉弱與減發長債預期成為主導敘事，壓低了殖利率。這顯示市場正在重新評估權重，將勞動降溫視為比能源通膨更迫切的定價因素，油價上行暫時退居為修正因子。後續需觀察通膨硬數據是否因油價反彈而僵固。",
+    "market_snapshot": "WTI｜78.18｜上行｜油價上行，增加能源成本與短期通膨預期的上行壓力；若非今日主線，應視為修正因子或並行訊號。\nUS10Y｜4.66｜下行｜反映勞動市場降溫與財政部減發長債預期，降息預期上升壓低長端利率。\nDXY｜99.60｜下行｜受美債殖利率回落與利差優勢縮窄影響，美元偏弱並減輕亞洲貨幣壓力。\nGold｜4340.70｜上行｜受惠於實質利率下行與美元走弱，加上Fed政策獨立性疑慮提供額外避險支撐。",
     "news_evidence": [
-      "美國7月小非農就業僅增4.4萬人，創半年來最低，釋放勞動市場邊際降溫訊號。",
-      "荷姆茲海峽重開協議取得進展，地緣風險緩解帶動WTI與布蘭特原油雙雙下行。",
-      "美債10年期殖利率回落至4.66%附近，美元指數跌破100關卡至99.60，反映降息預期升溫。",
-      "黃金價格突破4400美元，在避險情緒降溫下仍受實質利率下行驅動。"
+      "美國7月非農就業數據轉弱，引發市場對勞動市場降溫的關注，降低高利率維持更久的預期。",
+      "財政部可能減發長債的預期，配合就業降溫，成為壓低美債殖利率的強大修正因子。",
+      "川普與Fed新任主席華許頻繁通話，增加政策獨立性不確定性，為黃金提供避險支撐。",
+      "WTI與Brent原油雙雙上行，雖帶來通膨壓力，但暫未扭轉利率下行的主線邏輯。"
     ],
     "watchpoints": [
-      "即將公布的美國官方非農就業與失業率數據，確認勞動市場降溫趨勢是否延續。",
-      "聯準會官員對就業數據轉弱的政策表態，是否將焦點轉向雙重使命中的就業風險。",
-      "荷姆茲海峽協議後續進展，若談判生變可能再次推升油價與通膨預期。"
+      "下一份CPI或PPI數據是否因油價上行而反彈，測試通膨僵固性。",
+      "初領失業金與後續就業數據，確認勞動市場是否持續轉弱。",
+      "財政部發債計畫實際落地情況，觀察長債供給是否如預期減少。"
     ],
     "visual_note": {
-      "title": "勞動降溫主導降息預期，實質利率下行推升金價",
-      "file_id": "1KyEye8kC4dG9PHgsOfp0RJnoe_xN45MZ",
+      "title": "勞動降溫主導利率下行，油價上行成修正因子",
+      "file_id": "",
       "url": "https://drive.google.com/file/d/1KyEye8kC4dG9PHgsOfp0RJnoe_xN45MZ/view?usp=drivesdk",
       "model": "gemini-3-pro-image"
     },
     "news_narrative": {
-      "title": "勞動降溫與地緣風險緩解交乘，推升降息預期與金價",
-      "support_level": "中",
+      "title": "Labor｜Nonfarm Payrolls / 非農就業",
+      "support_level": "低",
       "cards": [
         {
           "label": "驗證結果",
-          "text": "部分支持"
+          "text": "待觀察"
         },
         {
           "label": "摘要",
-          "text": "美國7月小非農就業增幅創半年新低，加上荷姆茲海峽協議取得進展，勞動降溫與地緣風險緩解壓低美國10年期公債殖利率與美元指數。利率下行與美元走弱支撐亞洲貨幣偏強，並推動黃金大漲。布蘭特原油偏強但WTI回落，顯示能源通膨壓力正被修正因子抵銷，市場重新評估降息預期。"
+          "text": "AI 新聞敘事驗證未完成，暫以新聞候選分類判斷。原因：Gemini HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}"
         },
         {
           "label": "支持新聞",
-          "text": "1. 新聞重點：美國7月小非農就業僅增4.4萬人創半年最低，且荷姆茲海峽重開協議取得進展，釋放勞動降溫與地緣風險緩解訊號。\n2. 市場影響：壓低美國10年期公債殖利率與美元指數，市場提高對降息的期待，並削弱美元利差優勢，同時推升黃金價格。\n3. 驗證結論：資產走勢部分支持此敘事，美債殖利率與美元下行帶動亞洲貨幣走強與黃金大漲，惟布蘭特原油上行顯示能源通膨壓力仍存分歧。"
+          "text": "1. news.cnyes.com：美債殖利率終於有救？財政部暗示可能減發長債 - news.cnyes.com\n2. news.cnyes.com：A股掀美IEEPA關稅違憲退稅潮！貴州輪胎單家到帳8136萬人民幣 千億級退稅已達六成 - news.cnyes.com\n3. Reuters：US job growth likely picked up in July; unemployment rate forecast unchanged at 4.2% - Reuters"
         },
         {
           "label": "異常訊號",
-          "text": "1. 布蘭特原油上行與WTI下行出現分歧，且在荷姆茲海峽協議有望達成的新聞下，油價並未全面回落，顯示能源市場對供給風險與需求前景的評估仍在拉鋸，成為通膨預期的修正因子。\n2. 黃金在避險情緒（地緣風險）降溫的背景下依然大漲，顯示其主要驅動力已轉向實質利率下行與美元走弱，而非單純的地緣避險買盤。"
+          "text": "1. AI 驗證未完成，需人工確認新聞與數據圖卡是否一致。"
         },
         {
           "label": "觀察重點",
-          "text": "1. 觀察即將公布的美國官方非農就業與失業率數據，若持續轉弱，將確認勞動市場降溫趨勢並進一步壓低殖利率。\n2. 關注荷姆茲海峽協議的後續進展與中東地緣政治變化，若談判破裂可能再次推升油價與通膨預期。\n3. 留意聯準會官員對就業數據轉弱的政策表態，是否將焦點從通膨風險轉向雙重使命中的就業風險。\n4. 觀察布蘭特與WTI原油走勢的分歧是否收斂，以確認全球能源需求放緩是否能完全抵銷潛在的供給側壓力。"
+          "text": "1. 觀察下一次 Market Snapshot 數據變化\n2. 確認新聞主軸是否與利率、美元、油價方向一致"
         }
       ],
-      "news_links_json": "[\n  {\n    \"rank\": 1,\n    \"theme\": \"Rates｜Treasury Yields / 美債殖利率\",\n    \"source\": \"news.cnyes.com\",\n    \"title\": \"表面救日元、背後保美債！貝森特盯上Fed疫情時代工具 - news.cnyes.com\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiT0FVX3lxTFBVRkJjdUthalRXbGxEMmZQTUNxQ004VFdvT2NaVjNYY3JFVTZSVEdSMF9FS0N5WmNLU1F0Z1E5WUtoSUF6V1I1aThWZW1tTVk?oc=5\",\n    \"published_at\": \"Wed, 05 Aug 2026 18:05:53 GMT\",\n    \"score\": 122,\n    \"matched_keywords\": \"聯準會政策:fed | 美債殖利率:treasury/yield/yields | 變數:TREASURY_YIELDS | 類型:DATA | 來源角色:CNYES_MACRO\"\n  },\n  {\n    \"rank\": 2,\n    \"theme\": \"FX｜Dollar / FX / 美元與匯率\",\n    \"source\": \"news.cnyes.com\",\n    \"title\": \"〈紐約匯市〉美元跌至七周低點 荷姆茲海峽協議有望達成 日元持穩157 - news.cnyes.com\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiT0FVX3lxTE5yN1hZZGJzWV9XbFNSRWFIeHIyZk1RTkVwMFNZYnhNd2VQU0tfYXJ1ZTlZR0FRN25xTWRrU1dNSGdFcHZLdnk3MEVxRm5TRU0?oc=5\",\n    \"published_at\": \"Wed, 05 Aug 2026 21:57:07 GMT\",\n    \"score\": 116.6,\n    \"matched_keywords\": \"美元與亞洲匯率:dollar | 變數:DOLLAR_FX | 類型:DATA | 來源角色:CNYES_MACRO\"\n  },\n  {\n    \"rank\": 3,\n    \"theme\": \"Labor｜Nonfarm Payrolls / 非農就業\",\n    \"source\": \"news.cnyes.com\",\n    \"title\": \"Fed還能只盯著通膨？美國7月小非農僅增4.4萬人 增幅創半年最低 - news.cnyes.com\",\n    \"url\": \"https://news.google.com/rss/articles/CBMipgFBVV95cUxORlZNbFVsTV8zZm10ZzZITG1nSWlGSlZVeVFIZHRLVHNHdDg1RWNtWnZqcDBKajQtckZSZ0hDbUQwajNkSGFwUm1vQWg2LVhva0J4SUhvNW0xRDVYQzlHUXBpOHUzQ2tacWpiVFFTX0lmMC1pbVFYQjhkX0FDMU40TG1MWVhVejFDem5CSGF3b01ST2Q4YzYxcjJON0Izb29qd0xxa0xB?oc=5\",\n    \"published_at\": \"Wed, 05 Aug 2026 16:11:22 GMT\",\n    \"score\": 112,\n    \"matched_keywords\": \"聯準會政策:fed | 就業與成長:payrolls | 變數:PAYROLLS | 類型:DATA | 來源角色:CNYES_MACRO\"\n  },\n  {\n    \"rank\": 4,\n    \"theme\": \"Asset｜Gold / 黃金\",\n    \"source\": \"news.cnyes.com\",\n    \"title\": \"〈港股盤後〉科網股活躍 恒指漲0.24% PCB概念與黃金板塊強勢爆發 - news.cnyes.com\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiT0FVX3lxTFBTamJEcEt0eHRHWWJ5SnBOUG4xVE1iM3pGQkFYQ1lBeTUxa2pSQ1NzQ256S0EzQm5oUi15aXk5S2plTllNVjZSaTkzY1pkR1E?oc=5\",\n    \"published_at\": \"Wed, 05 Aug 2026 08:40:27 GMT\",\n    \"score\": 111.2,\n    \"matched_keywords\": \"能源與原物料:gold | 風險情緒／避險資金:gold | 變數:GOLD | 類型:DATA | 來源角色:CNYES_MACRO\"\n  },\n  {\n    \"rank\": 5,\n    \"theme\": \"Fed Policy｜Fed / 聯準會\",\n    \"source\": \"news.cnyes.com\",\n    \"title\": \"Fed華許避談利率展望引爭議 貝森特力挺：市場該自己做功課 - news.cnyes.com\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiT0FVX3lxTE85a3JmTGgybEhrUUkzWnYtRDRsUmlnNHFkdHFCX2RIaHRWZnk3aEl2NWlKRG5VdWMwYnNFM0F1bU9pWmp6SGEtV3FhRWtuSGs?oc=5\",\n    \"published_at\": \"Wed, 05 Aug 2026 05:40:06 GMT\",\n    \"score\": 109.4,\n    \"matched_keywords\": \"聯準會政策:fed | 變數:FED | 類型:DATA | 來源角色:CNYES_MACRO\"\n  },\n  {\n    \"rank\": 6,\n    \"theme\": \"Asset｜Gold / 黃金\",\n    \"source\": \"Reuters\",\n    \"title\": \"Lower bonds yields, Iran talks set gold on track for largest daily growth since February - Reuters\",\n    \"url\": \"https://news.google.com/rss/articles/CBMimgFBVV95cUxNSmlKVnBzQTlPclFHcWhMcVpJeXB0eVQ1ODYxMTk1bkRLbDVybnI4dXhqQ01HaDR1N1FULU03ZDhZWUlEMkFtV2Z3RmFTWHhpVDFlRi0wRG9ZSkFlWVFTUFhXUFVjN3A5Zm1FSnNUbHlwWHF4OEo0TkxvZVV2OEdJNS1ZdG9OQ3V4ME43NV9QeXpSSnVQUEdIb1Jn?oc=5\",\n    \"published_at\": \"Wed, 05 Aug 2026 01:01:00 GMT\",\n    \"score\": 109.2,\n    \"matched_keywords\": \"就業與成長:growth | 美債殖利率:yield/yields/bond | 能源與原物料:gold | 風險情緒／避險資金:gold | 變數:GOLD | 類型:BACKUP | 來源角色:WIRE_CONFIRMATION\"\n  },\n  {\n    \"rank\": 7,\n    \"theme\": \"FX｜Dollar / FX / 美元與匯率\",\n    \"source\": \"Reuters\",\n    \"title\": \"Breakingviews - Weak Fed and yen is Bessent's perfect pair trade - Reuters\",\n    \"url\": \"https://news.google.com/rss/articles/CBMipwFBVV95cUxPelpvckNZaUtzb1JEV0FlVlRBVUZCdzZpSlIyQktFWXJ3V2MyN1JlVGg5TV8zUm1SU2JmYkFoTzBndFE4RU5lamQ3VmxOWDktWDRfYXNFOUlHX0hGakxkV1EtWnF0UnFjYnVSVVMxMEJZQjZxTC1SNkY2T3RDbzlWN0w0QTFTNGhBeWQxSmlRVndmNXFLZFh2SXp6TWNZeUFlM3Jqd21Sbw?oc=5\",\n    \"published_at\": \"Wed, 05 Aug 2026 17:35:12 GMT\",\n    \"score\": 107.6,\n    \"matched_keywords\": \"聯準會政策:fed | 美元與亞洲匯率:dollar/yen | 變數:DOLLAR_FX | 類型:BACKUP | 來源角色:WIRE_CONFIRMATION\"\n  },\n  {\n    \"rank\": 8,\n    \"theme\": \"Asset｜Gold / 黃金\",\n    \"source\": \"Reuters\",\n    \"title\": \"Trading Day: Momentum fizzles, gold sizzles - Reuters\",\n    \"url\": \"https://news.google.com/rss/articles/CBMipgFBVV95cUxOYUpRNUR0dUREOGNCc05RdF9OT2hlQjJULU5PSFJPT29wT3lJUElsV1JReE5ocmhhcjNTUmg2UnR0NF9pN0lrRnE4dUVuNGplYlJ4TXozSTYzMGdnd0M5MnpyRmxSTDFFZTEwZWRocTlkQ1pOT25XNVRWXzBrLXcxTGFZRFk3a3A1a3hDUWFkZmJHWGwzc05WY1prOVJJS0NFam9PSmFn?oc=5\",\n    \"published_at\": \"Wed, 05 Aug 2026 21:10:27 GMT\",\n    \"score\": 106.2,\n    \"matched_keywords\": \"能源與原物料:gold | 風險情緒／避險資金:gold | 變數:GOLD | 類型:BACKUP | 來源角色:WIRE_CONFIRMATION\"\n  }\n]"
+      "news_links_json": "[\n  {\n    \"rank\": 1,\n    \"theme\": \"Rates｜Treasury Yields / 美債殖利率\",\n    \"source\": \"news.cnyes.com\",\n    \"title\": \"美債殖利率終於有救？財政部暗示可能減發長債 - news.cnyes.com\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiT0FVX3lxTE04OU9kVEdObUpZN2lTaUZKcTVreDdWM2Q0MUlGbkdZN2lHNVdkSWNBcU11S05uZGUzOUQ3Z0xOaTFCdTMyaktLNEVpMjJIeWc?oc=5\",\n    \"published_at\": \"Fri, 07 Aug 2026 18:00:12 GMT\",\n    \"score\": 110,\n    \"matched_keywords\": \"美債殖利率:treasury/yield/yields | 變數:TREASURY_YIELDS | 類型:DATA | 來源角色:CNYES_MACRO\"\n  },\n  {\n    \"rank\": 2,\n    \"theme\": \"FX｜Dollar / FX / 美元與匯率\",\n    \"source\": \"news.cnyes.com\",\n    \"title\": \"A股掀美IEEPA關稅違憲退稅潮！貴州輪胎單家到帳8136萬人民幣 千億級退稅已達六成 - news.cnyes.com\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiT0FVX3lxTFBnN0FJazdlbXpWUVJTc2pscjNWX0pUa0dQSlFIalFEcDdJN3JWeDNQTTl1Y0xkVnBBMzV0SjZSRjhqWjh1TFRGdnNTVVV0aVE?oc=5\",\n    \"published_at\": \"Sun, 09 Aug 2026 03:00:03 GMT\",\n    \"score\": 109.6,\n    \"matched_keywords\": \"美元與亞洲匯率:dollar | 變數:DOLLAR_FX | 類型:DATA | 來源角色:CNYES_MACRO\"\n  },\n  {\n    \"rank\": 3,\n    \"theme\": \"Labor｜Nonfarm Payrolls / 非農就業\",\n    \"source\": \"Reuters\",\n    \"title\": \"US job growth likely picked up in July; unemployment rate forecast unchanged at 4.2% - Reuters\",\n    \"url\": \"https://news.google.com/rss/articles/CBMivAFBVV95cUxPTUdRTEsxdnBGRklaVFZoQWpDVk5mMEw4M2RwMWFhNlppZXRza05YSm9VY1ZwaFlGZU9WcENrSnhfeGlzOERROVZ6UG1mUzhuTEpiSGZCNXNwRlZuM181aW4zNnlkVlRlT09jVURzR092SmoxUnhuSTNIYkotLWZOdTlBVFk2SldYYV9hRnIyemJ4NlRSMGNJekxURkZ0dTh6VGdhTENDajM0bW1Ja18yX25ncnhITlhMNjJlWA?oc=5\",\n    \"published_at\": \"Fri, 07 Aug 2026 04:08:21 GMT\",\n    \"score\": 108,\n    \"matched_keywords\": \"就業與成長:payrolls/unemployment/employment/growth | 變數:PAYROLLS | 類型:BACKUP | 來源角色:WIRE_CONFIRMATION\"\n  },\n  {\n    \"rank\": 4,\n    \"theme\": \"Fed Policy｜Fed / 聯準會\",\n    \"source\": \"Reuters\",\n    \"title\": \"Jobs report will offer fresh test of Fed Chairman Warsh's less-guidance stance - Reuters\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiuwFBVV95cUxNd1VZLTFFMFQxT05oOVNScVJSbW9SNDZFMjVnc2JsZXI2TXdJWEVSM3p0NzlPTi1SQ2o2aEFTTWxqVVlONlB6NHYzcThZcmhQU1N1cWlGZmQ4ek53aDhzVVpaTTZQdEMzbkU4YTNwQnpldF94S0lCZ3FXZlNiSGlGZ1RQcVdEWE9qTXJHUkc5RS03d0hhZ3lQVGMzV2FQS0NBMGxkbG9tTjZNNUFqUjN4SjYyeGxyWEZTZWk0?oc=5\",\n    \"published_at\": \"Fri, 07 Aug 2026 11:04:21 GMT\",\n    \"score\": 106.4,\n    \"matched_keywords\": \"聯準會政策:fed | 就業與成長:jobs | 地緣政治:war | 變數:FED | 類型:BACKUP | 來源角色:WIRE_CONFIRMATION\"\n  },\n  {\n    \"rank\": 5,\n    \"theme\": \"Rates｜Treasury Yields / 美債殖利率\",\n    \"source\": \"marketwatch.com\",\n    \"title\": \"TLT | iShares 20+ Year Treasury Bond ETF Overview - marketwatch.com\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiWkFVX3lxTE9TYmJ6bVVlUnliem1HVFhsRlc5QWR2dFNVN3RZdzFlbmlpbkRtNVZyOTNuREZJaTFNb3JmRU01R0tuWUV4WXFyVGd2cVBOVnNJRGlPRFgxRHJGUQ?oc=5\",\n    \"published_at\": \"Fri, 07 Aug 2026 23:59:00 GMT\",\n    \"score\": 106,\n    \"matched_keywords\": \"美債殖利率:treasury/yield/yields/bond | 變數:TREASURY_YIELDS | 類型:REACTION | 來源角色:MARKET_REACTION\"\n  },\n  {\n    \"rank\": 6,\n    \"theme\": \"Rates｜Treasury Yields / 美債殖利率\",\n    \"source\": \"marketwatch.com\",\n    \"title\": \"VGLT | Vanguard Long-Term Treasury ETF Overview - marketwatch.com\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiW0FVX3lxTE1hRUJSRU5TZ2JEeEE3QUxrYzkySXBhbEkyOGthdWk2aEpGd1JyZVVXM0pPVTZ3dmZ3anQzMFlJUFh0NVBqajBaQkwyM1FMYXV6X1lDelB6Q3VudkU?oc=5\",\n    \"published_at\": \"Fri, 07 Aug 2026 23:34:00 GMT\",\n    \"score\": 103,\n    \"matched_keywords\": \"美債殖利率:treasury/yield/yields | 變數:TREASURY_YIELDS | 類型:REACTION | 來源角色:MARKET_REACTION\"\n  },\n  {\n    \"rank\": 7,\n    \"theme\": \"Labor｜Nonfarm Payrolls / 非農就業\",\n    \"source\": \"news.cnyes.com\",\n    \"title\": \"今晚美國非農大考 「弱7月」魔咒會重演嗎？此前三年均不及預期 - news.cnyes.com\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiT0FVX3lxTE1BOG1hc1k5MjN4Q3NwdGhDbEsxVjZVWm9qSzlONUE0ZkZoOVhKMlBUMVFKLWJnc241MEl0elV5S0JLSnI0Y1FXRVBKeGtDWUE?oc=5\",\n    \"published_at\": \"Fri, 07 Aug 2026 12:30:10 GMT\",\n    \"score\": 102,\n    \"matched_keywords\": \"就業與成長:payrolls | 變數:PAYROLLS | 類型:DATA | 來源角色:CNYES_MACRO\"\n  },\n  {\n    \"rank\": 8,\n    \"theme\": \"Fed Policy｜Fed / 聯準會\",\n    \"source\": \"Reuters\",\n    \"title\": \"Gold hits seven-week high as weak US jobs data dents rate hike bets - Reuters\",\n    \"url\": \"https://news.google.com/rss/articles/CBMirwFBVV95cUxPbWpUMWdTeEtHNmJ5VDlJZU9tOGp0d0xFQTBlT2xXUHBTSENUdHowV0JkLTFockFBbUl6T0hHT29nUjN5XzR0RWlCbU9VQjZBY2pJd0o5dmFhel9VeGZqV0E1VFpEZjJ3dWk1T2I5aERGNE41dVlkWlFFeHFsUm80RVVPTkNlX2lKc0tJTEtBRURzbXZZMWI5YnlHS1dlWWJyRkFsSmxXM2NWdU5qV1lj?oc=5\",\n    \"published_at\": \"Fri, 07 Aug 2026 23:02:34 GMT\",\n    \"score\": 101.4,\n    \"matched_keywords\": \"聯準會政策:fed/rate hike | 就業與成長:jobs | 能源與原物料:gold | 風險情緒／避險資金:gold | 變數:FED | 類型:BACKUP | 來源角色:WIRE_CONFIRMATION\"\n  }\n]"
     },
-    "raw_daily_summary_package": "日期：2026-08-07\n今日主線：就業降溫主導降息預期\n\nExecutive Summary：\n今日市場核心矛盾在於地緣風險降溫但黃金依然大漲，顯示市場焦點已從避險轉向實質利率下行。美國小非農就業創半年新低，勞動降溫成為壓低美債殖利率與美元的主導力量，並蓋過潛在的通膨擔憂。油價下行作為修正因子，進一步緩和了能源通膨壓力，整體資產傳導邏輯由就業降溫與降息預期主導。\n\n今日核心訊號：\n- 小非農增幅創半年低\n- 美債殖利率顯著回落\n- 實質利率預期推升金價\n\n核心資產重點：\nWTI｜77.08｜下行｜油價下行，可能緩和能源通膨壓力；若由需求疲弱造成，亦需視為成長降溫訊號。\nUS10Y｜4.66%｜下行｜反映勞動市場降溫，市場重新評估降息預期，帶動長端利率下行。\nDXY｜99.60｜下行｜受美債殖利率回落拖累，利差優勢削弱，給予日圓等亞洲貨幣喘息空間。\nGold｜4401.30｜上行｜在避險情緒降溫下逆勢大漲，主要反映實質利率下行與美元走弱的預期。\n\n矛盾 / 背離：\n今日最關鍵的背離在於『地緣風險降溫與黃金大漲並存』以及『通膨預期傳導失效』。荷姆茲海峽協議進展理應削弱避險買盤，但黃金卻強勢上行，這表明黃金的定價邏輯已轉向『實質利率下行與美元走弱』的主線。同時，小非農就業疲軟作為強大的修正因子，直接截斷了通膨推升利率的傳導鏈，使得美債殖利率與美元同步下行，帶動日圓走強。\n\n總經傳導鏈：\n[小非農就業降溫與地緣風險緩解] -> [美國10年期公債殖利率下行] -> [美元指數走弱] -> [黃金大漲與日圓偏強，油價回落]\n\n新聞佐證：\n- 美國7月小非農就業僅增4.4萬人，創半年來最低，釋放勞動市場邊際降溫訊號。\n- 荷姆茲海峽重開協議取得進展，地緣風險緩解帶動WTI與布蘭特原油雙雙下行。\n- 美債10年期殖利率回落至4.66%附近，美元指數跌破100關卡至99.60，反映降息預期升溫。\n- 黃金價格突破4400美元，在避險情緒降溫下仍受實質利率下行驅動。\n\n待觀察問題：\n- 即將公布的美國官方非農就業與失業率數據，確認勞動市場降溫趨勢是否延續。\n- 聯準會官員對就業數據轉弱的政策表態，是否將焦點轉向雙重使命中的就業風險。\n- 荷姆茲海峽協議後續進展，若談判生變可能再次推升油價與通膨預期。"
+    "raw_daily_summary_package": "日期：2026-08-07\n今日主線：勞動降溫重塑政策預期\n\nExecutive Summary：\n今日市場呈現通膨預期多空拉鋸，核心矛盾在於油價上行與美債殖利率下行的分歧。市場目前最重視勞動市場降溫訊號，7月非農轉弱與財政部減發長債預期成為壓低利率的主導力量，帶動美元走弱並推升黃金與日圓。油價走高雖增加能源通膨壓力，但暫時被視為修正因子，降息預期上升抵銷了部分通膨擔憂。\n\n今日核心訊號：\n- 非農就業數據轉弱\n- 美債殖利率顯著下行\n- 油價上行修正因子\n\n核心資產重點：\nWTI｜78.18｜上行｜油價上行，增加能源成本與短期通膨預期的上行壓力；若非今日主線，應視為修正因子或並行訊號。\nUS10Y｜4.66｜下行｜反映勞動市場降溫與財政部減發長債預期，降息預期上升壓低長端利率。\nDXY｜99.60｜下行｜受美債殖利率回落與利差優勢縮窄影響，美元偏弱並減輕亞洲貨幣壓力。\nGold｜4340.70｜上行｜受惠於實質利率下行與美元走弱，加上Fed政策獨立性疑慮提供額外避險支撐。\n\n矛盾 / 背離：\n今日最關鍵的資產聯動背離出現在油價與美債殖利率。通常油價上行會推升通膨預期與長端利率，但今日非農就業轉弱與減發長債預期成為主導敘事，壓低了殖利率。這顯示市場正在重新評估權重，將勞動降溫視為比能源通膨更迫切的定價因素，油價上行暫時退居為修正因子。後續需觀察通膨硬數據是否因油價反彈而僵固。\n\n總經傳導鏈：\n[非農就業轉弱與減發長債預期] -> [美國10年期公債殖利率下行] -> [美元指數偏弱] -> [黃金上漲與日圓走強]\n\n新聞佐證：\n- 美國7月非農就業數據轉弱，引發市場對勞動市場降溫的關注，降低高利率維持更久的預期。\n- 財政部可能減發長債的預期，配合就業降溫，成為壓低美債殖利率的強大修正因子。\n- 川普與Fed新任主席華許頻繁通話，增加政策獨立性不確定性，為黃金提供避險支撐。\n- WTI與Brent原油雙雙上行，雖帶來通膨壓力，但暫未扭轉利率下行的主線邏輯。\n\n待觀察問題：\n- 下一份CPI或PPI數據是否因油價上行而反彈，測試通膨僵固性。\n- 初領失業金與後續就業數據，確認勞動市場是否持續轉弱。\n- 財政部發債計畫實際落地情況，觀察長債供給是否如預期減少。"
   }
 }
