@@ -1,158 +1,159 @@
 {
-  "generated_at": "2026-08-28T13:58:05+08:00",
+  "generated_at": "2026-08-28T20:16:39+08:00",
   "date": "2026-08-27",
   "mode": "macro_pricing_logic_v4",
   "logic": {
     "pricing_context": {
-      "market_was_pricing": "Fed hawkishness and stable employment leading to higher interest rates.",
-      "new_information": "Fed officials Hamack and Schmid delivered hawkish speeches; initial jobless claims fell to 203k; WTI rose to 83.59; DXY fell to 99.129 while US10Y rose to 4.672%.",
-      "pricing_question": "Why did the US Dollar weaken (DXY down to 99.129) despite rising US Treasury yields (US10Y up to 4.672%) driven by hawkish Fed comments and strong employment data?"
+      "market_was_pricing": "聯準會維持高利率更久的預期，同時伴隨全球風險偏好改善對美元避險需求的削弱。",
+      "new_information": "Fed 官員哈瑪克與施密德發表鷹派言論指出政策仍偏寬鬆；上周初領失業金人數降至 20.3 萬顯示就業市場穩定；美債 10 年期殖利率上行至 4.672%；WTI 油價上行至 83.59；美元指數偏弱至 99.129。",
+      "pricing_question": "在聯準會官員釋放鷹派訊號且就業數據穩健、推升美債殖利率的背景下，為何美元指數未升反跌，進而支撐了亞幣走勢？"
     },
     "input_material_mapping": {
       "inflation_materials": [
-        "WTI oil price rose to 83.59, increasing energy costs and short-term inflation expectations.",
-        "Initial jobless claims fell to 203k, showing a stable labor market."
+        "WTI 油價上行至 83.59，增加能源成本與短期通膨預期壓力",
+        "Fed 官員哈瑪克與施密德發表鷹派言論，直言政策仍偏寬鬆",
+        "上周初領失業金人數降至 20.3 萬，顯示就業市場保持穩定"
       ],
       "rate_materials": [
-        "Fed officials Hamack and Schmid delivered hawkish speeches, stating policy remains loose.",
-        "Initial jobless claims fell to 203k, showing a stable labor market.",
-        "US 10-year Treasury yield rose to 4.67%."
+        "Fed 官員哈瑪克與施密德發表鷹派言論",
+        "上周初領失業金人數降至 20.3 萬，強化高利率維持更久預期",
+        "美國 10 年期公債殖利率上行至 4.672%"
       ],
       "dollar_materials": [
-        "DXY fell to 99.129, diverging from rising yields due to improved risk appetite."
+        "美元指數偏弱至 99.129，未與殖利率同步上行，反映風險偏好改善削弱避險需求"
       ],
       "gold_materials": [
-        "Gold prices fell due to high rates and real rate concerns."
+        "金價因高利率與實質利率疑慮而承壓下行"
       ],
       "asia_fx_materials": [
-        "Taiwan Dollar (TWD) was relatively strong, supported by a weaker USD as a key correction factor."
+        "台幣表現偏強，主要受到美元走弱的修正因子支撐"
       ],
-      "mapping_summary": "The market digested hawkish Fed rhetoric and robust employment data which pushed yields higher, while rising oil prices added to inflation concerns. However, a risk-on mood weakened the US dollar, creating a divergence between yields and DXY, which in turn supported the Taiwan Dollar while gold fell under the weight of higher rates."
+      "mapping_summary": "今日素材主要呈現美國經濟基本面（就業）與政策態度（Fed 鷹派）共同推升利率，但貨幣市場則由風險偏好改善主導，導致美元走弱並傳導至亞幣偏強，黃金則順應利率上行而下跌。"
     },
     "inflation_expectation": {
       "energy": {
         "direction": "up",
         "importance": "medium",
         "evidence": [
-          "WTI rose to 83.59"
+          "WTI 油價上行至 83.59"
         ],
-        "judgment": "Oil price increase adds to energy costs and short-term inflation expectations."
+        "judgment": "油價持續上行增加能源成本，對短期通膨預期構成上行壓力。"
       },
       "supply_chain": {
         "direction": "unclear",
         "importance": "low",
         "evidence": [],
-        "judgment": "No direct supply chain data provided in daily summary."
+        "judgment": "今日無相關供應鏈或運價數據發布。"
       },
       "price_data": {
         "direction": "unclear",
         "importance": "low",
         "evidence": [],
-        "judgment": "No specific CPI/PPI/PCE data released today."
+        "judgment": "今日無新發布的 CPI、PPI 或 PCE 數據。"
       },
       "demand": {
         "direction": "unclear",
         "importance": "low",
         "evidence": [],
-        "judgment": "No specific PMI or retail sales data released today."
+        "judgment": "今日無新發布的 PMI 或零售銷售等需求端數據。"
       },
       "labor_market": {
         "direction": "up",
         "importance": "high",
         "evidence": [
-          "Initial jobless claims fell to 203k"
+          "上周初領失業金人數降至 20.3 萬"
         ],
-        "judgment": "Stable labor market supports economic resilience and potential wage-push inflation pressure."
+        "judgment": "初領失業金人數維持低位，顯示就業市場依然穩健，可能持續支撐服務業通膨韌性。"
       },
       "policy_expectation": {
         "direction": "up",
         "importance": "high",
         "evidence": [
-          "Fed officials Hamack and Schmid delivered hawkish remarks stating policy is still loose"
+          "Fed 官員哈瑪克與施密德直言政策仍偏寬鬆"
         ],
-        "judgment": "Hawkish Fed rhetoric suggests policy rates will remain higher for longer to combat inflation."
+        "judgment": "官員的鷹派表態反映聯準會內部對通膨降溫進度的審慎態度，推升政策限制性時間需拉長的預期。"
       },
       "summary": {
         "overall_direction": "up",
         "strength": "medium",
-        "dominant_force": "Hawkish Fed policy expectations and tight labor market (jobless claims at 203k).",
-        "offsetting_force": "None identified in inflation inputs, though overall risk appetite is strong.",
-        "judgment": "Inflation expectations are tilted upward today, driven by a tight labor market, hawkish Fed comments, and rising oil prices."
+        "dominant_force": "聯準會官員鷹派言論與穩健的就業數據。",
+        "offsetting_force": "無明顯抵銷因子，油價上行亦同步提供支撐。",
+        "judgment": "今日通膨預期在穩健就業與 Fed 鷹派言論的共振下偏向強勢，油價上行進一步強化了短期通膨隱憂。"
       }
     },
     "rate_pricing": {
       "direction": "up",
-      "link_with_inflation_expectation": "Directly aligned. Higher inflation expectations from tight labor markets and rising oil prices, combined with hawkish Fed speak, drove yields higher.",
-      "fed_policy_signal": "Fed officials Hamack and Schmid delivered hawkish comments, stating that policy is still loose, pushing back on immediate rate cuts.",
+      "link_with_inflation_expectation": "同向傳導。穩健的就業數據與 Fed 官員對政策偏寬鬆的擔憂，直接轉化為市場對高利率維持更久（Higher for Longer）的預期，推升美債殖利率。",
+      "fed_policy_signal": "哈瑪克與施密德的鷹派發言，暗示降息門檻仍高，政策可能需要維持限制性更久。",
       "treasury_supply_demand": "unclear",
       "term_premium": "unclear",
       "safe_haven_bond_buying": "down",
-      "growth_concern_or_cut_expectation": "Rate cut expectations decreased as the market priced in 'higher for longer' due to stable employment (jobless claims at 203k) and Fed hawkishness.",
-      "dominant_force": "Fed hawkishness and stable employment pushing US 10Y yield to 4.672%.",
-      "judgment": "Rates priced higher today, driven by the dual force of hawkish Fed comments and solid labor market data, solidifying the 'higher for longer' narrative."
+      "growth_concern_or_cut_expectation": "就業數據穩健削弱了短期內因經濟衰退而降息的預期，推升長端殖利率。",
+      "dominant_force": "就業數據穩健與聯聯會官員鷹派言論的雙重共振。",
+      "judgment": "美國 10 年期公債殖利率上行至 4.672%，定價邏輯完全順應基本面與政策面的緊縮預期。"
     },
     "dollar_pricing": {
       "direction": "down",
-      "link_with_rates": "Divergent. Typically, higher yields support the USD, but today DXY fell to 99.129 while yields rose.",
+      "link_with_rates": "反向背離。儘管美債殖利率顯著上行，但美元指數並未反映利差優勢，反而走弱至 99.129。",
       "safe_haven_dollar": "down",
       "liquidity_demand": "unclear",
       "other_currency_weakness": "unclear",
-      "us_relative_growth_or_policy": "While US growth/policy remains hawkish and robust, it was offset by risk-on sentiment.",
-      "dominant_force": "Improvement in risk appetite, which weakened the USD's safe-haven appeal.",
-      "judgment": "The US Dollar priced lower today despite rising yields, as risk-on sentiment dominated currency markets, overriding the interest rate differential support."
+      "us_relative_growth_or_policy": "雖然美國經濟韌性與鷹派政策理應支撐美元，但今日被市場整體的風險偏好改善所壓制。",
+      "dominant_force": "市場風險偏好改善，削弱了美元的避險需求。",
+      "judgment": "美元指數走弱代表今日外匯市場的主導邏輯在於風險情緒的釋放，而非單純的利差交易，這構成了今日市場的最大修正因子。"
     },
     "gold_pricing": {
       "direction": "down",
-      "rate_or_real_rate_pressure": "High. Gold was suppressed by rising yields (US10Y at 4.672%) and real rate concerns.",
-      "dollar_effect": "The weaker USD usually supports gold, but today this was overridden by the negative impact of higher yields.",
+      "rate_or_real_rate_pressure": "高。美債殖利率上行至 4.672%，推升持有黃金的機會成本，實質利率疑慮對金價構成直接壓抑。",
+      "dollar_effect": "positive",
       "safe_haven_demand": "down",
       "central_bank_buying": "unclear",
       "geopolitical_risk": "unclear",
-      "dominant_force": "Rising US Treasury yields and high interest rate expectations.",
-      "judgment": "Gold prices fell, conforming to the pressure of higher yields and real rates, which completely offset any supportive effect from a weaker US Dollar."
+      "dominant_force": "美債殖利率上行與高利率維持更久的預期。",
+      "judgment": "儘管弱勢美元通常利多黃金，但今日金價定價主要受制於美債殖利率上行的壓力，顯示利率端傳導力量壓過了美元走弱的支撐。"
     },
     "asia_fx_pricing": {
       "twd": {
-        "reaction": "strong",
+        "reaction": "偏強",
         "consistent_with_dollar_pressure": "yes",
-        "local_correction_factor": "Supported by a weaker USD (DXY down to 99.129) and improved global risk appetite.",
-        "judgment": "TWD appreciated, moving in line with the weaker USD, which acted as the main correction factor against rising US yields."
+        "local_correction_factor": "美元指數走弱與全球風險偏好改善，成為支撐台幣偏強的主要驅動力，抵銷了美債殖利率上行的流出壓力。",
+        "judgment": "台幣匯率順應弱勢美元與風險偏好改善而偏強，並未受到美債殖利率走高的負面衝擊。"
       },
       "jpy": {
         "reaction": "unclear",
         "consistent_with_dollar_pressure": "unclear",
-        "local_correction_factor": "No specific JPY data provided in daily summary.",
-        "judgment": "Data insufficient to evaluate JPY reaction."
+        "local_correction_factor": "今日無相關日圓走勢與日本央行政策數據。",
+        "judgment": "資料不足，待確認。"
       },
       "krw": {
         "reaction": "unclear",
         "consistent_with_dollar_pressure": "unclear",
-        "local_correction_factor": "No specific KRW data provided in daily summary.",
-        "judgment": "Data insufficient to evaluate KRW reaction."
+        "local_correction_factor": "今日無相關韓圜走勢與韓國基本面數據。",
+        "judgment": "資料不足，待確認。"
       }
     },
     "market_contradiction": {
-      "baseline_expectation": "Hawkish Fed comments and strong employment data should push both US yields and the US Dollar (DXY) higher.",
-      "actual_reaction": "US 10Y yields rose to 4.672%, but the USD index fell to 99.129.",
-      "most_non_obvious_link": "The decoupling of DXY from US10Y yields due to a surge in risk appetite.",
-      "possible_explanation": "Global risk appetite improved significantly, which weakened the USD's safe-haven demand and overshadowed the yield-differential support.",
+      "baseline_expectation": "在 Fed 官員發表鷹派言論且初領失業金人數下降的背景下，美債殖利率上行應同步吸引資金流入美元，推升美元指數，並對新興市場貨幣（如台幣）構成貶值壓力。",
+      "actual_reaction": "美債殖利率確實上行，但美元指數卻偏弱，台幣反而逆勢偏強。",
+      "most_non_obvious_link": "美債殖利率與美元指數的方向分歧，以及弱美元對台幣的強勁支撐。",
+      "possible_explanation": "市場可能正處於風險偏好改善的環境中，資金流向非美資產的意願壓過了美債高殖利率的吸引力，導致美元避險屬性削弱而走軟。",
       "is_correction_or_new_mainline": "offsetting_force",
-      "how_to_integrate_into_main_theme": "The core narrative is 'higher for longer' rates driven by US economic resilience, but the currency market is currently dominated by a risk-on mood that dilutes USD strength, allowing emerging market currencies like TWD to strengthen temporarily.",
+      "how_to_integrate_into_main_theme": "將其視為『風險偏好改善』對『高利率預期』的抵銷力量。雖然基本面與政策面支持高利率，但市場情緒的樂觀暫時阻止了美元的強勢，並為亞幣提供了喘息空間。",
       "presenter_story_angle": {
-        "opening_question": "Why did the US Dollar slide today even as US Treasury yields surged on hawkish Fed comments and strong jobs data?",
-        "normal_script": "Normally, when Fed officials sound hawkish and jobless claims drop, yields rise and the US Dollar strengthens because of wider interest rate differentials.",
-        "where_it_breaks": "Today, while the 10-year yield climbed to 4.672%, the US Dollar Index actually fell to 99.129.",
-        "why_it_matters": "This divergence suggests that global risk appetite is currently strong enough to override the interest rate channel, weakening the USD's safe-haven appeal and giving a breather to Asian currencies like the Taiwan Dollar.",
-        "next_watch": "We need to watch upcoming Fed speeches and see if the USD eventually realigns with rising yields, or if non-US currency strength is driving this DXY weakness."
+        "opening_question": "為什麼聯準會官員大放鷹詞、美債殖利率飆升，美元指數卻不升反降，甚至還讓台幣逆勢走強？",
+        "normal_script": "按照常理，當就業數據穩健、Fed 官員直言政策仍偏寬鬆時，美債殖利率衝高應該會吸引資金回流美元，進而壓抑亞幣與黃金。",
+        "where_it_breaks": "但今天這個傳導鏈在美元端出現了斷裂。10 年期美債殖利率衝上 4.672%，美元指數卻跌到了 99.129，台幣也跟著偏強。",
+        "why_it_matters": "這表明今天市場的主導力量並非對緊縮的恐慌，而是風險偏好的改善。這種樂觀情緒削弱了美元的避險需求，成為支撐台幣的關鍵修正因子。而黃金則因為實質利率壓力，依然選擇順應殖利率上行而下跌。",
+        "next_watch": "接下來我們需要驗證，這種弱美元究竟是由非美貨幣的實質走強帶動，還是僅僅是短暫的風險情緒派對？"
       }
     },
     "pricing_assessment": {
-      "dominant_market_force": "Hawkish Fed rhetoric and stable employment driving US yields higher.",
-      "offsetting_force": "Improved global risk appetite weakening the USD.",
-      "most_non_obvious_signal": "DXY falling to 99.129 despite US10Y rising to 4.672%.",
-      "market_question": "Will the USD remain decoupled from rising yields, or will the 'higher for longer' reality eventually force the dollar back up?",
-      "one_sentence_takeaway": "While hawkish Fed views and tight jobs push yields up and gold down, a risk-on wave has temporarily decoupled the weak USD, supporting the Taiwan Dollar.",
-      "next_watch": "Upcoming Fed official speeches, DXY-yield realignment, and oil price trends."
+      "dominant_market_force": "聯準會維持高利率更久的預期（由鷹派言論與穩健就業驅動）。",
+      "offsetting_force": "全球風險偏好改善，削弱美元避險需求並支撐台幣。",
+      "most_non_obvious_signal": "美元指數與 10 年期美債殖利率的顯著背離。",
+      "market_question": "美元走弱是否能持續與高殖利率脫鉤？這是否代表非美貨幣有更具實質性的利多支撐？",
+      "one_sentence_takeaway": "今日市場呈現『美債殖利率因鷹派與就業上行，但美元因風險偏好改善而走弱』的背離特徵，亞幣因而獲得喘息空間。",
+      "next_watch": "觀察即將到來的 Fed 關鍵官員演講以確認利率路徑，並留意美元指數是否會重新與美債殖利率對齊。"
     }
   }
 }
