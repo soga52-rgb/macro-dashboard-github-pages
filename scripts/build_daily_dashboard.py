@@ -129,7 +129,7 @@ def history_dates(current_date: str, limit: int = 7) -> List[str]:
 # Gemini helpers
 # =============================================================================
 
-def gemini_json(prompt: str, fallback: Any, task: str, temperature: float = 0.55) -> Any:
+def gemini_json(prompt: str, fallback: Any, task: str) -> Any:
     import time
 
     api_key = os.environ.get("GEMINI_API_KEY", "").strip()
@@ -143,8 +143,6 @@ def gemini_json(prompt: str, fallback: Any, task: str, temperature: float = 0.55
     payload = {
         "contents": [{"parts": [{"text": prompt}]}],
         "generationConfig": {
-            "temperature": temperature,
-            "topP": 0.9,
             "responseMimeType": "application/json",
         },
     }
@@ -479,7 +477,7 @@ daily_summary:
 
 def generate_pricing_logic(payload: Dict[str, Any]) -> Dict[str, Any]:
     fallback = fallback_pricing_logic(payload)
-    raw = gemini_json(pricing_prompt(payload), fallback, "Macro Pricing Logic", 0.45)
+    raw = gemini_json(pricing_prompt(payload), fallback, "Macro Pricing Logic")
     if not isinstance(raw, dict):
         return fallback
     for k, v in fallback.items():
@@ -739,7 +737,7 @@ def normalize_podcast(raw: Any, fallback: Dict[str, Any]) -> Dict[str, Any]:
 
 def generate_presenter_podcast(logic: Dict[str, Any], payload: Dict[str, Any]) -> Dict[str, Any]:
     fallback = fallback_presenter_podcast(logic, payload)
-    raw = gemini_json(presenter_prompt(logic, payload), {"podcast": fallback}, "AI Presenter Podcast", 0.55)
+    raw = gemini_json(presenter_prompt(logic, payload), {"podcast": fallback}, "AI Presenter Podcast")
     return normalize_podcast(raw, fallback)
 
 
