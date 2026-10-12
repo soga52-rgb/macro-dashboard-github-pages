@@ -1,0 +1,166 @@
+{
+  "generated_at": "2026-10-12T14:35:47+08:00",
+  "date": "2026-10-11",
+  "mode": "macro_pricing_logic_v4",
+  "logic": {
+    "pricing_context": {
+      "market_was_pricing": "市場原先定價經濟具備韌性，且政策利率將維持在高檔更久（Higher for Longer）。",
+      "new_information": "WTI與Brent原油分別突破92美元與105美元，疊加海外美債撤資疑慮，推升美國10年期公債殖利率至5.24%。",
+      "pricing_question": "高油價引發的通膨壓力與美債長端供需疑慮，是否正主導殖利率與美元同步走高，並壓制大宗商品與亞洲貨幣？"
+    },
+    "input_material_mapping": {
+      "inflation_materials": [
+        "WTI原油升至92.41美元（突破92美元）",
+        "Brent原油突破105美元",
+        "能源成本增加與短期通膨預期上行壓力"
+      ],
+      "rate_materials": [
+        "美國10年期公債殖利率升至5.24%",
+        "市場評估實體經濟支柱與海外美債撤資疑慮",
+        "市場討論美債殖利率直奔6%之可能性"
+      ],
+      "dollar_materials": [
+        "美元指數站上102.26",
+        "利差優勢支撐美元走強"
+      ],
+      "gold_materials": [
+        "金價回落至4211美元",
+        "高利率環境與強美元對不孳息黃金構成壓迫"
+      ],
+      "asia_fx_materials": [
+        "日圓走弱至158.29",
+        "台幣升至31.91呈現逆向走勢",
+        "亞幣因區域資金配置出現分歧"
+      ],
+      "mapping_summary": "油價大漲推升通膨預期，共振長端公債供需疑慮，拉升美債殖利率與美元，進而壓制黃金與日圓；台幣則受本地資金配置影響逆勢走強。"
+    },
+    "inflation_expectation": {
+      "energy": {
+        "direction": "up",
+        "importance": "high",
+        "evidence": [
+          "WTI原油突破92美元至92.41美元",
+          "Brent原油突破105美元"
+        ],
+        "judgment": "油價顯著衝高直接增加能源成本，構成短期通膨預期上行的核心推動力。"
+      },
+      "supply_chain": {
+        "direction": "unclear",
+        "importance": "low",
+        "evidence": [],
+        "judgment": "摘要中缺乏供應鏈 bottlenecks 或瓶頸的明確數據。"
+      },
+      "price_data": {
+        "direction": "unclear",
+        "importance": "medium",
+        "evidence": [
+          "即將公布美國CPI通膨數據"
+        ],
+        "judgment": "硬數據尚未公布，目前主要由能源市場引導通膨預期，尚待正式CPI驗證。"
+      },
+      "demand": {
+        "direction": "up",
+        "importance": "medium",
+        "evidence": [
+          "市場評估實體經濟支柱具韌性"
+        ],
+        "judgment": "實體經濟表現尚可，支撐需求端通膨預期不致快速冷卻。"
+      },
+      "labor_market": {
+        "direction": "unclear",
+        "importance": "low",
+        "evidence": [],
+        "judgment": "摘要未提及就業市場相關最新數據。"
+      },
+      "policy_expectation": {
+        "direction": "up",
+        "importance": "medium",
+        "evidence": [
+          "強化利率維持高檔更久預期"
+        ],
+        "judgment": "通膨壓力與經濟韌性共同強化市場對央行維持高利率更久之定價。"
+      },
+      "summary": {
+        "overall_direction": "up",
+        "strength": "strong",
+        "dominant_force": "WTI與Brent原油雙雙突破關鍵點位帶來的能源通膨壓力",
+        "offsetting_force": "今日暫無明確抵銷通膨預期之力量",
+        "judgment": "能源價格大漲為今日通膨預期上行的主導力量，並獲得實體經濟韌性預期的支撐。"
+      }
+    },
+    "rate_pricing": {
+      "direction": "up",
+      "link_with_inflation_expectation": "同向。油價強勢推升通膨預期，直接加劇長端名目利率上行壓力。",
+      "fed_policy_signal": "市場定價央行將維持高利率更久，高檔利率路徑明確。",
+      "treasury_supply_demand": "市場存在海外美債撤資疑慮，削弱長端買盤力量。",
+      "term_premium": "撤資疑慮與通膨風險推升期限溢價，引發美債殖利率直奔6%之討論。",
+      "safe_haven_bond_buying": "未見顯著避險買債跡象，供需與通膨疑慮佔據主導。",
+      "growth_concern_or_cut_expectation": "實體經濟支柱尚存，成長停滯或大幅降息之預期並非當前主線。",
+      "dominant_force": "能源通膨預期升溫與海外美債撤資/供需疑慮之共振效果",
+      "judgment": "美債殖利率攀升至5.24%，係由能源引發的通膨預期與美債長端供需疑慮共同推升。"
+    },
+    "dollar_pricing": {
+      "direction": "up",
+      "link_with_rates": "同向。美債殖利率攀升提供利差優勢，驅動美元指數走強。",
+      "safe_haven_dollar": "摘要未顯示避險情緒為美元主要推力，力道主要來自利差。",
+      "liquidity_demand": "未特別顯示美元流動性緊縮需求。",
+      "other_currency_weakness": "日圓等主要非美貨幣因利差擴大而承受壓迫。",
+      "us_relative_growth_or_policy": "美國實體經濟支柱與較高的利率路徑支撐美元相對優勢。",
+      "dominant_force": "美債殖利率走高所強化的相對利差優勢",
+      "judgment": "美元指數站上102.26，傳導鏈嚴格承接美債殖利率上行之利差效應。"
+    },
+    "gold_pricing": {
+      "direction": "down",
+      "rate_or_real_rate_pressure": "美債10年期殖利率升至5.24%，顯著提高持有不孳息黃金的機會成本。",
+      "dollar_effect": "美元指數走強至102.26，對以美元計價之黃金形成直接價格壓制。",
+      "safe_haven_demand": "即便地緣或能源風險存在，避險買盤不足以抵銷名目利率與美元強勢帶來的壓力。",
+      "central_bank_buying": "摘要未提供央行買盤相關數據。",
+      "geopolitical_risk": "地緣風險推高油價，但對黃金的支撐力道被利率與美元壓制。",
+      "dominant_force": "美債殖利率衝高與強勢美元的雙重抑制",
+      "judgment": "黃金回落至4211美元，主因利率高檔與強勢美元壓過潛在的避險需求。"
+    },
+    "asia_fx_pricing": {
+      "twd": {
+        "reaction": "升值至31.91（逆勢偏強）",
+        "consistent_with_dollar_pressure": "no",
+        "local_correction_factor": "區域資金配置流向與本地資金流動形成修正力量，抵銷美元指數強勢傳導。",
+        "judgment": "台幣未受美元走強壓制反而逆勢偏強，反映區域資金流動成為當前匯率的修正因子。"
+      },
+      "jpy": {
+        "reaction": "貶值至158.29（偏弱）",
+        "consistent_with_dollar_pressure": "yes",
+        "local_correction_factor": "無足夠本地修正因子，利差劣勢主導走勢。",
+        "judgment": "日圓走勢完全符合美債殖利率走高與強美元的基準傳導邏輯。"
+      },
+      "krw": {
+        "reaction": "待確認",
+        "consistent_with_dollar_pressure": "unclear",
+        "local_correction_factor": "摘要未提供韓圜相關數據。",
+        "judgment": "資料不足，尚待確認。"
+      }
+    },
+    "market_contradiction": {
+      "baseline_expectation": "美債殖利率衝高至5.24%且美元指數站上102.26時，亞洲貨幣應普遍承受貶值壓力。",
+      "actual_reaction": "日圓如期弱至158.29，但台幣卻逆勢走強升至31.91。",
+      "most_non_obvious_link": "強美元格局下台幣與日圓出現顯著走勢分歧。",
+      "possible_explanation": "區域資金配置或特定產業資金流入台灣市場，其強度短期壓過了強勢美元帶來的外部壓力。",
+      "is_correction_or_new_mainline": "correction_factor",
+      "how_to_integrate_into_main_theme": "將台幣升值視為強美元主線下的區域修正因子，不影響整體高利率與強美元的主軸，但需關注後續強美元是否會收斂此分歧。",
+      "presenter_story_angle": {
+        "opening_question": "當美債殖利率飆上5.24%、美元強勢衝高時，為何台幣能獨自逆勢走強？",
+        "normal_script": "油價破百與美債撤資疑慮帶動殖利率與美元雙漲，按常理應對不孳息黃金與亞洲貨幣構成全面壓制。",
+        "where_it_breaks": "然而在亞幣陣營中，日圓順應趨勢弱至158.29，台幣卻逆勢升至31.91。",
+        "why_it_matters": "這顯示區域資金配置正在發揮強烈的修正作用，市場並非單純複製宏觀公式，而是出現局部資金分歧。",
+        "next_watch": "觀察即將公布的美國CPI數據是否會進一步強化強美元，並檢驗台幣這股逆勢修正力量能否持續。"
+      }
+    },
+    "pricing_assessment": {
+      "dominant_market_force": "能源價格暴漲與長端美債撤資疑慮共振，推升美債殖利率與美元指數。",
+      "offsetting_force": "台幣受區域資金配置支撐逆勢偏強，對亞幣整體走勢構成修正。",
+      "most_non_obvious_signal": "美元指數站上102.26之際，台幣逆勢升值至31.91。",
+      "market_question": "高油價驅動的長端利率衝高，是否足以進一步壓制整體亞幣並收斂台幣的逆勢走勢？",
+      "one_sentence_takeaway": "油價與長端利率共振推升美債殖利率與美元，金價與日圓承壓，惟台幣逆勢走強形成區域修正因子。",
+      "next_watch": "美國CPI通膨數據、布蘭特原油於105美元上方之續航力，以及美元指數能否收斂台幣與日圓的分歧。"
+    }
+  }
+}

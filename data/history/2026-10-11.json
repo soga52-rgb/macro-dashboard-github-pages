@@ -1,0 +1,64 @@
+{
+  "generated_at": "2026-10-12T14:34:58+08:00",
+  "source": "Google Sheets Today Daily Source",
+  "mode": "today_daily_source",
+  "data_status": "complete",
+  "daily_summary": {
+    "date": "2026-10-11",
+    "headline": "利率高檔與能源壓力共振",
+    "executive_summary": "市場聚焦經濟韌性與能源上行推動美債殖利率攀升至5.24%，核心關切利率維持高檔更久的政策路徑。傳導鏈由長端利率走高帶動美元指數升至102.26，並同步壓抑黃金；台幣逆勢走強則成為區域匯市的主要修正因子。",
+    "market_signals": [
+      "美債殖利率攀升",
+      "油價強勢走高",
+      "美元指數偏強"
+    ],
+    "macro_chain": "能源走高與經濟支柱預期差 -> 美國10年期公債殖利率升至5.24% -> 美元指數走強至102.26 -> 日圓與黃金承壓，台幣逆勢分歧",
+    "divergence": "利率高檔維持與強油價推動長端利率走揚，主導美元指數同步偏強並壓抑金價下行；然而台幣未隨日圓走弱反而逆勢偏強，顯示區域資金配置形成匯率修正因子，後續傳導是否收斂仍待觀察。",
+    "market_snapshot": "WTI｜92.41｜上行｜油價上行，增加能源成本與短期通膨預期的上行壓力；若非今日主線，應視為修正因子或並行訊號。\nUS10Y｜5.24%｜上行｜實體經濟支柱與長端供需疑慮推升殖利率，強化高利率維持更久預期\nDXY｜102.26｜上行｜利差優勢支撐美元走強，對不孳息黃金與日圓構成明顯壓迫",
+    "news_evidence": [
+      "市場評估實體經濟支柱與海外美債撤資疑慮，推升美債殖利率直奔6%之討論度",
+      "WTI與Brent原油分別突破92美元與105美元，增加能源通膨預期的上行壓力",
+      "美國10年期公債殖利率升至5.24%，帶動美元指數站上102.26並壓抑金價回落至4211美元",
+      "強美元格局下日圓走弱至158.29，但台幣升至31.91呈現逆向走勢"
+    ],
+    "watchpoints": [
+      "即將公布的美國CPI通膨硬數據是否進一步驗證通膨預期升溫",
+      "布蘭特原油於105美元上方能否持續推升央行長期利率定價",
+      "美元指數能否延續強勢並收斂台幣與日圓之間的走勢分歧"
+    ],
+    "visual_note": {
+      "title": "通膨預期與利率高檔共振，美元走強壓制金價日圓",
+      "file_id": "",
+      "url": "",
+      "model": "gemini-3.1-flash-image"
+    },
+    "news_narrative": {
+      "title": "高利率維持更久",
+      "support_level": "中",
+      "cards": [
+        {
+          "label": "驗證結果",
+          "text": "部分支持"
+        },
+        {
+          "label": "摘要",
+          "text": "市場聚焦美債殖利率直奔6%的實體經濟支柱與海外資金流失疑慮，推升利率因子占據上風，帶動美國10年期公債殖利率上行與美元指數偏強。強美元壓抑金價下行，日圓與韓元亦同步走弱，但台幣逆勢偏強成為匯市修正因子，整體交叉資產傳導大致連貫。"
+        },
+        {
+          "label": "支持新聞",
+          "text": "1. 新聞重點：市場分析指出即使無金融風暴，三大實體經濟支柱仍可能推動美債殖利率直奔6%，同時投資人重新擔心美債撤資與高油價壓力。\n2. 市場影響：推高政策利率維持更久的預期，帶動美債殖利率攀升，並對不孳息資產及亞洲貨幣形成外溢壓力。\n3. 驗證結論：美國10年期公債殖利率升至5.24%、美元指數走強且金價下跌，支持利率上行傳導，惟台幣走勢呈現分歧。"
+        },
+        {
+          "label": "異常訊號",
+          "text": "1. 在美國10年期公債殖利率走高與美元偏強環境下，日圓與韓元均呈現偏弱，但美元兌台幣下跌（台幣偏強），顯示區域資金流或特定資產配置形成匯率傳導的修正因子，後續走勢待觀察。"
+        },
+        {
+          "label": "觀察重點",
+          "text": "1. 即將公布的美國最新CPI通膨數據是否確認通膨預期進一步升溫\n2. 美債標售狀況與長端公債供需變化是否加劇殖利率上行壓力\n3. WTI與Brent原油持續走高對通膨預期與央行降息路徑的實質干擾\n4. 美元指數能否持續站穩102關卡並消除亞洲貨幣間的走勢分歧"
+        }
+      ],
+      "news_links_json": "[\n  {\n    \"rank\": 1,\n    \"theme\": \"Rates｜Treasury Yields / 美債殖利率\",\n    \"source\": \"鉅亨網\",\n    \"title\": \"《黑天鵝》作者示警：AI前景好不等於值得買 更怕美國人自己撤出美債 - 鉅亨網\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiT0FVX3lxTE5JNnA0dWtNbEtaYURCY3FJYjFnS2MxUTVTVkRXSVFpTVFvZXNqd0d2WGhBc1o2UGs0QUNaMWRJN0lZTThjQS1OUUtiRlBxWjg?oc=5\",\n    \"published_at\": \"Sun, 11 Oct 2026 05:00:05 GMT\",\n    \"score\": 115,\n    \"matched_keywords\": \"美債殖利率:treasury/yield/yields | 變數:TREASURY_YIELDS | 類型:DATA | 來源角色:CNYES_MACRO\"\n  },\n  {\n    \"rank\": 2,\n    \"theme\": \"Fed Policy｜Fed / 聯準會\",\n    \"source\": \"鉅亨網\",\n    \"title\": \"日本企業破產創13年同期新高！升息、缺工與成本上漲夾擊 25.1萬家殭屍企業面臨危機 - 鉅亨網\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiT0FVX3lxTE8zaTBnQkFjNVBoUVVhOXBWNWhIOGZhazE4ai1zVVlFb29McVhPR193M0xuMFdabWl1bG9yQk55ZC05cm1XT05aRG1MRFBPTm8?oc=5\",\n    \"published_at\": \"Sun, 11 Oct 2026 12:10:03 GMT\",\n    \"score\": 112.4,\n    \"matched_keywords\": \"聯準會政策:fed | 變數:FED | 類型:DATA | 來源角色:CNYES_MACRO\"\n  },\n  {\n    \"rank\": 3,\n    \"theme\": \"Rates｜Treasury Yields / 美債殖利率\",\n    \"source\": \"鉅亨網\",\n    \"title\": \"即使沒金融風暴 美債殖利率為何仍可能直奔6%？三大實體經濟支柱全解析 - 鉅亨網\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiT0FVX3lxTE5PQlUybVM3X2t4cjF0bHFWbl9uQVA1UjFCYW5kN09ETDkxei0tbzB4Q3lhNUlqWVFvWm90Tm4zeGxHX0RkYUJ6VG1uelBTMlk?oc=5\",\n    \"published_at\": \"Sat, 10 Oct 2026 18:59:36 GMT\",\n    \"score\": 112,\n    \"matched_keywords\": \"美債殖利率:treasury/yield/yields | 變數:TREASURY_YIELDS | 類型:DATA | 來源角色:CNYES_MACRO\"\n  },\n  {\n    \"rank\": 4,\n    \"theme\": \"Rates｜Treasury Yields / 美債殖利率\",\n    \"source\": \"MarketWatch\",\n    \"title\": \"TLT | iShares 20+ Year Treasury Bond ETF Overview - MarketWatch\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiWkFVX3lxTE9TYmJ6bVVlUnliem1HVFhsRlc5QWR2dFNVN3RZdzFlbmlpbkRtNVZyOTNuREZJaTFNb3JmRU01R0tuWUV4WXFyVGd2cVBOVnNJRGlPRFgxRHJGUQ?oc=5\",\n    \"published_at\": \"Fri, 09 Oct 2026 23:59:00 GMT\",\n    \"score\": 106,\n    \"matched_keywords\": \"美債殖利率:treasury/yield/yields/bond | 變數:TREASURY_YIELDS | 類型:REACTION | 來源角色:MARKET_REACTION\"\n  },\n  {\n    \"rank\": 5,\n    \"theme\": \"Asset｜Gold / 黃金\",\n    \"source\": \"Reuters\",\n    \"title\": \"Gold rises on softer dollar, easing yields; Fed outlook in focus - Reuters\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiqwFBVV95cUxNeGNoLVpDYnBQaDAyMHhRWGgyWTB6VUs1Q3FzcXdjeE5ZaUF5WGZTeF95ajd0MEJpeEltTmhjOW84Q21kSkZZZTRZZFpXbXk2Q1NGSFJTWWgteGxDR1dDWjBxa29OZ1lmZExpZjIzZDY1NlhyT3VMTkhBck1laGF2Q3MxRmJxTmFJY3BJM29sRko2Z1A1RE93QktQMkZqQ0sxWGJLTUdCX2VwZTg?oc=5\",\n    \"published_at\": \"Fri, 09 Oct 2026 01:58:00 GMT\",\n    \"score\": 104.2,\n    \"matched_keywords\": \"聯準會政策:fed | 美債殖利率:yield/yields | 美元與亞洲匯率:dollar | 能源與原物料:gold | 風險情緒／避險資金:gold | 變數:GOLD | 類型:BACKUP | 來源角色:WIRE_CONFIRMATION\"\n  },\n  {\n    \"rank\": 6,\n    \"theme\": \"Rates｜Treasury Yields / 美債殖利率\",\n    \"source\": \"Reuters\",\n    \"title\": \"Stocks advance ahead of earnings, navigating still-high Treasury yields and oil prices - Reuters\",\n    \"url\": \"https://news.google.com/rss/articles/CBMie0FVX3lxTFBmemlrTzkxS0ZGNW4xVC1Bb0FYNmR0MWNHMnFtYXl6Wmg2UHFSVWwwUEQ0MEI5dmY0VGVtR1RURVc2aHlZRjBnVS0yQzdJaDVqNWVnSGFOZkh6SHdTSTJVUDBjd0tFdFhrbjFHa3ExVzFNN0FvOXFpOTZ2QQ?oc=5\",\n    \"published_at\": \"Fri, 09 Oct 2026 19:19:05 GMT\",\n    \"score\": 103,\n    \"matched_keywords\": \"通膨數據:prices | 美債殖利率:treasury/yield/yields | 能源與原物料:oil | 變數:TREASURY_YIELDS | 類型:BACKUP | 來源角色:WIRE_CONFIRMATION\"\n  },\n  {\n    \"rank\": 7,\n    \"theme\": \"Asset｜Gold / 黃金\",\n    \"source\": \"Reuters\",\n    \"title\": \"Gold hits one-week high, heads for weekly gain on bargain-hunting - Reuters\",\n    \"url\": \"https://news.google.com/rss/articles/CBMipwFBVV95cUxQVl80MTVLVXR1WWd1MGxyNFRNN1VaNlJ2WFNIeGlrLS1HTGwzc1pZZ3FqaFZyOFBZcDk0VGRnMzVvSUtiSGFyR3c2Z29Fa25XZk1xX0JlWGpJZVlNaEJhWXhoenc3enFGZGZ3QnVUaGg1U2ZTNE9GZGxfTDIyb3hoMl9ycTNsOHpHeWdKRXk1VmdZZ1VITnhMR29NQ3JYUmV4TXJpemVRaw?oc=5\",\n    \"published_at\": \"Fri, 09 Oct 2026 08:52:57 GMT\",\n    \"score\": 94.2,\n    \"matched_keywords\": \"能源與原物料:gold | 風險情緒／避險資金:gold | 變數:GOLD | 類型:BACKUP | 來源角色:WIRE_CONFIRMATION\"\n  },\n  {\n    \"rank\": 8,\n    \"theme\": \"Inflation｜CPI / 消費者物價\",\n    \"source\": \"Reuters\",\n    \"title\": \"Wall St Week Ahead Bank earnings, CPI headline busy markets week as S&P 500 hovers near records - Reuters\",\n    \"url\": \"https://news.google.com/rss/articles/CBMivwFBVV95cUxOc2ZtTkg1OU1ZeEVqdGdTUjFKR1BSYkwzcWRwWG1wNjE2UFpqa2NYbmxPMXNxM2pURVpLWVVUYm9zUmE2S1QwMEUxZURaejlrb1g1V0dEMF80RnBWOUo4U1VPYzNlM0M5dlBnMkdQVS1ObHA2b1BYTmJLa1RuUk8xSVB4bk5FUnRQblcwTUtLTVFMZGU2Y0o0VEVWLWFBUnRCOWlpUEI0MmF2WGJyTmdhd3lpQlZDZ3JQZXJMd0FYcw?oc=5\",\n    \"published_at\": \"Fri, 09 Oct 2026 21:04:49 GMT\",\n    \"score\": 78,\n    \"matched_keywords\": \"通膨數據:inflation/cpi | 變數:CPI | 類型:BACKUP | 來源角色:WIRE_CONFIRMATION\"\n  }\n]"
+    },
+    "raw_daily_summary_package": "日期：2026-10-11\n今日主線：利率高檔與能源壓力共振\n\nExecutive Summary：\n市場聚焦經濟韌性與能源上行推動美債殖利率攀升至5.24%，核心關切利率維持高檔更久的政策路徑。傳導鏈由長端利率走高帶動美元指數升至102.26，並同步壓抑黃金；台幣逆勢走強則成為區域匯市的主要修正因子。\n\n今日核心訊號：\n- 美債殖利率攀升\n- 油價強勢走高\n- 美元指數偏強\n\n核心資產重點：\nWTI｜92.41｜上行｜油價上行，增加能源成本與短期通膨預期的上行壓力；若非今日主線，應視為修正因子或並行訊號。\nUS10Y｜5.24%｜上行｜實體經濟支柱與長端供需疑慮推升殖利率，強化高利率維持更久預期\nDXY｜102.26｜上行｜利差優勢支撐美元走強，對不孳息黃金與日圓構成明顯壓迫\n\n矛盾 / 背離：\n利率高檔維持與強油價推動長端利率走揚，主導美元指數同步偏強並壓抑金價下行；然而台幣未隨日圓走弱反而逆勢偏強，顯示區域資金配置形成匯率修正因子，後續傳導是否收斂仍待觀察。\n\n總經傳導鏈：\n能源走高與經濟支柱預期差 -> 美國10年期公債殖利率升至5.24% -> 美元指數走強至102.26 -> 日圓與黃金承壓，台幣逆勢分歧\n\n新聞佐證：\n- 市場評估實體經濟支柱與海外美債撤資疑慮，推升美債殖利率直奔6%之討論度\n- WTI與Brent原油分別突破92美元與105美元，增加能源通膨預期的上行壓力\n- 美國10年期公債殖利率升至5.24%，帶動美元指數站上102.26並壓抑金價回落至4211美元\n- 強美元格局下日圓走弱至158.29，但台幣升至31.91呈現逆向走勢\n\n待觀察問題：\n- 即將公布的美國CPI通膨硬數據是否進一步驗證通膨預期升溫\n- 布蘭特原油於105美元上方能否持續推升央行長期利率定價\n- 美元指數能否延續強勢並收斂台幣與日圓之間的走勢分歧"
+  }
+}
