@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-10-12T14:35:47+08:00",
-  "date": "2026-10-11",
+  "generated_at": "2026-10-13T15:10:18+08:00",
+  "date": "2026-10-12",
   "history_dates": [
+    "2026-10-12",
     "2026-10-11",
     "2026-10-09",
     "2026-10-08",
     "2026-10-07",
     "2026-10-06",
-    "2026-10-05",
-    "2026-10-04"
+    "2026-10-05"
   ],
   "source": "Apps Script dashboard_html_source",
-  "html_length": 1393628,
-  "index_html_length": 1404550,
+  "html_length": 1102068,
+  "index_html_length": 1112990,
   "ai_presenter": "daily_macro_podcast_v1_compact_ui_v7",
   "daily_audio": {
-    "generated_at": "2026-10-12T14:35:47+08:00",
-    "date": "2026-10-11",
-    "audio_file": "assets/audio/daily_ai_presenter_2026-10-11.mp3",
+    "generated_at": "2026-10-13T15:10:17+08:00",
+    "date": "2026-10-12",
+    "audio_file": "assets/audio/daily_ai_presenter_2026-10-12.mp3",
     "audio_exists": false,
     "audio_generated_this_run": false,
     "enabled": true,
@@ -26,7 +26,7 @@
     "volume": "+0%",
     "pitch": "-5Hz",
     "status": "failed",
-    "error": "403, message='Invalid response status', url='wss://speech.platform.bing.com/consumer/speech/synthesize/readaloud/edge/v1?TrustedClientToken=6A5AA1D4EAFF4E9FB37E23D68491D6F4&ConnectionId=5770c70cd3014b00978b3b0d810489aa&Sec-MS-GEC=589216A70A6DBD43F7EF84E697A9B1244FDB0C2C8567C02A07BCF00CA7B5A150&Sec-MS-GEC-Version=1-143.0.3650.75'"
+    "error": "403, message='Invalid response status', url='wss://speech.platform.bing.com/consumer/speech/synthesize/readaloud/edge/v1?TrustedClientToken=6A5AA1D4EAFF4E9FB37E23D68491D6F4&ConnectionId=bf48a3d5526d4e6f91c330b297a85b33&Sec-MS-GEC=1FAD36EDEFDCBE04E3124EA355EFE3FF2C89A55D61A3359770F8ADB610F159C9&Sec-MS-GEC-Version=1-143.0.3650.75'"
   },
   "gemini_model": "gemini-3.5-flash"
 }

@@ -1,0 +1,64 @@
+{
+  "generated_at": "2026-10-13T15:09:26+08:00",
+  "source": "Google Sheets Today Daily Source",
+  "mode": "today_daily_source",
+  "data_status": "complete",
+  "daily_summary": {
+    "date": "2026-10-12",
+    "headline": "避險美元主導與利率傳導分歧",
+    "executive_summary": "市場核心矛盾在於油價急升推高能源通膨預期，但美債殖利率因逢高配置買盤介入而逆勢回落至5.24%。市場目前最重視地緣政治下的避險需求與高利率維持更久的定價，推升美元指數至102.57並全面壓抑日圓、台幣與金價。長線高殖利率吸引力成為壓抑美債利率的修正因子，使跨資產傳導呈現局部不貼合。",
+    "market_signals": [
+      "油價上行推升通膨",
+      "長端美債利率回落",
+      "避險強美元壓制亞幣"
+    ],
+    "macro_chain": "[地緣局勢升溫與油價上行] -> [美債高殖利率吸引逢高配置買盤介入使US10Y回落至5.24%（傳導分歧）] -> [避險需求與利差優勢推升DXY至102.57] -> [日圓、台幣承壓走貶，黃金受強美元壓制下行]",
+    "divergence": "今日最關鍵的背離在於油價大漲與殖利率回落。主導敘事為地緣局勢引發的避險美元與高利率維持更久預期，但美債5.2%以上高收益率吸引長線逢低買盤進場，形成壓低利率的修正因子；強美元與實質利率壓力亦壓制金價表現，油價與長端利率的背離關係仍待後續通膨硬數據觀察確認。",
+    "market_snapshot": "WTI｜93.27｜上行｜油價上行，增加能源成本與短期通膨預期的上行壓力；若非今日主線，應視為修正因子或並行訊號。\nUS10Y｜5.24%｜下行｜反映長端殖利率具備配置吸引力，逢高買盤介入使利率回落，修正了單純通膨升溫推升利率的邏輯。\nDXY｜102.57｜偏強｜受利差優勢與避險流動性需求支撐維持強勢，並對日圓及台幣等亞洲貨幣帶來持續貶值壓力。",
+    "news_evidence": [
+      "中東緊張局勢推升布蘭特原油突破106美元、西德州原油升至93.27美元，加劇市場對能源通膨預期的評估。",
+      "美國10年期公債殖利率回落至5.24%，顯示高殖利率吸引長線配置資金逢高介入，暫時抵銷通膨上行壓力。",
+      "美元指數升至102.57，在地緣避險與政策高利率支撐下維持高位，壓迫日圓走弱至158.59及台幣貶至31.93。",
+      "黃金回落至4196.4美元，顯示在強勢美元與高利率維持更久預期下，流動性與持有成本因素壓過了地緣避險需求。"
+    ],
+    "watchpoints": [
+      "布蘭特原油能否站穩106美元關卡，若油價漲勢擴大是否迫使美債殖利率重啟上行。",
+      "即將公布的通膨硬數據，驗證市場對高利率維持更久的定價是否面臨重新評估。",
+      "日圓與台幣持續逼近波段低點之際，亞洲各國央行是否釋放匯率干預或阻貶訊號。"
+    ],
+    "visual_note": {
+      "title": "油價攀升與利率背離：避險美元下的資產分歧",
+      "file_id": "1UIWmJZY_I37asGtckeHwADZa_mEKq_8z",
+      "url": "https://drive.google.com/file/d/1UIWmJZY_I37asGtckeHwADZa_mEKq_8z/view?usp=drivesdk",
+      "model": "gemini-3.1-flash-image"
+    },
+    "news_narrative": {
+      "title": "高利率維持更久與避險美元",
+      "support_level": "中",
+      "cards": [
+        {
+          "label": "驗證結果",
+          "text": "部分支持"
+        },
+        {
+          "label": "摘要",
+          "text": "核心矛盾在於油價攀升與升息預期推升通膨隱憂，但美國10年期公債殖利率卻回落至5.24%。主導因子為中東局勢帶動的避險美元與利率定價，推高美元指數至102.57，拖累金價下行並壓迫日圓、台幣等亞洲貨幣。公債逢低買盤與高殖利率吸引力成為壓低利率的修正因子，使長端利率傳導出現分歧。"
+        },
+        {
+          "label": "支持新聞",
+          "text": "1. 新聞重點：中東局勢緊張推升國際油價，市場重新評估通膨與美國利率維持高位更久的主觀機率，帶動美元指數守在18個月高點附近。\n2. 市場影響：推高美元指數與原油價格，限制亞洲貨幣表現並拖累黃金下行，同時吸引部分資金逢高配置美債以鎖定高收益。\n3. 驗證結論：實際走勢部分支持政策緊縮與強美元敘事，但美國10年期公債殖利率回落與通膨預期形成分歧，顯示避險買盤或資產配置需求正在修正利率傳導。"
+        },
+        {
+          "label": "異常訊號",
+          "text": "1. 油價上行（WTI至93.27、Brent至106.04）通常會推升通膨預期並帶動殖利率走高，但美國10年期公債殖利率下行至5.24%，顯示市場看見美債高殖利率吸引力，逢高買盤介入成為壓低殖利率的反向壓力。\n2. 美元指數偏強與地緣政治緊張並存，但黃金回落至4196.4，顯示在強美元與高利率維持更久的心理預期下，流動性與利差因素壓過了黃金的避險吸引力。\n3. 韓元逆勢走強（USD/KRW降至1334.12），與日圓、台幣承壓走勢分歧，屬於區域匯率的待觀察訊號，需確認是否有個別資金流或政策干預介入。"
+        },
+        {
+          "label": "觀察重點",
+          "text": "1. 中東地緣局勢演變對Brent原油106美元關卡的影響，若油價持續飆升是否迫使美債殖利率重啟上行。\n2. 美國即將公布的CPI通膨硬數據，驗證市場對高利率維持更久的定價是否過度反應。\n3. 華爾街對美債逢低買盤的延續性，觀察5.2%以上高殖利率能否持續吸引長線資金抵銷通膨壓力。\n4. 日圓與亞洲貨幣在美元強勢逼近高點時，各國央行是否釋放匯率干預或阻貶訊號。"
+        }
+      ],
+      "news_links_json": "[\n  {\n    \"rank\": 1,\n    \"theme\": \"Rates｜Treasury Yields / 美債殖利率\",\n    \"source\": \"鉅亨網\",\n    \"title\": \"高殖利率該出手了？華爾街看見美債價值 仍提醒別急著抄底 - 鉅亨網\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiT0FVX3lxTE1CazJSWllVWmF3UkpDcXNuWG5tWDhkc1lzWjhxbDA5MU5wbHRCZWlQcUdsOGZOVnRBeXdrUTZxcjdicDA2Ump1NE9scDJIM28?oc=5\",\n    \"published_at\": \"Mon, 12 Oct 2026 20:01:23 GMT\",\n    \"score\": 122,\n    \"matched_keywords\": \"美債殖利率:treasury/yield/yields | 變數:TREASURY_YIELDS | 類型:DATA | 來源角色:CNYES_MACRO\"\n  },\n  {\n    \"rank\": 2,\n    \"theme\": \"FX｜Dollar / FX / 美元與匯率\",\n    \"source\": \"鉅亨網\",\n    \"title\": \"〈紐約匯市〉美元守住18個月高點 中東局勢緊張、美國通膨牽動市場情緒 - 鉅亨網\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiT0FVX3lxTE9FczdmRFhwMy0wb2pmNTJaOEY5Q1FNbFhKMFcxSlE4V1VNRk9uZGZXUFRTT2h1LWswRk9ObWZlMk9XU0V3Qk9yREg5RnRjLW8?oc=5\",\n    \"published_at\": \"Mon, 12 Oct 2026 22:23:46 GMT\",\n    \"score\": 116.6,\n    \"matched_keywords\": \"美元與亞洲匯率:dollar | 變數:DOLLAR_FX | 類型:DATA | 來源角色:CNYES_MACRO\"\n  },\n  {\n    \"rank\": 3,\n    \"theme\": \"Fed Policy｜Fed / 聯準會\",\n    \"source\": \"鉅亨網\",\n    \"title\": \"鉅亨投資雷達》破解「聯準會升息=股市下跌」迷思！ - 鉅亨網\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiT0FVX3lxTE5Xd0tGOUdSNDlPNS1sMDlNVFNpbXBZSU53VHVuRnRWZVhOQ0REa2NUWnE0N3lYM19XRWxvSVY0d250V09XdXJYSVpsMklXTXc?oc=5\",\n    \"published_at\": \"Mon, 12 Oct 2026 09:04:22 GMT\",\n    \"score\": 109.4,\n    \"matched_keywords\": \"聯準會政策:fed | 變數:FED | 類型:DATA | 來源角色:CNYES_MACRO\"\n  },\n  {\n    \"rank\": 4,\n    \"theme\": \"Fed Policy｜Fed / 聯準會\",\n    \"source\": \"鉅亨網\",\n    \"title\": \"美銀Hartnett：升息反成最大利多 債券終結泡沫邏輯正在蔓延 - 鉅亨網\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiT0FVX3lxTE15TVZSWTVydDhHbVB0NDFxVERtWlNHQTZlYW9uZlQ3THNvazB6NWRfcENVOE03ZG5ya2F1TE4yUkpnTktHRkl3dXU1R3l3MGM?oc=5\",\n    \"published_at\": \"Mon, 12 Oct 2026 07:00:17 GMT\",\n    \"score\": 109.4,\n    \"matched_keywords\": \"聯準會政策:fed | 變數:FED | 類型:DATA | 來源角色:CNYES_MACRO\"\n  },\n  {\n    \"rank\": 5,\n    \"theme\": \"Fed Policy｜Fed / 聯準會\",\n    \"source\": \"鉅亨網\",\n    \"title\": \"Fed 10月升息反成美股利多？美銀示警「債券終結泡沫」 - 鉅亨網\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiT0FVX3lxTFBvdmlBUlBtTVdGbE1DSnRldEROeEIwTk1RWndkakw0cmZGSVN2TldNVHZjWEktNzZjRHh4YkZIN3dfeElQcXFGQmlPMGtjaWs?oc=5\",\n    \"published_at\": \"Mon, 12 Oct 2026 06:20:04 GMT\",\n    \"score\": 109.4,\n    \"matched_keywords\": \"聯準會政策:fed | 變數:FED | 類型:DATA | 來源角色:CNYES_MACRO\"\n  },\n  {\n    \"rank\": 6,\n    \"theme\": \"FX｜Dollar / FX / 美元與匯率\",\n    \"source\": \"Reuters\",\n    \"title\": \"Oil rallies, sending dollar higher on expectations of higher US rates - Reuters\",\n    \"url\": \"https://news.google.com/rss/articles/CBMie0FVX3lxTFA4VndfYlhKMjFvd01KYndaSHVGZ3dlckMtTUtucy1jQjk0aE9JcHRpdEFuSE1SZGFWZzV1TW1MVFFabU9oNEhfajl6MVVIbzFVVF85VUZaWTFMRmx1WDFPRHItbWhuVWpoUzRxcXBPc0V4Tmo1UUU3QjRfbw?oc=5\",\n    \"published_at\": \"Mon, 12 Oct 2026 00:42:00 GMT\",\n    \"score\": 100.6,\n    \"matched_keywords\": \"美元與亞洲匯率:dollar | 能源與原物料:oil | 變數:DOLLAR_FX | 類型:BACKUP | 來源角色:WIRE_CONFIRMATION\"\n  }\n]"
+    },
+    "raw_daily_summary_package": "日期：2026-10-12\n今日主線：避險美元主導與利率傳導分歧\n\nExecutive Summary：\n市場核心矛盾在於油價急升推高能源通膨預期，但美債殖利率因逢高配置買盤介入而逆勢回落至5.24%。市場目前最重視地緣政治下的避險需求與高利率維持更久的定價，推升美元指數至102.57並全面壓抑日圓、台幣與金價。長線高殖利率吸引力成為壓抑美債利率的修正因子，使跨資產傳導呈現局部不貼合。\n\n今日核心訊號：\n- 油價上行推升通膨\n- 長端美債利率回落\n- 避險強美元壓制亞幣\n\n核心資產重點：\nWTI｜93.27｜上行｜油價上行，增加能源成本與短期通膨預期的上行壓力；若非今日主線，應視為修正因子或並行訊號。\nUS10Y｜5.24%｜下行｜反映長端殖利率具備配置吸引力，逢高買盤介入使利率回落，修正了單純通膨升溫推升利率的邏輯。\nDXY｜102.57｜偏強｜受利差優勢與避險流動性需求支撐維持強勢，並對日圓及台幣等亞洲貨幣帶來持續貶值壓力。\n\n矛盾 / 背離：\n今日最關鍵的背離在於油價大漲與殖利率回落。主導敘事為地緣局勢引發的避險美元與高利率維持更久預期，但美債5.2%以上高收益率吸引長線逢低買盤進場，形成壓低利率的修正因子；強美元與實質利率壓力亦壓制金價表現，油價與長端利率的背離關係仍待後續通膨硬數據觀察確認。\n\n總經傳導鏈：\n[地緣局勢升溫與油價上行] -> [美債高殖利率吸引逢高配置買盤介入使US10Y回落至5.24%（傳導分歧）] -> [避險需求與利差優勢推升DXY至102.57] -> [日圓、台幣承壓走貶，黃金受強美元壓制下行]\n\n新聞佐證：\n- 中東緊張局勢推升布蘭特原油突破106美元、西德州原油升至93.27美元，加劇市場對能源通膨預期的評估。\n- 美國10年期公債殖利率回落至5.24%，顯示高殖利率吸引長線配置資金逢高介入，暫時抵銷通膨上行壓力。\n- 美元指數升至102.57，在地緣避險與政策高利率支撐下維持高位，壓迫日圓走弱至158.59及台幣貶至31.93。\n- 黃金回落至4196.4美元，顯示在強勢美元與高利率維持更久預期下，流動性與持有成本因素壓過了地緣避險需求。\n\n待觀察問題：\n- 布蘭特原油能否站穩106美元關卡，若油價漲勢擴大是否迫使美債殖利率重啟上行。\n- 即將公布的通膨硬數據，驗證市場對高利率維持更久的定價是否面臨重新評估。\n- 日圓與台幣持續逼近波段低點之際，亞洲各國央行是否釋放匯率干預或阻貶訊號。"
+  }
+}

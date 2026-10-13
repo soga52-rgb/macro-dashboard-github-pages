@@ -1,0 +1,14 @@
+{
+  "generated_at": "2026-10-13T15:10:17+08:00",
+  "date": "2026-10-12",
+  "audio_file": "assets/audio/daily_ai_presenter_2026-10-12.mp3",
+  "audio_exists": false,
+  "audio_generated_this_run": false,
+  "enabled": true,
+  "voice": "zh-TW-YunJheNeural",
+  "rate": "-8%",
+  "volume": "+0%",
+  "pitch": "-5Hz",
+  "status": "failed",
+  "error": "403, message='Invalid response status', url='wss://speech.platform.bing.com/consumer/speech/synthesize/readaloud/edge/v1?TrustedClientToken=6A5AA1D4EAFF4E9FB37E23D68491D6F4&ConnectionId=bf48a3d5526d4e6f91c330b297a85b33&Sec-MS-GEC=1FAD36EDEFDCBE04E3124EA355EFE3FF2C89A55D61A3359770F8ADB610F159C9&Sec-MS-GEC-Version=1-143.0.3650.75'"
+}
