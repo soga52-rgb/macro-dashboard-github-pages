@@ -1,0 +1,64 @@
+{
+  "generated_at": "2026-10-15T13:16:18+08:00",
+  "source": "Google Sheets Today Daily Source",
+  "mode": "today_daily_source",
+  "data_status": "complete",
+  "daily_summary": {
+    "date": "2026-10-14",
+    "headline": "通膨預期重估與利率回落",
+    "executive_summary": "市場目前高度關注通膨黏性是否推遲降息，但通膨硬數據偏熱並未推升美國10年期公債殖利率，反而引發對高利率壓迫經濟成長的重新評估。在利差與避險需求支持下美元偏強、黃金承壓，並對台幣等非美貨幣構成壓力；然而公債殖利率回落與布蘭特原油走跌成為修正因子，顯示跨資產傳導出現局部背離。",
+    "market_signals": [
+      "美CPI升至3.7%",
+      "美債殖利率回落",
+      "美元指數維持強勢"
+    ],
+    "macro_chain": "[美國9月CPI高於預期與企業漲價] -> [美國10年期公債殖利率不升反跌(分歧/修正項)] -> [美元指數偏強維持利差優勢] -> [台幣等亞洲貨幣承壓 / 黃金走跌 / 原油分歧(部分連貫)]",
+    "divergence": "今日關鍵背離在於「通膨預期 → 殖利率」傳導脫鉤。雖然CPI年增3.7%與褐皮書成本壓力支持美元偏強主線，但10年期美債殖利率回落至5.19%，且原油內部WTI上行與布蘭特下行出現分化，顯示市場正在修正能源通膨力道，並重新評估緊縮環境對實體經濟的壓迫。整體跨資產鏈條呈現部分連貫，後續利率趨勢仍待觀察。",
+    "market_snapshot": "WTI｜95.03｜上行｜油價上行，增加能源成本與短期通膨預期的上行壓力；若非今日主線，應視為修正因子或並行訊號。\nUS10Y｜5.19%｜下行｜長端利率回落，反映市場對極端高利率衝擊成長的擔憂與公債配置避險買盤。\nDXY｜102.55｜偏強｜受相對利差優勢與避險需求支撐偏強，加劇台幣等非美貨幣外部貶值壓力。",
+    "news_evidence": [
+      "美國9月CPI年增率為3.7%高於預期，Fed褐皮書顯示柴油價格推升成本，企業預期物價仍具調漲動能。",
+      "美國10年期公債殖利率降至5.19%，反映市場心理重新權衡極端高利率對景氣的衝擊，公債浮現防禦性買盤。",
+      "原油走勢出現分歧，西德州原油上漲至95.03美元，而布蘭特原油下跌至106.01美元，多空拉鋸削弱了單純能源通膨預期的驅動力道。",
+      "美元指數受利差與防禦需求推升至102.55，帶動黃金回落至4125.90美元，美元兌台幣走高至32.164，日圓則受避險支撐微升至158.21。"
+    ],
+    "watchpoints": [
+      "美債長端拍賣買盤及10年期殖利率能否守住關鍵整數位，檢驗公債買盤延續性。",
+      "WTI與布蘭特原油價差分歧是否收斂，以及能源價格對實質通膨預期的修正幅度。",
+      "Fed官員最新公開演說，觀察決策層是否因CPI偏熱而強化緊縮立場。"
+    ],
+    "visual_note": {
+      "title": "通膨硬數據偏熱與公債殖利率背離之跨資產傳導",
+      "file_id": "1H26hwGVD-ZdmdNZD9bsIOalrndIuP9ID",
+      "url": "https://drive.google.com/file/d/1H26hwGVD-ZdmdNZD9bsIOalrndIuP9ID/view?usp=drivesdk",
+      "model": "gemini-3.1-flash-image"
+    },
+    "news_narrative": {
+      "title": "通膨預期重新評估",
+      "support_level": "中",
+      "cards": [
+        {
+          "label": "驗證結果",
+          "text": "部分支持"
+        },
+        {
+          "label": "摘要",
+          "text": "核心矛盾在於通膨硬數據偏熱，但美國10年期公債殖利率反而下行。主導因子為高通膨使市場降低降息期待，支撐美元指數走強並壓低金價。然而，殖利率回落與布蘭特原油走跌形成修正因子，顯示市場心理正在重新評估高利率對經濟成長與風險情緒的衝擊，避險買盤進駐公債市場，亞洲貨幣如台幣與韓元則持續承壓。"
+        },
+        {
+          "label": "支持新聞",
+          "text": "1. 新聞重點：美國9月CPI年增3.7%高於預期，且Fed褐皮書顯示柴油價格推升成本，企業預期物價仍將上漲，帶動升息與高利率維持更久之預期。\n2. 市場影響：推高美元指數並壓低黃金價格，同時拖累台幣與韓元等亞洲貨幣表現，但未能持續推升美國10年期公債殖利率。\n3. 驗證結論：強美元與弱金價支持通膨偏熱的傳導，但公債殖利率下行與布蘭特原油下跌則呈現分歧，驗證結論為部分支持且存在修正因子。"
+        },
+        {
+          "label": "異常訊號",
+          "text": "1. 通膨預期與殖利率脫鉤：CPI數據高於預期且褐皮書提示漲價壓力，理論上應推升利率，但美國10年期公債殖利率回落至5.19%，反映市場心理重新評估極端高利率對成長帶來的風險，使公債浮現避險或逢低配置買盤。\n2. 能源市場走勢分歧：西德州原油上行至95.03美元，但布蘭特原油下行至106.01美元，且新聞提及油價下跌使通膨多空拉鋸，削弱了單純能源推升通膨的定價力道。\n3. 匯率傳導分化：強美元壓迫台幣與韓元走弱，但日圓逆勢偏強，反映市場對高利率引發的金融風險擔憂升溫，避險情緒壓過部分利差邏輯。"
+        },
+        {
+          "label": "觀察重點",
+          "text": "1. 後續美債拍賣需求與長端殖利率是否重測關鍵阻力點，檢驗公債買盤能否持續壓低利率。\n2. 原油價格走勢能否收斂分歧，尤其是布蘭特原油回落是否能進一步緩解整體能源通膨預期。\n3. Fed官員最新談話對高通膨的回應，觀察政策立場是否從保持耐心轉向重啟升息擔憂。\n4. 亞洲貨幣在強美元環境下的資金外流壓力，特別是台幣與韓元匯率的防守關鍵水位。"
+        }
+      ],
+      "news_links_json": "[\n  {\n    \"rank\": 1,\n    \"theme\": \"Rates｜Treasury Yields / 美債殖利率\",\n    \"source\": \"鉅亨網\",\n    \"title\": \"美債殖利率若衝上6%怎麼辦？戴蒙示警風險 科技七巨頭意外成資金避風港 - 鉅亨網\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiT0FVX3lxTE9kMF81Um54VEFQWU9HeXFSSlZRb01jY0ZtYkdKQURrT3YwejNwNEZTWWpKcEljNEtESUxMcTBZSnlLWTA5bTBHa0tJM3Jub0E?oc=5\",\n    \"published_at\": \"Wed, 14 Oct 2026 16:29:49 GMT\",\n    \"score\": 118,\n    \"matched_keywords\": \"美債殖利率:treasury/yield/yields | 變數:TREASURY_YIELDS | 類型:DATA | 來源角色:CNYES_MACRO\"\n  },\n  {\n    \"rank\": 2,\n    \"theme\": \"Fed Policy｜Fed / 聯準會\",\n    \"source\": \"鉅亨網\",\n    \"title\": \"〈紐約匯市〉美元觸及18個月高點後回落 投資人預期Fed仍將保持耐心 - 鉅亨網\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiT0FVX3lxTFBpZHg0dnliZkpaYXJlNXBHUm83SFFoUVg0OV9vQnJETTRrTnB0M3Z4cElydGpkZk1CZm5tSG54LWlad01PS1BjZ29jaXZjYmM?oc=5\",\n    \"published_at\": \"Wed, 14 Oct 2026 21:52:13 GMT\",\n    \"score\": 116.4,\n    \"matched_keywords\": \"聯準會政策:fed | 變數:FED | 類型:DATA | 來源角色:CNYES_MACRO\"\n  },\n  {\n    \"rank\": 3,\n    \"theme\": \"Fed Policy｜Fed / 聯準會\",\n    \"source\": \"鉅亨網\",\n    \"title\": \"通膨還高也不急！鮑曼：Fed才升息 可以再看看 - 鉅亨網\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiT0FVX3lxTE9VQlZ4OXJ6YVlJSG5KdTZFdVFDSUk3Tk1DZWRqWjhfU0RHVU5WcFdGc0tnZzdWLU5JMVhFZFNQY01vem5BdU9lSXpwenJFbFk?oc=5\",\n    \"published_at\": \"Wed, 14 Oct 2026 19:31:14 GMT\",\n    \"score\": 114.4,\n    \"matched_keywords\": \"聯準會政策:fed | 變數:FED | 類型:DATA | 來源角色:CNYES_MACRO\"\n  },\n  {\n    \"rank\": 4,\n    \"theme\": \"Fed Policy｜Fed / 聯準會\",\n    \"source\": \"鉅亨網\",\n    \"title\": \"柴油變貴一路傳！Fed褐皮書揭成本壓力 企業預期還會漲價 - 鉅亨網\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiT0FVX3lxTE9JTEJoTlpNbVVfb09zNHl4MlV0VTFUZjczaEVGeTI5V1dCY3paRHc2eTZINmU0clkwcFVCWUd0ek01V0h1ZUVpTjRKS2Z1c1k?oc=5\",\n    \"published_at\": \"Wed, 14 Oct 2026 18:40:49 GMT\",\n    \"score\": 114.4,\n    \"matched_keywords\": \"聯準會政策:fed | 變數:FED | 類型:DATA | 來源角色:CNYES_MACRO\"\n  },\n  {\n    \"rank\": 5,\n    \"theme\": \"Inflation｜CPI / 消費者物價\",\n    \"source\": \"鉅亨網\",\n    \"title\": \"〈台股盤前要聞〉美國9月CPI年增3.7%高於預期、公股4金2銀前三季大賺1345億元 - 鉅亨網\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiT0FVX3lxTE5oN1JpMGhDZ0t0MGxBRTBTYnlENjd1SDl6c3ExRVVRckNNeS1QOTVWQnRyazBFUmw1LTBWbWQ3NURjNUlvLWlMc0dMVkt3X1E?oc=5\",\n    \"published_at\": \"Wed, 14 Oct 2026 21:11:10 GMT\",\n    \"score\": 114,\n    \"matched_keywords\": \"通膨數據:inflation/cpi | 變數:CPI | 類型:DATA | 來源角色:CNYES_MACRO\"\n  },\n  {\n    \"rank\": 6,\n    \"theme\": \"FX｜Dollar / FX / 美元與匯率\",\n    \"source\": \"鉅亨網\",\n    \"title\": \"〈台幣〉台積電法說前夕市場觀望 匯市高低洗盤1.5角微升1.2分 - 鉅亨網\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiT0FVX3lxTE1zbmIzRERMWmxva1hLVDBGZ1A2VnBMd0JsOXAydjZwNzlKcGNTUlZKMk5BN0RzN2Ywb2pvTTZEbnh1eGVkRHoyYk1zeWZCRVU?oc=5\",\n    \"published_at\": \"Wed, 14 Oct 2026 11:44:58 GMT\",\n    \"score\": 112.6,\n    \"matched_keywords\": \"美元與亞洲匯率:dollar | 變數:DOLLAR_FX | 類型:DATA | 來源角色:CNYES_MACRO\"\n  },\n  {\n    \"rank\": 7,\n    \"theme\": \"FX｜Dollar / FX / 美元與匯率\",\n    \"source\": \"鉅亨網\",\n    \"title\": \"台積電法說前夕，市場觀望氣氛如何影響匯市？ - 鉅亨網\",\n    \"url\": \"https://news.google.com/rss/articles/CBMipgFBVV95cUxPRVBjcjN5WGN5akxTTGsyTGlBX0VjaEVfQkdfYnlhMXc4VWtkXzFEZWJnZGNtWWRvRXlVZnpvbFFPd3hUMnQ1NmlHLThzUjRZS2VVSmRaWHZERm1jSUpNeFBDNEVFZEs3T2ctSVVTNTJZUDNGQjhaZm1qRkpXN2hTM1YyS29FY1BFTjRJTXBBcUdpbzdqdTFDS0M0dDVMMGV1bVRDdVZB?oc=5\",\n    \"published_at\": \"Wed, 14 Oct 2026 03:45:55 GMT\",\n    \"score\": 109.6,\n    \"matched_keywords\": \"美元與亞洲匯率:dollar | 變數:DOLLAR_FX | 類型:DATA | 來源角色:CNYES_MACRO\"\n  },\n  {\n    \"rank\": 8,\n    \"theme\": \"FX｜Dollar / FX / 美元與匯率\",\n    \"source\": \"鉅亨網\",\n    \"title\": \"〈紐約匯市〉美元自18個月高點回落 油價下跌、通膨數據受矚 - 鉅亨網\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiT0FVX3lxTE1jd2J2WnhRVWZPeGRHMEIwSVRmVmFyUXNMbmpGcktrSDhVNnRaZTYtaXhvN1E1X3lrdVVJT1hCMU9Oc2lPekFjYW0xZk9FY2s?oc=5\",\n    \"published_at\": \"Tue, 13 Oct 2026 22:46:14 GMT\",\n    \"score\": 109.6,\n    \"matched_keywords\": \"美元與亞洲匯率:dollar | 變數:DOLLAR_FX | 類型:DATA | 來源角色:CNYES_MACRO\"\n  }\n]"
+    },
+    "raw_daily_summary_package": "日期：2026-10-14\n今日主線：通膨預期重估與利率回落\n\nExecutive Summary：\n市場目前高度關注通膨黏性是否推遲降息，但通膨硬數據偏熱並未推升美國10年期公債殖利率，反而引發對高利率壓迫經濟成長的重新評估。在利差與避險需求支持下美元偏強、黃金承壓，並對台幣等非美貨幣構成壓力；然而公債殖利率回落與布蘭特原油走跌成為修正因子，顯示跨資產傳導出現局部背離。\n\n今日核心訊號：\n- 美CPI升至3.7%\n- 美債殖利率回落\n- 美元指數維持強勢\n\n核心資產重點：\nWTI｜95.03｜上行｜油價上行，增加能源成本與短期通膨預期的上行壓力；若非今日主線，應視為修正因子或並行訊號。\nUS10Y｜5.19%｜下行｜長端利率回落，反映市場對極端高利率衝擊成長的擔憂與公債配置避險買盤。\nDXY｜102.55｜偏強｜受相對利差優勢與避險需求支撐偏強，加劇台幣等非美貨幣外部貶值壓力。\n\n矛盾 / 背離：\n今日關鍵背離在於「通膨預期 → 殖利率」傳導脫鉤。雖然CPI年增3.7%與褐皮書成本壓力支持美元偏強主線，但10年期美債殖利率回落至5.19%，且原油內部WTI上行與布蘭特下行出現分化，顯示市場正在修正能源通膨力道，並重新評估緊縮環境對實體經濟的壓迫。整體跨資產鏈條呈現部分連貫，後續利率趨勢仍待觀察。\n\n總經傳導鏈：\n[美國9月CPI高於預期與企業漲價] -> [美國10年期公債殖利率不升反跌(分歧/修正項)] -> [美元指數偏強維持利差優勢] -> [台幣等亞洲貨幣承壓 / 黃金走跌 / 原油分歧(部分連貫)]\n\n新聞佐證：\n- 美國9月CPI年增率為3.7%高於預期，Fed褐皮書顯示柴油價格推升成本，企業預期物價仍具調漲動能。\n- 美國10年期公債殖利率降至5.19%，反映市場心理重新權衡極端高利率對景氣的衝擊，公債浮現防禦性買盤。\n- 原油走勢出現分歧，西德州原油上漲至95.03美元，而布蘭特原油下跌至106.01美元，多空拉鋸削弱了單純能源通膨預期的驅動力道。\n- 美元指數受利差與防禦需求推升至102.55，帶動黃金回落至4125.90美元，美元兌台幣走高至32.164，日圓則受避險支撐微升至158.21。\n\n待觀察問題：\n- 美債長端拍賣買盤及10年期殖利率能否守住關鍵整數位，檢驗公債買盤延續性。\n- WTI與布蘭特原油價差分歧是否收斂，以及能源價格對實質通膨預期的修正幅度。\n- Fed官員最新公開演說，觀察決策層是否因CPI偏熱而強化緊縮立場。"
+  }
+}
