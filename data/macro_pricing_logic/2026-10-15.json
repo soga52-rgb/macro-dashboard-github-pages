@@ -1,0 +1,164 @@
+{
+  "generated_at": "2026-10-16T13:06:16+08:00",
+  "date": "2026-10-15",
+  "mode": "macro_pricing_logic_v4",
+  "logic": {
+    "pricing_context": {
+      "market_was_pricing": "前期通膨硬數據衝擊與高利率延續性。",
+      "new_information": "避險資金流入美債壓低長端殖利率至 5.09%、美元指數降至 102.00、原油價格出現分歧（WTI 上漲而 Brent 下跌）、外資匯出壓制台幣。",
+      "pricing_question": "美債殖利率的回落是由避險與成長就業邊際降溫主導，還是僅為前期通膨衝擊鈍化後的短期修整？"
+    },
+    "input_material_mapping": {
+      "inflation_materials": [
+        "前期通膨硬數據衝擊鈍化",
+        "WTI 原油反彈至 96.09 美元",
+        "布蘭特原油跌至 105.64 美元"
+      ],
+      "rate_materials": [
+        "美銀指出避險資金流入美債",
+        "美國 10 年期公債殖利率降至 5.09%",
+        "市場重新評估高利率延續性與就業成長邊際降溫對沖效應"
+      ],
+      "dollar_materials": [
+        "美債殖利率回落削弱利差優勢",
+        "美元指數回落至 102.00"
+      ],
+      "gold_materials": [
+        "殖利率與美元走弱帶動黃金反彈突破 4190 美元"
+      ],
+      "asia_fx_materials": [
+        "美日利差縮窄帶動日圓回升至 158 附近",
+        "外資匯出壓力導致美元兌台幣升至 32.35（台幣逆勢重貶）"
+      ],
+      "mapping_summary": "今日焦點在於美債殖利率回落壓低美元，帶動黃金與日圓走強，惟油價多空分歧與台幣因外資匯出逆勢走弱，呈現局部傳導分歧。"
+    },
+    "inflation_expectation": {
+      "energy": {
+        "direction": "mixed",
+        "importance": "medium",
+        "evidence": [
+          "WTI 原油反彈至 96.09 美元",
+          "布蘭特原油跌至 105.64 美元"
+        ],
+        "judgment": "WTI 與 Brent 走勢分歧，能源通膨壓力呈現多空拉鋸。"
+      },
+      "supply_chain": {
+        "direction": "unclear",
+        "importance": "low",
+        "evidence": [],
+        "judgment": "資料未提供供應鏈相關數據。"
+      },
+      "price_data": {
+        "direction": "down",
+        "importance": "medium",
+        "evidence": [
+          "前期通膨硬數據衝擊鈍化"
+        ],
+        "judgment": "市場對前期通膨數據的衝擊進行重新評估與鈍化處理。"
+      },
+      "demand": {
+        "direction": "down",
+        "importance": "medium",
+        "evidence": [
+          "市場關注成長邊際降溫對沖效應"
+        ],
+        "judgment": "成長邊際降溫疑慮對通膨預期形成一定壓抑。"
+      },
+      "labor_market": {
+        "direction": "down",
+        "importance": "medium",
+        "evidence": [
+          "市場關注就業邊際降溫對沖效應"
+        ],
+        "judgment": "就業市場放緩預期有助於緩和通膨壓力。"
+      },
+      "policy_expectation": {
+        "direction": "unclear",
+        "importance": "low",
+        "evidence": [],
+        "judgment": "資料未提及具體 Fed 官員談話或政策改變。"
+      },
+      "summary": {
+        "overall_direction": "mixed",
+        "strength": "medium",
+        "dominant_force": "前期通膨衝擊鈍化與就業成長邊際降溫預期",
+        "offsetting_force": "WTI 原油反彈帶來的短期能源通膨上行壓力",
+        "judgment": "整體通膨預期因前期衝擊鈍化與成長放緩預期而邊際緩和，但油價內部分歧限制了通膨預期單邊下行幅度。"
+      }
+    },
+    "rate_pricing": {
+      "direction": "down",
+      "link_with_inflation_expectation": "通膨預期因前期衝擊鈍化而緩和，方向與利率下行一致。",
+      "fed_policy_signal": "資料未提供具體政策訊號，市場主要聚焦於高利率延續性之重新評估。",
+      "treasury_supply_demand": "美銀點名避險資金流入美債，增加對長端公債的需求。",
+      "term_premium": "資料未提供期限溢價數據。",
+      "safe_haven_bond_buying": "避險資金顯著流入美債，推動長端殖利率回吐。",
+      "growth_concern_or_cut_expectation": "市場對成長與就業邊際降溫進行重新定價。",
+      "dominant_force": "避險資金流入美債與成長就業放緩預期",
+      "judgment": "避險買盤與成長放緩預期共同主導美債殖利率下行，10年期殖利率降至5.09%。"
+    },
+    "dollar_pricing": {
+      "direction": "down",
+      "link_with_rates": "美債殖利率回落削弱美元利差優勢，傳導方向一致。",
+      "safe_haven_dollar": "避險需求轉向美債而非美元，美元相對避險屬性未獲提振。",
+      "liquidity_demand": "資料未提供流動性緊張訊號。",
+      "other_currency_weakness": "日圓等非美貨幣因利差縮窄而獲得喘息並回升。",
+      "us_relative_growth_or_policy": "美國成長與就業邊際降溫預期壓制美元。",
+      "dominant_force": "美債殖利率回落導致的利差優勢削弱",
+      "judgment": "美債殖利率下降直接壓低美元指數至 102.00。"
+    },
+    "gold_pricing": {
+      "direction": "up",
+      "rate_or_real_rate_pressure": "美債殖利率回落降低持有黃金的機會成本。",
+      "dollar_effect": "美元指數走弱至 102.00 提供黃金支撐。",
+      "safe_haven_demand": "市場避險情緒提升，帶動黃金反彈。",
+      "central_bank_buying": "資料未提供央行買盤數據。",
+      "geopolitical_risk": "資料未提供具體地緣政治細節。",
+      "dominant_force": "美債殖利率與美元雙雙回落疊加避險需求",
+      "judgment": "美債殖利率下行與美元走弱形成合力，推升黃金反彈突破 4190 美元。"
+    },
+    "asia_fx_pricing": {
+      "twd": {
+        "reaction": "美元兌台幣升至 32.35（台幣逆勢重貶）",
+        "consistent_with_dollar_pressure": "no",
+        "local_correction_factor": "外資資金匯出壓力壓過弱勢美元傳導",
+        "judgment": "台幣走勢背離弱美元主線，受個體市場外資匯出賣壓主導。"
+      },
+      "jpy": {
+        "reaction": "升值至 158 附近",
+        "consistent_with_dollar_pressure": "yes",
+        "local_correction_factor": "美日利差因美債殖利率回落而縮窄",
+        "judgment": "日圓走勢高度符合基準傳導鏈，主要由美日利差縮窄驅動。"
+      },
+      "krw": {
+        "reaction": "待確認",
+        "consistent_with_dollar_pressure": "unclear",
+        "local_correction_factor": "資料未提供韓圜數據",
+        "judgment": "資料不足，尚待確認。"
+      }
+    },
+    "market_contradiction": {
+      "baseline_expectation": "弱勢美元應帶動整體亞洲貨幣普遍走強，且通膨緩和預期應伴隨原油價格全面回落。",
+      "actual_reaction": "台幣在弱美元背景下因外資匯出逆勢重貶至 32.35，且 WTI 原油反彈與 Brent 下跌形成內部分歧。",
+      "most_non_obvious_link": "美元指數下跌至 102.00，台幣卻逆勢重貶。",
+      "possible_explanation": "台幣受個體市場資金流（外資集中匯出）主導，短期資金面壓力壓過了總經層面的弱美元傳導。",
+      "is_correction_or_new_mainline": "offsetting_force",
+      "how_to_integrate_into_main_theme": "將台幣貶值與 WTI 反彈視為大盤整體弱美元、低殖利率主線下的「區域資金與能源成本修正因子」，不改變整體總經主線方向。",
+      "presenter_story_angle": {
+        "opening_question": "為什麼在美債殖利率回落、美元走弱的背景下，台幣卻逆勢重貶至 32.35？",
+        "normal_script": "美債殖利率下行帶動美元指數回落至 102，正常情況下應帶動亞幣普遍反彈。",
+        "where_it_breaks": "台幣因外資匯出壓力逆勢走弱，且 WTI 原油反彈與 Brent 下跌出現能源分歧。",
+        "why_it_matters": "這顯示出美債與美元的主線傳導雖然成立，但區域市場的個體資金流與局部能源壓力正構成強烈的抵銷力量。",
+        "next_watch": "觀察外資在台幣市場的匯出動能是否趨緩，以及 WTI 與 Brent 分歧是否收斂。"
+      }
+    },
+    "pricing_assessment": {
+      "dominant_market_force": "避險買盤與就業成長邊際降溫預期驅動美債殖利率回落及美元走弱。",
+      "offsetting_force": "外資匯出造成的台幣貶值賣壓與 WTI 原油反彈帶來的能源壓力。",
+      "most_non_obvious_signal": "台幣在美元指數降至 102 時逆勢重貶至 32.35。",
+      "market_question": "美債殖利率下行是源於暫時性的避險需求，還是市場對經濟放緩的實質重新定價？",
+      "one_sentence_takeaway": "市場以避險買盤與成長放緩預期壓低美債殖利率與美元，但外資匯出與油價分歧限制了非美資產的全面共振。",
+      "next_watch": "美國後續就業與通膨硬數據，以及 WTI 與 Brent 原油價差收斂狀況。"
+    }
+  }
+}
