@@ -1,0 +1,161 @@
+{
+  "generated_at": "2026-10-17T13:02:39+08:00",
+  "date": "2026-10-16",
+  "mode": "macro_pricing_logic_v4",
+  "logic": {
+    "pricing_context": {
+      "market_was_pricing": "市場先前主要聚焦於高通膨黏性環境下高利率政策需維持多久，以及二次通膨風險的可能性。",
+      "new_information": "美國PPI年增率飆升至6.3%，WTI原油攀升至99.04美元/桶，推升10年期美債殖利率至5.098%，但美元指數反常走弱至101.78。",
+      "pricing_question": "在通膨數據熱絡與美債殖利率創高的背景下，美元指數為何未同步走強，其背後的政策空間與債券供給修正因子如何主導市場定價？"
+    },
+    "input_material_mapping": {
+      "inflation_materials": [
+        "美國PPI年增率飆升至6.3%",
+        "WTI原油攀升至每桶99.04美元、Brent原油達109.69美元"
+      ],
+      "rate_materials": [
+        "美國10年期公債殖利率升至5.098%",
+        "美國財政部公債發行規模帶來的供給壓力與期限溢價",
+        "市場降低對Fed進一步升息的期待"
+      ],
+      "dollar_materials": [
+        "市場降低對Fed進一步升息期待促使美元指數不漲反跌至101.78",
+        "公債供給發行壓力與非美貨幣反彈對匯市之影響"
+      ],
+      "gold_materials": [
+        "高利率環境與殖利率維持高檔壓抑金價下挫"
+      ],
+      "asia_fx_materials": [
+        "日圓出現反彈",
+        "台幣因資金外流逆勢偏弱"
+      ],
+      "mapping_summary": "今日素材顯示生產者端物價與能源價格同步走高，激化通膨預期並推升美債殖利率；惟美債發行供給壓力與Fed升息空間受限等因素壓制美元，致使跨資產傳導在美元環節出現分歧，並進一步分化亞幣與金價表現。"
+    },
+    "inflation_expectation": {
+      "energy": {
+        "direction": "up",
+        "importance": "high",
+        "evidence": [
+          "WTI原油攀升至每桶99.04美元",
+          "Brent原油達109.69美元"
+        ],
+        "judgment": "原油價格逼近百元大關，顯著加大能源成本與短期綜合通膨預期的上行壓力。"
+      },
+      "supply_chain": {
+        "direction": "unclear",
+        "importance": "low",
+        "evidence": [],
+        "judgment": "daily_summary 未提供供應鏈瓶頸或運價之具體數據與資訊。"
+      },
+      "price_data": {
+        "direction": "up",
+        "importance": "high",
+        "evidence": [
+          "美國PPI年增率飆升至6.3%"
+        ],
+        "judgment": "生產者物價指數遠高於預期，顯示商品與生產端的通膨黏性顯著增強。"
+      },
+      "demand": {
+        "direction": "unclear",
+        "importance": "low",
+        "evidence": [],
+        "judgment": "daily_summary 未提供零售銷售或PMI等需求端數據。"
+      },
+      "labor_market": {
+        "direction": "unclear",
+        "importance": "low",
+        "evidence": [],
+        "judgment": "daily_summary 未提供就業市場相關新聞或數據。"
+      },
+      "policy_expectation": {
+        "direction": "up",
+        "importance": "medium",
+        "evidence": [
+          "市場對高通膨黏性與二次通膨風險之關注升溫"
+        ],
+        "judgment": "通膨數據熱絡引發市場對潛在二次通膨風險的警覺。"
+      },
+      "summary": {
+        "overall_direction": "up",
+        "strength": "strong",
+        "dominant_force": "PPI飆升6.3%與原油價格逼近百元",
+        "offsetting_force": "無顯著緩和通膨之數據",
+        "judgment": "生產者物價與能源成本雙雙擴張，構成今日通膨預期上行的主要驅動力。"
+      }
+    },
+    "rate_pricing": {
+      "direction": "up",
+      "link_with_inflation_expectation": "利率與通膨預期方向一致，通膨黏性與能源成本大漲直接推高長端公債殖利率。",
+      "fed_policy_signal": "市場預期高利率需維持更久，但對Fed進一步升息的預期有所降溫。",
+      "treasury_supply_demand": "美國財政部公債發行規模較大，市場持續消化發行供給端壓力。",
+      "term_premium": "長債發行疑慮與通膨不確定性推升期限溢價。",
+      "safe_haven_bond_buying": "待確認，未見避險資金大規模進入債市壓低殖利率之跡象。",
+      "growth_concern_or_cut_expectation": "市場關注焦點在於高利率維持時間，而非短期大幅降息或成長顯著衰退。",
+      "dominant_force": "通膨黏性及公債發行供給壓力",
+      "judgment": "10年期美債殖利率升至5.098%，主因PPI偏熱、油價大漲與長債供給推升期限溢價共同作用。"
+    },
+    "dollar_pricing": {
+      "direction": "down",
+      "link_with_rates": "美元與利率走勢呈反向背離，美債殖利率上行未帶動美元指數走強。",
+      "safe_haven_dollar": "無顯著避險買盤流入美元。",
+      "liquidity_demand": "待確認，未見美元流動性緊張信號。",
+      "other_currency_weakness": "非美貨幣如日圓出現反彈，壓制美元相對優勢。",
+      "us_relative_growth_or_policy": "市場降低對Fed進一步升息期待，致使高殖利率無法完全轉化為美元利差溢價。",
+      "dominant_force": "Fed升息空間受限預期與非美貨幣反彈",
+      "judgment": "美元指數回落至101.78，反映利率上行若非由政策強烈升息驅動，其對美元的支撐力道將受限。"
+    },
+    "gold_pricing": {
+      "direction": "down",
+      "rate_or_real_rate_pressure": "10年期美債殖利率突破5.09%，實質利率與持有成本壓力顯著壓抑金價。",
+      "dollar_effect": "美元走弱原本利多黃金，但未能抵銷殖利率高檔帶來的壓迫。",
+      "safe_haven_demand": "地緣或避險需求不足以支撐金價對抗高利率壓力。",
+      "central_bank_buying": "待確認， daily_summary 未提供央行買盤資料。",
+      "geopolitical_risk": "待確認，未見地緣政治風險顯著推升金價之數據。",
+      "dominant_force": "美債殖利率高檔與高利率環境壓迫",
+      "judgment": "高利率與公債殖利率上行成為主導因子，壓制金價呈現承壓下挫走勢。"
+    },
+    "asia_fx_pricing": {
+      "twd": {
+        "reaction": "逆勢偏弱",
+        "consistent_with_dollar_pressure": "no",
+        "local_correction_factor": "本地資金持續外流",
+        "judgment": "台幣未受惠於美元回落，主要受資本外流等本地修正因素壓制而走弱。"
+      },
+      "jpy": {
+        "reaction": "反彈",
+        "consistent_with_dollar_pressure": "yes",
+        "local_correction_factor": "非美貨幣自身反彈需求與美日利差擴大預期邊際轉變",
+        "judgment": "日圓跟隨美元指數回落而出現反彈，符合美債殖利率對美元推升力道減弱之市場反應。"
+      },
+      "krw": {
+        "reaction": "待確認",
+        "consistent_with_dollar_pressure": "unclear",
+        "local_correction_factor": "資料不足",
+        "judgment": "daily_summary 未提及韓圜走勢與相關數據。"
+      }
+    },
+    "market_contradiction": {
+      "baseline_expectation": "當強勁通膨數據（PPI）與油價激增推升10年期美債殖利率至5.098%時，正常傳導機制應帶動美日利差擴大並支撐美元指數走強。",
+      "actual_reaction": "10年期美債殖利率大幅上行，但美元指數卻反向走弱至101.78。",
+      "most_non_obvious_link": "美債殖利率顯著突破與美元指數走弱之間的傳導斷裂。",
+      "possible_explanation": "長端殖利率上升部分源於財政部發行規模帶來的供給壓力與期限溢價，而非全然來自對Fed再升息的預期；當市場認定Fed升息空間受限且非美貨幣反彈，美元即失去利差溢價動能。",
+      "is_correction_or_new_mainline": "correction_factor",
+      "how_to_integrate_into_main_theme": "將美元背離定位為匯市修正因子，強調利率驅動力來自「發行供給與期限溢價」而非「政策積極升息」，進而使美元與殖利率短線脫鉤。",
+      "presenter_story_angle": {
+        "opening_question": "當美債殖利率衝破 5.09% 創高，為什麼美元指數反而回落至 101.78？",
+        "normal_script": "PPI飆升至6.3%加上油價逼近百元，理論上應通過高利率預期全面推升美債殖利率與美元。",
+        "where_it_breaks": "市場並未將殖利率上行轉化為美元買盤，美元指數反向下探。",
+        "why_it_matters": "這暗示殖利率創高主因包含公債供給壓力與期限溢價，市場不認為Fed有能力進一步大幅升息，導致跨資產利差定價出現修正。",
+        "next_watch": "觀察後續CPI/PCE是否逼迫Fed重構升息路徑，以及長債供給壓力是否持續壓制美元與亞幣。"
+      }
+    },
+    "pricing_assessment": {
+      "dominant_market_force": "PPI與油價大漲推升通膨黏性，帶動美債殖利率攀升與高利率維持更久預期。",
+      "offsetting_force": "Fed進一步升息預期受限與公債發行供給疑慮，壓制美元指數發揮利差優勢。",
+      "most_non_obvious_signal": "10年期美債殖利率升至5.098% 的同時，美元指數不漲反跌至 101.78。",
+      "market_question": "長端殖利率上行是由債券供給壓力驅動，還是會實質誘發Fed啟動新一輪政策緊縮？",
+      "one_sentence_takeaway": "通膨黏性與公債供給推升美債殖利率至5.098%，但升息期待受限致使美元與利率發生走勢背離。",
+      "next_watch": "美國後續CPI與PCE數據是否確認PPI二次通膨風險，以及布蘭特與WTI原油能否站穩百元關卡。"
+    }
+  }
+}
