@@ -1,0 +1,64 @@
+{
+  "generated_at": "2026-10-19T13:22:16+08:00",
+  "source": "Google Sheets Today Daily Source",
+  "mode": "today_daily_source",
+  "data_status": "complete",
+  "daily_summary": {
+    "date": "2026-10-18",
+    "headline": "通膨預期重估與政策拉鋸",
+    "executive_summary": "市場核心矛盾在於美國10年期公債殖利率維持高檔上行，美元指數卻因進一步升息預期降溫而走弱。市場當前最重視高利率維持更久與科技股修正引發的避險定價，帶動黃金強勢上行並支撐日圓反彈。油價雙雙下行則成為通膨預期的修正因子，跨資產傳導在利率與匯率環節出現分歧。",
+    "market_signals": [
+      "美債長端利率走升",
+      "美元指數受挫走弱",
+      "避險買盤推升金價"
+    ],
+    "macro_chain": "科技股賣壓與升息押注降溫 → 美國10年期公債殖利率維持高檔震盪 → 美元指數承壓回落 → 避險推升黃金走強、日圓獲得支撐、油價回落提供通膨修正",
+    "divergence": "今日最關鍵的背離在於「美債殖利率上行」與「美元指數走弱」。主導敘事偏向市場評估政策利率將長期維持高檔，但進一步激進升息的押注降溫，削弱了美元的利差動能；同時原油價格走跌成為能源通膨的修正因子，利率與匯率的聯動關係出現分歧，仍待後續經濟硬數據進一步確認。",
+    "market_snapshot": "US10Y｜5.098%｜上行｜反映市場對政策利率高檔停留更久的預期，長端利率維持高檔\nDXY｜101.83｜偏弱｜進一步升息預期降溫及非美貨幣反彈，利差支撐美元力度暫時減弱\nWTI｜98.40美元｜下行｜油價下行，可能緩和能源通膨壓力；若由需求疲弱造成，亦需視為成長降溫訊號。\nGold｜4195.30美元｜上行｜科技股回檔引發避險需求，疊加美元偏弱，支撐金價偏強走勢\nUSDJPY｜157.85｜日圓偏強｜受美元回檔與市場避險需求回流影響，日圓呈現反彈偏強走勢",
+    "news_evidence": [
+      "美國10年期公債殖利率維持在5.098%的高檔水平，顯示利率維持高位敘事仍具韌性",
+      "市場對聯準會進一步升息押注有所降溫，牽制美元指數跌至101.83",
+      "科技股重挫引發市場避險關注，資金轉向避險資產，推升黃金至4195.30美元高位",
+      "西德州原油跌至98.40美元、布蘭特原油跌至108.98美元，緩和短期能源通膨預期"
+    ],
+    "watchpoints": [
+      "美國即將公布的通膨硬數據與勞動數據，檢驗通膨降溫與薪資壓力方向",
+      "聯準會官員最新公開談話，確認政策利率路徑是否強化維持高利率更久的立場",
+      "美股科技族群財報與風險偏好變化，觀察黃金與美債避險買盤的延續性"
+    ],
+    "visual_note": {
+      "title": "美債美元走勢分歧：高利率拉鋸與避險資產聯動",
+      "file_id": "1Ky3tIwjI0XF9XRvn5rHcSBLqntK6x-u8",
+      "url": "https://drive.google.com/file/d/1Ky3tIwjI0XF9XRvn5rHcSBLqntK6x-u8/view?usp=drivesdk",
+      "model": "gemini-3.1-flash-image"
+    },
+    "news_narrative": {
+      "title": "通膨預期重新評估與政策路徑拉鋸",
+      "support_level": "中",
+      "cards": [
+        {
+          "label": "驗證結果",
+          "text": "部分支持"
+        },
+        {
+          "label": "摘要",
+          "text": "市場核心矛盾在於美國10年期公債殖利率維持上行，但美元指數卻隨升息預期降溫而走弱。主導因子為高利率維持更久預期與科技股回檔引發的避險情緒，支撐黃金大漲；油價下行與升息預期降溫成為修正因子，使亞洲貨幣呈現日圓反彈、韓元偏弱的分歧傳導。"
+        },
+        {
+          "label": "支持新聞",
+          "text": "1. 新聞重點：科技股重挫引發市場避險關注，同時聯準會進一步升息押注降溫，導致美元出現單週疲態。\n2. 市場影響：壓低美元指數並推升避險資產黃金，但美國10年期公債殖利率受政策高檔停留預期牽制，尚未全面向下修正。\n3. 驗證結論：資產走勢對通膨單一傳導鏈僅呈部分支持，利率與美元指數的背離顯示市場定價仍在分歧調整中。"
+        },
+        {
+          "label": "異常訊號",
+          "text": "1. 美國10年期公債殖利率上行與美元指數走弱出現背離，顯示利差支撐效果減弱，市場更受升息預期降溫與非美貨幣反彈主導。\n2. 西德州與布蘭特原油雙雙下跌，本應緩解通膨預期，但長端公債殖利率仍居高不下，構成反向壓力與待觀察訊號。\n3. 亞洲貨幣走勢分化，日圓受避險與美日利差縮小預期推升偏強，韓元則續偏弱，反映科技股賣壓對區域匯市的差異化衝擊。"
+        },
+        {
+          "label": "觀察重點",
+          "text": "1. 下一個美國關鍵通膨數據與就業數據，驗證通膨降溫與實質薪資壓力方向。\n2. 聯準會官員最新談話，觀察政策利率路徑是否強化維持高利率更久的立場。\n3. 科技巨頭財報與美股賣壓是否延續，牽動黃金與美債避險買盤的消長。\n4. 國際原油價格跌勢是否持續，確認能源對整體通膨預期的實質緩解程度。"
+        }
+      ],
+      "news_links_json": "[\n  {\n    \"rank\": 1,\n    \"theme\": \"Rates｜Treasury Yields / 美債殖利率\",\n    \"source\": \"鉅亨網\",\n    \"title\": \"AI股重挫、美債重拾避險光環 大舉押空投資人恐措手不及 - 鉅亨網\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiT0FVX3lxTE8wa1RLVzVybDZaek44clU3cmFWUFU3SnpnWWtkdkRtRGVxUEY3OFBSdm9Xb3puOTU2WmxEeFpoOEpMelF3SG9fdy1tWTBpQlU?oc=5\",\n    \"published_at\": \"Sun, 18 Oct 2026 22:32:41 GMT\",\n    \"score\": 122,\n    \"matched_keywords\": \"美債殖利率:treasury/yield/yields | 變數:TREASURY_YIELDS | 類型:DATA | 來源角色:CNYES_MACRO\"\n  },\n  {\n    \"rank\": 2,\n    \"theme\": \"Rates｜Treasury Yields / 美債殖利率\",\n    \"source\": \"鉅亨網\",\n    \"title\": \"外資持有美債規模8月回升 加拿大、比利時增最多 中國砍到18年低點 - 鉅亨網\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiT0FVX3lxTE5jWnhrZjNlNFZoUW40MzdNeTJUSlBJMHpnZGE5a0x5VnNXMUxPYTR1bkt3SVBVY1ZVRi1wdklLbmRYRDhDa2hZQ2d0VDNoaVE?oc=5\",\n    \"published_at\": \"Sat, 17 Oct 2026 09:00:02 GMT\",\n    \"score\": 110,\n    \"matched_keywords\": \"美債殖利率:treasury/yield/yields | 變數:TREASURY_YIELDS | 類型:DATA | 來源角色:CNYES_MACRO\"\n  },\n  {\n    \"rank\": 3,\n    \"theme\": \"Rates｜Treasury Yields / 美債殖利率\",\n    \"source\": \"鉅亨網\",\n    \"title\": \"AI賣壓燒向債市！美債殖利率急跌 華爾街緊盯科技巨頭財報 - 鉅亨網\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiT0FVX3lxTFB1QXlTN0hrMTBxNUpEbFVqaTlNUWdvZHhtWE5BODJRRFBCdDJtd1NiSmhEeFMxd3lqOVNVbVhsT0x4b2hWVFlGZGRtWFR5MHM?oc=5\",\n    \"published_at\": \"Sat, 17 Oct 2026 06:30:03 GMT\",\n    \"score\": 110,\n    \"matched_keywords\": \"美債殖利率:treasury/yield/yields | 變數:TREASURY_YIELDS | 類型:DATA | 來源角色:CNYES_MACRO\"\n  },\n  {\n    \"rank\": 4,\n    \"theme\": \"FX｜Dollar / FX / 美元與匯率\",\n    \"source\": \"鉅亨網\",\n    \"title\": \"〈紐約匯市〉美元逾1個月來首見單週跌幅 升息預期降溫、AI疑慮持續 - 鉅亨網\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiT0FVX3lxTFA4TWJvTHBjSV9xOUJTRGZrczAyeFdKSTV3Ry1kMzhRY09zNDRhMHlPZXVPV1RoU2o0VnJrTFh1LWJ3YXlDZzNTZUZZV2N2dlU?oc=5\",\n    \"published_at\": \"Fri, 16 Oct 2026 22:14:13 GMT\",\n    \"score\": 104.6,\n    \"matched_keywords\": \"美元與亞洲匯率:dollar | 變數:DOLLAR_FX | 類型:DATA | 來源角色:CNYES_MACRO\"\n  },\n  {\n    \"rank\": 5,\n    \"theme\": \"FX｜Dollar / FX / 美元與匯率\",\n    \"source\": \"MarketWatch\",\n    \"title\": \"CDH31 | Canadian Dollar Mar 2031 Overview - MarketWatch\",\n    \"url\": \"https://news.google.com/rss/articles/CBMic0FVX3lxTE5IWkhlcmpYT1lwVjNPSHZxNC11WjJSb1dmUldSbmVWWUpHdlFnSXFHUl81RE9zUHFXUDJXcEsxdWU1dWdSeUtPZkU0azBmc3FKaEJkRnlGdWZQc1dRZ0pEMGpDLUZMU21YRFgxMDBxelJXY28?oc=5\",\n    \"published_at\": \"Sat, 17 Oct 2026 18:43:39 GMT\",\n    \"score\": 99.6,\n    \"matched_keywords\": \"美元與亞洲匯率:dollar | 變數:DOLLAR_FX | 類型:REACTION | 來源角色:MARKET_REACTION\"\n  },\n  {\n    \"rank\": 6,\n    \"theme\": \"FX｜Dollar / FX / 美元與匯率\",\n    \"source\": \"MarketWatch\",\n    \"title\": \"CDQ28 | Canadian Dollar Aug 2028 Overview - MarketWatch\",\n    \"url\": \"https://news.google.com/rss/articles/CBMic0FVX3lxTE1CQVR3X0ZZSG55eDBiUV9HMklwUG9OX2JLVmJwem5xdktjVG9oMUFaU0JGZ2lyVmVnRE9fc09na21LdHRmRFRVVWhVUWtwYU1XVnJUeUtkQlIzaWxxUHJQMEJ2bkRDcGZFSnlRdEo0QXVRaWs?oc=5\",\n    \"published_at\": \"Sat, 17 Oct 2026 18:34:20 GMT\",\n    \"score\": 99.6,\n    \"matched_keywords\": \"美元與亞洲匯率:dollar | 變數:DOLLAR_FX | 類型:REACTION | 來源角色:MARKET_REACTION\"\n  },\n  {\n    \"rank\": 7,\n    \"theme\": \"Asset｜Gold / 黃金\",\n    \"source\": \"MarketWatch\",\n    \"title\": \"GLD | SPDR Gold Shares Overview - MarketWatch\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiWkFVX3lxTFBEeFVzV1NpNnNleURQdHZjNUZiZDI0bHRjd0VqYlZSN0dMOS01bUdhWDh6UWF1emZMeTMxT2xPNVhmYTNXeTJISHg1NjQ1dm1uWnFSWXpGWTd4Zw?oc=5\",\n    \"published_at\": \"Fri, 16 Oct 2026 23:59:00 GMT\",\n    \"score\": 99.2,\n    \"matched_keywords\": \"能源與原物料:gold | 風險情緒／避險資金:gold | 變數:GOLD | 類型:REACTION | 來源角色:MARKET_REACTION\"\n  },\n  {\n    \"rank\": 8,\n    \"theme\": \"Rates｜Treasury Yields / 美債殖利率\",\n    \"source\": \"Reuters\",\n    \"title\": \"US equity funds draw renewed inflows as Treasury yields ease - Reuters\",\n    \"url\": \"https://news.google.com/rss/articles/CBMipAFBVV95cUxPSnEzLXc5RkdoR3NSRUxDdzZoNGpOUTlsQTM2VmpCRlVTOE04SjRfN214eHpCTnVBUW5Od0pTbnppZXRhTXFlS2lJMlIxOUpab3ZHMDh1Q3JfNFBXbENmUEQzOU5LVkZYWUxhNVFTTmM5SXdPaGlLYVY0N3BEekdhRmZTMnBycE9NWFF3dlJ0ZW1DX0VYbWtqV3ZheG85d0hLbksySw?oc=5\",\n    \"published_at\": \"Fri, 16 Oct 2026 12:30:02 GMT\",\n    \"score\": 98,\n    \"matched_keywords\": \"美債殖利率:treasury/yield/yields | 變數:TREASURY_YIELDS | 類型:BACKUP | 來源角色:WIRE_CONFIRMATION\"\n  }\n]"
+    },
+    "raw_daily_summary_package": "日期：2026-10-18\n今日主線：通膨預期重估與政策拉鋸\n\nExecutive Summary：\n市場核心矛盾在於美國10年期公債殖利率維持高檔上行，美元指數卻因進一步升息預期降溫而走弱。市場當前最重視高利率維持更久與科技股修正引發的避險定價，帶動黃金強勢上行並支撐日圓反彈。油價雙雙下行則成為通膨預期的修正因子，跨資產傳導在利率與匯率環節出現分歧。\n\n今日核心訊號：\n- 美債長端利率走升\n- 美元指數受挫走弱\n- 避險買盤推升金價\n\n核心資產重點：\nUS10Y｜5.098%｜上行｜反映市場對政策利率高檔停留更久的預期，長端利率維持高檔\nDXY｜101.83｜偏弱｜進一步升息預期降溫及非美貨幣反彈，利差支撐美元力度暫時減弱\nWTI｜98.40美元｜下行｜油價下行，可能緩和能源通膨壓力；若由需求疲弱造成，亦需視為成長降溫訊號。\nGold｜4195.30美元｜上行｜科技股回檔引發避險需求，疊加美元偏弱，支撐金價偏強走勢\nUSDJPY｜157.85｜日圓偏強｜受美元回檔與市場避險需求回流影響，日圓呈現反彈偏強走勢\n\n矛盾 / 背離：\n今日最關鍵的背離在於「美債殖利率上行」與「美元指數走弱」。主導敘事偏向市場評估政策利率將長期維持高檔，但進一步激進升息的押注降溫，削弱了美元的利差動能；同時原油價格走跌成為能源通膨的修正因子，利率與匯率的聯動關係出現分歧，仍待後續經濟硬數據進一步確認。\n\n總經傳導鏈：\n科技股賣壓與升息押注降溫 → 美國10年期公債殖利率維持高檔震盪 → 美元指數承壓回落 → 避險推升黃金走強、日圓獲得支撐、油價回落提供通膨修正\n\n新聞佐證：\n- 美國10年期公債殖利率維持在5.098%的高檔水平，顯示利率維持高位敘事仍具韌性\n- 市場對聯準會進一步升息押注有所降溫，牽制美元指數跌至101.83\n- 科技股重挫引發市場避險關注，資金轉向避險資產，推升黃金至4195.30美元高位\n- 西德州原油跌至98.40美元、布蘭特原油跌至108.98美元，緩和短期能源通膨預期\n\n待觀察問題：\n- 美國即將公布的通膨硬數據與勞動數據，檢驗通膨降溫與薪資壓力方向\n- 聯準會官員最新公開談話，確認政策利率路徑是否強化維持高利率更久的立場\n- 美股科技族群財報與風險偏好變化，觀察黃金與美債避險買盤的延續性"
+  }
+}
