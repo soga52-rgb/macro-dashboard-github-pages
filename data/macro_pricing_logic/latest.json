@@ -1,167 +1,162 @@
 {
-  "generated_at": "2026-10-23T13:27:00+08:00",
-  "date": "2026-10-22",
+  "generated_at": "2026-10-24T13:06:46+08:00",
+  "date": "2026-10-23",
   "mode": "macro_pricing_logic_v4",
   "logic": {
     "pricing_context": {
-      "market_was_pricing": "市場先前主要定價通膨具備韌性以及高利率環境將維持更久（Higher for Longer）。",
-      "new_information": "AI基建融資疑慮與地緣戰火升溫，促使避險資金湧入長端公債；同時原油雙雙反彈（WTI 99.05美元、Brent 112.92美元），且初領失業金降至19.4萬人。",
-      "pricing_question": "地緣風險與AI融資疑慮引發的避險買債力道，是否足以持續壓過油價反彈與勞動市場韌性所累積的通膨壓力？"
+      "market_was_pricing": "市場原本預期勞動市場將逐步放緩，從而為美聯儲降息鋪平道路。",
+      "new_information": "美國初領失業金人數接近57年低點，凸顯勞動市場強勁韌性；美債10年期殖利率升至4.988%，WTI原油與Brent原油走勢分歧。",
+      "pricing_question": "就業韌性是否會驅動美債10年期殖利率突破5%關卡，並引導市場重新定價政策高利率維持更久（higher-for-longer）的路徑？"
     },
     "input_material_mapping": {
       "inflation_materials": [
-        "WTI原油反彈升至99.05美元/桶",
-        "Brent原油升至112.92美元/桶",
-        "美國上周初領失業金人數降至19.4萬人",
-        "中東地緣戰火局勢"
+        "美國初領失業金人數接近57年低點，顯示勞動市場維持極度緊繃",
+        "西德州原油（WTI）上行至103.44美元",
+        "布蘭特原油（Brent）回落至111.66美元，能源端訊號分歧"
       ],
       "rate_materials": [
-        "美國10年期公債殖利率跌破5%關卡降至4.953%",
-        "AI基建融資疑慮引發金融條件緊縮擔憂",
-        "戰火地緣風險引發避險資金湧入公債"
+        "初領失業金強勁淡化降息預期",
+        "美國10年期公債殖利率攀升至4.988%，逼近5.00%心理關卡"
       ],
       "dollar_materials": [
-        "美元指數受美債殖利率回落拖累降至101.62",
-        "區域風險升溫下跨資產資金流動分歧"
+        "利差優勢推動美元指數升至101.75",
+        "美國就業展現相對經濟韌性，對美元形成支撐"
       ],
       "gold_materials": [
-        "黃金未獲避險資金青睞逆勢回落",
-        "獲利了結壓力或市場流動性調度干擾"
+        "高利率與強美元壓抑無孳息資產，金價回落至4010美元"
       ],
       "asia_fx_materials": [
-        "日圓受避險買盤推升走強至156.72",
-        "台幣受科技股及AI融資疑慮承壓微幅走貶至32.60"
+        "日圓受美日利差擴大與強美元壓制，走貶至156.81",
+        "台幣逆勢偏強，呈現區域資金動能分歧",
+        "韓圜數據缺乏，待後續資料確認"
       ],
-      "mapping_summary": "今日市場素材呈現避險衝擊與通膨韌性的交錯。避險需求主導長端美債殖利率與美元下行，並推升日圓；然而油價上漲與初領失業金走低形成通膨修正因子，科技股承壓則導致台幣與黃金走勢出現分歧。"
+      "mapping_summary": "就業韌性數據為核心觸發點，帶動利率與美元同步走升並壓抑金價與日圓；惟原油價格分歧與台幣逆勢走高，形成主線中的修正力量。"
     },
     "inflation_expectation": {
       "energy": {
-        "direction": "up",
-        "importance": "high",
+        "direction": "mixed",
+        "importance": "medium",
         "evidence": [
-          "WTI原油升至99.05美元",
-          "Brent原油升至112.92美元",
-          "地緣戰火升溫"
+          "WTI原油上行至103.44美元",
+          "Brent原油回落至111.66美元"
         ],
-        "judgment": "能源價格因地緣風險大幅反彈，直接推升短期通膨預期與企業成本壓力。"
+        "judgment": "油價走勢呈現分歧，WTI上行增加短期成本壓力，但Brent回落抵銷部分通膨預期，總體能源傳導方向尚不明確。"
       },
       "supply_chain": {
         "direction": "unclear",
         "importance": "low",
         "evidence": [],
-        "judgment": "今日資料未提供供應鏈瓶頸或運價相關數據。"
+        "judgment": "今日資料未提供供應鏈或運價相關數據。"
       },
       "price_data": {
         "direction": "unclear",
         "importance": "low",
         "evidence": [],
-        "judgment": "今日資料未更新CPI/PPI/PCE等硬數據。"
+        "judgment": "今日資料未公布最新CPI、PPI或PCE等通膨數據。"
       },
       "demand": {
-        "direction": "mixed",
-        "importance": "medium",
-        "evidence": [
-          "AI基建融資疑慮影響市場對科技資本支出的信心"
-        ],
-        "judgment": "科技投資融資疑慮可能引發金融條件緊縮，進而對終端需求預期產生邊際抑制效果。"
+        "direction": "unclear",
+        "importance": "low",
+        "evidence": [],
+        "judgment": "今日資料未涵蓋PMI或零售銷售等終端需求數據。"
       },
       "labor_market": {
         "direction": "up",
-        "importance": "medium",
+        "importance": "high",
         "evidence": [
-          "初領失業金人數降至19.4萬人"
+          "美國初領失業金人數接近57年低點"
         ],
-        "judgment": "初領失業金人數降至低位，顯示勞動市場仍具韌性，不支持通膨預期快速降溫。"
+        "judgment": "初領失業金極低反映勞工市場供需緊繃，可能透過薪資粘性支撐服務業通膨預期。"
       },
       "policy_expectation": {
-        "direction": "mixed",
-        "importance": "low",
+        "direction": "up",
+        "importance": "medium",
         "evidence": [
-          "地緣風險與通膨韌性相互拉扯"
+          "市場重新評估政策利率維持在高檔更久（higher-for-longer）的路徑"
         ],
-        "judgment": "政策預期受地緣不確定性與勞動數據支撐，暫無明確單向轉變訊號。"
+        "judgment": "就業強勁促使市場延後降息時點預期，間接支撐通膨粘性敘事。"
       },
       "summary": {
         "overall_direction": "up",
         "strength": "medium",
-        "dominant_force": "原油價格大漲（WTI 99.05美元）與初領失業金降至19.4萬人，共同構成了通膨預期的支撐力道。",
-        "offsetting_force": "AI融資疑慮引發對整體成長與金融條件緊縮的擔憂。",
-        "judgment": "整體通膨預期在能源與就業端具備上行支持，成為今日債市殖利率下行過程中的主要修正因子。"
+        "dominant_force": "勞動市場極度緊繃（初領失業金逼近歷史低點）",
+        "offsetting_force": "布蘭特原油回落使能源端通膨衝擊受限",
+        "judgment": "通膨預期今日主要由強勁的就業數據支撐，反映市場對服務業通膨與工資粘性的擔憂，儘管油價分歧減緩了總體衝擊力道。"
       }
     },
     "rate_pricing": {
-      "direction": "down",
-      "link_with_inflation_expectation": "今日利率走勢與通膨預期形成背離。雖然油價與就業數據推升通膨預期，但利率受到自身避險與成長擔憂因子主導而顯著走低。",
-      "fed_policy_signal": "資料未提及最新Fed官員談話變化。",
-      "treasury_supply_demand": "避險資金大量流入美債市場，帶動公債價格上漲、殖利率向下突破關鍵整數關卡。",
-      "term_premium": "地緣政治風險與AI融資疑慮壓抑了長端期限溢價。",
-      "safe_haven_bond_buying": "地緣戰火風險與AI融資疑慮共同觸發了強烈的避險買債需求。",
-      "growth_concern_or_cut_expectation": "市場對AI融資疑慮及金融條件緊縮可能影響經濟成長產生擔憂，削弱了高利率維持更久（Higher for Longer）的定價。",
-      "dominant_force": "避險資金買盤與成長緊縮疑慮壓過通膨韌性，成為主導利率定價的核心力量。",
-      "judgment": "美國10年期公債殖利率跌破5%至4.953%，顯示市場短線將地緣風險與金融條件緊縮置於通膨壓力之上。"
+      "direction": "up",
+      "link_with_inflation_expectation": "利率與通膨預期同向。就業韌性強化了通膨粘性疑慮，進而推升市場對政策利率高檔維持更久的預期。",
+      "fed_policy_signal": "市場將初領失業金解讀為美聯儲缺乏即刻降息的緊迫性，政策偏鷹框架延續。",
+      "treasury_supply_demand": "資料未提供公債供給變化，殖利率上行主要由政策預期修正驅動。",
+      "term_premium": "10年期殖利率升至4.988%逼近5.00%，顯示長端利率風險溢價隨著政策維持高檔更久而擴大。",
+      "safe_haven_bond_buying": "無避險買盤跡象，公債市場呈現賣壓。",
+      "growth_concern_or_cut_expectation": "市場顯著消退短期降息預期，經濟成長尚未出現顯著衰退擔憂。",
+      "dominant_force": "初領失業金強勁帶動的 Higher-for-longer 定價與降息預期遞延",
+      "judgment": "美債殖利率上行完全由強勁就業數據主導，高利率維持更久預期成為利率定價的核心錨點。"
     },
     "dollar_pricing": {
-      "direction": "down",
-      "link_with_rates": "美元走勢與美債殖利率保持同向。美債殖利率回落削弱了美利差優勢，拖累美元指數下降。",
-      "safe_haven_dollar": "雖然地緣風險升溫，但美債殖利率走低對美元的拉壓效應大於美元自身的避險吸引力。",
-      "liquidity_demand": "資料未顯示市場出現全球性美元流動性緊縮需求。",
-      "other_currency_weakness": "避險貨幣如日圓走強，對美元指數形成直接壓制。",
-      "us_relative_growth_or_policy": "AI融資疑慮對美國科技股及經濟相對強韌的預期造成邊際修正。",
-      "dominant_force": "美債殖利率跌破5%帶來的利差削弱效應，為美元指數走軟（降至101.62）的主要主導力道。",
-      "judgment": "美元主要受美債殖利率下行傳導而走軟，但受區域資產流動影響，對亞幣的傳導出現分歧。"
+      "direction": "up",
+      "link_with_rates": "美元與利率方向同向。美債殖利率攀升進一步擴大美國與其他主要經濟體的利差優勢。",
+      "safe_haven_dollar": "無明顯避險需求驅動，主要由利差與經濟基本面相對優勢支撐。",
+      "liquidity_demand": "未見美元流動性緊縮跡象。",
+      "other_currency_weakness": "利差擴大持續對日圓等非美貨幣形成壓制。",
+      "us_relative_growth_or_policy": "美國就業市場極低失業金人數展現相較於區域經濟體的相對韌性。",
+      "dominant_force": "美債殖利率走高帶來的利差優勢與美國經濟相對韌性",
+      "judgment": "美元指數走強至101.75，精確反映了美債殖利率上行所帶來的利差吸引力，傳導路徑相當順暢。"
     },
     "gold_pricing": {
       "direction": "down",
-      "link_with_rates": "黃金走勢與美債殖利率下行形成背離。利率下行本應降低持有黃金的機會成本，但金價並未受惠。",
-      "dollar_effect": "美元指數走軟本應對黃金構成支撐，但今日未能推動金價上揚。",
-      "safe_haven_demand": "在地緣風險升溫的情境下，黃金避險買盤顯得相對疲弱。",
-      "central_bank_buying": "資料未提及央行買盤最新動向。",
-      "geopolitical_risk": "中東戰火局勢未能有效轉化為黃金的推升動能。",
-      "dominant_force": "市場獲利了結賣壓或流動性資金調度需求，壓過了傳統的避險傳導機制。",
-      "judgment": "黃金在利率與美元雙雙回落的有利環境下逆勢走弱，顯示獲利了結或流動性因素短期修正了黃金的避險定價。"
+      "rate_or_real_rate_pressure": "美債10年期殖利率逼近5%，實質利率上行對無孳息資產形成直接壓制。",
+      "dollar_effect": "美元指數升至101.75，增加以美元計價黃金的持有成本。",
+      "safe_haven_demand": "市場地緣或避險需求不足以抵銷高利率與強美元的雙重壓力。",
+      "central_bank_buying": "資料未提及央行購金動向。",
+      "geopolitical_risk": "地緣政治因素今日未對金價提供足夠支撐。",
+      "dominant_force": "美債殖利率上行與強美元的雙重緊縮壓制",
+      "judgment": "金價承壓回落至4010美元，順應利率與美元走高的傳導，無孳息資產風險回報率相對下降。"
     },
     "asia_fx_pricing": {
       "twd": {
-        "reaction": "微幅走貶至32.60",
+        "reaction": "逆勢偏強走揚",
         "consistent_with_dollar_pressure": "no",
-        "local_correction_factor": "AI融資疑慮打擊科技股表現，導致本地資金及股市資金流出壓力壓過美元回落的利多。",
-        "judgment": "台幣走勢與美元走軟背離，顯示本地科技產業鏈相關資金流出主導了短線定價。"
+        "local_correction_factor": "區域資金動能或本地特定產業資金流入抵銷了強美元的外部壓力。",
+        "judgment": "台幣走勢與美元主線背離，顯示本地資金面或科技產業動能成為強美元框架下的修正因子。"
       },
       "jpy": {
-        "reaction": "走升至156.72",
+        "reaction": "走貶至156.81",
         "consistent_with_dollar_pressure": "yes",
-        "local_correction_factor": "日圓發揮傳統避險貨幣功能，配合美債殖利率下行形成共振。",
-        "judgment": "日圓充分反應美債殖利率回落與地緣避險需求，表現強勢。"
+        "local_correction_factor": "美日利差維持在高檔，缺乏本地政策干預或緊縮訊號。",
+        "judgment": "日圓完全承受強美元與高美債殖利率壓力，利差因子持續主導其弱勢。"
       },
       "krw": {
-        "reaction": "待確認",
+        "reaction": "資料不足，待確認",
         "consistent_with_dollar_pressure": "unclear",
-        "local_correction_factor": "今日資料未提供韓圜具體匯率與交易數據。",
-        "judgment": "資料不足，待確認。"
+        "local_correction_factor": "每日摘要未提供韓圜數據。",
+        "judgment": "資料不足以對韓圜今日定價進行機構級判斷。"
       }
     },
     "market_contradiction": {
-      "baseline_expectation": "在地緣戰火升溫推升油價（WTI逼近100美元）且就業數據強勁（初領失業金19.4萬）的情境下，基準傳導應為通膨預期上行、推升美債殖利率與美元，並帶動黃金避險上漲。",
-      "actual_reaction": "美債殖利率跌破5%，美元同步走軟，黃金不升反降，亞幣中僅日圓走強而台幣偏弱。",
-      "most_non_obvious_link": "高油價與強就業未能阻止美債殖利率顯著回落，且黃金在地緣風險與美債殖利率下降雙重利多下逆勢下跌。",
-      "possible_explanation": "市場短線將「AI融資疑慮可能引發信用緊縮與成長趨緩」視為首要威脅，避險資金優先湧入長端公債；而黃金則遭遇前期獲利了結或流動性變現賣壓。",
-      "is_correction_or_new_mainline": "offsetting_force",
-      "how_to_integrate_into_main_theme": "將公債避險買盤定調為短線主導力量，但必須將油價反彈與就業韌性視為強烈的「抵銷力量/修正因子」，說明利率下行空間可能受到通膨潛在風險的限制。",
+      "baseline_expectation": "在就業強勁推升美債殖利率逼近5%且美元指數走強的背景下，亞洲貨幣應普遍承壓走貶，且商品市場應呈現較一致的緊縮定價。",
+      "actual_reaction": "台幣逆勢偏強未隨美元走貶，同時原油市場出現WTI走揚但Brent回落的分歧定價。",
+      "most_non_obvious_link": "強美元背景下台幣的逆勢走強，以及油價兩大基準合約的走勢分歧。",
+      "possible_explanation": "台幣可能受到區域科技產業資本流入或特定結匯需求支撐；原油分歧則反映北美與全球供需結構的局部差異。",
+      "is_correction_or_new_mainline": "correction_factor",
+      "how_to_integrate_into_main_theme": "將高殖利率與強美元定為全球宏觀主線，台幣偏強與油價分歧視為局部與區域資產的修正因子，不破壞總體高利率維持更久的整體定價邏輯。",
       "presenter_story_angle": {
-        "opening_question": "當原油價格大漲逼近百元關卡、就業數據又表現強勁時，為什麼美國10年期公債殖利率反而跌破了5%？",
-        "normal_script": "依照傳統邏輯，高油價與強勁的勞動市場會推高通膨預期，帶動公債殖利率與美元同步走高。",
-        "where_it_breaks": "但今日市場卻把焦點轉向AI融資疑慮與地緣戰火，大量避險資金選擇湧入長端美債，強行將殖利率壓至4.953%，進而拖累美元。",
-        "why_it_matters": "這代表市場短期對金融條件緊縮與資產風險的恐懼，壓過了對通膨韌性的擔憂；但油價大漲意味著通膨隱患並未消除。",
-        "next_watch": "後續需觀察中東局勢是否繼續推升油價，以及非農就業等數據是否會重新校正債市對高利率的定價。"
+        "opening_question": "當美債殖利率逼近5%、美元指數全面壓頂時，為何台幣能逆勢偏強？油價又為何出現分歧？",
+        "normal_script": "標準的宏觀傳導路徑是：初領失業金極低展現就業韌性，推升美債殖利率至4.988%，美元走高至101.75，進而壓抑日圓貶至156.81與金價回落至4010美元。",
+        "where_it_breaks": "然而傳導鏈在亞洲匯市與原油端出現局部分歧，台幣未跟隨美元升值而走貶，原油亦呈WTI漲、Brent跌的分歧態勢。",
+        "why_it_matters": "這意味著全球緊縮預期雖高，但區域資金流與商品供需的個別結構正發揮緩衝作用，抑制了強美元的全面性殺傷力。",
+        "next_watch": "觀察美債10年期殖利率能否實質突破5.00%整數關卡，以及非農就業數據是否進一步確認就業市場極度緊繃。"
       }
     },
     "pricing_assessment": {
-      "dominant_market_force": "AI融資疑慮與地緣戰火引發的公債避險買盤，主導美債殖利率跌破5%並拖累美元走軟。",
-      "offsetting_force": "原油價格顯著反彈（WTI 99.05美元）與初領失業金人數走低（19.4萬人）帶來的通膨韌性。",
-      "most_non_obvious_signal": "黃金在地緣風險與利率、美元雙降的背景下逆勢走弱；台幣因科技股承壓而與美元回落趨勢背離。",
-      "market_question": "由避險情緒驅動的美債殖利率下行，能否在油價大漲與勞動市場韌性的壓力下持續？",
-      "one_sentence_takeaway": "避險買盤短線主導美債與美元回落，但油價大漲與就業韌性仍對利率下行形成顯著的修正力量。",
-      "next_watch": "中東地緣政治對油價的後續推升程度，以及科技業AI資本支出與信用利差變化。"
+      "dominant_market_force": "美國初領失業金接近57年低點所展現的就業韌性，引發政策高利率維持更久（Higher-for-longer）重新定價。",
+      "offsetting_force": "原油漲跌分歧緩和通膨全面爆發疑慮，台幣逆勢偏強對區域匯市壓力形成局部緩衝。",
+      "most_non_obvious_signal": "台幣在美債殖利率逼近5%及美元走強的雙重壓力下逆勢走強。",
+      "market_question": "美債10年期殖利率能否突破5.00%關鍵心理關卡，並觸發跨資產新一輪緊縮定價？",
+      "one_sentence_takeaway": "就業韌性推升美債殖利率逼近5%與強美元主線，惟台幣逆勢與油價分歧顯示區域資金與商品端存在修正因子。",
+      "next_watch": "觀察美債10年期殖利率是否突破5.00%，以及後續非農就業與薪資數據能否持續支持高利率維持更久的敘事。"
     }
   }
 }
