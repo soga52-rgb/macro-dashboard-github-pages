@@ -1,0 +1,14 @@
+{
+  "generated_at": "2026-10-27T13:40:29+08:00",
+  "date": "2026-10-26",
+  "audio_file": "assets/audio/daily_ai_presenter_2026-10-26.mp3",
+  "audio_exists": false,
+  "audio_generated_this_run": false,
+  "enabled": true,
+  "voice": "zh-TW-YunJheNeural",
+  "rate": "-8%",
+  "volume": "+0%",
+  "pitch": "-5Hz",
+  "status": "failed",
+  "error": "No audio was received. Please verify that your parameters are correct."
+}
