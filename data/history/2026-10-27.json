@@ -1,0 +1,64 @@
+{
+  "generated_at": "2026-10-28T14:20:00+08:00",
+  "source": "Google Sheets Today Daily Source",
+  "mode": "today_daily_source",
+  "data_status": "complete",
+  "daily_summary": {
+    "date": "2026-10-27",
+    "headline": "通膨拉鋸與長端美債承壓",
+    "executive_summary": "市場目前最重視美債赤字供給與全球央行高利率維持更久（higher-for-longer）敘事，推升美債10年期殖利率逼近5%並支撐強勢美元。油價回落與房市放緩雖構成通膨下行的修正因子，但市場避險情緒升溫帶動黃金同步走高，使跨資產傳導呈現部分分歧。",
+    "market_signals": [
+      "美債殖利率逼近5%",
+      "原油期貨顯著回落",
+      "美元金價同步走強"
+    ],
+    "macro_chain": "美債赤字擔憂與央行高利率預期 → 美國10年期公債殖利率升至4.993% → 美元指數偏強上行至102.36 → 日圓承壓逼近158，黃金受避險買盤推升反常同步走強，油價下行扮演通膨修正因子",
+    "divergence": "今日關鍵背離在於「利率/美元走強與黃金同步上行」。傳統上美債殖利率與強美元會壓抑不孳息資產，但金價漲至4075美元，顯示市場不僅定價高利率主線，亦同時在定價全球央行政策不確定性與地緣避險需求；油價下挫則作為能源通膨的修正因子，後續傳導是否轉為全面防禦仍待觀察。",
+    "market_snapshot": "WTI｜99.90｜下行｜油價下行，可能緩和能源通膨壓力；若由需求疲弱造成，亦需視為成長降溫訊號。\nUS10Y｜4.993%｜利率上行｜長端利率反映財政赤字供給壓力與央行利率高檔維持預期，推升期限溢價。\nDXY｜102.36｜美元偏強｜利差優勢與避險買盤支撐強美元，加劇日圓等亞洲貨幣貶值壓力。",
+    "news_evidence": [
+      "市場擔憂美國財政赤字擴大及公債供給增加，推升10年期美債殖利率至4.993%。",
+      "國際原油價格走跌，WTI跌破百元關卡至99.90美元，布蘭特原油降至109.44美元，緩和短期能源通膨預期。",
+      "美元指數升至102.36，美元兌日圓上漲至157.96，利差主導下非美及亞洲貨幣多數承壓。",
+      "黃金價格攀升至4075美元，避險買盤壓過強美元與實質利率上行的壓制效果。"
+    ],
+    "watchpoints": [
+      "即將召開的Fed利率決策會議，是否進一步強化高利率維持更久（higher-for-longer）指引。",
+      "國際原油價格若持續破底，是否擴大對通膨預期與長端殖利率的下行修正力道。",
+      "美國財政部公債標售表現與赤字爭議，長端美債殖利率是否正式突破5%整數關卡。"
+    ],
+    "visual_note": {
+      "title": "通膨預期多空拉鋸：美債高檔震盪與美元黃金背離架構",
+      "file_id": "1yJo3jpfHzxse0yJH2_3_pZiSQR-QwuhZ",
+      "url": "https://drive.google.com/file/d/1yJo3jpfHzxse0yJH2_3_pZiSQR-QwuhZ/view?usp=drivesdk",
+      "model": "gemini-3.1-flash-image"
+    },
+    "news_narrative": {
+      "title": "通膨預期多空拉鋸與避險需求升溫",
+      "support_level": "中",
+      "cards": [
+        {
+          "label": "驗證結果",
+          "text": "部分支持"
+        },
+        {
+          "label": "摘要",
+          "text": "市場聚焦全球央行會議與美債赤字擔憂，推升美國10年期公債殖利率與美元指數。儘管油價下跌及房市降溫提供通膨緩解的修正因子，但市場避險情緒升溫帶動黃金同步走高，使股債匯資產傳導呈現多空拉鋸與部分分歧。"
+        },
+        {
+          "label": "支持新聞",
+          "text": "1. 新聞重點：市場擔憂美債赤字擴大並聚焦各國央行利率會議，同時油價走跌使通膨壓力多空交織。\n2. 市場影響：推高美國10年期公債殖利率與美元指數，但油價回落限制了通膨預期的單向失控。\n3. 驗證結論：資產走勢顯示美元與公債殖利率走強，但金價同步上行，傳導僅獲部分支持並存在分歧。"
+        },
+        {
+          "label": "異常訊號",
+          "text": "1. 原油價格下挫（WTI 跌至 99.90、Brent 跌至 109.44）及新屋銷售放緩本應壓低殖利率，但美債殖利率升至 4.993%，反映財政供給與央行高利率政策預期壓過景氣冷卻訊號。\n2. 美元指數與黃金呈現反常的同向走強，顯示金價上漲主因並非單純利差走勢，而是反映市場對全球政策不確定性與避險買盤的定價。"
+        },
+        {
+          "label": "觀察重點",
+          "text": "1. 即將召開的 Fed 利率決策會議，是否強化高利率維持更久（higher-for-longer）敘事。\n2. 國際原油價格若持續破底，是否進一步加大對公債殖利率的下行修正壓力。\n3. 美國財政部公債標售狀況與赤字爭議，對美債長端期限溢價的後續推升效應。\n4. 美元偏強下亞洲貨幣的承壓程度，以及各國央行後續的匯率干預動向。"
+        }
+      ],
+      "news_links_json": "[\n  {\n    \"rank\": 1,\n    \"theme\": \"Rates｜Treasury Yields / 美債殖利率\",\n    \"source\": \"鉅亨網\",\n    \"title\": \"美國兩黨互卡就能救美債？投資人不買單：不做事債也照增 - 鉅亨網\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiT0FVX3lxTFBzWGx1Z3YtbnhVcWt5U3VlR2gtYm1LckdfZmg0ZTdNSmdqYUJnU1NiQ0FTdmRLR0FkbGZTYXhtRnhMLWRDMERmNU14MncxZTQ?oc=5\",\n    \"published_at\": \"Tue, 27 Oct 2026 15:10:05 GMT\",\n    \"score\": 118,\n    \"matched_keywords\": \"美債殖利率:treasury/yield/yields | 變數:TREASURY_YIELDS | 類型:DATA | 來源角色:CNYES_MACRO\"\n  },\n  {\n    \"rank\": 2,\n    \"theme\": \"FX｜Dollar / FX / 美元與匯率\",\n    \"source\": \"鉅亨網\",\n    \"title\": \"〈紐約匯市〉美元走升 市場聚焦各國央行利率決策會議 - 鉅亨網\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiT0FVX3lxTE1iX3UtM0JCZmNqd1FjS1Y2eVJlZ1dSSEhPOXlGY2xoc0xnT1JVSHJYaHMxNzF2dzFrZ0hha05fM1gteWpRYlFuRGpZQzMzZzQ?oc=5\",\n    \"published_at\": \"Tue, 27 Oct 2026 21:41:46 GMT\",\n    \"score\": 116.6,\n    \"matched_keywords\": \"美元與亞洲匯率:dollar | 變數:DOLLAR_FX | 類型:DATA | 來源角色:CNYES_MACRO\"\n  },\n  {\n    \"rank\": 3,\n    \"theme\": \"Rates｜Treasury Yields / 美債殖利率\",\n    \"source\": \"MarketWatch\",\n    \"title\": \"TMBMKGB-10Y | U.K. 10 Year Gilt Overview - MarketWatch\",\n    \"url\": \"https://news.google.com/rss/articles/CBMieEFVX3lxTE8xZTh0cW1XT3BuRmlRYXNPVzlrc3N3eXhJcVBmSzVEcFlDNFY5b2NxQjgzdk1NUUdRMVQyV005ZGxLWlhJRC1UbnFZeUQ4elk0eFFob1ZJeENnSHdnR0pjX0d4MXQ2Y2xwdnlTamNMTHdtdTRhTnpOZw?oc=5\",\n    \"published_at\": \"Tue, 27 Oct 2026 18:28:19 GMT\",\n    \"score\": 115,\n    \"matched_keywords\": \"美債殖利率:treasury/yield/yields/10 year | 變數:TREASURY_YIELDS | 類型:REACTION | 來源角色:MARKET_REACTION\"\n  },\n  {\n    \"rank\": 4,\n    \"theme\": \"FX｜Dollar / FX / 美元與匯率\",\n    \"source\": \"Reuters\",\n    \"title\": \"POLL Strong dollar, high yields drag on gold outlook, but central-bank demand lends support - Reuters\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiwwFBVV95cUxNY2N0dGg4Q1VsMUJXaTJYb1J4cjJiQjRGYS16djR0Nnh5VGVsQmFRZXctU0w3UUpfclljaFp4ZW5DVFZTLVYzTUlSWDY5Q0JsQ0JLYjF5aFJoVDBpOGhrWnkxdEZKdUtpQzNPc1kxRGdGRkdTZENtM25LLUNYNTdlMjNnMHdUcU52VVlFTkNXRUJKMDFhWEhFalptcGZvQ0FZeUl1UHF5T3Z2UmpWOUR6ekJmMnlHblRWQU1MUzFUaXZiUzA?oc=5\",\n    \"published_at\": \"Tue, 27 Oct 2026 13:30:00 GMT\",\n    \"score\": 110.6,\n    \"matched_keywords\": \"美債殖利率:yield/yields | 美元與亞洲匯率:dollar | 能源與原物料:gold | 風險情緒／避險資金:gold | 變數:DOLLAR_FX | 類型:BACKUP | 來源角色:WIRE_CONFIRMATION\"\n  },\n  {\n    \"rank\": 5,\n    \"theme\": \"Fed Policy｜Fed / 聯準會\",\n    \"source\": \"Reuters\",\n    \"title\": \"Gold gains on softer oil prices ahead of Fed meeting - Reuters\",\n    \"url\": \"https://news.google.com/rss/articles/CBMilgFBVV95cUxQQWIyeWVhRnVBaHZfV05HanpZVFJzZDZiaC1MTEFVX0JEbWc5RVhRV3htMnJFMDNCVjBPWTJISkhha3ZWc3otaXBCTGloREJidmlqOWtXMTQ4Zks2aTA5czBzNC1OdGNuVXlqLVZ4TTk3M1VUSEZvdVdCLXV3bHJsZXBHSktGcXR0dk1wS2VYdWYxTm9ueGc?oc=5\",\n    \"published_at\": \"Tue, 27 Oct 2026 05:46:00 GMT\",\n    \"score\": 107.4,\n    \"matched_keywords\": \"通膨數據:prices | 聯準會政策:fed | 能源與原物料:oil/gold | 風險情緒／避險資金:gold | 變數:FED | 類型:BACKUP | 來源角色:WIRE_CONFIRMATION\"\n  },\n  {\n    \"rank\": 6,\n    \"theme\": \"Rates｜Treasury Yields / 美債殖利率\",\n    \"source\": \"Reuters\",\n    \"title\": \"Bond market is a buy right now, JP Morgan Asset Management's fixed income head says - Reuters\",\n    \"url\": \"https://news.google.com/rss/articles/CBMixAFBVV95cUxPc3VRRFNCaDlHTDliTGZNZ0RPWldLbXpjeWljeVducGNXVTd4VVBoRy1VaVVNX0RlLUM2UFpJQW5wUlMyMmxLZHhiSXkwZXlXU25NekNoMmx3b0hlVjF1RDNSck9GU3VHaFdCYU13OV8xaVVmRWJFbWpsX211VkkwLXBISG9XVG9UdVlCdXVQSlp0OEdpbVc2aENGdXFoQkp4R1dLU0gyc1ZGcGNCeXJabkF6bWpFZkloaU1tZXhheHB6dmVC?oc=5\",\n    \"published_at\": \"Tue, 27 Oct 2026 02:43:00 GMT\",\n    \"score\": 106,\n    \"matched_keywords\": \"美債殖利率:treasury/yield/yields/bond | 變數:TREASURY_YIELDS | 類型:BACKUP | 來源角色:WIRE_CONFIRMATION\"\n  },\n  {\n    \"rank\": 7,\n    \"theme\": \"Asset｜Gold / 黃金\",\n    \"source\": \"Reuters\",\n    \"title\": \"Gold rises as lower oil prices ease inflation fears ahead of Fed meeting - Reuters\",\n    \"url\": \"https://news.google.com/rss/articles/CBMimwFBVV95cUxPZml1aC0yS2NrLUloeEFPZnYyeExpazhPVExTT1BLcV9HZGxEZWFzcHFUMTJFbDhUTjgyaE5EbGRja1BRX0p2UzlDSmEzUUpzTG9ZT2xKZEZMczFvb1pzU2xrdXlNT0dDUXYtQnhoLUFpT09xQmF5Q25FQXdKNGpjOERVdTB1UTk4NkhSd2k3cUNBSTJRMVVsUlpSWQ?oc=5\",\n    \"published_at\": \"Mon, 26 Oct 2026 14:39:48 GMT\",\n    \"score\": 105.2,\n    \"matched_keywords\": \"通膨數據:inflation/prices | 聯準會政策:fed | 能源與原物料:oil/gold | 風險情緒／避險資金:gold | 變數:GOLD | 類型:BACKUP | 來源角色:WIRE_CONFIRMATION\"\n  },\n  {\n    \"rank\": 8,\n    \"theme\": \"Fed Policy｜Fed / 聯準會\",\n    \"source\": \"Reuters\",\n    \"title\": \"Stocks rise as oil slips with tech earnings, Fed ahead - Reuters\",\n    \"url\": \"https://news.google.com/rss/articles/CBMigwFBVV95cUxQdEdzTDdxbEtNX1l6VDJMdF9NTGpUNEJPYy1jaUo2SkllaGhJZnZvNzZOOTd5MkZHV3p5T2ZhcjlkcWduOXp5elFKREQ0bFBib0pXUzNKdGI2QmE3eWZxRlktZXhSZG0tQzQ4U1dXNWxOZktiZVZvc1pNUERsYUFLVUJYSQ?oc=5\",\n    \"published_at\": \"Tue, 27 Oct 2026 01:46:00 GMT\",\n    \"score\": 100.4,\n    \"matched_keywords\": \"聯準會政策:fed | 能源與原物料:oil | 變數:FED | 類型:BACKUP | 來源角色:WIRE_CONFIRMATION\"\n  }\n]"
+    },
+    "raw_daily_summary_package": "日期：2026-10-27\n今日主線：通膨拉鋸與長端美債承壓\n\nExecutive Summary：\n市場目前最重視美債赤字供給與全球央行高利率維持更久（higher-for-longer）敘事，推升美債10年期殖利率逼近5%並支撐強勢美元。油價回落與房市放緩雖構成通膨下行的修正因子，但市場避險情緒升溫帶動黃金同步走高，使跨資產傳導呈現部分分歧。\n\n今日核心訊號：\n- 美債殖利率逼近5%\n- 原油期貨顯著回落\n- 美元金價同步走強\n\n核心資產重點：\nWTI｜99.90｜下行｜油價下行，可能緩和能源通膨壓力；若由需求疲弱造成，亦需視為成長降溫訊號。\nUS10Y｜4.993%｜利率上行｜長端利率反映財政赤字供給壓力與央行利率高檔維持預期，推升期限溢價。\nDXY｜102.36｜美元偏強｜利差優勢與避險買盤支撐強美元，加劇日圓等亞洲貨幣貶值壓力。\n\n矛盾 / 背離：\n今日關鍵背離在於「利率/美元走強與黃金同步上行」。傳統上美債殖利率與強美元會壓抑不孳息資產，但金價漲至4075美元，顯示市場不僅定價高利率主線，亦同時在定價全球央行政策不確定性與地緣避險需求；油價下挫則作為能源通膨的修正因子，後續傳導是否轉為全面防禦仍待觀察。\n\n總經傳導鏈：\n美債赤字擔憂與央行高利率預期 → 美國10年期公債殖利率升至4.993% → 美元指數偏強上行至102.36 → 日圓承壓逼近158，黃金受避險買盤推升反常同步走強，油價下行扮演通膨修正因子\n\n新聞佐證：\n- 市場擔憂美國財政赤字擴大及公債供給增加，推升10年期美債殖利率至4.993%。\n- 國際原油價格走跌，WTI跌破百元關卡至99.90美元，布蘭特原油降至109.44美元，緩和短期能源通膨預期。\n- 美元指數升至102.36，美元兌日圓上漲至157.96，利差主導下非美及亞洲貨幣多數承壓。\n- 黃金價格攀升至4075美元，避險買盤壓過強美元與實質利率上行的壓制效果。\n\n待觀察問題：\n- 即將召開的Fed利率決策會議，是否進一步強化高利率維持更久（higher-for-longer）指引。\n- 國際原油價格若持續破底，是否擴大對通膨預期與長端殖利率的下行修正力道。\n- 美國財政部公債標售表現與赤字爭議，長端美債殖利率是否正式突破5%整數關卡。"
+  }
+}
