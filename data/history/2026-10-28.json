@@ -1,0 +1,64 @@
+{
+  "generated_at": "2026-10-29T14:30:47+08:00",
+  "source": "Google Sheets Today Daily Source",
+  "mode": "today_daily_source",
+  "data_status": "complete",
+  "daily_summary": {
+    "date": "2026-10-28",
+    "headline": "通膨預期推升長端利率",
+    "executive_summary": "市場目前最重視油價破百對綜合通膨預期的拉動，以及Fed維持利率不變後長短端利差的重新定價。西德州原油站上百元推升美債10年期殖利率至5.04%，壓制不孳息的黃金回落，呈現部分連貫的通膨傳導。然而美元指數受短端降息預期與風險偏好改善牽制而偏弱走跌，成為今日跨資產傳導的主要修正因子。",
+    "market_signals": [
+      "油價大漲推升通膨預期",
+      "美債10年期破5.04%",
+      "美元走弱與利率脫鉤"
+    ],
+    "macro_chain": "油價攀升重燃通膨預期且Fed按兵不動 → 美國10年期公債殖利率走高破5% → 美元指數受短端利率壓制走弱（傳導分歧） → 黃金受實質利率壓制下行、原油維持強勢、日圓與台幣獲得喘息空間",
+    "divergence": "今日核心背離在於「美債殖利率上行 vs 美元指數偏弱」。主線由高油價引發的綜合通膨預期主導，推高10年期殖利率並壓抑黃金；然而Fed如預期按兵不動致使短天期利率跳水，疊加非美資產反彈，削弱了美元的利差支撐，該背離是否持續收斂仍待後續硬數據觀察。",
+    "market_snapshot": "WTI｜102.03｜上行｜油價上行，增加能源成本與短期通膨預期的上行壓力；若非今日主線，應視為修正因子或並行訊號。\nUS10Y｜5.045%｜上行｜反映長端通膨預期重新評估與期限溢價，壓抑快速降息期待。\nDXY｜102.15｜偏弱｜短端利率預期回落壓抑美元，未能完全反映長端利差優勢，暫列修正因子。",
+    "news_evidence": [
+      "WTI與布蘭特原油雙雙大漲站上百元大關，大幅強化綜合通膨預期上行壓力。",
+      "Fed於期中選舉前維持利率不變，引發短端殖利率跳水，但長端10年期殖利率突破5.045%。",
+      "黃金回落至4073美元，顯示市場暫時未反映地緣避險需求，而是更在意高利率帶來的持有利息成本。",
+      "美元指數回落至102.15，殖利率推升匯率的機制暫時受阻，帶動日圓與台幣小幅偏強。"
+    ],
+    "watchpoints": [
+      "WTI原油是否持續企穩於百元之上，確認能源成本對通膨預期的外溢延續性。",
+      "美元指數能否在亞洲貨幣利差壓力下止跌，收斂長端殖利率與美元走勢的背離。",
+      "即將公佈的通膨硬數據（CPI/PCE）是否佐證通膨回溫，進一步延後降息時間點。"
+    ],
+    "visual_note": {
+      "title": "通膨預期推升長端利率，美元與殖利率走勢分歧",
+      "file_id": "17yW4qN0eVYD5a3vKXjoEdMMKREZ4CF6X",
+      "url": "https://drive.google.com/file/d/17yW4qN0eVYD5a3vKXjoEdMMKREZ4CF6X/view?usp=drivesdk",
+      "model": "gemini-3.1-flash-image"
+    },
+    "news_narrative": {
+      "title": "通膨預期重新評估",
+      "support_level": "中",
+      "cards": [
+        {
+          "label": "驗證結果",
+          "text": "部分支持"
+        },
+        {
+          "label": "摘要",
+          "text": "市場重新評估能源與通膨權重，油價上行推升綜合通膨預期，帶動美國10年期公債殖利率突破5.04%。儘管Fed維持利率不變使短天期利率跳水並拖累美元指數偏弱，長端利率仍主導資產定價，壓制黃金回落。成長放緩疑慮與美元走貶形成修正因子，跨資產傳導呈現部分連貫。"
+        },
+        {
+          "label": "支持新聞",
+          "text": "1. 新聞重點：Fed於期中選舉前如預期維持利率不變，短天期美債殖利率跳水但長天期美債殖利率上行，油價走強亦加劇金價壓力。\n2. 市場影響：推高美國10年期公債殖利率並拖累美元指數與金價表現，市場同時降低對快速降息的期待。\n3. 驗證結論：實際走勢中美國10年期公債殖利率與油價走升、黃金下跌完全符合通膨主線，僅美元指數偏弱呈現分歧，整體走勢獲部分支持。"
+        },
+        {
+          "label": "異常訊號",
+          "text": "1. 長天期美債殖利率上行與美元指數走弱形成脫鉤，主因Fed按兵不動壓低短端利率預期，且非美資產或風險偏好改善對美元造成反向壓力。\n2. 金價隨油價上揚與長端利率攀升而走軟，顯示黃金暫時未反映避險需求，而是更重視實質利率上行帶來的壓制效果。"
+        },
+        {
+          "label": "觀察重點",
+          "text": "1. 下一次通膨硬數據（CPI/PCE）是否確認油價外溢效應，牽動降息預期是否進一步延後。\n2. 西德州原油與布蘭特原油能否站穩百元大關，若持續攀升將強化綜合通膨預期上行壓力。\n3. 美元指數能否在亞洲貨幣偏弱時止跌回升，收斂殖利率與美元走勢的分歧。"
+        }
+      ],
+      "news_links_json": "[\n  {\n    \"rank\": 1,\n    \"theme\": \"Asset｜Gold / 黃金\",\n    \"source\": \"鉅亨網\",\n    \"title\": \"〈貴金屬盤後〉Fed在美期中選舉前按兵不動 金價隨油價上漲走軟 - 鉅亨網\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiT0FVX3lxTE5yUko2WllNODg5M1VZOEhPVW5YVzc4aTFKLThTTmN2TzJ3TExqcVpVSGV1bl9WQW5QRWdieWZ5Vlo2VEpFc29CRmM2N1RJaGc?oc=5\",\n    \"published_at\": \"Wed, 28 Oct 2026 21:21:07 GMT\",\n    \"score\": 120.2,\n    \"matched_keywords\": \"聯準會政策:fed | 能源與原物料:gold | 風險情緒／避險資金:gold | 變數:GOLD | 類型:DATA | 來源角色:CNYES_MACRO\"\n  },\n  {\n    \"rank\": 2,\n    \"theme\": \"Rates｜Treasury Yields / 美債殖利率\",\n    \"source\": \"鉅亨網\",\n    \"title\": \"美聯儲按兵不動，兩年期美債殖利率短線跳水 - 鉅亨網\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiT0FVX3lxTE1oVHFEWThHamNMRE5BOUJ6Vm9YNUt3S3dRSVZUcVFrUVFHbU1GMUs5Y2d5WWoyd1I2ejlMdVc0VVgtM3dFZXZNLVZYMEJCSGc?oc=5\",\n    \"published_at\": \"Wed, 28 Oct 2026 19:07:30 GMT\",\n    \"score\": 120,\n    \"matched_keywords\": \"美債殖利率:treasury/yield/yields | 變數:TREASURY_YIELDS | 類型:DATA | 來源角色:CNYES_MACRO\"\n  },\n  {\n    \"rank\": 3,\n    \"theme\": \"FX｜Dollar / FX / 美元與匯率\",\n    \"source\": \"鉅亨網\",\n    \"title\": \"〈紐約匯市〉美元走貶 Fed如預期維持利率不變 - 鉅亨網\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiT0FVX3lxTE9ta040NWRRYVg5OUQwbV9qR09mYzBIUk9oWTZQTGViUXhITVVJMUFLTWhVZlpkelVjSXl0N2VmSFJscGZHQWFmMWt6X3ExelU?oc=5\",\n    \"published_at\": \"Wed, 28 Oct 2026 21:41:43 GMT\",\n    \"score\": 118.6,\n    \"matched_keywords\": \"聯準會政策:fed | 美元與亞洲匯率:dollar | 變數:DOLLAR_FX | 類型:DATA | 來源角色:CNYES_MACRO\"\n  },\n  {\n    \"rank\": 4,\n    \"theme\": \"Fed Policy｜Fed / 聯準會\",\n    \"source\": \"MarketWatch\",\n    \"title\": \"U.S. Stocks Up, Treasury Yields Mixed After Fed Holds -- Update - MarketWatch\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiswFBVV95cUxPV2hYakpBMElPR1ZlRlNpSjktZmsyZk9MQ3o1WHk2bHpJQzJBZWRXX0tRRWgzRVEtei1mREY4cjFhZGpyYlhzSHZIZnpJc1VabzYzQW04SE5OLW9vOTdXT3Z5b1dsczdNdUhleE1hSU9IODRiUWVvbkFTVjBjZERlVmphTkl5TXo5STVldUc3Y3pJczdtT2RmUXR1a2xGSENJbGd5Z2UtNHpfY3hxM1R0VVFVQQ?oc=5\",\n    \"published_at\": \"Wed, 28 Oct 2026 20:46:00 GMT\",\n    \"score\": 117.4,\n    \"matched_keywords\": \"聯準會政策:fed | 美債殖利率:treasury/yield/yields | 變數:FED | 類型:REACTION | 來源角色:MARKET_REACTION\"\n  },\n  {\n    \"rank\": 5,\n    \"theme\": \"Rates｜Treasury Yields / 美債殖利率\",\n    \"source\": \"MarketWatch\",\n    \"title\": \"U.S. Stocks Up, Treasury Yields Mixed After Fed Hold - MarketWatch\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiqAFBVV95cUxNZlV0NFJGVUZibGI2NmVoZjBwRVVpenB5MGs2UEtBV1BhcmNYYTloVVo0RjJpUi1od05RUGlLMVJnY3p2WHlwMU8xREN1b2VqUTByQnVTOXpfSkdfbVdhNEZrUy1zTHVGTzRjV1VteWlCWUxQSHo1UzhvQ3pnWmtRRUpWNUcwSTdJWTN3U09uZXI3RXVNRmdSV19XRk5nQm5GaVBWZnVlaU0?oc=5\",\n    \"published_at\": \"Wed, 28 Oct 2026 20:12:00 GMT\",\n    \"score\": 117,\n    \"matched_keywords\": \"聯準會政策:fed | 美債殖利率:treasury/yield/yields | 變數:TREASURY_YIELDS | 類型:REACTION | 來源角色:MARKET_REACTION\"\n  },\n  {\n    \"rank\": 6,\n    \"theme\": \"Asset｜Gold / 黃金\",\n    \"source\": \"鉅亨網\",\n    \"title\": \"Fed決議出爐前夕金價再遭下修！小摩：金價近期仍有下行風險 東方匯理：最糟階段已過 - 鉅亨網\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiT0FVX3lxTE9HRkZSMlNWZjZscEtzazViR0d4NXJ6d3BXYU5ZeDRSVG81WnJJQmVvWnRYQmp4OHBmUEUxb2hURFRIU3VNTnRMMXhZNVgtdGs?oc=5\",\n    \"published_at\": \"Wed, 28 Oct 2026 11:30:31 GMT\",\n    \"score\": 116.2,\n    \"matched_keywords\": \"聯準會政策:fed | 能源與原物料:gold | 風險情緒／避險資金:gold | 變數:GOLD | 類型:DATA | 來源角色:CNYES_MACRO\"\n  },\n  {\n    \"rank\": 7,\n    \"theme\": \"Rates｜Treasury Yields / 美債殖利率\",\n    \"source\": \"MarketWatch\",\n    \"title\": \"Consumer Cos Down as Long-Term Treasury Yields Rise -- Consumer Roundup - MarketWatch\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiwwFBVV95cUxPbXJGUVFyZnU0MXN5bFdZT01XN05KbFg5ZDRJUm9YSi1aanFidUtSVnNzM2w1VHVGZzJ3UzdaVGRqWjV0QW1xaDVpOVVqSWhLcmpBV0F3WldlaEx2NnNwWHlUZXBLdmVibHpyb29TLUlqVXRJejBMb3RMYWR1Wk9xcnZSU0tMbEN2NUEtUmp0Z1J5NlZJd0Zua0JqMEVWdkxUZ0N1bGdSb3V0bElXaFdqMjdLLWRtb0xqZi1IOEN4bGk5YjQ?oc=5\",\n    \"published_at\": \"Wed, 28 Oct 2026 21:29:00 GMT\",\n    \"score\": 115,\n    \"matched_keywords\": \"美債殖利率:treasury/yield/yields | 變數:TREASURY_YIELDS | 類型:REACTION | 來源角色:MARKET_REACTION\"\n  },\n  {\n    \"rank\": 8,\n    \"theme\": \"Asset｜Gold / 黃金\",\n    \"source\": \"鉅亨網\",\n    \"title\": \"大都會投信發表One MIM新品牌 投資長喊：7480億美元AUM應援 不漏接台股黃金行情 - 鉅亨網\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiT0FVX3lxTE9EYnVUVk1EVU01c1hKdDI1WG94T05fWXNvWXlEMVFkRXFDRldFOWlKWGdoR3JtOHVLZzMtbHpaUDZ1ZGw1OEtOQlVfamN6WTg?oc=5\",\n    \"published_at\": \"Wed, 28 Oct 2026 11:09:32 GMT\",\n    \"score\": 114.2,\n    \"matched_keywords\": \"能源與原物料:gold | 風險情緒／避險資金:gold | 變數:GOLD | 類型:DATA | 來源角色:CNYES_MACRO\"\n  }\n]"
+    },
+    "raw_daily_summary_package": "日期：2026-10-28\n今日主線：通膨預期推升長端利率\n\nExecutive Summary：\n市場目前最重視油價破百對綜合通膨預期的拉動，以及Fed維持利率不變後長短端利差的重新定價。西德州原油站上百元推升美債10年期殖利率至5.04%，壓制不孳息的黃金回落，呈現部分連貫的通膨傳導。然而美元指數受短端降息預期與風險偏好改善牽制而偏弱走跌，成為今日跨資產傳導的主要修正因子。\n\n今日核心訊號：\n- 油價大漲推升通膨預期\n- 美債10年期破5.04%\n- 美元走弱與利率脫鉤\n\n核心資產重點：\nWTI｜102.03｜上行｜油價上行，增加能源成本與短期通膨預期的上行壓力；若非今日主線，應視為修正因子或並行訊號。\nUS10Y｜5.045%｜上行｜反映長端通膨預期重新評估與期限溢價，壓抑快速降息期待。\nDXY｜102.15｜偏弱｜短端利率預期回落壓抑美元，未能完全反映長端利差優勢，暫列修正因子。\n\n矛盾 / 背離：\n今日核心背離在於「美債殖利率上行 vs 美元指數偏弱」。主線由高油價引發的綜合通膨預期主導，推高10年期殖利率並壓抑黃金；然而Fed如預期按兵不動致使短天期利率跳水，疊加非美資產反彈，削弱了美元的利差支撐，該背離是否持續收斂仍待後續硬數據觀察。\n\n總經傳導鏈：\n油價攀升重燃通膨預期且Fed按兵不動 → 美國10年期公債殖利率走高破5% → 美元指數受短端利率壓制走弱（傳導分歧） → 黃金受實質利率壓制下行、原油維持強勢、日圓與台幣獲得喘息空間\n\n新聞佐證：\n- WTI與布蘭特原油雙雙大漲站上百元大關，大幅強化綜合通膨預期上行壓力。\n- Fed於期中選舉前維持利率不變，引發短端殖利率跳水，但長端10年期殖利率突破5.045%。\n- 黃金回落至4073美元，顯示市場暫時未反映地緣避險需求，而是更在意高利率帶來的持有利息成本。\n- 美元指數回落至102.15，殖利率推升匯率的機制暫時受阻，帶動日圓與台幣小幅偏強。\n\n待觀察問題：\n- WTI原油是否持續企穩於百元之上，確認能源成本對通膨預期的外溢延續性。\n- 美元指數能否在亞洲貨幣利差壓力下止跌，收斂長端殖利率與美元走勢的背離。\n- 即將公佈的通膨硬數據（CPI/PCE）是否佐證通膨回溫，進一步延後降息時間點。"
+  }
+}

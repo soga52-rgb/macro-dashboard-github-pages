@@ -1,0 +1,160 @@
+{
+  "generated_at": "2026-10-29T14:31:41+08:00",
+  "date": "2026-10-28",
+  "mode": "macro_pricing_logic_v4",
+  "logic": {
+    "pricing_context": {
+      "market_was_pricing": "市場原先聚焦於Fed政策路徑與高利率對通膨及資產價格的壓抑效果。",
+      "new_information": "WTI與布蘭特原油突破百元關卡（WTI達102.03美元），Fed於期中選舉前維持利率不變致短端殖利率跳水，但長端美債10年期殖利率突破5.045%，美元指數則偏弱走跌至102.15。",
+      "pricing_question": "在油價破百強化通膨預期並推升長端美債殖利率之際，美元指數何以受短端預期與風險偏好牽制而與長端殖利率呈現背離？"
+    },
+    "input_material_mapping": {
+      "inflation_materials": [
+        "WTI與布蘭特原油雙雙大漲站上百元大關（WTI 102.03美元）",
+        "油價大漲顯著推升綜合通膨預期"
+      ],
+      "rate_materials": [
+        "Fed於期中選舉前維持利率不變",
+        "短端殖利率跳水",
+        "美國10年期公債殖利率突破5.045%"
+      ],
+      "dollar_materials": [
+        "美元指數走弱至102.15",
+        "美元走弱與長端殖利率脫鉤背離"
+      ],
+      "gold_materials": [
+        "黃金回落至4073美元",
+        "高利率與持有代價壓制不孳息資產"
+      ],
+      "asia_fx_materials": [
+        "美元走弱帶動日圓與台幣小幅偏強並獲得喘息空間"
+      ],
+      "mapping_summary": "本日素材聚焦於高油價推升綜合通膨預期，帶動長端殖利率破5%，而Fed按兵不動則引發短端殖利率跳水並拖累美元，跨資產傳導出現長短端與匯率的分歧。"
+    },
+    "inflation_expectation": {
+      "energy": {
+        "direction": "up",
+        "importance": "high",
+        "evidence": [
+          "WTI與布蘭特原油雙雙大漲站上百元大關（WTI 102.03美元）"
+        ],
+        "judgment": "油價突破百元直接拉動能源成本，為今日推升綜合通膨預期的最核心管道。"
+      },
+      "supply_chain": {
+        "direction": "unclear",
+        "importance": "low",
+        "evidence": [],
+        "judgment": "摘要未提及供應鏈相關新資料，無法判斷。"
+      },
+      "price_data": {
+        "direction": "unclear",
+        "importance": "medium",
+        "evidence": [
+          "後續需觀察即將公佈的通膨硬數據（CPI/PCE）"
+        ],
+        "judgment": "今日無具體CPI/PCE數據公布，硬數據對通膨預期的驗證尚待後續觀察。"
+      },
+      "demand": {
+        "direction": "unclear",
+        "importance": "low",
+        "evidence": [],
+        "judgment": "摘要未提供PMI、零售銷售或終端需求數據，資料不足。"
+      },
+      "labor_market": {
+        "direction": "unclear",
+        "importance": "low",
+        "evidence": [],
+        "judgment": "摘要未提供就業市場與薪資相關新訊號，資料不足。"
+      },
+      "policy_expectation": {
+        "direction": "up",
+        "importance": "medium",
+        "evidence": [
+          "Fed維持利率不變，市場重新評估通膨與利率維持在高位的時間"
+        ],
+        "judgment": "Fed按兵不動疊加高油價，強化了通膨回溫可能延後降息時間點的政策預期。"
+      },
+      "summary": {
+        "overall_direction": "up",
+        "strength": "strong",
+        "dominant_force": "原油突破百元大關帶來的能源成本上漲壓力。",
+        "offsetting_force": "無顯著緩解通膨預期的因子。",
+        "judgment": "今日通膨預期主要由油價破百單向驅動，呈現強勢上行，成為跨資產定價的首要觸發點。"
+      }
+    },
+    "rate_pricing": {
+      "direction": "mixed",
+      "link_with_inflation_expectation": "長端與通膨預期同向，受高油價驅動而走高；短端則因Fed政策落點與降息預期出現下行分歧。",
+      "fed_policy_signal": "Fed於期中選舉前維持利率不變，直接引發短端殖利率跳水。",
+      "treasury_supply_demand": "摘要未提供公債發行或具體供需數據，資料不足。",
+      "term_premium": "美國10年期公債殖利率升至5.045%，反映市場對長期通膨風險與期限溢價的重新定價。",
+      "safe_haven_bond_buying": "未見顯著避險買債跡象，殖利率在通膨預期主導下上行。",
+      "growth_concern_or_cut_expectation": "短端利率跳水反映市場對短期降息預期的重新調整及風險偏好改善。",
+      "dominant_force": "高油價拉動長端通膨預期壓過短端跳水，驅動殖利率曲線走陡與長端破5.045%。",
+      "judgment": "利率定價呈長短端分化，長端受油價推升通膨預期主導突破5.045%，短端則因Fed按兵不動而跳水，整體呈現曲線陡峭化特徵。"
+    },
+    "dollar_pricing": {
+      "direction": "down",
+      "link_with_rates": "與長端利率方向背離。美元未跟隨10年期殖利率上行，反而受短端殖利率跳水牽制走弱。",
+      "safe_haven_dollar": "風險偏好改善削弱了美元的避險需求。",
+      "liquidity_demand": "未見美元流動性緊縮訊號。",
+      "other_currency_weakness": "非美資產反彈，削弱美元相對表現。",
+      "us_relative_growth_or_policy": "Fed按兵不動與短端利率下行削弱了短期利差優勢。",
+      "dominant_force": "短端殖利率跳水與風險偏好改善構成的抵銷力量，壓過了長端殖利率上行的拉動。",
+      "judgment": "美元指數走弱至102.15，顯示長端殖利率推升匯率的傳導機制暫時受阻，短端利率與風險情緒成為今日美元定價的主導修正因子。"
+    },
+    "gold_pricing": {
+      "direction": "down",
+      "rate_or_real_rate_pressure": "美債10年期殖利率升至5.045%，推升持有不孳息資產的機會成本與實質利率壓力，為主要壓制力量。",
+      "dollar_effect": "美元走弱本應帶來一定支撐，但不足以抵銷高殖利率帶來的壓力。",
+      "safe_haven_demand": "地緣避險需求並未顯著轉化為黃金買盤。",
+      "central_bank_buying": "摘要未提及央行購金動向。",
+      "geopolitical_risk": "地緣政治風險對金價的推升作用暫被高利率環境掩蓋。",
+      "dominant_force": "美債10年期殖利率突破5.045%帶來的利率與機會成本壓力。",
+      "judgment": "黃金回落至4073美元，表明市場目前優先定價高利率帶來的持有利息成本，而非地緣避險或美元走弱因素。"
+    },
+    "asia_fx_pricing": {
+      "twd": {
+        "reaction": "小幅偏強 / 獲得喘息空間",
+        "consistent_with_dollar_pressure": "yes",
+        "local_correction_factor": "美元指數回落減輕了外部資金流出壓力。",
+        "judgment": "隨著美元與短端利率走弱，台幣順應美元壓力減緩而獲得小幅喘息空間。"
+      },
+      "jpy": {
+        "reaction": "小幅偏強 / 獲得喘息空間",
+        "consistent_with_dollar_pressure": "yes",
+        "local_correction_factor": "美元走弱緩解了美日利差擴大的即時壓迫感。",
+        "judgment": "日圓在美元指數壓制減弱下止跌回升，反應美元側傳導的暫時放緩。"
+      },
+      "krw": {
+        "reaction": "待確認",
+        "consistent_with_dollar_pressure": "unclear",
+        "local_correction_factor": "daily_summary 未提供韓圜具體數據與動態。",
+        "judgment": "缺乏資料，暫無法給出確切定價判斷。"
+      }
+    },
+    "market_contradiction": {
+      "baseline_expectation": "在油價破百推升通膨預期、美債10年期殖利率強勢突破5.045%的背景下，基準傳導預期美利差優勢應吸引資金流入，帶動美元指數走強。",
+      "actual_reaction": "美債長端殖利率創高的同時，美元指數卻回落至102.15偏弱走跌，日圓與台幣亦出現反彈。",
+      "most_non_obvious_link": "美債長端殖利率（5.045%）與美元指數（102.15）發生方向背離。",
+      "possible_explanation": "Fed按兵不動導致短端殖利率跳水，削減了短期利差優勢；同時非美資產反彈與風險偏好改善，共同阻滯了長端殖利率向美元強勢的傳導。",
+      "is_correction_or_new_mainline": "offsetting_force",
+      "how_to_integrate_into_main_theme": "將美元走弱定位為通膨預期主線下的跨資產修正因子，主線仍維持高油價帶動長端通膨與利率定價，但匯率端受到短端結構與風險情緒的暫時干擾。",
+      "presenter_story_angle": {
+        "opening_question": "當油價飆破百元、美債10年期殖利率站上5.04%的高點時，為什麼美元指數反而走弱落至102.15？",
+        "normal_script": "油價大漲重燃通膨預期，推升長端利率，通常會透過利差優勢拉高美元。",
+        "where_it_breaks": "然而 Fed 按兵不動引發短端殖利率跳水，加上風險偏好改善，中斷了長端殖利率對美元的支撐力量。",
+        "why_it_matters": "這代表市場目前對短端利率預期與風險情緒的定價壓過了長端利差，若後續硬數據證實通膨高企，美元與長端殖利率的背離可能被迫收斂。",
+        "next_watch": "觀察 WTI 能否持續穩在 100 美元之上，以及即將公布的 CPI/PCE 是否會扭轉短端利率跳水的預期。"
+      }
+    },
+    "pricing_assessment": {
+      "dominant_market_force": "油價突破百元關卡強勢推升綜合通膨預期，並拉動美債10年期殖利率突破5.045%。",
+      "offsetting_force": "Fed按兵不動致短端殖利率跳水，疊加風險偏好改善，壓抑美元指數並壓制金價。",
+      "most_non_obvious_signal": "美債長端殖利率衝高破5%與美元指數偏弱走跌之間的連貫性阻滯（背離）。",
+      "market_question": "高油價驅動的長端通膨預期，能否在後續CPI/PCE硬數據中得到印證，進而修復美元與長端殖利率的背離？",
+      "one_sentence_takeaway": "油價破百主導通膨與長端利率衝高，但美元受短端跳水牽制走弱，形成跨資產傳導的短線修正。",
+      "next_watch": "WTI原油是否企穩100美元之上、美元指數止跌狀況，以及即將公佈的CPI與PCE硬數據。"
+    }
+  }
+}
