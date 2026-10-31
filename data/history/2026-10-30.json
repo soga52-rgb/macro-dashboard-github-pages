@@ -1,0 +1,64 @@
+{
+  "generated_at": "2026-10-31T14:20:16+08:00",
+  "source": "Google Sheets Today Daily Source",
+  "mode": "today_daily_source",
+  "data_status": "complete",
+  "daily_summary": {
+    "date": "2026-10-30",
+    "headline": "通膨與避險買盤多空拉鋸",
+    "executive_summary": "市場正面臨能源通膨壓力回升與聯準會維持緊縮底牌的考驗，但核心關注點在於避險買盤對長端利率的壓制效應。美債10年期殖利率下行與油價上攻形成分歧，顯示避險資金流入公債成為關鍵修正因子。美元指數受避險及利差支撐維持偏強，金價受美元壓制走跌，跨資產傳導呈現部分連貫與分歧並存。",
+    "market_signals": [
+      "油價大漲衝擊通膨",
+      "美債長端逆勢走跌",
+      "美元偏強壓制黃金"
+    ],
+    "macro_chain": "油價上漲推升能源通膨壓力與地緣避險升溫 -> 公債避險買盤壓低美國10年期公債殖利率至4.929% -> 避險流動性支撐美元指數走強至101.96 -> 金價受強美元壓制下跌、台幣承壓偏弱（傳導部分分歧）",
+    "divergence": "今日核心背離在於「原油走強與公債殖利率下行」。油價上行本應推升綜合通膨預期並帶動利率走高，但市場湧入公債避險壓低長端殖利率，使避險買盤成為壓制利率的主要修正因子；同時美元並未跟隨殖利率回落，反而因避險屬性維持偏強，跨資產傳導出現分歧，後續趨勢仍待觀察。",
+    "market_snapshot": "WTI｜102.95｜上行｜油價上行，增加能源成本與短期通膨預期的上行壓力；若非今日主線，應視為修正因子或並行訊號。\nUS10Y｜4.929%｜下行｜長端利率回落，反映全球資金避險買盤介入，修正了通膨預期對殖利率的推升效果。\nDXY｜101.96｜偏強｜美元受避險流動性與政策底牌支撐偏強，對非美與亞洲貨幣持續帶來匯率壓力。",
+    "news_evidence": [
+      "WTI原油突破102美元、布蘭特原油達112美元，顯著增加能源成本與短期綜合通膨預期上行壓力。",
+      "MarketWatch報導全球公債在避險買盤推動下殖利率大幅下挫，美國10年期公債殖利率降至4.928%。",
+      "聯準會雖暫停升息但保留緊縮底牌，初領失業金意外下滑顯示就業市場仍具韌性，提供美元利差優勢支撐。",
+      "美元指數維持在101.96相對高檔，壓迫黃金跌至3884美元附近，亞洲貨幣中台幣走勢偏弱。"
+    ],
+    "watchpoints": [
+      "後續非農就業數據若超預期強勁，是否削弱美債避險買盤並重新推升10年期殖利率突破5%。",
+      "油價若持續在高檔震盪，能源通膨修正因子是否轉為主導敘事，迫使市場重新定價升息路徑。",
+      "日本央行政策動向與官員談話，若釋出貨幣政策調整訊號，可能引發日圓波動並牽動美元指數。"
+    ],
+    "visual_note": {
+      "title": "通膨預期與避險買盤拉鋸：原油強彈下的利率分歧",
+      "file_id": "1ZIz9GLyRhkm0uhSLU938O0uRhQcCex0p",
+      "url": "https://drive.google.com/file/d/1ZIz9GLyRhkm0uhSLU938O0uRhQcCex0p/view?usp=drivesdk",
+      "model": "gemini-3.1-flash-image"
+    },
+    "news_narrative": {
+      "title": "高利率與避險需求拉鋸",
+      "support_level": "中",
+      "cards": [
+        {
+          "label": "驗證結果",
+          "text": "部分支持"
+        },
+        {
+          "label": "摘要",
+          "text": "市場面臨能源通膨壓力與聯準會鷹派論調，但美國10年期公債殖利率不升反降至4.928%。主因全球資金湧入公債避險壓低長端利率，成為關鍵修正因子。美元指數在避險與高利率預期支撐下維持強勢，金價則受強美元壓制下跌，傳導鏈呈現部分連貫與分歧並存。"
+        },
+        {
+          "label": "支持新聞",
+          "text": "1. 新聞重點：MarketWatch報導10月全球公債殖利率在資金尋求避險的買盤推動下大幅下挫，同時鉅亨網報導聯準會暫停升息但保留緊縮底牌且初領失業金意外下滑。\n2. 市場影響：壓低美國10年期公債殖利率，同時支撐美元指數走強並拖累黃金下行，限制了高油價對公債殖利率的推升力道。\n3. 驗證結論：資產走勢部分支持政策鷹派敘事，但避險買盤壓低公債殖利率，使通膨傳導至利率的環節出現分歧。"
+        },
+        {
+          "label": "異常訊號",
+          "text": "1. WTI與布蘭特原油雙雙走高，理論上推升通膨預期與美債殖利率，但美國10年期公債殖利率卻下行，反映市場避險需求成為壓低利率的主要修正因子。\n2. 殖利率回落通常不利美元，但美元指數逆勢偏強，顯示美元主要受到避險買盤及非美貨幣相對偏弱所驅動，與利率走向形成分歧。\n3. 亞洲貨幣數據落後且走勢不一，日圓與韓元日前偏強而台幣偏弱，後續對強美元的傳導仍屬待觀察訊號。"
+        },
+        {
+          "label": "觀察重點",
+          "text": "1. 後續非農就業與最新通膨硬數據，觀察是否強化高利率維持更久預期並推升美債殖利率。\n2. 地緣政治風險與能源供給中斷情勢，若油價持續飆升是否迫使美債避險買盤退場並轉向定價通膨。\n3. 日本央行（BOJ）會議決議與政策動向，若釋出偏鷹訊號可能帶動日圓大幅波動並牽動美元指數走向。"
+        }
+      ],
+      "news_links_json": "[\n  {\n    \"rank\": 1,\n    \"theme\": \"FX｜Dollar / FX / 美元與匯率\",\n    \"source\": \"鉅亨網\",\n    \"title\": \"〈紐約匯市〉美元10月上漲 升息預期居高不下 - 鉅亨網\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiT0FVX3lxTE1JdHA3ZmF4STFwWDQtUzVucG5kUG5GYXc1SUtUa29Nb2ZhNnQ4VkRuZ3dtSXF5cHJLVG5uWVdvcGRZdzZtVUE1NzVKN0d3cWs?oc=5\",\n    \"published_at\": \"Fri, 30 Oct 2026 22:16:15 GMT\",\n    \"score\": 116.6,\n    \"matched_keywords\": \"美元與亞洲匯率:dollar | 變數:DOLLAR_FX | 類型:DATA | 來源角色:CNYES_MACRO\"\n  },\n  {\n    \"rank\": 2,\n    \"theme\": \"Rates｜Treasury Yields / 美債殖利率\",\n    \"source\": \"MarketWatch\",\n    \"title\": \"Global Bond Yields Fall Sharply in October Amid Flight to Safety -- 2nd Update - MarketWatch\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiygFBVV95cUxQVkQ1VjNyb0kzc3E5U3BYblZFSjZuaFcyb2owNVl5MERNNFpKbjJTaGUwV0R3WGxPZ3A4aHZTaVktX1RtU1Q3WWdHZktYM3EyLTFrak00MU5uLVltd28zWW1uZ1VwQWdjdzVyRWNJYk4zWVZsTGFuRVRNcFpSY29XSXZia0Y3UXQtLTE0dWN1amRhTDBSNWM2WDZHdndOQUNFU0trMHdENGVfbnZjU2dLYVBtMDMzUVkyM0NpYVVwdU85UGVvcEN2b0xR?oc=5\",\n    \"published_at\": \"Fri, 30 Oct 2026 19:09:00 GMT\",\n    \"score\": 116,\n    \"matched_keywords\": \"美債殖利率:treasury/yield/yields/bond | 變數:TREASURY_YIELDS | 類型:REACTION | 來源角色:MARKET_REACTION\"\n  },\n  {\n    \"rank\": 3,\n    \"theme\": \"Fed Policy｜Fed / 聯準會\",\n    \"source\": \"鉅亨網\",\n    \"title\": \"全球主要央行多暫停升息 但能源與地緣政治陰影下 緊縮周期尚未結束 - 鉅亨網\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiT0FVX3lxTE5UOWMyZDBxSXM4LWpxaGJOVXJCTXBhZ2xJVUVPNEtkcE9HakhoSU5idk9BcjFYTC12elRBTXBoS1psR0tLZFlXeW5LVWlrdHc?oc=5\",\n    \"published_at\": \"Fri, 30 Oct 2026 12:40:05 GMT\",\n    \"score\": 112.4,\n    \"matched_keywords\": \"聯準會政策:fed | 變數:FED | 類型:DATA | 來源角色:CNYES_MACRO\"\n  },\n  {\n    \"rank\": 4,\n    \"theme\": \"FX｜Dollar / FX / 美元與匯率\",\n    \"source\": \"鉅亨網\",\n    \"title\": \"【遠東商銀】BOJ會議決議前，美元兌日圓回落 - 鉅亨網\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiT0FVX3lxTE1VaDNLWWxFMDIzU3dvcjlTQWRkQ0xTMGpMcG5ZaGwwajRMUnpwUVJTSEZfbVh5bG9hZ0hmTWJGaG1qY3pHU3ZucHdlZGNub3c?oc=5\",\n    \"published_at\": \"Fri, 30 Oct 2026 01:36:52 GMT\",\n    \"score\": 109.6,\n    \"matched_keywords\": \"美元與亞洲匯率:dollar | 變數:DOLLAR_FX | 類型:DATA | 來源角色:CNYES_MACRO\"\n  },\n  {\n    \"rank\": 5,\n    \"theme\": \"Fed Policy｜Fed / 聯準會\",\n    \"source\": \"鉅亨網\",\n    \"title\": \"不讓華爾街猜透！華許保留升息底牌 重塑Fed決策模式 - 鉅亨網\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiT0FVX3lxTE9Md29ld2phMGJXdHp2YTdIZ08tcEdNYjFFREFjZ3QtcUlpNm1Qc3VyQWltbkpxWmQ2ZEtwcjFSUnRNU3NFZ3lBNWJZQjZZQUU?oc=5\",\n    \"published_at\": \"Thu, 29 Oct 2026 17:30:13 GMT\",\n    \"score\": 106.4,\n    \"matched_keywords\": \"聯準會政策:fed | 變數:FED | 類型:DATA | 來源角色:CNYES_MACRO\"\n  },\n  {\n    \"rank\": 6,\n    \"theme\": \"Fed Policy｜Fed / 聯準會\",\n    \"source\": \"鉅亨網\",\n    \"title\": \"【熱門時事】 聯準會10月鷹派暫停升息，明年將進行重大改革減少議息會議次數 - 鉅亨網\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiS0FVX3lxTFBrakk0MFRaWXRMOXgzRkt0Vm9XdXRkR0lhZFBTeXlHOGI5T0JHUEdlekRyS2ZsRVhWYmtwRkh0Q21ndWVoeXQzTTRUSQ?oc=5\",\n    \"published_at\": \"Thu, 29 Oct 2026 07:14:05 GMT\",\n    \"score\": 104.4,\n    \"matched_keywords\": \"聯準會政策:fed | 變數:FED | 類型:DATA | 來源角色:CNYES_MACRO\"\n  },\n  {\n    \"rank\": 7,\n    \"theme\": \"Fed Policy｜Fed / 聯準會\",\n    \"source\": \"鉅亨網\",\n    \"title\": \"「沒聽到任何人談論政治」華許駁斥期中選舉影響利率決策 - 鉅亨網\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiT0FVX3lxTE5tUXBWX2RnaVBSa1huOHpjYzlLcnpLYzV4eGZkbEp4SVp1VlBkYVU5d0lIZXMtSWg4dkZtcTJLaUU1TFJUU0F1Q3B0eHBQd2M?oc=5\",\n    \"published_at\": \"Thu, 29 Oct 2026 00:30:03 GMT\",\n    \"score\": 104.4,\n    \"matched_keywords\": \"聯準會政策:fed | 變數:FED | 類型:DATA | 來源角色:CNYES_MACRO\"\n  },\n  {\n    \"rank\": 8,\n    \"theme\": \"Asset｜Gold / 黃金\",\n    \"source\": \"Reuters\",\n    \"title\": \"Gold slips on higher oil; markets assess Warsh comments after Fed holds rates steady - Reuters\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiowFBVV95cUxNRUczTDEtcklEQks1UTM3TlZhanpWZ19RUUVMTnkzQTFXWHpmeEF0YWVST0gzamNJNG5KVFJIcUZMOUxnZnBRMkhXYjBkaGdER1Vkc2hQWmplZmluYkQ4YWNsbkwwY0N5ZzFDQldCTDJucHRZY3lOVHdPWEt0RnJmQVprXzBoQnFEZHM3OS13cGNrRFp6MjBuMXJrVTRpcGs3UkpN?oc=5\",\n    \"published_at\": \"Wed, 28 Oct 2026 21:25:47 GMT\",\n    \"score\": 101.2,\n    \"matched_keywords\": \"聯準會政策:fed | 能源與原物料:oil/gold | 地緣政治:war | 風險情緒／避險資金:gold | 變數:GOLD | 類型:BACKUP | 來源角色:WIRE_CONFIRMATION\"\n  }\n]"
+    },
+    "raw_daily_summary_package": "日期：2026-10-30\n今日主線：通膨與避險買盤多空拉鋸\n\nExecutive Summary：\n市場正面臨能源通膨壓力回升與聯準會維持緊縮底牌的考驗，但核心關注點在於避險買盤對長端利率的壓制效應。美債10年期殖利率下行與油價上攻形成分歧，顯示避險資金流入公債成為關鍵修正因子。美元指數受避險及利差支撐維持偏強，金價受美元壓制走跌，跨資產傳導呈現部分連貫與分歧並存。\n\n今日核心訊號：\n- 油價大漲衝擊通膨\n- 美債長端逆勢走跌\n- 美元偏強壓制黃金\n\n核心資產重點：\nWTI｜102.95｜上行｜油價上行，增加能源成本與短期通膨預期的上行壓力；若非今日主線，應視為修正因子或並行訊號。\nUS10Y｜4.929%｜下行｜長端利率回落，反映全球資金避險買盤介入，修正了通膨預期對殖利率的推升效果。\nDXY｜101.96｜偏強｜美元受避險流動性與政策底牌支撐偏強，對非美與亞洲貨幣持續帶來匯率壓力。\n\n矛盾 / 背離：\n今日核心背離在於「原油走強與公債殖利率下行」。油價上行本應推升綜合通膨預期並帶動利率走高，但市場湧入公債避險壓低長端殖利率，使避險買盤成為壓制利率的主要修正因子；同時美元並未跟隨殖利率回落，反而因避險屬性維持偏強，跨資產傳導出現分歧，後續趨勢仍待觀察。\n\n總經傳導鏈：\n油價上漲推升能源通膨壓力與地緣避險升溫 -> 公債避險買盤壓低美國10年期公債殖利率至4.929% -> 避險流動性支撐美元指數走強至101.96 -> 金價受強美元壓制下跌、台幣承壓偏弱（傳導部分分歧）\n\n新聞佐證：\n- WTI原油突破102美元、布蘭特原油達112美元，顯著增加能源成本與短期綜合通膨預期上行壓力。\n- MarketWatch報導全球公債在避險買盤推動下殖利率大幅下挫，美國10年期公債殖利率降至4.928%。\n- 聯準會雖暫停升息但保留緊縮底牌，初領失業金意外下滑顯示就業市場仍具韌性，提供美元利差優勢支撐。\n- 美元指數維持在101.96相對高檔，壓迫黃金跌至3884美元附近，亞洲貨幣中台幣走勢偏弱。\n\n待觀察問題：\n- 後續非農就業數據若超預期強勁，是否削弱美債避險買盤並重新推升10年期殖利率突破5%。\n- 油價若持續在高檔震盪，能源通膨修正因子是否轉為主導敘事，迫使市場重新定價升息路徑。\n- 日本央行政策動向與官員談話，若釋出貨幣政策調整訊號，可能引發日圓波動並牽動美元指數。"
+  }
+}
