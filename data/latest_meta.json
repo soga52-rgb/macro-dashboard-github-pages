@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-31T14:21:11+08:00",
+  "generated_at": "2026-11-02T14:53:25+08:00",
   "date": "2026-10-30",
   "history_dates": [
     "2026-10-30",
@@ -11,22 +11,21 @@
     "2026-10-23"
   ],
   "source": "Apps Script dashboard_html_source",
-  "html_length": 1348066,
-  "index_html_length": 1358988,
+  "html_length": 1232813,
+  "index_html_length": 1243735,
   "ai_presenter": "daily_macro_podcast_v1_compact_ui_v7",
   "daily_audio": {
-    "generated_at": "2026-10-31T14:21:09+08:00",
+    "generated_at": "2026-11-02T14:53:25+08:00",
     "date": "2026-10-30",
     "audio_file": "assets/audio/daily_ai_presenter_2026-10-30.mp3",
-    "audio_exists": false,
+    "audio_exists": true,
     "audio_generated_this_run": false,
     "enabled": true,
     "voice": "zh-TW-YunJheNeural",
     "rate": "-8%",
     "volume": "+0%",
     "pitch": "-5Hz",
-    "status": "failed",
-    "error": "No audio was received. Please verify that your parameters are correct."
+    "status": "skipped_existing"
   },
   "gemini_model": "gemini-3.5-flash"
 }
