@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-02T14:53:25+08:00",
-  "date": "2026-10-30",
-  "audio_file": "assets/audio/daily_ai_presenter_2026-10-30.mp3",
+  "generated_at": "2026-11-03T15:17:27+08:00",
+  "date": "2026-11-02",
+  "audio_file": "assets/audio/daily_ai_presenter_2026-11-02.mp3",
   "audio_exists": true,
-  "audio_generated_this_run": false,
+  "audio_generated_this_run": true,
   "enabled": true,
   "voice": "zh-TW-YunJheNeural",
   "rate": "-8%",
   "volume": "+0%",
   "pitch": "-5Hz",
-  "status": "skipped_existing"
+  "status": "ok"
 }

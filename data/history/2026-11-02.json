@@ -1,0 +1,64 @@
+{
+  "generated_at": "2026-11-03T15:16:39+08:00",
+  "source": "Google Sheets Today Daily Source",
+  "mode": "today_daily_source",
+  "data_status": "complete",
+  "daily_summary": {
+    "date": "2026-11-02",
+    "headline": "通膨預期重估殖利率回落",
+    "executive_summary": "市場重新評估通膨權重，油價下行顯著緩和能源通膨壓力，成為主導長端利率下修的關鍵修正因子。美國10年期公債殖利率滑落至4.894%，同步拖累美元指數跌破102並推升金價反彈。儘管台幣貼合弱勢美元走強，日圓卻受政治與利差疑慮逆勢偏弱，跨資產傳導呈現部分連貫。",
+    "market_signals": [
+      "油價下行緩和通膨",
+      "美債殖利率回落",
+      "美元走弱金價反彈"
+    ],
+    "macro_chain": "[油價重挫壓低通膨預期] -> [美國10年期公債殖利率回落至4.894%] -> [美元指數走跌至101.78] -> [黃金反彈、台幣走強，但日圓因政治不確定性分歧偏弱]",
+    "divergence": "今日核心主線為油價下行帶動的通膨預期重估，壓抑美債殖利率並拖累美元。然而日圓並未隨美元走弱升值反而走軟，與走強的台幣形成分歧，顯示地緣與選舉前政治因素仍是亞洲匯率的待觀察變數。",
+    "market_snapshot": "WTI｜96.26｜下跌｜油價下行，可能緩和能源通膨壓力；若由需求疲弱造成，亦需視為成長降溫訊號。\nUS10Y｜4.894%｜下滑｜反映能源通膨預期降溫與市場對高利率維持更久的預期邊際修正\nDXY｜101.78｜回落｜利差優勢隨殖利率回調而收斂，但亞洲貨幣走勢分歧顯示地緣不確定性仍在",
+    "news_evidence": [
+      "WTI與Brent原油期貨同步回落，削弱市場對能源通膨再度升溫的預期。",
+      "美國10年期公債殖利率滑落至4.894%，歐洲主要公債殖利率亦同步走低。",
+      "美元指數受利率下行拖累跌至101.78，支撐黃金自低檔強勁反彈至3956.6美元。",
+      "台幣受惠弱美元偏強，但日圓逆勢貶至157.87，反映美國選舉前避險與利差情緒拉鋸。"
+    ],
+    "watchpoints": [
+      "美國財政部公債發行規模指引，評估供給壓力是否再次推升長端利率。",
+      "國際原油期貨能否維持跌勢，若地緣衝突加劇反彈將重燃通膨預期風險。",
+      "美國期中選舉前後政治不確定性消退後，日圓是否會跟隨美元回調展開補升。"
+    ],
+    "visual_note": {
+      "title": "通膨預期重估：油價下行引領利率回落與跨資產連鎖反應",
+      "file_id": "19_aELUHw7EwA4S1peRaH3P8EpGNXncWC",
+      "url": "https://drive.google.com/file/d/19_aELUHw7EwA4S1peRaH3P8EpGNXncWC/view?usp=drivesdk",
+      "model": "gemini-3.1-flash-image"
+    },
+    "news_narrative": {
+      "title": "通膨預期重新評估",
+      "support_level": "中",
+      "cards": [
+        {
+          "label": "驗證結果",
+          "text": "部分支持"
+        },
+        {
+          "label": "摘要",
+          "text": "市場重新評估通膨權重，油價大跌削弱了通膨升溫疑慮，成為主導利率下行的修正因子。美國10年期公債殖利率滑落並拖累美元指數，推動金價自低檔反彈；交叉資產傳導多數貼合，但亞洲貨幣中日圓與韓元受政治不確定性拖累偏弱，傳導僅部分連貫。"
+        },
+        {
+          "label": "支持新聞",
+          "text": "1. 新聞重點：MarketWatch與鉅亨網報導，油價重挫削弱市場對通膨升溫的疑慮，美債殖利率與歐洲公債殖利率同步下滑，美元在美國期中選舉前走軟。\n2. 市場影響：壓低通膨預期與美債殖利率，拖累美元指數，同時支撐黃金從一年低點強勁反彈逾2%。\n3. 驗證結論：資產走勢支持油價下跌帶動殖利率與美元走弱的因果鏈，但亞洲貨幣走勢分歧顯示地緣與政治風險仍待觀察。"
+        },
+        {
+          "label": "異常訊號",
+          "text": "1. 通膨硬數據雖顯黏性，但WTI與Brent原油下行成為強效修正因子，帶動美國10年期公債殖利率下探至4.894%，化解了單純看通膨推升利率的矛盾。\n2. 美元指數回落至101.78，但亞洲貨幣並未全數升值；台幣偏強貼合弱勢美元，日圓與韓元卻逆勢偏弱，屬於地緣政治與美國期中選舉前的分歧訊號。"
+        },
+        {
+          "label": "觀察重點",
+          "text": "1. 美國財政部美債發行指引調整，是否引發新一波公債供給壓力推升長天期殖利率。\n2. 國際油價能否維持跌勢，若地緣衝突再起帶動原油反彈，將重燃通膨預期上行風險。\n3. 美國期中選舉政治不確定性消退後，日圓與韓元是否會重新跟隨美元指數修正補升。"
+        }
+      ],
+      "news_links_json": "[\n  {\n    \"rank\": 1,\n    \"theme\": \"Rates｜Treasury Yields / 美債殖利率\",\n    \"source\": \"MarketWatch\",\n    \"title\": \"U.S. Treasury, European Bond Yields Fall as Oil Prices Drop -- 2nd Update - MarketWatch\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiwAFBVV95cUxNdm0zVFB1blR1bVprbm5XTTV6a0pjcERVVW9oendzZ0xBeHFOemloYW4tWWpZd1lwUnNOMlg2ZjE5YlNscWV2Q0VJM1RmNlBzSEhFam1LVjRIMzRuS1RINm1NMURzeUY3bmJSTnlsOUd1MmxtaHA1Y3N1M1JqQmtMc3ctM2Z4LWZKMEYwb0VPZ2tHZUQ5N0RkZUtJSkdpdUZSUWYtUktGMjVEdnhUSUpCZnlaUWNLQzV3MmUtLVVQeDg?oc=5\",\n    \"published_at\": \"Mon, 02 Nov 2026 19:05:00 GMT\",\n    \"score\": 121,\n    \"matched_keywords\": \"通膨數據:prices | 美債殖利率:treasury/yield/yields/bond | 能源與原物料:oil | 變數:TREASURY_YIELDS | 類型:REACTION | 來源角色:MARKET_REACTION\"\n  },\n  {\n    \"rank\": 2,\n    \"theme\": \"Asset｜Gold / 黃金\",\n    \"source\": \"鉅亨網\",\n    \"title\": \"〈貴金屬盤後〉黃金從一年低點反彈逾2% 油價重挫通膨升溫疑慮 - 鉅亨網\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiT0FVX3lxTE8xd3JLdFhvWEVPa2ZlLWVKS1FtdWpkTFVGMDhYd1BpU2Y1SmFqUjVhQkQ0QmQyaXBXbTdXZGVKZlZ6dVJhN3ZjN1Y2MjlIbTA?oc=5\",\n    \"published_at\": \"Mon, 02 Nov 2026 22:07:56 GMT\",\n    \"score\": 118.2,\n    \"matched_keywords\": \"能源與原物料:gold | 風險情緒／避險資金:gold | 變數:GOLD | 類型:DATA | 來源角色:CNYES_MACRO\"\n  },\n  {\n    \"rank\": 3,\n    \"theme\": \"FX｜Dollar / FX / 美元與匯率\",\n    \"source\": \"鉅亨網\",\n    \"title\": \"〈紐約匯市〉美國期中選舉前美元走弱 油價大跌 - 鉅亨網\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiT0FVX3lxTE5WQ0Y0MWUwX0hzTE1IMVBHQkN4cnFzQ29sajM5bWlvQTFyNnRIVUpkMXJ5cjdqd0pLQTh1T21OOTNuaGpFbkprRkNCR0c0aEE?oc=5\",\n    \"published_at\": \"Mon, 02 Nov 2026 21:48:20 GMT\",\n    \"score\": 116.6,\n    \"matched_keywords\": \"美元與亞洲匯率:dollar | 變數:DOLLAR_FX | 類型:DATA | 來源角色:CNYES_MACRO\"\n  },\n  {\n    \"rank\": 4,\n    \"theme\": \"Rates｜Treasury Yields / 美債殖利率\",\n    \"source\": \"鉅亨網\",\n    \"title\": \"華爾街嚴陣以待：美債發行指引或迎近三年來最大調整 - 鉅亨網\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiT0FVX3lxTE1hRmUxQmd0MnNYU2R5UmNNaVZndFY0ZUw4RGNnTFNCMmNlNS1TZ2J4SWt4NmZ6eWpldFZxdkdlcldfUHE5aFNlUEx3bHZmRDQ?oc=5\",\n    \"published_at\": \"Mon, 02 Nov 2026 01:00:15 GMT\",\n    \"score\": 115,\n    \"matched_keywords\": \"美債殖利率:treasury/yield/yields | 變數:TREASURY_YIELDS | 類型:DATA | 來源角色:CNYES_MACRO\"\n  },\n  {\n    \"rank\": 5,\n    \"theme\": \"FX｜Dollar / FX / 美元與匯率\",\n    \"source\": \"鉅亨網\",\n    \"title\": \"搶攻AI雲端！甲骨文啟動200億美元股債募資 迎接資本支出高峰 - 鉅亨網\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiT0FVX3lxTFB5Y3d4dWxYbGVUMDczUWV3bDVPQnhtN3lqN3VSN3FUY0FnMURncmZicWxsX0VJNF9pbjdGRXUwOWcyQ25mWkoxSjMxdDVZMzg?oc=5\",\n    \"published_at\": \"Mon, 02 Nov 2026 15:00:42 GMT\",\n    \"score\": 94.6,\n    \"matched_keywords\": \"美元與亞洲匯率:dollar | 變數:DOLLAR_FX | 類型:DATA | 來源角色:CNYES_MACRO\"\n  }\n]"
+    },
+    "raw_daily_summary_package": "日期：2026-11-02\n今日主線：通膨預期重估殖利率回落\n\nExecutive Summary：\n市場重新評估通膨權重，油價下行顯著緩和能源通膨壓力，成為主導長端利率下修的關鍵修正因子。美國10年期公債殖利率滑落至4.894%，同步拖累美元指數跌破102並推升金價反彈。儘管台幣貼合弱勢美元走強，日圓卻受政治與利差疑慮逆勢偏弱，跨資產傳導呈現部分連貫。\n\n今日核心訊號：\n- 油價下行緩和通膨\n- 美債殖利率回落\n- 美元走弱金價反彈\n\n核心資產重點：\nWTI｜96.26｜下跌｜油價下行，可能緩和能源通膨壓力；若由需求疲弱造成，亦需視為成長降溫訊號。\nUS10Y｜4.894%｜下滑｜反映能源通膨預期降溫與市場對高利率維持更久的預期邊際修正\nDXY｜101.78｜回落｜利差優勢隨殖利率回調而收斂，但亞洲貨幣走勢分歧顯示地緣不確定性仍在\n\n矛盾 / 背離：\n今日核心主線為油價下行帶動的通膨預期重估，壓抑美債殖利率並拖累美元。然而日圓並未隨美元走弱升值反而走軟，與走強的台幣形成分歧，顯示地緣與選舉前政治因素仍是亞洲匯率的待觀察變數。\n\n總經傳導鏈：\n[油價重挫壓低通膨預期] -> [美國10年期公債殖利率回落至4.894%] -> [美元指數走跌至101.78] -> [黃金反彈、台幣走強，但日圓因政治不確定性分歧偏弱]\n\n新聞佐證：\n- WTI與Brent原油期貨同步回落，削弱市場對能源通膨再度升溫的預期。\n- 美國10年期公債殖利率滑落至4.894%，歐洲主要公債殖利率亦同步走低。\n- 美元指數受利率下行拖累跌至101.78，支撐黃金自低檔強勁反彈至3956.6美元。\n- 台幣受惠弱美元偏強，但日圓逆勢貶至157.87，反映美國選舉前避險與利差情緒拉鋸。\n\n待觀察問題：\n- 美國財政部公債發行規模指引，評估供給壓力是否再次推升長端利率。\n- 國際原油期貨能否維持跌勢，若地緣衝突加劇反彈將重燃通膨預期風險。\n- 美國期中選舉前後政治不確定性消退後，日圓是否會跟隨美元回調展開補升。"
+  }
+}
