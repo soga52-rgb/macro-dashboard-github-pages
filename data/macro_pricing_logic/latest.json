@@ -1,166 +1,166 @@
 {
-  "generated_at": "2026-11-06T15:29:23+08:00",
-  "date": "2026-11-05",
+  "generated_at": "2026-11-07T14:39:00+08:00",
+  "date": "2026-11-06",
   "mode": "macro_pricing_logic_v4",
   "logic": {
     "pricing_context": {
-      "market_was_pricing": "原油價格走高且通膨與就業訊號偏熱的環境。",
-      "new_information": "股市科技股拋售加劇帶動資金湧入美債避險，美國10年期公債殖利率降至4.84%，美元指數升至101.59，黃金攀升至4097.90美元。",
-      "pricing_question": "科技股拋售所引發的債券避險買盤，能否在原油走高與通膨偏熱的背景下持續壓制殖利率？"
+      "market_was_pricing": "市場原先拉鋸於原油價格波動與通膨放緩預期之間，關注聯準會政策轉折的時間點。",
+      "new_information": "美國非農就業新增人數顯著超出預期，同時 WTI 與 Brent 原油分別回跌至 90.34 美元與 97.76 美元。",
+      "pricing_question": "超預期的強勁就業數據是否足以壓過原油下跌帶來的通膨緩和訊號，並主導聯準會高利率維持更久？"
     },
     "input_material_mapping": {
       "inflation_materials": [
-        "WTI原油攀升至91.20美元，Brent原油達99.25美元，持續累積能源成本與通膨壓力",
-        "既有通膨與就業訊號偏熱的市場背景",
-        "市場高度聚焦即將公布的非農就業數據以驗證通膨韌性"
+        "WTI 原油回跌至 90.34 美元，Brent 原油回跌至 97.76 美元",
+        "美國非農就業新增人數顯著超出預期",
+        "美股出現回檔拋售"
       ],
       "rate_materials": [
-        "科技股拋售加劇促使資金湧入美債避險",
-        "美國10年期公債殖利率回落至4.84%",
-        "市場關注非農就業數據以驗證降息路徑"
+        "美國 10 年期公債殖利率攀升至 4.859%",
+        "市場對聯準會高利率維持更久（Higher for longer）與降息延後的定價增強"
       ],
       "dollar_materials": [
-        "美元指數走強至101.59",
-        "避險需求與利差優勢支撐美元偏強姿態"
+        "美債殖利率擴大帶來利差優勢",
+        "美元指數偏強收在 102.28"
       ],
       "gold_materials": [
-        "黃金同步攀升至4097.90美元",
-        "避險買盤與防禦性資產配置需求推升金價"
+        "美國 10 年期美債殖利率升至 4.859%",
+        "美元指數走強至 102.28",
+        "無孳息資產黃金承壓跌至 4079.5 美元"
       ],
       "asia_fx_materials": [
-        "美元指數走強對亞洲貨幣帶來普遍承壓",
-        "美元兌台幣升至33.07，台幣維持弱勢整理"
+        "日圓受利差擴大壓制貶至 158.42",
+        "台幣相對抗跌收在 32.76",
+        "韓圜缺乏具體數據"
       ],
-      "mapping_summary": "今日素材顯示股市科技股拋售帶動避險情緒顯著升溫，避險資金流向公債、美元與黃金，遮蔽了原油價格攀升帶來的通膨壓力。"
+      "mapping_summary": "今日主線由非農就業強勁所引發的高利率預期主導，帶動美債殖利率與美元走高並壓制金價；原油下跌則提供通膨降溫的反向修正訊號，亞幣則呈分化反應。"
     },
     "inflation_expectation": {
       "energy": {
-        "direction": "up",
-        "importance": "high",
+        "direction": "down",
+        "importance": "medium",
         "evidence": [
-          "WTI原油升至91.20美元",
-          "Brent原油升至99.25美元"
+          "WTI 原油跌至 90.34 美元",
+          "Brent 原油跌至 97.76 美元"
         ],
-        "judgment": "油價高檔攀升顯著增加能源成本，構成短期通膨預期的主要推升管道。"
+        "judgment": "油價回跌提供能源通膨降溫訊號，有助於緩和綜合通膨預期上行壓力。"
       },
       "supply_chain": {
         "direction": "unclear",
         "importance": "low",
         "evidence": [],
-        "judgment": "資料不足以判斷供應鏈瓶頸之最新變化。"
+        "judgment": "摘要未提供供應鏈或運價相關新增數據。"
       },
       "price_data": {
-        "direction": "up",
-        "importance": "medium",
-        "evidence": [
-          "通膨訊號偏熱"
-        ],
-        "judgment": "既有通膨數據偏熱之基調，為通膨預期提供基底支撐。"
-      },
-      "demand": {
         "direction": "unclear",
         "importance": "low",
         "evidence": [],
-        "judgment": "資料未揭露最新實質需求端經濟數據。"
+        "judgment": "CPI 與 PPI 通膨硬數據尚待公布，暫無新資料。"
       },
-      "labor_market": {
-        "direction": "up",
-        "importance": "medium",
-        "evidence": [
-          "就業訊號偏熱",
-          "市場聚焦非農就業數據"
-        ],
-        "judgment": "就業市場訊號偏熱維持通膨韌性疑慮，尚待非農就業數據進一步印證。"
-      },
-      "policy_expectation": {
+      "demand": {
         "direction": "mixed",
         "importance": "medium",
         "evidence": [
-          "市場聚焦即將公布的非農就業數據以驗證降息路徑"
+          "美股拋售回檔"
         ],
-        "judgment": "政策路徑預期正處於非農公布前夕的觀望與驗證期。"
+        "judgment": "美股回檔反映成長降溫或需求修正疑慮，但尚未構成確立的下行趨勢。"
+      },
+      "labor_market": {
+        "direction": "up",
+        "importance": "high",
+        "evidence": [
+          "非農就業新增人數顯著超出預期"
+        ],
+        "judgment": "就業市場展現強勁韌性，增強了薪資與服務業通膨推升的潛在風險。"
+      },
+      "policy_expectation": {
+        "direction": "up",
+        "importance": "high",
+        "evidence": [
+          "市場預期聯準會維持緊縮高利率政策的時間將延長"
+        ],
+        "judgment": "就業強勁直接打擊轉鴿期待，市場轉向定價長期高利率環境。"
       },
       "summary": {
-        "overall_direction": "up",
+        "overall_direction": "mixed",
         "strength": "medium",
-        "dominant_force": "WTI與Brent原油高檔續攀及既有通膨與就業偏熱訊號。",
-        "offsetting_force": "科技股賣壓引發對整體金融情勢緊縮的關注（尚主要體現在避險層面）。",
-        "judgment": "通膨預期本身方向偏強，惟其向利率端的傳導被突發的避險買盤所遮蔽與切斷。"
+        "dominant_force": "強勁非農就業數據推升勞動市場與政策緊縮預期",
+        "offsetting_force": "WTI 與 Brent 原油回跌緩和能源通膨壓力",
+        "judgment": "就業強勁推升通膨與緊縮預期，但能源價格下行限制了通膨預期的整體上行空間，呈現多空因子交錯。"
       }
     },
     "rate_pricing": {
-      "direction": "down",
-      "link_with_inflation_expectation": "利率定價與通膨預期方向背離，通膨預期偏上但殖利率下行，顯示傳導鏈受強效修正因子干擾。",
-      "fed_policy_signal": "市場等待非農就業數據以釐清Fed降息路徑。",
-      "treasury_supply_demand": "科技股拋售潮加劇，帶動大規模避險資金湧入公債市場。",
-      "term_premium": "資料不足以評估期限溢價之獨立變動。",
-      "safe_haven_bond_buying": "股災防禦需求激發公債避險買盤，成為押低殖利率的核心動能。",
-      "growth_concern_or_cut_expectation": "科技股重挫引發市場對金融資產價格波動的防禦反應。",
-      "dominant_force": "美股科技股賣壓引發的公債避險買盤。",
-      "judgment": "美債10年期殖利率降至4.84%，反映股災避險資金強度暫時壓過通膨預期，主導利率短線走低。"
+      "direction": "up",
+      "link_with_inflation_expectation": "與勞動市場推升的通膨/政策預期同向，且緊縮預期主導力道壓過原油下行的緩和效果。",
+      "fed_policy_signal": "非農就業超預期強化了聯準會維持高利率更久的政策路徑定價。",
+      "treasury_supply_demand": "摘要未特別提供公債發行與供需特定數據。",
+      "term_premium": "10 年期殖利率升至 4.859%，反映市場對政策利率維持高檔及期限溢價的重新定價。",
+      "safe_haven_bond_buying": "美股出現拋售與避險情緒，但避險買力未能阻止債券賣壓與殖利率上行。",
+      "growth_concern_or_cut_expectation": "降息預期被延後，就業強勁削弱了短期內對經濟陷入衰退的定價。",
+      "dominant_force": "強勁非農數據推動的聯準會高利率維持更久定價",
+      "judgment": "美債殖利率上行至 4.859%，表明市場將非農超預期視為核心訊號，主導緊縮高利率預期並壓過避險買債需求。"
     },
     "dollar_pricing": {
       "direction": "up",
-      "link_with_rates": "美元與美債殖利率方向背離，美債殖利率因買盤回落，但美元受強烈避險買盤與利差優勢支撐而上漲。",
-      "safe_haven_dollar": "美股科技股拋售增強全球資金對美元資產的防禦性配置需求。",
-      "liquidity_demand": "市場波動加劇帶動美元流動性避險買盤。",
-      "other_currency_weakness": "亞洲貨幣普遍走弱，相對鞏固美元強勢立場。",
-      "us_relative_growth_or_policy": "美債殖利率雖有回落但仍處高位（4.84%），利差優勢依然存在。",
-      "dominant_force": "避險需求與相對利差優勢。",
-      "judgment": "美元指數走強至101.59，顯示避險屬性在今日壓過了殖利率拉回的潛在負面影響。"
+      "link_with_rates": "與美債殖利率同向上行，美債殖利率升至 4.859% 提供美利差優勢。",
+      "safe_haven_dollar": "市場避險情緒升溫為美元提供額外支撐。",
+      "liquidity_demand": "摘要未提及美元流動性緊張情事。",
+      "other_currency_weakness": "日圓等非美貨幣因美日利差擴大而承受貶值壓力。",
+      "us_relative_growth_or_policy": "強勁非農進一步印證美國經濟相對其他經濟體具備更高韌性。",
+      "dominant_force": "美債殖利率走高帶來的利差優勢與美國經濟相對韌性",
+      "judgment": "美元指數偏強收在 102.28，主要受到美債殖利率上揚及美國就業強勁所引導的利差與韌性驅動。"
     },
     "gold_pricing": {
-      "direction": "up",
-      "rate_or_real_rate_pressure": "美債10年期殖利率回落至4.84%，降低了持有非孳息資產的機會成本壓力。",
-      "dollar_effect": "美元指數攀高至101.59，但未能壓抑金價，兩者展現罕見的同步走強。",
-      "safe_haven_demand": "科技股重挫推升強烈避險情緒，資金同步注入黃金防禦。",
-      "central_bank_buying": "資料不足以確定央行買盤影響。",
-      "geopolitical_risk": "高油價反映的地緣背景為金價提供底層支撐。",
-      "dominant_force": "科技股拋售引發的防禦性避險買盤與殖利率回落。",
-      "judgment": "黃金攀升至4097.90美元，避險買盤與殖利率回落之合力主導定價，其強度壓過了強勢美元的傳統抑制效果。"
+      "direction": "down",
+      "rate_or_real_rate_pressure": "10 年期美債殖利率升至 4.859%，顯著提高無孳息資產的持有機會成本。",
+      "dollar_effect": "美元指數走強至 102.28，對以美元計價的金價形成直接壓制。",
+      "safe_haven_demand": "雖有避險情緒，但避險買盤不足以抵銷高殖利率與強美元帶來的壓力。",
+      "central_bank_buying": "摘要未提供央行買盤相關數據。",
+      "geopolitical_risk": "摘要未提及顯著新增之地緣政治風險數據。",
+      "dominant_force": "美債殖利率與美元指數同步上行帶來的機會成本壓力",
+      "judgment": "金價承壓跌至 4079.5 美元，顯示利率與美元上行的宏觀壓迫力道顯著壓過了避險買盤的支撐力量。"
     },
     "asia_fx_pricing": {
       "twd": {
-        "reaction": "美元兌台幣升至33.07，台幣持續承壓整理。",
-        "consistent_with_dollar_pressure": "yes",
-        "local_correction_factor": "科技股拋售加劇可能誘發科技權益資金外流。",
-        "judgment": "美元指數走高至101.59疊加科技股賣壓，使台幣承受雙重壓迫。"
+        "reaction": "相對抗跌收在 32.76",
+        "consistent_with_dollar_pressure": "no",
+        "local_correction_factor": "可能受本地出口商拋匯、科技產業資金流入或區域資金流向差異所支撐",
+        "judgment": "台幣表現抗跌，未跟隨美元走強而顯著貶值，顯示本地資金流或產業因素提供修正抵銷。"
       },
       "jpy": {
-        "reaction": "受強美元壓制，亞幣普遍承壓。",
+        "reaction": "貶值至 158.42",
         "consistent_with_dollar_pressure": "yes",
-        "local_correction_factor": "資料未揭露日本自身獨立修正因子。",
-        "judgment": "日圓跟隨區域貨幣在美元走強下維持偏弱姿態。"
+        "local_correction_factor": "美日利差持續擴大",
+        "judgment": "日圓走勢符合高殖利率與強美元的基準傳導邏輯，因利差劣勢而持續承壓。"
       },
       "krw": {
-        "reaction": "跟隨亞幣普遍承壓走勢。",
-        "consistent_with_dollar_pressure": "yes",
-        "local_correction_factor": "全球科技股拋售潮增添科技出口國資產壓力。",
-        "judgment": "強勢美元與科技股避險賣壓共同影響韓圜表現。"
+        "reaction": "資料未詳細載明數字",
+        "consistent_with_dollar_pressure": "unclear",
+        "local_correction_factor": "資料不足",
+        "judgment": "每日摘要未提供韓圜具體數據與走勢，暫標示為待確認。"
       }
     },
     "market_contradiction": {
-      "baseline_expectation": "原油高檔（WTI 91.20、Brent 99.25）與通膨偏熱訊號應推升公債殖利率，並對黃金構成壓抑。",
-      "actual_reaction": "美債10年期殖利率反向降至4.84%，且黃金（4097.90美元）與美元（101.59）罕見同步上漲。",
-      "most_non_obvious_link": "油價與通膨訊號偏熱卻未帶動殖利率走升，傳導鏈被科技股賣壓引發的避險買盤截斷。",
-      "possible_explanation": "短線市場主導邏輯轉向防禦性避險，科技股拋售引發極度避險情緒，使債券與黃金成為資金避風港，暫時掩蓋中長期通膨預期。",
-      "is_correction_or_new_mainline": "correction_factor",
-      "how_to_integrate_into_main_theme": "將科技股拋售視為今日定價的強效修正因子，解釋其如何切斷通膨至利率的基準傳導，並促成美元與黃金的避險共振。",
+      "baseline_expectation": "若原油下跌（緩和通膨預期）且美股拋售/避險情緒升溫，基準邏輯預計美債殖利率應受壓制或吸引避險買盤。",
+      "actual_reaction": "美債殖利率強勢攀升至 4.859%，無視原油下跌與避險情緒。",
+      "most_non_obvious_link": "原油跌至 90.34 美元與美股回檔並未限制 10 年期美債殖利率上行。",
+      "possible_explanation": "市場將強勁非農解讀為聯準會鷹派立場的確鑿依據，使「政策緊縮與高利率維持更久」的權重大幅壓過原油下跌帶來的通膨緩和訊號。",
+      "is_correction_or_new_mainline": "offsetting_force",
+      "how_to_integrate_into_main_theme": "將強勁就業視為今日市場核心主線，原油下跌與股市回檔則作為通膨與成長放緩的修正因子，說明緊縮定價目前暫居主導地位但多空交錯。",
       "presenter_story_angle": {
-        "opening_question": "當原油飆高、通膨訊號偏熱時，為什麼美國10年期公債殖利率不升反降，黃金還能跟著美元一起大漲？",
-        "normal_script": "按基準傳導邏輯，原油高檔與通膨偏熱會推升美債殖利率，帶給黃金壓力並支撐美元。",
-        "where_it_breaks": "但今日科技股拋售加劇，引發強烈避險買盤湧入美債，硬生生將10年期殖利率壓低至4.84%。",
-        "why_it_matters": "這代表股市震盪帶來的避險買盤暫時主導並截斷了通膨傳導鏈，引發債券、美元與黃金同步獲防禦性買盤青睞。",
-        "next_watch": "觀察即將公布的非農就業數據；若數據強勁，殖利率是否會迅速向通膨基本面修正。"
+        "opening_question": "為什麼在原油價格回跌、美股出現拋售的情況下，美債殖利率還能一路推升至 4.859%？",
+        "normal_script": "按常理，油價下行有助於緩和通膨預期，加上股市回檔引發的避險情緒，應能吸引買盤搶進美債並壓低殖利率。",
+        "where_it_breaks": "然而今日債市完全無視油價降溫與避險買盤，全數專注於強勁非農所帶來的聯準會高利率維持更久定價。",
+        "why_it_matters": "這顯示市場對勞動市場與聯準會政策路徑的敏感度遠高於能源價格，高殖利率也順勢帶動美元走強並壓制金價與日圓。",
+        "next_watch": "後續需觀察 CPI/PPI 通膨數據以及原油 90 美元關卡，檢驗就業強勁是否實質轉化為二次通膨壓力。"
       }
     },
     "pricing_assessment": {
-      "dominant_market_force": "科技股拋售引發的跨資產防禦性避險需求。",
-      "offsetting_force": "高油價（WTI 91.20、Brent 99.25）與偏熱通膨基底對殖利率的潛在向上拉力。",
-      "most_non_obvious_signal": "油價高檔與通膨偏熱下美債殖利率回落至4.84%，且美元與黃金罕見同步上漲。",
-      "market_question": "股市賣壓驅動的公債避險買盤，能否持續抵抗原油與通膨累積的向上壓力？",
-      "one_sentence_takeaway": "避險買盤強勢截斷通膨向利率的傳導，驅動美債殖利率回落並促成美元黃金同步走強。",
-      "next_watch": "即將公布的非農就業數據與原油高檔走勢之延續性。"
+      "dominant_market_force": "強勁非農就業數據引發聯準會高利率維持更久的緊縮政策定價",
+      "offsetting_force": "WTI 與 Brent 原油回跌帶來的能源通膨降溫訊號",
+      "most_non_obvious_signal": "油價下跌與避險情緒未能阻止 10 年期美債殖利率攀升至 4.859%",
+      "market_question": "強勁就業帶來的利率上行壓力，是否會在後續 CPI/PPI 公布或油價延續跌勢時受到修復？",
+      "one_sentence_takeaway": "強勁非農就業主導高利率維持更久預期，驅動美債殖利率與美元走高並壓制金價，油價回跌則作為通膨修正因子暫居次要位置。",
+      "next_watch": "聯準會官員公開談話、即將公布的 CPI 與 PPI 硬數據，以及 WTI 原油是否守穩 90 美元關卡。"
     }
   }
 }
