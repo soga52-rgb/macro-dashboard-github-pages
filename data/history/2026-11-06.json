@@ -1,40 +1,40 @@
 {
-  "generated_at": "2026-11-07T14:38:08+08:00",
+  "generated_at": "2026-11-09T15:14:22+08:00",
   "source": "Google Sheets Today Daily Source",
   "mode": "today_daily_source",
   "data_status": "complete",
   "daily_summary": {
     "date": "2026-11-06",
-    "headline": "非農強韌推升利率預期",
-    "executive_summary": "今日市場核心矛盾在於原油下跌與避險情緒升溫，均未能阻止美債殖利率走揚。市場目前最重視強勁非農引發聯準會高利率維持更久的預期，驅動美債殖利率與美元同步走高並壓制金價。原油跌勢與美股回檔則被視為通膨與成長的修正因子，使跨資產傳導呈現高利率定價主導但多空拉鋸的格局。",
+    "headline": "就業韌性推升利率美元",
+    "executive_summary": "市場目前最重視就業強勁帶動的偏鷹政策路徑，使高利率維持更久的預期壓過能源跌價的通膨緩和效果。美債殖利率走高帶動美元走強並壓抑金價，原油走跌則作為能源通膨的修正因子。日圓與台幣因報價時間落後暫顯分歧，整體跨資產主線仍由緊縮預期主導。",
     "market_signals": [
-      "美債殖利率升破4.85%",
-      "美元指數偏強壓抑金價",
-      "國際原油雙雙回跌"
+      "非農激增壓抑降息",
+      "美債殖利率續揚",
+      "油價走跌形成修正"
     ],
-    "macro_chain": "[非農就業超預期引發高利率維持更久] -> [美國10年期公債殖利率上行至4.859%] -> [美元指數偏強收在102.28] -> [黃金承壓跌至4079.5、原油下行修正通膨預期、日圓走弱而台幣偏強分歧]",
-    "divergence": "今日核心主線由強勁非農數據主導，推動美債殖利率升至4.859%、美元指數走強至102.28，並連帶壓低金價至4079.5美元。然而，WTI原油跌至90.34美元與美股拋售釋放通膨與成長降溫訊號，構成修正因子；利率端未反映原油跌幅與避險買盤，顯示政策緊縮權重暫居上風，後續通膨預期是否實質轉向仍待觀察。",
-    "market_snapshot": "WTI｜90.34｜下跌｜油價下行，可能緩和能源通膨壓力；若由需求疲弱造成，亦需視為成長降溫訊號。\nUS10Y｜4.859%｜上行｜反應強勁就業帶動的降息預期延後與聯準會高利率維持更久之政策路徑。\nDXY｜102.28｜偏強｜利差優勢支撐美元走強，對黃金及非美亞洲貨幣形成廣泛壓迫。",
+    "macro_chain": "[非農就業超預期與失業率降至4.1%] -> [美國10年期公債殖利率上行至4.859%] -> [美元指數偏強升至102.30] -> [黃金承壓回落至4074.9 / 油價走跌修正能源預期 / 亞幣待補跌觀察]",
+    "divergence": "今日核心主線為勞動市場強勁推升利率與美元，原油走跌雖提供能源通膨緩解的修正因子，但未能扭轉殖利率上行趨勢；亞洲貨幣因資料時間落後暫呈分歧，傳導完整度仍待觀察後續匯市補跌反應。",
+    "market_snapshot": "WTI｜90.83｜下行｜油價下行，可能緩和能源通膨壓力；若由需求疲弱造成，亦需視為成長降溫訊號。\nUS10Y｜4.859%｜上行｜反映就業韌性引發的偏鷹政策路徑與高利率維持更久預期。\nDXY｜102.30｜偏強｜利差優勢支撐美元走強，後續需觀察對亞洲貨幣的壓迫效應。",
     "news_evidence": [
-      "路透報導美國非農就業新增人數顯著超出預期，推升聯準會維持緊縮高利率政策的路徑定價。",
-      "美國10年期公債殖利率攀升至4.859%，美元指數同步走強至102.28，壓迫無孳息資產黃金價格走弱。",
-      "WTI與Brent原油分別跌至90.34美元與97.76美元，提供能源通膨降溫訊號，成為當前緊縮主線的修正因子。",
-      "亞洲貨幣走勢分化，日圓受利差擴大壓制貶至158.42，台幣則相對抗跌至32.76，顯示資金流向存在區域差異。"
+      "美國非農新增就業激增16.5萬人且失業率降至4.1%，顯著降低市場對快速降息的期待。",
+      "美國10年期公債殖利率攀升至4.859%，實質利率與名目利率預期同步受壓抑。",
+      "WTI與Brent原油分別跌至90.83與98.32美元，形成能源通膨降溫的修正因子。",
+      "美元指數受利差優勢推升至102.30，金價承壓下挫至4074.9美元。"
     ],
     "watchpoints": [
-      "後續聯準會官員公開談話，確認超預期非農是否實質轉化為更鷹派的政策立場。",
-      "即將公布的CPI與PPI通膨硬數據，檢驗就業韌性是否向物價端傳導形成二次通膨壓力。",
-      "WTI原油能否守穩90美元關卡，跌勢若延續是否進一步下修綜合通膨預期並抑制殖利率。"
+      "即將公布的美國CPI與PPI硬數據，檢驗物價是否與強勁就業同步升溫。",
+      "Fed官員最新談話，確認點陣圖預期與高利率維持更久之政策定調。",
+      "亞洲貨幣（日圓、台幣）在資料同步更新後，是否面臨強美元帶來的補跌壓力。"
     ],
     "visual_note": {
-      "title": "非農超預期強化高利率定價，殖利率走升壓迫金價與匯率",
-      "file_id": "1ypLWUeq-0CLfkURbtcxx-z1TnvBgvCcQ",
+      "title": "就業韌性推升利率美元，油價下行成通膨修正因子",
+      "file_id": "1uhto2AL-aYDKPDwCmLTfEH_kKDjXK1yq",
       "url": "https://drive.google.com/file/d/1ypLWUeq-0CLfkURbtcxx-z1TnvBgvCcQ/view?usp=drivesdk",
       "model": "gemini-3.1-flash-image"
     },
     "news_narrative": {
-      "title": "高利率維持更久",
-      "support_level": "中",
+      "title": "就業強勁重燃緊縮預期，高利率支撐強美元",
+      "support_level": "高",
       "cards": [
         {
           "label": "驗證結果",
@@ -42,23 +42,23 @@
         },
         {
           "label": "摘要",
-          "text": "今日核心矛盾在於油價走弱與避險買盤未能壓低美債殖利率。主導因子為強勁非農數據推升聯準會鷹派預期，主導美國10年期公債殖利率升至4.85%上方並推動美元指數走強，壓制金價下跌與亞洲貨幣表現；油價走跌與股市拋售則作為修正因子，使市場在高利率與成長放緩預期中拉鋸。"
+          "text": "非農新增就業激增且失業率降至4.1%，推升市場對Fed偏鷹與利率維持更久的預期，成為推動美國10年期公債殖利率上行的主導因子。此傳導連帶支撐美元指數走強，並壓抑黃金價格。儘管油價下行形成潛在通膨修正因子，但強勁勞動市場仍主導整體交叉資產走勢。"
         },
         {
           "label": "支持新聞",
-          "text": "1. 新聞重點：路透報導美國非農就業新增人數超出市場預期，引發市場重新評估聯準會升息與維持高利率路徑，推動美元指數走高並令金價承壓。\n2. 市場影響：推高美國10年期公債殖利率與美元指數，直接壓低無孳息資產黃金價格，同時拖累多數亞洲貨幣走勢。\n3. 驗證結論：實際市場走勢中美國10年期公債殖利率上行、美元偏強、黃金下挫，完全支持強勁就業推升政策利率預期的傳導邏輯。"
+          "text": "1. 新聞重點：美國非農就業暴增16.5萬人且失業率降至4.1%，帶動市場大幅降低對快速降息的期待。\n2. 市場影響：推高美國10年期公債殖利率與美元指數，同時對黃金價格構成沉重下行壓力。\n3. 驗證結論：資產走勢完全符合勞動韌性驅動高利率預期的傳導邏輯，驗證結論為支持。"
         },
         {
           "label": "異常訊號",
-          "text": "1. 美股拋售與避險情緒升溫理應帶動美債避險買盤並壓低殖利率，然而美國10年期公債殖利率仍上行至4.859%，顯示利率端受聯準會緊縮預期的定價權重高於單純的避險需求，避險買盤被歸為修正因子。\n2. 西德州原油與布蘭特原油雙雙走跌，雖釋放通膨降溫訊號，但未能即刻緩解美債利率壓力，呈現原油弱勢與長端利率攀升的局部背離分歧。\n3. 亞洲貨幣呈現分化，日圓與韓元受強美元壓制走弱，台幣走勢則相對抗跌，反映資金流向與非美貨幣間存在待觀察的個別差異。"
+          "text": "1. WTI與Brent原油價格同步走跌，在理論上屬於通膨降溫訊號，但美國10年期公債殖利率依舊上行，顯示能源價格下跌目前僅為修正因子，未扭轉由就業驅動的利率定價。\n2. 亞洲貨幣中，韓元走弱貼合強美元走勢，但日圓與台幣因數據落後暫呈偏強，跨資產傳導在亞洲匯市上表現分歧，仍屬待觀察訊號。"
         },
         {
           "label": "觀察重點",
-          "text": "1. 下一次聯準會官員公開發言與FOMC會議，確認就業超預期是否真正提升後續升息機率。\n2. 即將公布的CPI及PPI通膨硬數據，檢驗薪資與就業韌性是否轉化為實質物價二次反彈壓力。\n3. 原油價格跌勢若持續擴大，是否進一步強化綜合通膨預期下行，進而扭轉目前美債殖利率升勢。\n4. 美股若持續因AI預期修正或成長擔憂遭到拋售，避險買盤是否促成殖利率轉折反向壓制美元。"
+          "text": "1. 即將公布的美國CPI與PPI通膨數據，觀察物價硬數據是否推波助瀾通膨預期。\n2. Fed官員最新談話與點陣圖預期，檢視對後續升降息路徑的定價變化。\n3. 油價若持續下跌是否開始對長天期美債殖利率產生抑制作用。\n4. 美元強勢下，亞洲貨幣（日圓、韓元、台幣）是否面臨更廣泛的貶值與資金流出壓力。"
         }
       ],
-      "news_links_json": "[\n  {\n    \"rank\": 1,\n    \"theme\": \"Rates｜Treasury Yields / 美債殖利率\",\n    \"source\": \"MarketWatch\",\n    \"title\": \"Stock Market News - Bond Market - Currencies Markets - MarketWatch\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiS0FVX3lxTE1WSk1SMEVJUWVGN1RIVTEtSThObVFxbkFHTE9ySmdyRUx4NjJMNWsta3lOaFBOVFF5eUEtN0lVaXc5QlFiTEdiQVZYSQ?oc=5\",\n    \"published_at\": \"Fri, 06 Nov 2026 19:01:06 GMT\",\n    \"score\": 116,\n    \"matched_keywords\": \"美債殖利率:treasury/yield/yields/bond | 變數:TREASURY_YIELDS | 類型:REACTION | 來源角色:MARKET_REACTION\"\n  },\n  {\n    \"rank\": 2,\n    \"theme\": \"Rates｜Treasury Yields / 美債殖利率\",\n    \"source\": \"鉅亨網\",\n    \"title\": \"美股拋售推動資金轉向美債，交易員押注殖利率進一步下行 - 鉅亨網\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiT0FVX3lxTFBlNF9xRjBxaDVFVFJic2JmdFAyaTNnVjFGWXNYTHdYVXFXbk1vZlZpMHlnZ2Y0NmF6YTVrTUF4UmluV2Nrdmh0R2pLOUJUX0k?oc=5\",\n    \"published_at\": \"Fri, 06 Nov 2026 10:05:08 GMT\",\n    \"score\": 115,\n    \"matched_keywords\": \"美債殖利率:treasury/yield/yields | 變數:TREASURY_YIELDS | 類型:DATA | 來源角色:CNYES_MACRO\"\n  },\n  {\n    \"rank\": 3,\n    \"theme\": \"Fed Policy｜Fed / 聯準會\",\n    \"source\": \"鉅亨網\",\n    \"title\": \"Fed再升息兩次就收手？非農若超預期 市場算盤得重打 - 鉅亨網\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiT0FVX3lxTE5GTjU0U3dWRXlWZ1M5ZTRDcnlJX1BDdm5mV3VVMThQY0ZFYUUza281VFdOVFkwcjNiLTdINVRkZExVMWlSdjFYekQxN2xaYmc?oc=5\",\n    \"published_at\": \"Thu, 05 Nov 2026 05:11:29 GMT\",\n    \"score\": 114.4,\n    \"matched_keywords\": \"聯準會政策:fed | 變數:FED | 類型:DATA | 來源角色:CNYES_MACRO\"\n  },\n  {\n    \"rank\": 4,\n    \"theme\": \"Asset｜Gold / 黃金\",\n    \"source\": \"鉅亨網\",\n    \"title\": \"跌懵了!AI、美股拋售,BTC爆倉10億,數字黃金敘事又碎了？ - 鉅亨網\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiT0FVX3lxTE9jcm1kNDBkVEdkVVlMdEdaNWJSYTdETFAyZTNmbkdrc0dGZlpfVmtYUEhsZklUT1B0d1lmY255d3o3Vk16aF9zU2tyM05oQms?oc=5\",\n    \"published_at\": \"Fri, 06 Nov 2026 14:30:08 GMT\",\n    \"score\": 114.2,\n    \"matched_keywords\": \"能源與原物料:gold | 風險情緒／避險資金:gold | 變數:GOLD | 類型:DATA | 來源角色:CNYES_MACRO\"\n  },\n  {\n    \"rank\": 5,\n    \"theme\": \"Asset｜Gold / 黃金\",\n    \"source\": \"Reuters\",\n    \"title\": \"Gold at over two-week high as dollar, yields weaken; US payrolls data awaited - Reuters\",\n    \"url\": \"https://news.google.com/rss/articles/CBMixAFBVV95cUxPRGw2bTVBSnBUN1BZcDhwQ0dVSmFIUVhDdGZLazVPNnV2NG5iYkVxXzg5QmRyY21IOWZOcFVRVXJBSU5PT1pXQWh3UHVmVWxhSm15bVh2NTVQZzJGVHpPT2dSSHc2NXlaLUYyQmVGX24xdW84cVN2NXpGcUhGZ0xrNDZSODR1NDNtNW9vc2JJSUVRcGZIMkprZHNONm4wN2VxUzdBX3B1NWxxcDBsWjNnZ05tUzdMRHJNaEJja2oxNC1QLWQt?oc=5\",\n    \"published_at\": \"Thu, 05 Nov 2026 03:46:00 GMT\",\n    \"score\": 114.2,\n    \"matched_keywords\": \"就業與成長:payrolls | 美債殖利率:yield/yields | 美元與亞洲匯率:dollar | 能源與原物料:gold | 風險情緒／避險資金:gold | 變數:GOLD | 類型:BACKUP | 來源角色:WIRE_CONFIRMATION\"\n  },\n  {\n    \"rank\": 6,\n    \"theme\": \"Fed Policy｜Fed / 聯準會\",\n    \"source\": \"鉅亨網\",\n    \"title\": \"高盛下調黃金目標價 因聯準會轉趨鷹派抑制投資需求 - 鉅亨網\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiT0FVX3lxTE1BRXQwOFlCYXlZaEc5MlUtdEl3TVNoYWhYZWl6RWZPVDlBWWwxZ0RRWF9PVVplVHYzdmFLTVdUUEd2MzluU08zNlliS2JyZXc?oc=5\",\n    \"published_at\": \"Fri, 06 Nov 2026 13:20:10 GMT\",\n    \"score\": 112.4,\n    \"matched_keywords\": \"聯準會政策:fed | 變數:FED | 類型:DATA | 來源角色:CNYES_MACRO\"\n  },\n  {\n    \"rank\": 7,\n    \"theme\": \"Labor｜Nonfarm Payrolls / 非農就業\",\n    \"source\": \"Reuters\",\n    \"title\": \"Dollar index jumps after US payrolls beat forecasts - Reuters\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiwAFBVV95cUxQcTZYNGtkV0pONThjTHhjTkdYS0JYX1YtSlJISko4bVRPZDlUSzZaTmhRU0ZtQmtnZWFRQUkxRDhUWHR2akFsSkhSZmQxdVE4dURkRlJ4ekEtc1lFSTlTT3VaU1VRa0VKRjZFZkdZUWVpR3NNT1hfR1JhLVkxWHlLUDVZT04wMnJYTFMyX0haakxHcWdIdWg2SFVpNGF4eWFwNXV0eGZ3Q2ZDeTYzbGtyZXpGM05XNDVBb0U2dUtScEM?oc=5\",\n    \"published_at\": \"Fri, 06 Nov 2026 01:24:00 GMT\",\n    \"score\": 110,\n    \"matched_keywords\": \"就業與成長:payrolls | 美元與亞洲匯率:dollar | 變數:PAYROLLS | 類型:BACKUP | 來源角色:WIRE_CONFIRMATION\"\n  },\n  {\n    \"rank\": 8,\n    \"theme\": \"FX｜Dollar / FX / 美元與匯率\",\n    \"source\": \"鉅亨網\",\n    \"title\": \"〈紐約匯市〉美元遊走平盤 投資人憂AI發展煞車影響經濟成長 - 鉅亨網\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiT0FVX3lxTFB4aGFCaUNWYkZGazZpeV83OHNQNmVCMUljdzJTT29kVmV5cDg3UUVNUTFSbDhDRzRqSlRaNXl1VTlyQzNtRGxlc0w0dmRDU00?oc=5\",\n    \"published_at\": \"Fri, 06 Nov 2026 06:25:42 GMT\",\n    \"score\": 109.6,\n    \"matched_keywords\": \"美元與亞洲匯率:dollar | 變數:DOLLAR_FX | 類型:DATA | 來源角色:CNYES_MACRO\"\n  }\n]"
+      "news_links_json": "[\n  {\n    \"rank\": 1,\n    \"theme\": \"FX｜Dollar / FX / 美元與匯率\",\n    \"source\": \"鉅亨網\",\n    \"title\": \"〈紐約匯市〉強勁非農撐起美元 周線收紅 - 鉅亨網\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiU0FVX3lxTE83WGxaNzdPWjZqeVF5RERwdGprRFU4Umh2TjEwMVB5NXR5WE81THZKczYzaC1vcDZLSThxdndUZTU3WlczU2c5UUFJZDdfeWI4QWNR?oc=5\",\n    \"published_at\": \"Sat, 07 Nov 2026 03:01:10 GMT\",\n    \"score\": 114.6,\n    \"matched_keywords\": \"美元與亞洲匯率:dollar | 變數:DOLLAR_FX | 類型:DATA | 來源角色:CNYES_MACRO\"\n  },\n  {\n    \"rank\": 2,\n    \"theme\": \"Asset｜Gold / 黃金\",\n    \"source\": \"鉅亨網\",\n    \"title\": \"Cathie Wood：比特幣將相對黃金繼續走強，黃金則面臨下行壓力 - 鉅亨網\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiT0FVX3lxTE9kb0U0WXNNSGk0OWpKek45Vm5VQk5abFd5RjZ2bWZpWVZlMlhHeDgwN29sN0VzVlVwbEhJaWVWT0JDM2VxOGJMM1Rhc0RGZzA?oc=5\",\n    \"published_at\": \"Sun, 08 Nov 2026 16:04:35 GMT\",\n    \"score\": 114.2,\n    \"matched_keywords\": \"能源與原物料:gold | 風險情緒／避險資金:gold | 變數:GOLD | 類型:DATA | 來源角色:CNYES_MACRO\"\n  },\n  {\n    \"rank\": 3,\n    \"theme\": \"Labor｜Nonfarm Payrolls / 非農就業\",\n    \"source\": \"鉅亨網\",\n    \"title\": \"美國非農暴增 16.5 萬人！Fed 升息機率近 80% 、比特幣守 7.5 萬 - 鉅亨網\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiU0FVX3lxTFBpMExRWWNwQ0Jvd1hPMnR2QVhuQWFJdGVNTjBGZWlWTFZKXzdyQ2loLWREWFBYWVQ0V2U2bjl6d2w5R1ZtTW9CbTFwX0cwODNIano4?oc=5\",\n    \"published_at\": \"Sat, 07 Nov 2026 13:42:47 GMT\",\n    \"score\": 106,\n    \"matched_keywords\": \"聯準會政策:fed | 就業與成長:payrolls | 變數:PAYROLLS | 類型:DATA | 來源角色:CNYES_MACRO\"\n  },\n  {\n    \"rank\": 4,\n    \"theme\": \"Rates｜Treasury Yields / 美債殖利率\",\n    \"source\": \"MarketWatch\",\n    \"title\": \"SGOV | iShares 0-3 Month Treasury Bond ETF Overview - MarketWatch\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiW0FVX3lxTE11bzRmRkJOTTJ5VkJmRXRVbVh1dGtwUE1VdUJNMWpiZWlZYXAwWTEzUVpHcC1CcUU2anVROFJsU1F5Z0ZMT3Jpb3JYZGxqcUJkczhCSG9RWG9Kd00?oc=5\",\n    \"published_at\": \"Sat, 07 Nov 2026 00:59:00 GMT\",\n    \"score\": 106,\n    \"matched_keywords\": \"美債殖利率:treasury/yield/yields/bond | 變數:TREASURY_YIELDS | 類型:REACTION | 來源角色:MARKET_REACTION\"\n  },\n  {\n    \"rank\": 5,\n    \"theme\": \"Rates｜Treasury Yields / 美債殖利率\",\n    \"source\": \"MarketWatch\",\n    \"title\": \"TLT | iShares 20+ Year Treasury Bond ETF Overview - MarketWatch\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiWkFVX3lxTE9TYmJ6bVVlUnliem1HVFhsRlc5QWR2dFNVN3RZdzFlbmlpbkRtNVZyOTNuREZJaTFNb3JmRU01R0tuWUV4WXFyVGd2cVBOVnNJRGlPRFgxRHJGUQ?oc=5\",\n    \"published_at\": \"Sat, 07 Nov 2026 00:59:00 GMT\",\n    \"score\": 106,\n    \"matched_keywords\": \"美債殖利率:treasury/yield/yields/bond | 變數:TREASURY_YIELDS | 類型:REACTION | 來源角色:MARKET_REACTION\"\n  },\n  {\n    \"rank\": 6,\n    \"theme\": \"Fed Policy｜Fed / 聯準會\",\n    \"source\": \"鉅亨網\",\n    \"title\": \"〈分析〉期中選舉後全球經濟3大利多 智庫：關稅、能源、Fed...川普受制才好 - 鉅亨網\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiT0FVX3lxTE9Ba2t6bC12eHZrczNaLVBGcHdoR2ttNXUzdGdPdDBuY2lTcjRtNFNlU2trWUNLZEZza29vdVBJdzdYR3c1cEtmV2ZIVWQzVHc?oc=5\",\n    \"published_at\": \"Thu, 05 Nov 2026 23:53:44 GMT\",\n    \"score\": 104.4,\n    \"matched_keywords\": \"聯準會政策:fed | 變數:FED | 類型:DATA | 來源角色:CNYES_MACRO\"\n  },\n  {\n    \"rank\": 7,\n    \"theme\": \"Labor｜Nonfarm Payrolls / 非農就業\",\n    \"source\": \"Reuters\",\n    \"title\": \"Gold drops as strong US payrolls boost dollar, yields - Reuters\",\n    \"url\": \"https://news.google.com/rss/articles/CBMirwFBVV95cUxQQVNBUlY0RkQ3Vm5qcDFmbS12Nlo0Wjd4RWNEWkROOFRSX0hha1VobWJkTW82YTM1QzNMUXlzX1V5bktiSHJDYklFR2ZDUnN4aEhGM3U0UmlRT3pDcjVFRkR5ak9IZ1NVbG4wempaX1Y0R2JXb0U2THRLcE80d0l1NFppQ3l5b2M4c3RQZU1sS1RNRHdiYmFsYmw0czRoUnVJRVJLNTl0VmVNODg3NWVR?oc=5\",\n    \"published_at\": \"Fri, 06 Nov 2026 14:50:45 GMT\",\n    \"score\": 103,\n    \"matched_keywords\": \"就業與成長:payrolls | 美債殖利率:yield/yields | 美元與亞洲匯率:dollar | 能源與原物料:gold | 風險情緒／避險資金:gold | 變數:PAYROLLS | 類型:BACKUP | 來源角色:WIRE_CONFIRMATION\"\n  },\n  {\n    \"rank\": 8,\n    \"theme\": \"Inflation｜PPI / 生產者物價\",\n    \"source\": \"鉅亨網\",\n    \"title\": \"本週操盤筆記：美國CPI、PPI、英國GDP與中國通膨數據 - 鉅亨網\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiT0FVX3lxTFBTRFAxMmlTZElfeXhSWHZrdUd5cFpGWDVqZVoxbFhPdThYSGstZGptMFBkbGNqSEVzdDZvcm1kSWd4dFp1SjZRMDFEbXVOYUE?oc=5\",\n    \"published_at\": \"Sun, 08 Nov 2026 13:50:02 GMT\",\n    \"score\": 102.4,\n    \"matched_keywords\": \"通膨數據:inflation/cpi/ppi | 就業與成長:gdp | 變數:PPI | 類型:DATA | 來源角色:CNYES_MACRO\"\n  }\n]"
     },
-    "raw_daily_summary_package": "日期：2026-11-06\n今日主線：非農強韌推升利率預期\n\nExecutive Summary：\n今日市場核心矛盾在於原油下跌與避險情緒升溫，均未能阻止美債殖利率走揚。市場目前最重視強勁非農引發聯準會高利率維持更久的預期，驅動美債殖利率與美元同步走高並壓制金價。原油跌勢與美股回檔則被視為通膨與成長的修正因子，使跨資產傳導呈現高利率定價主導但多空拉鋸的格局。\n\n今日核心訊號：\n- 美債殖利率升破4.85%\n- 美元指數偏強壓抑金價\n- 國際原油雙雙回跌\n\n核心資產重點：\nWTI｜90.34｜下跌｜油價下行，可能緩和能源通膨壓力；若由需求疲弱造成，亦需視為成長降溫訊號。\nUS10Y｜4.859%｜上行｜反應強勁就業帶動的降息預期延後與聯準會高利率維持更久之政策路徑。\nDXY｜102.28｜偏強｜利差優勢支撐美元走強，對黃金及非美亞洲貨幣形成廣泛壓迫。\n\n矛盾 / 背離：\n今日核心主線由強勁非農數據主導，推動美債殖利率升至4.859%、美元指數走強至102.28，並連帶壓低金價至4079.5美元。然而，WTI原油跌至90.34美元與美股拋售釋放通膨與成長降溫訊號，構成修正因子；利率端未反映原油跌幅與避險買盤，顯示政策緊縮權重暫居上風，後續通膨預期是否實質轉向仍待觀察。\n\n總經傳導鏈：\n[非農就業超預期引發高利率維持更久] -> [美國10年期公債殖利率上行至4.859%] -> [美元指數偏強收在102.28] -> [黃金承壓跌至4079.5、原油下行修正通膨預期、日圓走弱而台幣偏強分歧]\n\n新聞佐證：\n- 路透報導美國非農就業新增人數顯著超出預期，推升聯準會維持緊縮高利率政策的路徑定價。\n- 美國10年期公債殖利率攀升至4.859%，美元指數同步走強至102.28，壓迫無孳息資產黃金價格走弱。\n- WTI與Brent原油分別跌至90.34美元與97.76美元，提供能源通膨降溫訊號，成為當前緊縮主線的修正因子。\n- 亞洲貨幣走勢分化，日圓受利差擴大壓制貶至158.42，台幣則相對抗跌至32.76，顯示資金流向存在區域差異。\n\n待觀察問題：\n- 後續聯準會官員公開談話，確認超預期非農是否實質轉化為更鷹派的政策立場。\n- 即將公布的CPI與PPI通膨硬數據，檢驗就業韌性是否向物價端傳導形成二次通膨壓力。\n- WTI原油能否守穩90美元關卡，跌勢若延續是否進一步下修綜合通膨預期並抑制殖利率。"
+    "raw_daily_summary_package": "日期：2026-11-06\n今日主線：就業韌性推升利率美元\n\nExecutive Summary：\n市場目前最重視就業強勁帶動的偏鷹政策路徑，使高利率維持更久的預期壓過能源跌價的通膨緩和效果。美債殖利率走高帶動美元走強並壓抑金價，原油走跌則作為能源通膨的修正因子。日圓與台幣因報價時間落後暫顯分歧，整體跨資產主線仍由緊縮預期主導。\n\n今日核心訊號：\n- 非農激增壓抑降息\n- 美債殖利率續揚\n- 油價走跌形成修正\n\n核心資產重點：\nWTI｜90.83｜下行｜油價下行，可能緩和能源通膨壓力；若由需求疲弱造成，亦需視為成長降溫訊號。\nUS10Y｜4.859%｜上行｜反映就業韌性引發的偏鷹政策路徑與高利率維持更久預期。\nDXY｜102.30｜偏強｜利差優勢支撐美元走強，後續需觀察對亞洲貨幣的壓迫效應。\n\n矛盾 / 背離：\n今日核心主線為勞動市場強勁推升利率與美元，原油走跌雖提供能源通膨緩解的修正因子，但未能扭轉殖利率上行趨勢；亞洲貨幣因資料時間落後暫呈分歧，傳導完整度仍待觀察後續匯市補跌反應。\n\n總經傳導鏈：\n[非農就業超預期與失業率降至4.1%] -> [美國10年期公債殖利率上行至4.859%] -> [美元指數偏強升至102.30] -> [黃金承壓回落至4074.9 / 油價走跌修正能源預期 / 亞幣待補跌觀察]\n\n新聞佐證：\n- 美國非農新增就業激增16.5萬人且失業率降至4.1%，顯著降低市場對快速降息的期待。\n- 美國10年期公債殖利率攀升至4.859%，實質利率與名目利率預期同步受壓抑。\n- WTI與Brent原油分別跌至90.83與98.32美元，形成能源通膨降溫的修正因子。\n- 美元指數受利差優勢推升至102.30，金價承壓下挫至4074.9美元。\n\n待觀察問題：\n- 即將公布的美國CPI與PPI硬數據，檢驗物價是否與強勁就業同步升溫。\n- Fed官員最新談話，確認點陣圖預期與高利率維持更久之政策定調。\n- 亞洲貨幣（日圓、台幣）在資料同步更新後，是否面臨強美元帶來的補跌壓力。"
   }
 }
