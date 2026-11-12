@@ -1,0 +1,166 @@
+{
+  "generated_at": "2026-11-12T15:47:56+08:00",
+  "date": "2026-11-11",
+  "mode": "macro_pricing_logic_v4",
+  "logic": {
+    "pricing_context": {
+      "market_was_pricing": "市場先前關注通膨緩和與降息前景，同時觀察能源價格波動影響。",
+      "new_information": "美國10月CPI數據超出預期，芝加哥聯聯總裁表達不安並不排除重啟升息，推動10年期美債殖利率達4.998%。",
+      "pricing_question": "通膨黏性與鷹派政策訊號是否將美債殖利率實質推升並錨定於5%以上，從而壓制非孳息資產與非美貨幣？"
+    },
+    "input_material_mapping": {
+      "inflation_materials": [
+        "美國10月CPI超出預期，顯示通膨黏性頑固",
+        "芝加哥聯聯總裁警示通膨並表示不排除升息",
+        "WTI原油下跌至86.42美元，布蘭特原油上行至92.63美元"
+      ],
+      "rate_materials": [
+        "美國10年期公債殖利率攀升至4.998%",
+        "芝加哥聯聯總裁發出不安警告，不排除升息選項",
+        "市場重訂價緊縮政策與高利率持續時間"
+      ],
+      "dollar_materials": [
+        "美元指數偏強逼近102.90",
+        "美債殖利率走高帶來利差優勢",
+        "高利率預期支撐美元相對走強"
+      ],
+      "gold_materials": [
+        "黃金跌破4000美元關卡，跌幅近3%",
+        "美債殖利率接近5%增加持有不孳息資產成本",
+        "美元走強壓制金價"
+      ],
+      "asia_fx_materials": [
+        "日圓承壓走貶，美元兌日圓逼近159附近",
+        "台幣先前報價偏強屬數據落後，實質傳導待驗證",
+        "韓圜缺乏直接數據，需後續追蹤"
+      ],
+      "mapping_summary": "今日素材呈現經典的通膨超預期傳導鏈：CPI硬數據與鷹派談話帶動殖利率向上叩關5%，進而支撐美元並同步施壓黃金與日圓。"
+    },
+    "inflation_expectation": {
+      "energy": {
+        "direction": "mixed",
+        "importance": "medium",
+        "evidence": [
+          "WTI原油下行至86.42美元",
+          "布蘭特原油上行至92.63美元"
+        ],
+        "judgment": "油價走勢出現指標分歧，WTI下行提供局部緩和因子，但布蘭特仍強，整體對通膨預期影響呈現分歧。"
+      },
+      "supply_chain": {
+        "direction": "unclear",
+        "importance": "low",
+        "evidence": [],
+        "judgment": "本日摘要未提供供應鏈或運價相關明確數據。"
+      },
+      "price_data": {
+        "direction": "up",
+        "importance": "high",
+        "evidence": [
+          "美國10月CPI數據超出市場預期"
+        ],
+        "judgment": "CPI數據超預期為今日通膨預期上修的最主要硬數據支持。"
+      },
+      "demand": {
+        "direction": "unclear",
+        "importance": "low",
+        "evidence": [],
+        "judgment": "本日摘要未提供終端需求或PMI數據。"
+      },
+      "labor_market": {
+        "direction": "unclear",
+        "importance": "low",
+        "evidence": [],
+        "judgment": "本日摘要未提供勞動市場相關數據。"
+      },
+      "policy_expectation": {
+        "direction": "up",
+        "importance": "high",
+        "evidence": [
+          "芝加哥聯聯總裁表態不排除後續升息選項"
+        ],
+        "judgment": "官員鷹派發言強化市場對通膨持續性與緊縮政策延長的預期。"
+      },
+      "summary": {
+        "overall_direction": "up",
+        "strength": "strong",
+        "dominant_force": "美國10月CPI數據超預期與聯準會官員鷹派發言。",
+        "offsetting_force": "WTI原油價格回檔至86.42美元。",
+        "judgment": "通膨預期整體顯著偏強，硬數據與政策訊號主導市場，原油分歧僅提供有限抵銷作用。"
+      }
+    },
+    "rate_pricing": {
+      "direction": "up",
+      "link_with_inflation_expectation": "同向。通膨預期上修直接推升市場對聯準會終端利率與高利率維持時間的預期，傳導至長端殖利率。",
+      "fed_policy_signal": "芝加哥聯聯總裁公開表示不排除升息，重振緊縮風險定價。",
+      "treasury_supply_demand": "資料不足以判斷供給面，惟殖利率攀升顯示價格承壓。",
+      "term_premium": "資料不足，尚待觀察。",
+      "safe_haven_bond_buying": "避險買盤不顯著，利率主要受通膨與貨幣政策預期主導上行。",
+      "growth_concern_or_cut_expectation": "降息預期受到抑制，重啟升息可能性被納入定價考量。",
+      "dominant_force": "10月CPI超預期與聯準會官員不排除升息的言論。",
+      "judgment": "美國10年期公債殖利率上行至4.998%，主因通膨黏性引發緊縮預期重訂價，利率走勢與通膨預期高度同向。"
+    },
+    "dollar_pricing": {
+      "direction": "up",
+      "link_with_rates": "同向。美債殖利率接近5%擴大美國利差優勢，吸引資金流入美元。",
+      "safe_haven_dollar": "未有顯著主導性的避險需求紀錄，主要為利率驅動。",
+      "liquidity_demand": "未顯示特殊流動性緊縮需求。",
+      "other_currency_weakness": "美日利差擴大導致日圓承壓走貶至159附近。",
+      "us_relative_growth_or_policy": "美國通膨與政策立場相較其他主要央行更具緊縮傾向。",
+      "dominant_force": "美債殖利率強勁上行帶來的利差與高利率預期。",
+      "judgment": "美元指數走強至102.90，傳導路徑符合高利率預期支撐匯率的基準邏輯。"
+    },
+    "gold_pricing": {
+      "direction": "down",
+      "rate_or_real_rate_pressure": "美債10年期殖利率逼近5%，大幅提高持有黃金的機會成本，構成主要下行壓力。",
+      "dollar_effect": "美元指數偏強逼近103，加劇以美元計價的金價承壓。",
+      "safe_haven_demand": "地緣或避險需求不足以抵銷名目與實質利率上升的打壓。",
+      "central_bank_buying": "本日摘要未提及央行買盤動向。",
+      "geopolitical_risk": "地緣政治風險今日未成為主導金價的優先因素。",
+      "dominant_force": "美債殖利率叩關5%與美元走強共同作用。",
+      "judgment": "金價跌破4000美元大關並挫跌近3%，受制於利率與美元雙重壓制，展現典型的無息資產定價反應。"
+    },
+    "asia_fx_pricing": {
+      "twd": {
+        "reaction": "先前報價偏強",
+        "consistent_with_dollar_pressure": "unclear",
+        "local_correction_factor": "資料時間差與落後反應，實質匯率傳導仍待後續觀察。",
+        "judgment": "台幣強勢可能源於資料滯後，尚不能視為脫鉤美元壓力的獨立走強。"
+      },
+      "jpy": {
+        "reaction": "走貶，逼近159附近",
+        "consistent_with_dollar_pressure": "yes",
+        "local_correction_factor": "美日利差持續擴大。",
+        "judgment": "日圓走勢完全符合美元走強與美債殖利率上行的外部傳導壓力。"
+      },
+      "krw": {
+        "reaction": "待確認",
+        "consistent_with_dollar_pressure": "unclear",
+        "local_correction_factor": " daily_summary 缺少韓圜相關直接數據。",
+        "judgment": "資料不足，無法對韓圜做出確信判斷。"
+      }
+    },
+    "market_contradiction": {
+      "baseline_expectation": "若 WTI 原油價格下跌至 86.42 美元，能源通膨壓力應有緩和空間，殖利率上行斜率可能受限。",
+      "actual_reaction": "市場選擇性忽視 WTI 原油的回檔，完全由 CPI 超預期硬數據與聯準會鷹派言論主導，帶動殖利率與美元強勢上衝。",
+      "most_non_obvious_link": "WTI 與布蘭特原油走勢分歧，但市場並未給予 WTI 緩和通膨太高權重，而是單向定價 CPI 超預期。",
+      "possible_explanation": "現階段市場將「核心與整體CPI硬數據」及「聯準會政策表態」視為最高優先級，原油單日波動被視為次要修正項。",
+      "is_correction_or_new_mainline": "offsetting_force",
+      "how_to_integrate_into_main_theme": "將 WTI 下行定位為潛在的通膨緩和抵銷力量，但目前其影響力被強勁的 CPI 硬數據與央行鷹派訊號所壓制。",
+      "presenter_story_angle": {
+        "opening_question": "當 WTI 原油出現回檔時，為什麼美債殖利率依然衝向 5%？",
+        "normal_script": "按基準傳導，油價下滑應有助於減緩通膨預期並讓利率獲得喘息。",
+        "where_it_breaks": "然而今日市場被 10 月 CPI 超預期硬數據與聯準會官員重啟升息的言論完全掌控，WTI 的緩和作用遭到忽視。",
+        "why_it_matters": "這代表市場目前對通膨黏性處於高度敏感狀態，政策與 CPI 數據的定價權重遠高於原油短期波動。",
+        "next_watch": "觀察 10 年期美債殖利率在 5.0% 關卡是否誘發配置型買盤，以及 WTI 與布蘭特原油的分歧何時收斂。"
+      }
+    },
+    "pricing_assessment": {
+      "dominant_market_force": "美國10月CPI超預期與聯準會官員鷹派言論引發的緊縮預期重訂價。",
+      "offsetting_force": "WTI原油價格下跌至86.42美元。",
+      "most_non_obvious_signal": "WTI 原油回檔並未阻止美債殖利率叩關 5% 與黃金大跌。",
+      "market_question": "5.0% 的 10 年期美債殖利率關卡是否會吸引實質資產配置買盤進場？",
+      "one_sentence_takeaway": "CPI超預期與鷹派談話重新點燃緊縮鏈條，美債殖利率逼近5%帶動美元走強並全面壓制黃金與日圓。",
+      "next_watch": "10年期美債殖利率在5.0%整數關卡的買盤反應，以及後續聯準會官員談話的一致性。"
+    }
+  }
+}
