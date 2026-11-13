@@ -1,0 +1,63 @@
+{
+  "generated_at": "2026-11-13T15:21:20+08:00",
+  "source": "Google Sheets Today Daily Source",
+  "mode": "today_daily_source",
+  "data_status": "complete",
+  "daily_summary": {
+    "date": "2026-11-12",
+    "headline": "高利率維持更久推升美債",
+    "executive_summary": "市場目前最重視聯準會升息路徑是否進一步抬高，高盛上修利率預測引發美債10年期殖利率升破5.10%，並帶動強美元全面壓抑金價與亞洲貨幣。資產傳導鏈呈現標準的緊縮共振，而WTI原油的上行則作為墊高能源通膨預期的關鍵修正因子。",
+    "market_signals": [
+      "美債十載殖利率破高",
+      "美元指數偏強運行",
+      "油價上漲金價承壓"
+    ],
+    "macro_chain": "升息路徑重定價與能源通膨預期上修 -> 美國10年期公債殖利率升破5.10% -> 利差優勢推升美元指數 -> 壓抑金價走跌並加劇日圓逼近160及台幣貶值壓力",
+    "divergence": "今日呈現高利率定價下的經典跨資產強共振：政策升息預期帶動美國10年期公債殖利率衝破5.10%，推升美元指數並直接壓抑無孳息資產黃金。WTI原油走強並非此波利率上行的單一主驅動，而是扮演加深市場對通膨黏性疑慮的修正因子，強化了利率維持高檔的敘事。",
+    "market_snapshot": "WTI｜88.70｜上行｜油價上行，增加能源成本與短期通膨預期的上行壓力；若非今日主線，應視為修正因子或並行訊號。\nUS10Y｜5.103%｜上行｜市場重估聯準會升息路徑，高利率維持更久預期推升長端利率與期限溢價。\nDXY｜103.18｜偏強｜利差優勢支撐美元偏強，外匯壓力傳導至日圓與台幣等非美貨幣。",
+    "news_evidence": [
+      "高盛上修聯準會利率預測，市場預估12月及明年3月各升息一碼。",
+      "美國10年期公債殖利率突破5.10%，債市拋售推升整體長端名目利率。",
+      "國際油價持續攀升，WTI站穩88美元，增加實質通膨黏性與政策路徑修正因子。"
+    ],
+    "watchpoints": [
+      "聯準會官員後續談話是否全面確認12月升息預期。",
+      "國際油價若持續走高對未來通膨硬數據的實質外溢影響。",
+      "美元兌日圓逼近160關卡時日本財務省的匯率干預動向。"
+    ],
+    "visual_note": {
+      "title": "升息重定價引爆美債殖利率突破五點一跨資產傳導",
+      "file_id": "",
+      "url": "",
+      "model": "gemini-3.1-flash-image"
+    },
+    "news_narrative": {
+      "title": "高利率維持更久",
+      "support_level": "高",
+      "cards": [
+        {
+          "label": "驗證結果",
+          "text": "支持"
+        },
+        {
+          "label": "摘要",
+          "text": "市場重新定價聯準會升息路徑，高盛上修利率預測且12月升息機率激增，主導美國10年期公債殖利率突破5.10%並推升美元指數。高利率與強美元雙重施壓下，黃金明顯承壓走跌，原油走強則成為潛在通膨修正因子，整體跨資產傳導鏈高度連貫。"
+        },
+        {
+          "label": "支持新聞",
+          "text": "1. 新聞重點：高盛上修聯準會利率預測，市場預估12月及明年3月各升息一碼，帶動美債拋補加速且10年期美債殖利率突破5%。\n2. 市場影響：推高政策利率預期與美國10年期公債殖利率，支撐美元指數攀高，並顯著壓低黃金走勢。\n3. 驗證結論：美國10年期公債殖利率上行、美元偏強與黃金下跌走勢完全貼合，支持高利率定價主線。"
+        },
+        {
+          "label": "異常訊號",
+          "text": "1. WTI與Brent原油同步上行，雖未立即阻礙美債殖利率攀升，但能源成本墊高可能加劇未來通膨黏性，成為後續利率路徑的修正因子。\n2. 日圓與台幣對美元走弱，符合強美元下的外匯壓力傳導；韓元呈現微幅偏強走勢，可能受區域性資金調度或資料時間差影響，暫列為待觀察訊號。"
+        },
+        {
+          "label": "觀察重點",
+          "text": "1. 聯準會官員最新談話，觀察是否全面背書市場對於12月升息的高預期。\n2. 美國30年期等長天期公債標售需求與殖利率曲線倒掛程度變化。\n3. 國際油價持續攀升是否轉化為實質通膨數據壓力，進一步推高終點利率預期。\n4. 日圓逼近160大關後，日本官方是否發動實質外匯干預。"
+        }
+      ],
+      "news_links_json": "[\n  {\n    \"rank\": 1,\n    \"theme\": \"Rates｜Treasury Yields / 美債殖利率\",\n    \"source\": \"MarketWatch\",\n    \"title\": \"Stock Market News - Bond Market - Currencies Markets - MarketWatch\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiS0FVX3lxTE1WSk1SMEVJUWVGN1RIVTEtSThObVFxbkFHTE9ySmdyRUx4NjJMNWsta3lOaFBOVFF5eUEtN0lVaXc5QlFiTEdiQVZYSQ?oc=5\",\n    \"published_at\": \"Thu, 12 Nov 2026 20:47:18 GMT\",\n    \"score\": 118,\n    \"matched_keywords\": \"美債殖利率:treasury/yield/yields/bond | 變數:TREASURY_YIELDS | 類型:REACTION | 來源角色:MARKET_REACTION\"\n  },\n  {\n    \"rank\": 2,\n    \"theme\": \"Rates｜Treasury Yields / 美債殖利率\",\n    \"source\": \"MarketWatch\",\n    \"title\": \"The bond market now has an even bigger fear than AI fallout - MarketWatch\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiqgFBVV95cUxQWTI3RVVkdlJNR2tVVTNfRnJsd2JqUTd2Z3hIeWNNSEhRZ0NpQU4xekZKeTVVN2tJenp3MVh4RU9oTW5EcU9mNVNzTHlnY0pSVmFvT29NaEtETUFmakVPU1o3bUNVYlc3OUFBTVNDS05LYVFmeXdobF81V2paa1cycF96N1l5QW12dzNXMExYcG41c2U4VnRXa09YLXdKcnJVcEprZXNLOTBYQQ?oc=5\",\n    \"published_at\": \"Thu, 12 Nov 2026 20:44:00 GMT\",\n    \"score\": 118,\n    \"matched_keywords\": \"美債殖利率:treasury/yield/yields/bond | 變數:TREASURY_YIELDS | 類型:REACTION | 來源角色:MARKET_REACTION\"\n  },\n  {\n    \"rank\": 3,\n    \"theme\": \"Rates｜Treasury Yields / 美債殖利率\",\n    \"source\": \"MarketWatch\",\n    \"title\": \"Treasury Selloff Accelerates, European Bonds Follow Suit -- 3rd Update - MarketWatch\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiwAFBVV95cUxNNTdKQUQ1WkJDTTBCS0lYNnl2R18zVkdIemNhd3hKZ0ppalZCUktvb1UxLVg2dk1aTkU3UHpvYVJ3aGJpZmdGbUNpVUdFOHVCNTRNUDk0NUdDd2V2T2JnTllnUkpxTF9MYlpPTjZMTDNsTWxURmRmSng3TXlXdzZJNTAteU85aDZwWEpGUkZ3RFVULUJPMERvU0lsdmxSclp3LWx0cThqdlhZaGY1aTh4ZlgwWTNGOWowNmdvNjhleWE?oc=5\",\n    \"published_at\": \"Thu, 12 Nov 2026 20:40:00 GMT\",\n    \"score\": 118,\n    \"matched_keywords\": \"美債殖利率:treasury/yield/yields/bond | 變數:TREASURY_YIELDS | 類型:REACTION | 來源角色:MARKET_REACTION\"\n  },\n  {\n    \"rank\": 4,\n    \"theme\": \"FX｜Dollar / FX / 美元與匯率\",\n    \"source\": \"鉅亨網\",\n    \"title\": \"〈紐約匯市〉美元升至19個月新高 市場焦點轉向利率預期 - 鉅亨網\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiT0FVX3lxTE1kYm4wbFE1SkVudU1rcHJnNVMwV3RyYmFSWjB5MEU5eVlUQ19VUWdsMDhSWXVLUUdPSkQ0VFlHT3ZaR0N2UmJqZjVfM0VfWnM?oc=5\",\n    \"published_at\": \"Thu, 12 Nov 2026 21:22:28 GMT\",\n    \"score\": 116.6,\n    \"matched_keywords\": \"美元與亞洲匯率:dollar | 變數:DOLLAR_FX | 類型:DATA | 來源角色:CNYES_MACRO\"\n  },\n  {\n    \"rank\": 5,\n    \"theme\": \"Rates｜Treasury Yields / 美債殖利率\",\n    \"source\": \"MarketWatch\",\n    \"title\": \"U.S. 30-Year Treasury Auction Shows Softer Demand - MarketWatch\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiqAFBVV95cUxPeEZEVWtNQVBPUmFwNWN4ckZ2MXFpeWVNMm1PWGlqVWlwdF92NnRhY3Q2LXNxTkpQRmh0UFEwU3NMdzFEeEd6QzZQSlFoVGRkY2U1djBSYUJUREEwSnAxOEtUZnd3TlNpV1RBOHhNajRZU1BOcGszazZUZWo0TTJHSkM5bkE1V2MzMVY0UHRTSFAzOFZUZF9RX2lqQl9kV3NWMWVYTWNCU2Q?oc=5\",\n    \"published_at\": \"Thu, 12 Nov 2026 18:35:00 GMT\",\n    \"score\": 113,\n    \"matched_keywords\": \"美債殖利率:treasury/yield/yields | 變數:TREASURY_YIELDS | 類型:REACTION | 來源角色:MARKET_REACTION\"\n  },\n  {\n    \"rank\": 6,\n    \"theme\": \"Fed Policy｜Fed / 聯準會\",\n    \"source\": \"鉅亨網\",\n    \"title\": \"高盛上修Fed利率預測 估12月、明年3月各升息一碼 - 鉅亨網\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiT0FVX3lxTE56ckhaMXlnZjNfZ2tHMTY3MWlMREhFRUlVZU1MSUVHaVVkUXpJUHRHbjg5cWh3ZFlGZEp1WVZMWnJkZWZlZE1nMnc1NjFqbVU?oc=5\",\n    \"published_at\": \"Thu, 12 Nov 2026 11:00:04 GMT\",\n    \"score\": 112.4,\n    \"matched_keywords\": \"聯準會政策:fed | 變數:FED | 類型:DATA | 來源角色:CNYES_MACRO\"\n  },\n  {\n    \"rank\": 7,\n    \"theme\": \"FX｜Dollar / FX / 美元與匯率\",\n    \"source\": \"鉅亨網\",\n    \"title\": \"〈紐約匯市〉美元攀高、日元逼近160關卡 Fed 12月升息機率升至87% - 鉅亨網\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiT0FVX3lxTE51OGpzRUg1SjBscExfWi1ud3hzUUdiaE1paVFqM25WX2VDWkFiam1kZXYtUXZlZXJmc0EzdjB1NVV4S2tGYXNsZmlsSE1nWkE?oc=5\",\n    \"published_at\": \"Thu, 12 Nov 2026 02:07:27 GMT\",\n    \"score\": 111.6,\n    \"matched_keywords\": \"聯準會政策:fed | 美元與亞洲匯率:dollar | 變數:DOLLAR_FX | 類型:DATA | 來源角色:CNYES_MACRO\"\n  },\n  {\n    \"rank\": 8,\n    \"theme\": \"Fed Policy｜Fed / 聯準會\",\n    \"source\": \"Reuters\",\n    \"title\": \"US Treasury bought yen in July; Fed made no solo FX interventions in Q3 - Reuters\",\n    \"url\": \"https://news.google.com/rss/articles/CBMirgFBVV95cUxQMkM3MHBxSC0zWERfdnhqRURMc2dhS01oamJOMC1TZFMwNGljLUtmTEVlaFZsVWc4b2JsUmJVNkUwWEpraUJaVVJrNHp3TktqczB6RXhtSTBOaWZFQ0k0WFd6UHhvTGFJMWs5UTAzZDkyb1FfNU90RVh5WVZfT0ZzMzNfeGVLR1J2NDItOVhvbmFtQVgtclBoMEpQdkxCcXFtVkUzZFZrQzB2bmd3NlE?oc=5\",\n    \"published_at\": \"Thu, 12 Nov 2026 22:13:43 GMT\",\n    \"score\": 109.4,\n    \"matched_keywords\": \"聯準會政策:fed | 美債殖利率:treasury | 美元與亞洲匯率:yen | 變數:FED | 類型:BACKUP | 來源角色:WIRE_CONFIRMATION\"\n  }\n]"
+    },
+    "raw_daily_summary_package": "日期：2026-11-12\n今日主線：高利率維持更久推升美債\n\nExecutive Summary：\n市場目前最重視聯準會升息路徑是否進一步抬高，高盛上修利率預測引發美債10年期殖利率升破5.10%，並帶動強美元全面壓抑金價與亞洲貨幣。資產傳導鏈呈現標準的緊縮共振，而WTI原油的上行則作為墊高能源通膨預期的關鍵修正因子。\n\n今日核心訊號：\n- 美債十載殖利率破高\n- 美元指數偏強運行\n- 油價上漲金價承壓\n\n核心資產重點：\nWTI｜88.70｜上行｜油價上行，增加能源成本與短期通膨預期的上行壓力；若非今日主線，應視為修正因子或並行訊號。\nUS10Y｜5.103%｜上行｜市場重估聯準會升息路徑，高利率維持更久預期推升長端利率與期限溢價。\nDXY｜103.18｜偏強｜利差優勢支撐美元偏強，外匯壓力傳導至日圓與台幣等非美貨幣。\n\n矛盾 / 背離：\n今日呈現高利率定價下的經典跨資產強共振：政策升息預期帶動美國10年期公債殖利率衝破5.10%，推升美元指數並直接壓抑無孳息資產黃金。WTI原油走強並非此波利率上行的單一主驅動，而是扮演加深市場對通膨黏性疑慮的修正因子，強化了利率維持高檔的敘事。\n\n總經傳導鏈：\n升息路徑重定價與能源通膨預期上修 -> 美國10年期公債殖利率升破5.10% -> 利差優勢推升美元指數 -> 壓抑金價走跌並加劇日圓逼近160及台幣貶值壓力\n\n新聞佐證：\n- 高盛上修聯準會利率預測，市場預估12月及明年3月各升息一碼。\n- 美國10年期公債殖利率突破5.10%，債市拋售推升整體長端名目利率。\n- 國際油價持續攀升，WTI站穩88美元，增加實質通膨黏性與政策路徑修正因子。\n\n待觀察問題：\n- 聯準會官員後續談話是否全面確認12月升息預期。\n- 國際油價若持續走高對未來通膨硬數據的實質外溢影響。\n- 美元兌日圓逼近160關卡時日本財務省的匯率干預動向。"
+  }
+}

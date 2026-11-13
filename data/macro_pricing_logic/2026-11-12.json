@@ -1,0 +1,155 @@
+{
+  "generated_at": "2026-11-13T15:22:50+08:00",
+  "date": "2026-11-12",
+  "mode": "macro_pricing_logic_v4",
+  "logic": {
+    "pricing_context": {
+      "market_was_pricing": "市場先前假設聯準會升息循環已近尾聲或政策利率將維持觀望。",
+      "new_information": "高盛上修聯準會利率預測（預估12月及明年3月各升息一碼），美債10年期殖利率升破5.10%（報5.103%），且WTI原油持續攀升站穩88美元（報88.70）。",
+      "pricing_question": "聯準會升息路徑是否進一步抬高，以及高利率維持更久預期是否將持續強化緊縮共振？"
+    },
+    "input_material_mapping": {
+      "inflation_materials": [
+        "WTI原油價格上行至88.70美元，站穩88美元，增加實質通膨黏性與能源成本壓力。"
+      ],
+      "rate_materials": [
+        "高盛上修聯準會利率預測，市場預估12月及明年3月各升息一碼。",
+        "美國10年期公債殖利率突破5.10%（報5.103%），債市拋售推升整體長端名目利率與期限溢價。"
+      ],
+      "dollar_materials": [
+        "美元指數偏強運行（報103.18），受利差優勢支撐。",
+        "外匯壓力傳導至日圓與台幣等非美貨幣。"
+      ],
+      "gold_materials": [
+        "高利率與美元指數偏強壓抑無孳息資產黃金，油價上漲金價承壓。"
+      ],
+      "asia_fx_materials": [
+        "利差優勢推升美元，加劇日圓逼近160及台幣貶值壓力。"
+      ],
+      "mapping_summary": "今日市場素材以高盛上修升息預估與油價走高為主要驅動，透過利率與利差管道直接傳導至美元、黃金與亞幣。"
+    },
+    "inflation_expectation": {
+      "energy": {
+        "direction": "up",
+        "importance": "high",
+        "evidence": [
+          "WTI原油價格上行至88.70美元，國際油價持續攀升站穩88美元。"
+        ],
+        "judgment": "油價持續走高直接墊高能源成本，加深市場對通膨黏性的疑慮。"
+      },
+      "supply_chain": {
+        "direction": "unclear",
+        "importance": "low",
+        "evidence": [],
+        "judgment": "每日摘要未提供供應鏈或運價相關資料。"
+      },
+      "price_data": {
+        "direction": "unclear",
+        "importance": "low",
+        "evidence": [],
+        "judgment": "每日摘要未提供最新CPI、PPI或PCE等硬數據。"
+      },
+      "demand": {
+        "direction": "unclear",
+        "importance": "low",
+        "evidence": [],
+        "judgment": "每日摘要未提供PMI或零售銷售等需求面數據。"
+      },
+      "labor_market": {
+        "direction": "unclear",
+        "importance": "low",
+        "evidence": [],
+        "judgment": "每日摘要未提供就業市場相關數據。"
+      },
+      "policy_expectation": {
+        "direction": "up",
+        "importance": "high",
+        "evidence": [
+          "高盛上修聯準會利率預測，市場預估12月及明年3月各升息一碼。"
+        ],
+        "judgment": "升息路徑上修強化了市場對通膨黏性與緊縮政策維持更久的預期。"
+      },
+      "summary": {
+        "overall_direction": "up",
+        "strength": "medium",
+        "dominant_force": "高盛上修聯準會升息預測與油價（WTI 88.70美元）持續攀升",
+        "offsetting_force": "每日摘要未提供顯著緩解通膨預期之素材",
+        "judgment": "油價走高與政策升息預期上修共同作用，推升通膨黏性疑慮，為利率上行提供背景支持。"
+      }
+    },
+    "rate_pricing": {
+      "direction": "up",
+      "link_with_inflation_expectation": "利率與通膨預期呈現同向推升。油價走高強化通膨黏性疑慮，進一步支撐升息預期重定價。",
+      "fed_policy_signal": "高盛上修利率預測，市場開始預估12月及明年3月各升息一碼。",
+      "treasury_supply_demand": "美債市場出現拋售壓力，推升長端名目利率。",
+      "term_premium": "高利率維持更久預期發酵，推升長端利率與期限溢價，美債10年期殖利率突破5.10%（報5.103%）。",
+      "safe_haven_bond_buying": "未見避險買債跡象，市場主要由拋售與緊縮定價主導。",
+      "growth_concern_or_cut_expectation": "焦點聚焦於升息路徑抬高而非成長衰退或降息預期。",
+      "dominant_force": "聯準會升息路徑重定價（高盛上修預估）與美債拋售所帶來的期限溢價上調",
+      "judgment": "美債10年期殖利率升破5.10%，反映市場對聯準會進一步升息及高利率維持更久進行強烈重新定價。"
+    },
+    "dollar_pricing": {
+      "direction": "up",
+      "link_with_rates": "美元與美債殖利率方向高度同向。美債10年期殖利率衝破5.10%擴大利差優勢，支撐美元指數偏強運行至103.18。",
+      "safe_haven_dollar": "資料未強調避險流動性需求，主要由利差優勢主導。",
+      "liquidity_demand": "資料未顯示特定流動性緊縮需求。",
+      "other_currency_weakness": "非美貨幣普遍承壓，日圓逼近160關卡，台幣亦面臨貶值壓力。",
+      "us_relative_growth_or_policy": "美國政策升息預期上修強化了美方相對偏緊的政策姿態。",
+      "dominant_force": "美債殖利率衝高引發的利差優勢",
+      "judgment": "美元指數在美債殖利率突破5.10%帶動下偏強運行，展現跨資產緊縮共振的主導地位。"
+    },
+    "gold_pricing": {
+      "direction": "down",
+      "rate_or_real_rate_pressure": "美債10年期殖利率升破5.10%提高持有無孳息資產的機會成本，對黃金形成直接顯著壓制。",
+      "dollar_effect": "美元指數偏強運行（103.18）進一步加劇黃金下行壓力。",
+      "safe_haven_demand": "今日未見足以抵銷高利率與強美元壓力的避險買盤。",
+      "central_bank_buying": "資料未提及央行買盤相關細節。",
+      "geopolitical_risk": "資料未顯示地緣政治買盤足以支撐金價。",
+      "dominant_force": "高名目利率（美債10Y 5.103%）與強勢美元（DXY 103.18）共同壓抑",
+      "judgment": "金價承壓走跌，呈現高利率與強美元環境下的典型無孳息資產修正反應。"
+    },
+    "asia_fx_pricing": {
+      "twd": {
+        "reaction": "台幣呈現貶值壓力",
+        "consistent_with_dollar_pressure": "yes",
+        "local_correction_factor": "資料未提及顯著的本地資金流或央行修正因子",
+        "judgment": "台幣走勢符合美元指數偏強及美債殖利率擴大利差的傳導機制。"
+      },
+      "jpy": {
+        "reaction": "日圓走弱並逼近160關卡",
+        "consistent_with_dollar_pressure": "yes",
+        "local_correction_factor": "市場開始密切關注日本財務省潛在的匯率干預動向",
+        "judgment": "美日利差擴大驅動日圓逼近160，干預風險成為後續關鍵的政策修正因子。"
+      },
+      "krw": {
+        "reaction": "資料不足",
+        "consistent_with_dollar_pressure": "unclear",
+        "local_correction_factor": "每日摘要未提供韓圜相關數據與新聞素材",
+        "judgment": "資料不足以判斷韓圜今日定價細節，待後續數據確認。"
+      }
+    },
+    "market_contradiction": {
+      "baseline_expectation": "若高利率環境對經濟形成壓抑，原油等順週期大宗商品通常可能受成長疑慮牽制；或者油價大幅上漲引發避險需求時，金價應獲得一定程度支撐。",
+      "actual_reaction": "今日市場呈現高度一致的緊縮共振：美債殖利率衝高、美元強勢、金價下跌，而油價（WTI 88.70美元）同時上行。",
+      "most_non_obvious_link": "油價上行並非今日美債殖利率突破5.10%的單一主驅動，而是作為加深市場對通膨黏性疑慮的修正因子。",
+      "possible_explanation": "主導今日資產價格的力量是聯準會升息預期重定價（高盛上修預測），油價站穩88美元則強化了「通膨具黏性、高利率需維持更久」的敘事背景。",
+      "is_correction_or_new_mainline": "correction_factor",
+      "how_to_integrate_into_main_theme": "將油價上行定位為「墊高通膨黏性疑慮的修正因子」，與升息預期重定價共同嵌入主線，避免將其誤判為獨立的單一驅動源。",
+      "presenter_story_angle": {
+        "opening_question": "當美債10年期殖利率衝破5.10%帶動美元與金價展現經典緊縮共振時，站穩88美元的油價究竟是通膨的主引擎，還是背後推波助瀾的修正因子？",
+        "normal_script": "在升息預期抬高時，美債殖利率上升、美元走強、黃金與亞幣承壓是標準的機構傳導路徑。",
+        "where_it_breaks": "油價未因高利率壓抑需求而回落，反而持續攀升至88.70美元。",
+        "why_it_matters": "油價強勢上行加深了市場對通膨黏性的疑慮，為聯準會進一步升息與長期維持高利率提供重要基本面支撐。",
+        "next_watch": "關注聯準會官員談話是否全面確認12月升息預期，以及油價對後續通膨數據的實質外溢影響。"
+      }
+    },
+    "pricing_assessment": {
+      "dominant_market_force": "高盛上修升息預測所引發的聯準會政策路徑重定價，帶動美債10年期殖利率衝破5.10%。",
+      "offsetting_force": "WTI原油走強（88.70美元）作為通膨黏性修正因子，進一步強化了高利率維持更久的定價邏輯。",
+      "most_non_obvious_signal": "名目利率急升與美元偏強背景下，油價依然保持上行，未展現出需求受抑制的降溫訊號。",
+      "market_question": "市場是否已完全定價12月與明年3月的升息預期？日圓逼近160關卡是否會引發日本官方的實質干預？",
+      "one_sentence_takeaway": "美債殖利率突破5.10%觸發緊縮共振，升息預期上修與油價上行共同主導強美元、弱金價與亞幣承壓。",
+      "next_watch": "聯準會官員後續談話態度、油價對通膨硬數據的外溢影響，以及日圓逼近160關卡時日本財務省的干預動向。"
+    }
+  }
+}
