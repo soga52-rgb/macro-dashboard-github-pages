@@ -1,0 +1,64 @@
+{
+  "generated_at": "2026-11-14T15:03:53+08:00",
+  "source": "Google Sheets Today Daily Source",
+  "mode": "today_daily_source",
+  "data_status": "complete",
+  "daily_summary": {
+    "date": "2026-11-13",
+    "headline": "通膨黏性與避險並行",
+    "executive_summary": "市場目前最重視通膨年增黏性與能源成本走升是否迫使高利率維持更久，推動美債殖利率與美元同步上行。資產傳導整體貼合通膨路徑，但黃金在實質利率與強美元壓力下逆勢走高，成為關鍵的避險修正因子。PPI月增放緩雖提供些許降溫訊號，但未扭轉市場對緊縮預期的定價。",
+    "market_signals": [
+      "美債殖利率破5.15%",
+      "原油雙雙偏強走升",
+      "美元黃金同步走強"
+    ],
+    "macro_chain": "[PPI年增創高與油價走升] -> [美國10年期公債殖利率衝上5.15%] -> [美元指數偏強站上103.4] -> [亞洲貨幣承壓分化、黃金受避險買盤支撐逆勢走高]",
+    "divergence": "今日核心分歧在於「利率/美元 → 黃金」的傳導出現裂痕。主線為PPI年增高檔與雙原油走強驅動美債拋售、推升美元；修正因子則是地緣風險或政策不確定性催生的避險需求，支撐黃金逆勢突破3887美元。此背離訊號意味市場不僅在計價通膨黏性，更對極端利率環境下的系統性風險保持防禦，後續是否演變為全面避險仍待觀察。",
+    "market_snapshot": "WTI｜88.92｜油價上行｜油價上行，增加能源成本與短期通膨預期的上行壓力；若非今日主線，應視為修正因子或並行訊號。\nBrent｜96.08｜油價上行｜油價上行，增加能源成本與短期通膨預期的上行壓力；若非今日主線，應視為修正因子或並行訊號。\nUS10Y｜5.154%｜利率上行｜長端利率反映PPI年增高檔與油價推升的通膨預期，市場定價利率維持高檔更久。\nDXY｜103.41｜美元偏強｜利差優勢支撐美元維持強勢，對非美與亞洲貨幣形成中長期壓迫。\nGold｜3887.60｜金價上行｜在強美元與實質利率高檔下逆勢走強，反映地緣政治或政策不確定性帶來的避險買盤修正項。\nUSDJPY｜159.69｜日圓偏強｜資料落後呈現偏強，但利差劣勢下強美元將持續為日圓帶來外在回跌壓力。",
+    "news_evidence": [
+      "美國10月PPI年增創近四年新高，雖月增低於預期，但投行仍上修升息預期並引發美債拋售。",
+      "WTI與Brent原油分別站上88.92與96.08美元，能源通膨擔憂顯著加劇期限溢酬。",
+      "美國10年期公債殖利率上行至5.154%，美元指數升至103.41，利差驅動強美元格局。",
+      "黃金無畏高實質利率逆勢升至3887.60美元，顯示避險情緒介入修正傳統利率定價。"
+    ],
+    "watchpoints": [
+      "即將公佈的CPI與PCE等通膨硬數據，驗證通膨是否全面回溫或僅由能源推升。",
+      "Fed官員最新公開演說，評估對高油價與升息路徑是否釋放進一步緊縮訊號。",
+      "WTI與Brent原油能否守穩高檔，若持續上攻將進一步強化次級通膨螺旋風險。"
+    ],
+    "visual_note": {
+      "title": "通膨黏性與避險並行：殖利率美元雙強下的黃金背離",
+      "file_id": "1W9TCdTO0fPruqzfKhRbuG3L3INTl8ocX",
+      "url": "https://drive.google.com/file/d/1W9TCdTO0fPruqzfKhRbuG3L3INTl8ocX/view?usp=drivesdk",
+      "model": "gemini-3.1-flash-image"
+    },
+    "news_narrative": {
+      "title": "高利率維持更久與通膨預期多空拉鋸",
+      "support_level": "中",
+      "cards": [
+        {
+          "label": "驗證結果",
+          "text": "部分支持"
+        },
+        {
+          "label": "摘要",
+          "text": "市場聚焦通膨黏性與升息押注，推動美國10年期公債殖利率與美元指數同步走強。雖然PPI月增放緩形成修正因子，但年增創高疊加能源通膨擔憂，主導利率定價偏鷹。黃金則在強美元下逆勢上行，反映地緣政治或政策不確定性帶來的避險需求，使傳導鏈呈現部分連貫。"
+        },
+        {
+          "label": "支持新聞",
+          "text": "1. 新聞重點：美國10月PPI月增低於預期但年增創近四年新高，投行上修Fed升息預期並引發美債遭遇拋售潮。\n2. 市場影響：推高美國10年期公債殖利率至5.15%並支撐美元指數站上103.4，同時帶動油價上行與亞洲貨幣承壓分化。\n3. 驗證結論：支持高利率與通膨黏性定價，但美元與黃金同漲顯示避險情緒為關鍵修正因子，整體傳導部分支持。"
+        },
+        {
+          "label": "異常訊號",
+          "text": "1. 美國10年期公債殖利率與美元指數同步走高，理論上會壓抑無孳息資產，但黃金上行至3887.6美元，顯示市場除利差定價外，亦有地緣風險或政策不確定性引發的避險買盤，屬於避險修正因子。\n2. PPI月增數據低於預期提供通膨降溫微弱訊號，但年增創高與油價（WTI、Brent）走強使得市場更重視能源通膨風險，降溫訊號僅能視為反向壓力而非主線逆轉。"
+        },
+        {
+          "label": "觀察重點",
+          "text": "1. 後續CPI與PCE通膨硬數據，驗證通膨是全面死灰復燃還是僅受能源單項推升。\n2. Fed官員對能源衝擊與升息路徑的最新表態，觀察政策高利率預期是否進一步收緊。\n3. WTI與Brent原油期貨走勢，若油價持續飆升將加劇次級通膨壓力並推升公債期限溢酬。\n4. 亞洲貨幣（日圓、台幣、韓元）在強美元環境下的匯率防守力道及資金外流風險。"
+        }
+      ],
+      "news_links_json": "[\n  {\n    \"rank\": 1,\n    \"theme\": \"FX｜Dollar / FX / 美元與匯率\",\n    \"source\": \"鉅亨網\",\n    \"title\": \"〈紐約匯市〉美元創9月來最大單週漲幅 Fed升息幾成定局 - 鉅亨網\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiT0FVX3lxTFBudVZSMC1ERWFNSTU2TG1NOU1TZWtCVXh6R2ItcjV4am5lVW9SbExHVmQwd09SRTEtdXhqWHlZMTZzOTBmVmVXWkdDWHpxVFk?oc=5\",\n    \"published_at\": \"Fri, 13 Nov 2026 21:47:53 GMT\",\n    \"score\": 118.6,\n    \"matched_keywords\": \"聯準會政策:fed | 美元與亞洲匯率:dollar | 變數:DOLLAR_FX | 類型:DATA | 來源角色:CNYES_MACRO\"\n  },\n  {\n    \"rank\": 2,\n    \"theme\": \"Rates｜Treasury Yields / 美債殖利率\",\n    \"source\": \"鉅亨網\",\n    \"title\": \"美債料創川普「解放日」關稅以來最大單週拋售，市場押注美聯儲連續升息 - 鉅亨網\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiT0FVX3lxTE1rcmNJbldfV2pWb1BCZUJqQTlYUzlqVlpzUldXbkd4ZWh5TnkxRW1uZnB1bGZzOUJUYndsSU9Xb0FsN19ESVRqZ3luNTBLR28?oc=5\",\n    \"published_at\": \"Fri, 13 Nov 2026 12:05:08 GMT\",\n    \"score\": 118,\n    \"matched_keywords\": \"美債殖利率:treasury/yield/yields | 變數:TREASURY_YIELDS | 類型:DATA | 來源角色:CNYES_MACRO\"\n  },\n  {\n    \"rank\": 3,\n    \"theme\": \"Rates｜Treasury Yields / 美債殖利率\",\n    \"source\": \"鉅亨網\",\n    \"title\": \"華爾街清算巨頭 DTCC 宣布接入 Solana！股票、美債代幣化預計 2027 下半年上線 - 鉅亨網\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiT0FVX3lxTFBqLXFIQ0h1YWxfU3lzNG4tR09MNFV3eEtqd3UzRlJFUG11X3NlQlJTa2N0TktYcHBoa25JV0htSENPTmR3NWpkd3lkM0FCeWM?oc=5\",\n    \"published_at\": \"Fri, 13 Nov 2026 05:00:05 GMT\",\n    \"score\": 115,\n    \"matched_keywords\": \"美債殖利率:treasury/yield/yields | 變數:TREASURY_YIELDS | 類型:DATA | 來源角色:CNYES_MACRO\"\n  },\n  {\n    \"rank\": 4,\n    \"theme\": \"Rates｜Treasury Yields / 美債殖利率\",\n    \"source\": \"鉅亨網\",\n    \"title\": \"美股期貨小漲0.2% 輝達人事風波衝擊收斂、美債殖利率續攀 - 鉅亨網\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiT0FVX3lxTE5XUTNZMGFlV2VIZDFCY09nb3l2SFk3QmtSRVBhRU1nUjF3dnoycTNvUFdMbmxuMVlJVnhST0tTN1lvdmVOREl4bkJRY0FyUjg?oc=5\",\n    \"published_at\": \"Fri, 13 Nov 2026 03:30:07 GMT\",\n    \"score\": 115,\n    \"matched_keywords\": \"美債殖利率:treasury/yield/yields | 變數:TREASURY_YIELDS | 類型:DATA | 來源角色:CNYES_MACRO\"\n  },\n  {\n    \"rank\": 5,\n    \"theme\": \"Fed Policy｜Fed / 聯準會\",\n    \"source\": \"鉅亨網\",\n    \"title\": \"「別只看後照鏡！」美財長喊話Fed：別因能源衝擊升息 - 鉅亨網\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiT0FVX3lxTE9YLV9BOUYtQ2ZuWEFZSjhWQWJsZW5kOV9CdkFRTGdSakRHZS1XRU5Ra3p1UjB5ckxtVWZqSVVmaDg5dGxkSGNYS2ZCbE9NREU?oc=5\",\n    \"published_at\": \"Fri, 13 Nov 2026 16:31:31 GMT\",\n    \"score\": 112.4,\n    \"matched_keywords\": \"聯準會政策:fed | 變數:FED | 類型:DATA | 來源角色:CNYES_MACRO\"\n  },\n  {\n    \"rank\": 6,\n    \"theme\": \"Inflation｜PPI / 生產者物價\",\n    \"source\": \"鉅亨網\",\n    \"title\": \"Fed仍難鬆口氣！美國10月PPI月增低於預期 年增卻創近四年新高 - 鉅亨網\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiT0FVX3lxTE9zLWtVMHRsc1Y3SVREWUluMEhxZjhYT1Q3NGs0WDllNDZnajJxREZmWVh4N3Y2QWNyMVQ5M1BWcEg2ZWFYYjgzTlFoTTNPSUU?oc=5\",\n    \"published_at\": \"Fri, 13 Nov 2026 13:39:54 GMT\",\n    \"score\": 112.4,\n    \"matched_keywords\": \"通膨數據:inflation/ppi | 聯準會政策:fed | 變數:PPI | 類型:DATA | 來源角色:CNYES_MACRO\"\n  },\n  {\n    \"rank\": 7,\n    \"theme\": \"FX｜Dollar / FX / 美元與匯率\",\n    \"source\": \"鉅亨網\",\n    \"title\": \"〈紐約匯市〉美元升至19個月新高 市場焦點轉向利率預期 - 鉅亨網\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiT0FVX3lxTE1kYm4wbFE1SkVudU1rcHJnNVMwV3RyYmFSWjB5MEU5eVlUQ19VUWdsMDhSWXVLUUdPSkQ0VFlHT3ZaR0N2UmJqZjVfM0VfWnM?oc=5\",\n    \"published_at\": \"Thu, 12 Nov 2026 21:22:28 GMT\",\n    \"score\": 106.6,\n    \"matched_keywords\": \"美元與亞洲匯率:dollar | 變數:DOLLAR_FX | 類型:DATA | 來源角色:CNYES_MACRO\"\n  },\n  {\n    \"rank\": 8,\n    \"theme\": \"Fed Policy｜Fed / 聯準會\",\n    \"source\": \"鉅亨網\",\n    \"title\": \"高盛上修Fed利率預測 估12月、明年3月各升息一碼 - 鉅亨網\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiT0FVX3lxTE56ckhaMXlnZjNfZ2tHMTY3MWlMREhFRUlVZU1MSUVHaVVkUXpJUHRHbjg5cWh3ZFlGZEp1WVZMWnJkZWZlZE1nMnc1NjFqbVU?oc=5\",\n    \"published_at\": \"Thu, 12 Nov 2026 11:00:04 GMT\",\n    \"score\": 106.4,\n    \"matched_keywords\": \"聯準會政策:fed | 變數:FED | 類型:DATA | 來源角色:CNYES_MACRO\"\n  }\n]"
+    },
+    "raw_daily_summary_package": "日期：2026-11-13\n今日主線：通膨黏性與避險並行\n\nExecutive Summary：\n市場目前最重視通膨年增黏性與能源成本走升是否迫使高利率維持更久，推動美債殖利率與美元同步上行。資產傳導整體貼合通膨路徑，但黃金在實質利率與強美元壓力下逆勢走高，成為關鍵的避險修正因子。PPI月增放緩雖提供些許降溫訊號，但未扭轉市場對緊縮預期的定價。\n\n今日核心訊號：\n- 美債殖利率破5.15%\n- 原油雙雙偏強走升\n- 美元黃金同步走強\n\n核心資產重點：\nWTI｜88.92｜油價上行｜油價上行，增加能源成本與短期通膨預期的上行壓力；若非今日主線，應視為修正因子或並行訊號。\nBrent｜96.08｜油價上行｜油價上行，增加能源成本與短期通膨預期的上行壓力；若非今日主線，應視為修正因子或並行訊號。\nUS10Y｜5.154%｜利率上行｜長端利率反映PPI年增高檔與油價推升的通膨預期，市場定價利率維持高檔更久。\nDXY｜103.41｜美元偏強｜利差優勢支撐美元維持強勢，對非美與亞洲貨幣形成中長期壓迫。\nGold｜3887.60｜金價上行｜在強美元與實質利率高檔下逆勢走強，反映地緣政治或政策不確定性帶來的避險買盤修正項。\nUSDJPY｜159.69｜日圓偏強｜資料落後呈現偏強，但利差劣勢下強美元將持續為日圓帶來外在回跌壓力。\n\n矛盾 / 背離：\n今日核心分歧在於「利率/美元 → 黃金」的傳導出現裂痕。主線為PPI年增高檔與雙原油走強驅動美債拋售、推升美元；修正因子則是地緣風險或政策不確定性催生的避險需求，支撐黃金逆勢突破3887美元。此背離訊號意味市場不僅在計價通膨黏性，更對極端利率環境下的系統性風險保持防禦，後續是否演變為全面避險仍待觀察。\n\n總經傳導鏈：\n[PPI年增創高與油價走升] -> [美國10年期公債殖利率衝上5.15%] -> [美元指數偏強站上103.4] -> [亞洲貨幣承壓分化、黃金受避險買盤支撐逆勢走高]\n\n新聞佐證：\n- 美國10月PPI年增創近四年新高，雖月增低於預期，但投行仍上修升息預期並引發美債拋售。\n- WTI與Brent原油分別站上88.92與96.08美元，能源通膨擔憂顯著加劇期限溢酬。\n- 美國10年期公債殖利率上行至5.154%，美元指數升至103.41，利差驅動強美元格局。\n- 黃金無畏高實質利率逆勢升至3887.60美元，顯示避險情緒介入修正傳統利率定價。\n\n待觀察問題：\n- 即將公佈的CPI與PCE等通膨硬數據，驗證通膨是否全面回溫或僅由能源推升。\n- Fed官員最新公開演說，評估對高油價與升息路徑是否釋放進一步緊縮訊號。\n- WTI與Brent原油能否守穩高檔，若持續上攻將進一步強化次級通膨螺旋風險。"
+  }
+}
