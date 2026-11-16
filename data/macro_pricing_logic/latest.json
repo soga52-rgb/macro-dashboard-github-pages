@@ -1,167 +1,169 @@
 {
-  "generated_at": "2026-11-14T15:04:40+08:00",
+  "generated_at": "2026-11-16T15:21:06+08:00",
   "date": "2026-11-13",
   "mode": "macro_pricing_logic_v4",
   "logic": {
     "pricing_context": {
-      "market_was_pricing": "市場先前計價通膨放緩與利率觸頂。",
-      "new_information": "美國10月PPI年增創近四年新高，WTI（88.92）與Brent（96.08）原油雙雙走高，投行因而上修升息預期，引發美債拋售，推升美債殖利率至5.154%、美元指數至103.41。",
-      "pricing_question": "高通膨黏性與能源成本上行是否會逼使市場定價高利率維持更久，並同時引發極端利率環境下的系統性避險防禦？"
+      "market_was_pricing": "市場先前聚焦於通膨高檔維持與關稅政策不確定性。",
+      "new_information": "10月PPI年增創近四年新高，西德州原油回檔至88.56美元，布蘭特原油上漲至95.84美元，10年期美債殖利率升至5.15%，美元指數上升至103.41。",
+      "pricing_question": "在高通膨數據與關稅預期推升殖利率與美元的背景下，黃金與部分亞幣為何展現強勁的逆向韌性？"
     },
     "input_material_mapping": {
       "inflation_materials": [
-        "美國10月PPI年增創近四年新高，雖月增低於預期，仍展現通膨黏性",
-        "WTI原油升至88.92美元，Brent原油升至96.08美元，加劇能源通膨疑慮",
-        "即將公佈的CPI與PCE數據將作為驗證通膨是否全面回溫的指標"
+        "美國10月PPI年增創近四年新高",
+        "西德州原油回檔至88.56美元",
+        "布蘭特原油上漲至95.84美元",
+        "川普關稅預期發酵"
       ],
       "rate_materials": [
-        "美國10年期公債殖利率上行至5.154%",
-        "投行因PPI年增新高上修升息預期，引發美債拋售",
-        "能源通膨擔憂顯著加劇期限溢酬（Term Premium）",
-        "Fed官員演說將評估對高油價與升息路徑的態度"
+        "美國10年期公債殖利率上行至5.15%",
+        "市場重新定價聯準會連續升息預期",
+        "公債市場出現拋售潮",
+        "期限溢價擴大"
       ],
       "dollar_materials": [
         "美元指數升至103.41",
-        "利差優勢驅動強美元格局，對非美貨幣形成壓迫"
+        "美債殖利率上升提供利差優勢"
       ],
       "gold_materials": [
-        "黃金逆勢升至3887.60美元",
-        "地緣政治風險或政策不確定性帶來的避險買盤",
-        "無畏高實質利率與強美元壓力逆勢走強"
+        "黃金突破3886.30美元逆勢上行",
+        "川普關稅預期與高通膨焦慮引發避險買盤",
+        "法幣信任疑慮發酵"
       ],
       "asia_fx_materials": [
-        "USDJPY報159.69，資料呈現偏強，但利差劣勢下強美元帶來回跌壓力",
-        "亞洲貨幣整體承壓分化"
+        "美元兌日圓為159.66，日圓表現偏強",
+        "台幣與日圓未隨美元走強大幅貶值",
+        "區域資金與政策維穩力量介入"
       ],
-      "mapping_summary": "通膨與能源材料直接推動殖利率與美元同向偏強；黃金則因地緣與政策不確定性引發避險買盤而逆勢上揚；亞幣在強美元與利差劣勢下整體承受壓迫。"
+      "mapping_summary": "通膨與利率數據偏鷹帶動美債殖利率與美元走高；黃金受避險與關稅疑慮驅動逆勢上揚，亞幣則獲政策與資金維穩呈現鈍化。"
     },
     "inflation_expectation": {
       "energy": {
+        "direction": "mixed",
+        "importance": "medium",
+        "evidence": [
+          "西德州原油回檔至88.56美元",
+          "布蘭特原油上漲至95.84美元"
+        ],
+        "judgment": "油價內部走勢分歧，西德州原油回檔緩和部分能源壓力，布蘭特原油上漲則推升通膨疑慮，整體能源傳導力道呈現相互抵銷。"
+      },
+      "supply_chain": {
         "direction": "up",
         "importance": "high",
         "evidence": [
-          "WTI原油站上88.92美元",
-          "Brent原油站上96.08美元"
+          "川普關稅政策預期"
         ],
-        "judgment": "油價走高顯著加劇能源成本負擔，成為推升短期通膨預期的核心動力。"
-      },
-      "supply_chain": {
-        "direction": "unclear",
-        "importance": "low",
-        "evidence": [],
-        "judgment": "daily_summary 未提供供應鏈運價或瓶頸相關數據。"
+        "judgment": "關稅預期提高了市場對中長期進口成本與供應鏈瓶頸的潛在焦慮。"
       },
       "price_data": {
-        "direction": "mixed",
+        "direction": "up",
         "importance": "high",
         "evidence": [
-          "美國10月PPI年增創近四年新高",
-          "PPI月增低於預期"
+          "美國10月PPI年增創近四年新高"
         ],
-        "judgment": "PPI年增高檔反映通膨黏性仍強，雖月增放緩提供局部降溫訊號，但未改變市場對整體通膨壓力回升的疑慮。"
+        "judgment": "生產者物價數據顯著高於預期，直接強化生產者端價格傳導壓力。"
       },
       "demand": {
         "direction": "unclear",
         "importance": "low",
         "evidence": [],
-        "judgment": "daily_summary 未提供需求面（如PMI、零售銷售）之具體數據。"
+        "judgment": "資料不足，今日未提供 PM/NMI 或零售銷售等需求端數據。"
       },
       "labor_market": {
         "direction": "unclear",
         "importance": "low",
         "evidence": [],
-        "judgment": "daily_summary 未提供勞動市場相關數據。"
+        "judgment": "資料不足，今日未提供就業市場相關指標。"
       },
       "policy_expectation": {
         "direction": "up",
-        "importance": "medium",
+        "importance": "high",
         "evidence": [
-          "投行上修升息預期",
-          "市場定價高利率將維持更久"
+          "川普關稅預期"
         ],
-        "judgment": "通膨年增高檔與原油走強促使市場調整對政策利率終點與高利率維持時間的預期。"
+        "judgment": "關稅政策的不確定性持續推升市場對未來通膨走高及政策應對的預期。"
       },
       "summary": {
         "overall_direction": "up",
         "strength": "strong",
-        "dominant_force": "PPI年增創近四年新高與雙原油走強構成的通膨黏性與能源成本壓力",
-        "offsetting_force": "PPI月增低於預期",
-        "judgment": "今日通膨預期主要由高企的PPI年增數據與大幅走升的原油價格共同推升，顯示通膨黏性顯著，月增放緩僅帶來輕微抵銷。"
+        "dominant_force": "10月PPI年增創近四年新高與關稅政策預期",
+        "offsetting_force": "西德州原油價格回檔",
+        "judgment": "PPI數據過熱與關稅預期構成通膨預期的主要推升力量，雖然西德州原油回檔帶來微弱抵銷，整體通膨預期依然顯著偏強。"
       }
     },
     "rate_pricing": {
       "direction": "up",
-      "link_with_inflation_expectation": "同向。通膨預期偏強（PPI年增高檔與高油價）直接傳導至利率端，推升通膨溢價與升息預期。",
-      "fed_policy_signal": "投行因PPI年增數據上修升息預期，市場定價緊縮政策將維持更久。",
-      "treasury_supply_demand": "美債市場面臨拋售壓力，推動10年期美債殖利率衝上5.154%。",
-      "term_premium": "能源通膨疑慮加劇期限溢酬（Term Premium），長端殖利率承壓顯著。",
-      "safe_haven_bond_buying": "未見顯著資金流入美債避險，利率定價主要受通膨與緊縮預期主導。",
-      "growth_concern_or_cut_expectation": "市場焦點集中的通膨黏性壓倒了經濟成長擔憂，降息預期受到顯著修正。",
-      "dominant_force": "通膨年增黏性與原油價格上行加劇期限溢酬，觸發美債拋售。",
-      "judgment": "美債殖利率衝破5.15%，反映通膨預期傳導至利率端的力道明確，市場正重新定價高利率長久維持的情境。"
+      "link_with_inflation_expectation": "PPI年增創高與關稅預期促使市場重新定價Fed連續升息或維持高利率更久的可能性，推動債券拋售。",
+      "fed_policy_signal": "市場重新定價聯準會連續升息預期。",
+      "treasury_supply_demand": "公債面臨拋售潮，10年期公債殖利率攀升至5.15%。",
+      "term_premium": "長端利率反映通膨壓力與政策風險，期限溢價擴大。",
+      "safe_haven_bond_buying": "未出現顯著避險買債跡象，債市由通膨與政策賣壓主導。",
+      "growth_concern_or_cut_expectation": "降息預期受到顯著壓制，市場轉向押注高利率環境持續。",
+      "dominant_force": "PPI過熱與關稅預期引發的 Fed 升息重新定價",
+      "judgment": "利率定價完全承接通膨預期上行的傳導，10年期美債殖利率衝上5.15%，長端賣壓與期限溢價同步上升。"
     },
     "dollar_pricing": {
       "direction": "up",
-      "link_with_rates": "同向。美債殖利率上行擴大美國利差優勢，直接吸引資金推升美元。",
-      "safe_haven_dollar": "美債殖利率驅動為主的利差因素為主導，避險需求僅為並行支撐。",
-      "liquidity_demand": "未顯現特別的美元流動性緊縮問題。",
-      "other_currency_weakness": "主要非美貨幣普遍受制於與美國的利差擴大。",
-      "us_relative_growth_or_policy": "美國通膨黏性與利率衝高強化了美元相對的高殖利率優勢。",
-      "dominant_force": "美債殖利率大幅上行帶來的利差吸引力。",
-      "judgment": "美元指數站上103.41，定價邏輯完全承接利率端的走高，利差優勢持續為主導強勢美元的核心因子。"
+      "link_with_rates": "美債殖利率升至5.15%擴大了美國利差優勢，直接支撐美元指數走高至103.41。",
+      "safe_haven_dollar": "部分受關稅不確定性帶來的避險與流動性偏好支撐。",
+      "liquidity_demand": "流動性需求維持穩定，無極端緊縮訊號。",
+      "other_currency_weakness": "非美貨幣整體承壓，但亞幣展現局部抗貶維穩力道。",
+      "us_relative_growth_or_policy": "美國高利率預期與鷹派政策立場提供相對韌性。",
+      "dominant_force": "美債殖利率突破5.15%帶來的利差優勢",
+      "judgment": "美元定價與美債殖利率方向高度連貫，利差優勢推動美元指數偏強運行於103.41。"
     },
     "gold_pricing": {
       "direction": "up",
-      "rate_or_real_rate_pressure": "傳統傳導路徑受到阻斷。美債殖利率上至5.154%與美元強勢（103.41）本應壓抑金價，但此壓力被避險需求壓過。",
-      "dollar_effect": "強勢美元並未對金價構成預期的壓制作用。",
-      "safe_haven_demand": "地緣政治風險與政策不確定性強烈刺激避險買盤進場。",
-      "central_bank_buying": "daily_summary 未提供央行買盤具體數據。",
-      "geopolitical_risk": "地緣政治風險帶來強勁的避險溢價。",
-      "dominant_force": "地緣風險與極端利率環境下產生的尾部風險避險需求。",
-      "judgment": "金價突破3887.60美元，在強美元與高殖利率下逆勢走高，顯示避險買盤成為顯著的修正因子，壓倒了傳統利率與美元對金價的壓抑傳導。"
+      "rate_or_real_rate_pressure": "10年期美債殖利率高達5.15%理論上形成利空壓制，但未阻止金價走高。",
+      "dollar_effect": "美元指數走強至103.41，傳統壓制力被更強烈的買盤抵銷。",
+      "safe_haven_demand": "川普關稅預期與高通膨焦慮激發顯著的避險買盤。",
+      "central_bank_buying": "資料未特別提及央行動向，但法幣信任疑慮發酵支撐資產價值。",
+      "geopolitical_risk": "關稅政策的不確定性成為主要的地緣與政策風險來源。",
+      "dominant_force": "關稅預期與高通膨焦慮引發的實質避險買盤",
+      "judgment": "黃金定價脫離傳統實質利率模型，關稅風險與通膨擔憂催生的避險買盤成為核心修正因子，推動金價突破3886.30美元。"
     },
     "asia_fx_pricing": {
       "twd": {
-        "reaction": "待確認",
-        "consistent_with_dollar_pressure": "unclear",
-        "local_correction_factor": "daily_summary 未提供台幣具體行情數據。",
-        "judgment": "資料不足，但受強美元與亞幣整體承壓環境影響，預期承受外在貶值壓力。"
+        "reaction": "未隨美元走強而大幅貶值",
+        "consistent_with_dollar_pressure": "no",
+        "local_correction_factor": "區域資金與政策維穩力量介入",
+        "judgment": "台幣對強美元壓力出現鈍化，反映本地資金與政策維穩力道支撐。"
       },
       "jpy": {
-        "reaction": "USDJPY報159.69，短期呈現偏強，但利差劣勢顯著。",
-        "consistent_with_dollar_pressure": "mixed",
-        "local_correction_factor": "短期數據呈現偏強可能源於時差或局部資金流，但美日利差高檔與強美元格局持續構成回跌壓力。",
-        "judgment": "日圓短期雖呈偏強反應，但在強美元與巨大利差劣勢下，外在回跌壓力並未消除。"
+        "reaction": "美元兌日圓為159.66，日圓表現偏強",
+        "consistent_with_dollar_pressure": "no",
+        "local_correction_factor": "市場對本地政策干預或區域避險資金流入的預期",
+        "judgment": "儘管美債殖利率高企，日圓受干預預期與避險需求支撐，展現逆勢偏強格局。"
       },
       "krw": {
-        "reaction": "待確認",
+        "reaction": "資料不足",
         "consistent_with_dollar_pressure": "unclear",
-        "local_correction_factor": "daily_summary 未提供韓圜具體行情數據。",
-        "judgment": "資料不足，理論上隨亞幣整體承受美元強勢帶來的壓力。"
+        "local_correction_factor": "資料不足",
+        "judgment": "今日 daily_summary 未提供韓圜相關數據，狀態標示為待確認。"
       }
     },
     "market_contradiction": {
-      "baseline_expectation": "通膨與油價走高 → 美債殖利率升與美元強 → 持有黃金機會成本增加 → 黃金承壓下行。",
-      "actual_reaction": "美債殖利率衝上5.154%、美元升至103.41，黃金卻逆勢突破3887.60美元。",
-      "most_non_obvious_link": "利率與美元雙雙走強的情況下，黃金並未受壓，反而與美元同步走高。",
-      "possible_explanation": "殖利率突破5.15%的高位激發了市場對系統性風險或政策衝擊的防禦心理，同時地緣政治風險未解，催生強烈避險買盤，其影響壓倒了高實質利率帶來的持金成本。",
+      "baseline_expectation": "當美債殖利率升至5.15%且美元指數偏強至103.41時，高實質利率與強美元應對黃金形成顯著壓制，並帶動亞洲貨幣普遍走貶。",
+      "actual_reaction": "黃金突破3886.30美元逆勢上行，同時日圓（159.66）與台幣展現抗貶韌性，未隨美元大幅走弱。",
+      "most_non_obvious_link": "美債殖利率高企下，強美元與強黃金並行，以及美日利差擴大下日圓展現偏強韌性。",
+      "possible_explanation": "川普關稅預期引發的二次通膨風險與法幣信任疑慮，促使實質避險買盤超越純利差與實質利率邏輯；亞幣則受到區域政策維穩預期保護。",
       "is_correction_or_new_mainline": "correction_factor",
-      "how_to_integrate_into_main_theme": "將黃金走強作為「極端利率與地緣風險下的避險修正項」嵌入，主線仍是由通膨黏性與高油價驅動的美債拋售與美元偏強。",
+      "how_to_integrate_into_main_theme": "利率與美元構成今日的主線推升力，而黃金與亞幣韌性則作為關稅疑慮下的避險與政策維穩修正因子，揭示市場在定價高利率的同時也在對沖潛在政策衝擊。",
       "presenter_story_angle": {
-        "opening_question": "當美債殖利率衝破 5.15%、美元強勢站上 103.4 時，為什麼黃金不僅沒被打壓，反而逆勢創高突破 3887 美元？",
-        "normal_script": "按常理，PPI年增創高與油價大漲推升殖利率與美元，高持金成本會壓制黃金表現。",
-        "where_it_breaks": "今日黃金卻無視 5.154% 的高殖利率與強勢美元，逆勢上攻至 3887.60 美元。",
-        "why_it_matters": "這意味著市場不僅在計價通膨黏性與高利率，更開始對極端利率環境下的系統性風險與地緣局勢進行尾部防禦。",
-        "next_watch": "關注後續 CPI/PCE 硬數據是否證實通膨全面回溫，以及 Fed 演說對高油價與升息路徑的態度。"
+        "opening_question": "當美債殖利率衝破5.15%、美元強勢上攻時，為何黃金不但沒被壓垮，反而跟著飆升至3886美元？",
+        "normal_script": "按標準邏輯，10月PPI創波段新高推動Fed升息預期，帶動公債殖利率與美元同漲，應會壓抑金價與非美貨幣。",
+        "where_it_breaks": "但在黃金與亞幣端傳統模型失靈，強美元未能阻止黃金大漲與日圓抗貶。",
+        "why_it_matters": "這代表市場不只在定價高利率，更在提前對沖川普關稅可能帶來的二次通膨與法幣信任危機。",
+        "next_watch": "觀察即將公布的CPI與PCE硬數據是否驗證通膨全面升溫，以及黃金避險買盤能否持續抵抗5.15%的高殖利率壓制。"
       }
     },
     "pricing_assessment": {
-      "dominant_market_force": "PPI年增創高與雙原油走強（WTI 88.92 / Brent 96.08）驅動美債殖利率衝上 5.154% 並推升美元至 103.41。",
-      "offsetting_force": "PPI月增放緩低於預期略微緩解通膨，地緣與政策不確定性帶來的避險買盤支撐黃金逆勢上揚。",
-      "most_non_obvious_signal": "黃金在高殖利率與強美元的雙重壓力下逆勢上漲至 3887.60 美元。",
-      "market_question": "強美元與高殖利率背景下的黃金逆勢走強，究竟是短期地緣避險的暫時修正，還是市場正開始定價高利率環境下的系統性尾部風險？",
-      "one_sentence_takeaway": "通膨黏性與高油價主導美債拋售與美元強勢，但黃金逆勢上揚顯示市場在緊縮定價中正疊加系統性避險防禦。",
-      "next_watch": "即將公佈的 CPI 與 PCE 通膨硬數據，以及 Fed 官員公開演說對高油價與緊縮路徑的最新表態。"
+      "dominant_market_force": "PPI通膨數據過熱與關稅預期推升美債殖利率（5.15%）與美元（103.41）",
+      "offsetting_force": "關稅焦慮產生的黃金避險買盤與亞洲貨幣政策維穩力道",
+      "most_non_obvious_signal": "美債殖利率升至5.15%與強美元背景下，黃金突破3886.30美元逆勢上行",
+      "market_question": "關稅風險引發的避險買盤，能否長期對抗5.15%美債殖利率帶來的實質利率壓制？",
+      "one_sentence_takeaway": "通膨與關稅預期驅動美債殖利率與美元主導市場，但強烈避險情緒促使黃金呈現逆利差上行。",
+      "next_watch": "即將公布的CPI與PCE數據、 Fed官員談話，以及美債殖利率突破5.15%後對黃金與亞幣的持續壓迫力。"
     }
   }
 }
