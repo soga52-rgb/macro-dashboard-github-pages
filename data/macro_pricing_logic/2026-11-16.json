@@ -1,0 +1,162 @@
+{
+  "generated_at": "2026-11-17T16:34:32+08:00",
+  "date": "2026-11-16",
+  "mode": "macro_pricing_logic_v4",
+  "logic": {
+    "pricing_context": {
+      "market_was_pricing": "聯準會維持猛烈緊縮與高利率維持更久的政策路徑。",
+      "new_information": "WTI原油下行至85.06美元降溫能源通膨，同時美國10年期公債殖利率回落至5.12%，顯示市場出現景氣放緩與通膨冷卻的修正訊號。",
+      "pricing_question": "在高利率預期維持與油價/殖利率走跌帶來的景氣降溫訊號交錯下，市場定價主導權落在高利差優勢還是成長減速風險？"
+    },
+    "input_material_mapping": {
+      "inflation_materials": [
+        "WTI原油跌至85.06美元，Brent原油跌至91.84美元，提供能源通膨降溫訊號",
+        "新聞提及市場擔憂聯準會維持猛烈緊縮以壓抑通膨預期"
+      ],
+      "rate_materials": [
+        "美國10年期公債殖利率降至5.12%，長端利率回落",
+        "市場定價高利率維持更久可能引發實體經濟放緩風險，推動長端債券買盤"
+      ],
+      "dollar_materials": [
+        "美元指數走強至103.58",
+        "高利率預期與相對利差優勢/避險需求支撐美元強勢"
+      ],
+      "gold_materials": [
+        "美元指數走強壓制黃金跌至3859美元",
+        "高利率維持更久的預期增加持有黃金的機會成本"
+      ],
+      "asia_fx_materials": [
+        "美元走強使台幣同步偏弱至32.96",
+        "日圓顯現避險防禦特徵，走勢偏強呈背離現象",
+        "韓圜缺乏具體數據，資料不足待確認"
+      ],
+      "mapping_summary": "通膨預期受原油跌勢壓抑，長端美債殖利率回落反映景氣放緩疑慮；然而美元指數在高利率維持更久的預期下保持強勢，壓制黃金與台幣，日圓則展現獨立避險買盤。"
+    },
+    "inflation_expectation": {
+      "energy": {
+        "direction": "down",
+        "importance": "high",
+        "evidence": [
+          "WTI原油跌至85.06美元",
+          "Brent原油跌至91.84美元"
+        ],
+        "judgment": "原油價格顯著回落，為能源通膨提供明確降溫訊號。"
+      },
+      "supply_chain": {
+        "direction": "unclear",
+        "importance": "low",
+        "evidence": [],
+        "judgment": "daily_summary 未提供供應鏈或運價相關資訊。"
+      },
+      "price_data": {
+        "direction": "unclear",
+        "importance": "low",
+        "evidence": [],
+        "judgment": "daily_summary 未提供具體 CPI/PPI/PCE 等物價數據。"
+      },
+      "demand": {
+        "direction": "down",
+        "importance": "medium",
+        "evidence": [
+          "市場關心高利率對實體經濟的壓迫與未來成長放緩風險"
+        ],
+        "judgment": "實體經濟景氣降溫預期正削弱需求端通膨壓力。"
+      },
+      "labor_market": {
+        "direction": "unclear",
+        "importance": "low",
+        "evidence": [],
+        "judgment": "daily_summary 未提供就業與薪資相關數據。"
+      },
+      "policy_expectation": {
+        "direction": "up",
+        "importance": "medium",
+        "evidence": [
+          "市場擔憂聯準會維持猛烈緊縮與高利率維持更久"
+        ],
+        "judgment": "央行維持緊縮立場旨在抑制遠期通膨預期。"
+      },
+      "summary": {
+        "overall_direction": "down",
+        "strength": "medium",
+        "dominant_force": "油價下行與景氣放緩預期共同發揮作用",
+        "offsetting_force": "聯準會猛烈緊縮政策立場",
+        "judgment": "油價回落與對實體經濟減速的疑慮，成為今日引導通膨預期轉弱的主導通道。"
+      }
+    },
+    "rate_pricing": {
+      "direction": "down",
+      "link_with_inflation_expectation": "利率與通膨預期呈同向傳導，油價走跌緩和能源通膨，帶動長端公債殖利率下行。",
+      "fed_policy_signal": "聯準會維持猛烈緊縮與高利率維持更久的預期。",
+      "treasury_supply_demand": "資料不足以分析發債供給，但長天期美債吸引資金買盤。",
+      "term_premium": "資料不足以確定期限溢價變化。",
+      "safe_haven_bond_buying": "出現提前定價景氣放緩風險的債券防禦買盤。",
+      "growth_concern_or_cut_expectation": "市場開始定價高利率壓迫實體經濟帶來的潛在成長放緩風險，壓抑殖利率上行空間。",
+      "dominant_force": "油價下跌降溫通膨預期與成長放緩憂慮主導美債買盤",
+      "judgment": "雖然聯準會政策立場偏鷹，但美國10年期公債殖利率降至5.12%，顯示市場優先定價能源通膨冷卻與遠期景氣放緩風險。"
+    },
+    "dollar_pricing": {
+      "direction": "up",
+      "link_with_rates": "呈現傳導分歧，長端殖利率回落，但美元指數仍走強至103.58。",
+      "safe_haven_dollar": "高利率預期與環境不確定性提供美元部分避險及流動性支撐。",
+      "liquidity_demand": "高利率維持更久預期強化美元流動性吸金力道。",
+      "other_currency_weakness": "台幣偏弱貶至32.96，突顯美元相對利差優勢。",
+      "us_relative_growth_or_policy": "聯準會維持猛烈緊縮的預期支撐美元利差回報。",
+      "dominant_force": "聯準會高利率維持更久的利差預期與流動性需求",
+      "judgment": "美元未隨10年期美債殖利率走低，主因市場仍優先定價 Fed 高利率維持更久的利差優勢與防禦需求。"
+    },
+    "gold_pricing": {
+      "direction": "down",
+      "rate_or_real_rate_pressure": "高利率維持更久帶來持有非孳息資產的機會成本壓力。",
+      "dollar_effect": "美元指數走強至103.58對金價形成直接壓制。",
+      "safe_haven_demand": "未見足夠強勁的黃金避險買盤，資金更偏向美元或日圓。",
+      "central_bank_buying": "daily_summary 未提供央行買盤資料。",
+      "geopolitical_risk": "daily_summary 未提及突發地緣政治推升因素。",
+      "dominant_force": "美元指數走強與高利率維持更久的雙重壓制",
+      "judgment": "金價跌至3859美元，主要受制於美元走強與高利率環境產生的資金排擠效應。"
+    },
+    "asia_fx_pricing": {
+      "twd": {
+        "reaction": "偏弱貶值至32.96",
+        "consistent_with_dollar_pressure": "yes",
+        "local_correction_factor": "無明顯反向修正因子，承受強勢美元帶來的資本流出壓力。",
+        "judgment": "台幣走勢符合基準傳導，美元走強直接施壓台幣承壓。"
+      },
+      "jpy": {
+        "reaction": "偏強，顯現避險防禦特徵",
+        "consistent_with_dollar_pressure": "no",
+        "local_correction_factor": "局部資金避險需求發揮作用，修正了美元強勢帶來的壓力。",
+        "judgment": "日圓未跟隨亞幣普遍走弱，顯示市場防禦資金流出現分歧。"
+      },
+      "krw": {
+        "reaction": "資料不足",
+        "consistent_with_dollar_pressure": "unclear",
+        "local_correction_factor": "daily_summary 未提供韓圜數據。",
+        "judgment": "缺乏資料，待後續驗證。"
+      }
+    },
+    "market_contradiction": {
+      "baseline_expectation": "若聯準會維持猛烈緊縮與高利率預期，且美元走強，長端美債殖利率應同步上行。",
+      "actual_reaction": "10年期美債殖利率不升反跌至5.12%，且油價回落至85.06美元。",
+      "most_non_obvious_link": "「緊縮預期推升美元」與「長端公債殖利率回落」並存的分歧反應。",
+      "possible_explanation": "油價走跌緩和了長端通膨預期，同時市場開始提前定價高利率維持更久對實體經濟的壓迫，長債買盤進場鎖定收益。",
+      "is_correction_or_new_mainline": "offsetting_force",
+      "how_to_integrate_into_main_theme": "今日主線為緊縮預期支撐強勢美元，但長端殖利率與油價走跌構成關鍵修正力量，反映市場對遠期景氣降溫的預警。",
+      "presenter_story_angle": {
+        "opening_question": "為什麼聯準會喊出猛烈緊縮、推升美元走強，美國10年期公債殖利率卻不升反跌？",
+        "normal_script": "按基準邏輯，市場在聯準會偏鷹與高利率維持更久的預期下，應全面推升殖利率與美元。",
+        "where_it_breaks": "然而今日WTI原油跌至85.06美元，10年期美債殖利率亦同步回落至5.12%。",
+        "why_it_matters": "這顯示市場並未盲目追高利率，而是開始定價高利率對實體經濟的壓迫，透過長債買盤吸收成長放緩風險。",
+        "next_watch": "觀察10年期美債殖利率能否守住關鍵支撐，評估長債買盤是短線通膨降溫反應還是深度的經濟衰退預警。"
+      }
+    },
+    "pricing_assessment": {
+      "dominant_market_force": "聯準會高利率維持更久的預期對美元與利差的支撐力道",
+      "offsetting_force": "原油價格回落與實體經濟成長放緩疑慮對長端殖利率的向下壓制",
+      "most_non_obvious_signal": "美元指數走強（103.58）與10年期美債殖利率回落（5.12%）之間的傳導分歧",
+      "market_question": "美元的強勢利差定價與美債殖利率的景氣放緩預警，哪一股力量將主導接下來的資產重組？",
+      "one_sentence_takeaway": "緊縮預期支撐美元強勢，但原油跌勢與長債買盤正提前預警經濟成長放緩風險。",
+      "next_watch": "追蹤美國10年期公債殖利率支撐力道，並觀察WTI油價85美元關卡能否持續提供通膨降溫動能。"
+    }
+  }
+}
