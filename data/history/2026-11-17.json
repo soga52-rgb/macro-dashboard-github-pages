@@ -1,0 +1,64 @@
+{
+  "generated_at": "2026-11-18T15:59:02+08:00",
+  "source": "Google Sheets Today Daily Source",
+  "mode": "today_daily_source",
+  "data_status": "complete",
+  "daily_summary": {
+    "date": "2026-11-17",
+    "headline": "通膨預期重估債券走強",
+    "executive_summary": "市場目前最重視油價地緣衝擊是否引發二次通膨，核心矛盾在於油價攀升但美國10年期公債殖利率反而回落。整體跨資產呈現部分連貫，避險公債買盤與成長就業降溫預期構成主要修正因子，壓過短期能源通膨定價。",
+    "market_signals": [
+      "美債殖利率回落",
+      "原油地緣走高",
+      "美元指數轉弱"
+    ],
+    "macro_chain": "油輪遇襲推升原油但就業降溫修正 → 美國10年期公債殖利率回落至5.103% → 美元指數同步走弱至103.55 → 日圓走強、金價受高利率預期壓抑、台幣走勢待確認",
+    "divergence": "今日關鍵背離在於油價上行但美債殖利率回落。主線由長端債券買盤與就業降溫預期主導，能源價格走高僅作為供給面修正因子，並未全面演變為二次通膨交易；金價則受高利率維持更久預期壓抑，資產定價多空拉鋸，傳導仍待觀察。",
+    "market_snapshot": "WTI｜85.61｜上行｜油價上行，增加能源成本與短期通膨預期的上行壓力；若非今日主線，應視為修正因子或並行訊號。\nUS10Y｜5.103%｜下行｜反映市場重新評估就業與成長降溫，避險買盤帶動長端利率走低。\nDXY｜103.55｜偏弱｜受殖利率回落壓抑，利差優勢邊際收斂，緩解部分亞幣壓力。",
+    "news_evidence": [
+      "地緣政治事件引發油輪遇襲且原油庫存預期下滑，帶動WTI走升至85.61美元、Brent達93.07美元。",
+      "美國10年期公債殖利率回落至5.103%，顯示市場定價就業市場邊際降溫與公債買盤，未被能源通膨完全帶動。",
+      "美元指數隨殖利率同步走弱至103.55，使日圓等部分亞幣獲得短線喘息空間。",
+      "黃金下行至3851.90美元，反映市場仍受聯準會高利率維持更久預期壓抑，對實質利率與持有成本敏感。"
+    ],
+    "watchpoints": [
+      "追蹤中東油輪情勢與EIA原油庫存，觀察油價是否進一步推升短期綜合通膨預期。",
+      "關注即將公布的零售銷售與就業相關數據，確認成長與就業降溫預期是否獲得硬數據佐證。",
+      "留意聯準會官員最新公開談話，檢視對高利率維持時間與通膨路徑的定調是否重構美元主線。"
+    ],
+    "visual_note": {
+      "title": "通膨預期重估：油價反彈與美債殖利率回落的背離解析",
+      "file_id": "",
+      "url": "",
+      "model": ""
+    },
+    "news_narrative": {
+      "title": "通膨預期重新評估",
+      "support_level": "中",
+      "cards": [
+        {
+          "label": "驗證結果",
+          "text": "部分支持"
+        },
+        {
+          "label": "摘要",
+          "text": "油輪遇襲推升原油，加上高盛提及高利率壓抑金價，理論上推升通膨與政策利率路徑預期；然而美國10年期公債殖利率反常回落，帶動美元指數走弱。交叉資產走勢顯示市場暫時壓過能源通膨預期，避險或債券買盤構成主要修正因子，整體傳導呈部分連貫。"
+        },
+        {
+          "label": "支持新聞",
+          "text": "1. 新聞重點：地緣政治事件引發油輪遇襲且庫存預期下滑推升原油價格，同時市場與投行維持聯準會高利率環境將持續壓抑金價的定價邏輯。\n2. 市場影響：推高油價反彈並支撐能源通膨預期，但壓低短線美債殖利率與美元指數的連動幅度，使各資產在利率定價上出現多空拉鋸。\n3. 驗證結論：原油上漲雖符合地緣風險，但美國10年期公債殖利率下行與金價走弱顯示市場並未全面交易二次通膨，對傳統通膨傳導鏈僅呈部分支持。"
+        },
+        {
+          "label": "異常訊號",
+          "text": "1. 原油價格走高理論上應拉動通膨預期並推升利率，但美國10年期公債殖利率下行，反映市場目前視能源上漲為供給端擾動，避險公債買盤或成長擔憂反成為主導修正因子。\n2. 黃金未受美元指數轉弱支撐反而下行，顯示高利率維持更久的主流預期仍在發酵，金價對實質利率與持有成本更為敏感。\n3. 亞洲貨幣日圓與韓元對美元偏強，台幣偏弱且數據處於資料落後狀態，跨資產反應未完全同步，待後續匯率報價確認。"
+        },
+        {
+          "label": "觀察重點",
+          "text": "1. 觀察美國原油庫存與中東油輪情勢是否持續擴大，若油價站穩恐再度觸發通膨預期上修並推升殖利率。\n2. 追蹤近期零售銷售等成長數據，確認消費韌性是否會逆轉公債殖利率的回落趨勢。\n3. 關注聯準會官員最新公開談話對高利率維持時間點的定調，以研判政策路徑是否重新主導美元方向。"
+        }
+      ],
+      "news_links_json": "[\n  {\n    \"rank\": 1,\n    \"theme\": \"Rates｜Treasury Yields / 美債殖利率\",\n    \"source\": \"MarketWatch\",\n    \"title\": \"Stock Market News - Bond Market - Currencies Markets - MarketWatch\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiS0FVX3lxTE1WSk1SMEVJUWVGN1RIVTEtSThObVFxbkFHTE9ySmdyRUx4NjJMNWsta3lOaFBOVFF5eUEtN0lVaXc5QlFiTEdiQVZYSQ?oc=5\",\n    \"published_at\": \"Tue, 17 Nov 2026 20:55:31 GMT\",\n    \"score\": 118,\n    \"matched_keywords\": \"美債殖利率:treasury/yield/yields/bond | 變數:TREASURY_YIELDS | 類型:REACTION | 來源角色:MARKET_REACTION\"\n  },\n  {\n    \"rank\": 2,\n    \"theme\": \"Rates｜Treasury Yields / 美債殖利率\",\n    \"source\": \"MarketWatch\",\n    \"title\": \"Want to earn 5% on shorter-term Treasurys again? Watch for this shift. - MarketWatch\",\n    \"url\": \"https://news.google.com/rss/articles/CBMirwFBVV95cUxOdVpMUjliaFQ4eDZwRWRWeWZ6R0E3dTJ3ZUhpek4wQVNlbjBwN0RjSDBiMVZRTFotZ0VZV2UzTkd1cmxBc2I0YmQtMWxYRGkydHZEY1d2eWhFd0ZuSHJwWEMzdFE3QWlXenNhRFNRbTJvOUpCYl9FZThPYk40QnJ0U0llTkphTmdXYWRWVDZNZVpEd3lrWThkbmlJbm5ncFZWamtpbHB2Wk1UcGxuSE8w?oc=5\",\n    \"published_at\": \"Tue, 17 Nov 2026 22:08:00 GMT\",\n    \"score\": 115,\n    \"matched_keywords\": \"美債殖利率:treasury/yield/yields | 變數:TREASURY_YIELDS | 類型:REACTION | 來源角色:MARKET_REACTION\"\n  },\n  {\n    \"rank\": 3,\n    \"theme\": \"Fed Policy｜Fed / 聯準會\",\n    \"source\": \"鉅亨網\",\n    \"title\": \"1個月狂飆卻要苦等2年重返高點！高盛：Fed升息壓抑金價 2028年底前有望重回5600美元 - 鉅亨網\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiT0FVX3lxTE1oelNJbV9tMF9WUzB1N3A5Wmo0NkY0YTcxZFBYM1E0ampoZklGOHFfa2lHbWVZU3RVN0NocGdKUW1rSU5rMUx2QlZobnJFanc?oc=5\",\n    \"published_at\": \"Tue, 17 Nov 2026 04:50:03 GMT\",\n    \"score\": 109.4,\n    \"matched_keywords\": \"聯準會政策:fed | 變數:FED | 類型:DATA | 來源角色:CNYES_MACRO\"\n  },\n  {\n    \"rank\": 4,\n    \"theme\": \"FX｜Dollar / FX / 美元與匯率\",\n    \"source\": \"Reuters\",\n    \"title\": \"Gold struggles to rebound from one-year low as US dollar, yields advance - Reuters\",\n    \"url\": \"https://news.google.com/rss/articles/CBMitAFBVV95cUxNVGd6c05RMXpCQzBvWjhLZlZ6cjc4OUZ0cjZaSWxzZk9leV9WbG1EVmhoVlJfTHZZRFkxZml4Rll3TXd6SGc0dmtiSHFsYkVQWThZdkpxb3dGQkhpSkgyVC1HQlV5WkZQaHU4N3B2b2RELWdDaGpZLWtmbHo2cllMNE9tN29pYnJGM1Z4eFJ6bmNQdHJFX0lNTHZtV0x4MlNhT284LThTc1hTY2xlcEEta0wwNjg?oc=5\",\n    \"published_at\": \"Tue, 17 Nov 2026 01:47:00 GMT\",\n    \"score\": 107.6,\n    \"matched_keywords\": \"美債殖利率:yield/yields | 美元與亞洲匯率:dollar | 能源與原物料:gold | 風險情緒／避險資金:gold | 變數:DOLLAR_FX | 類型:BACKUP | 來源角色:WIRE_CONFIRMATION\"\n  },\n  {\n    \"rank\": 5,\n    \"theme\": \"Asset｜Gold / 黃金\",\n    \"source\": \"Reuters\",\n    \"title\": \"Guinea clears PDI Gold permit, raising hopes of easing mining backlog - Reuters\",\n    \"url\": \"https://news.google.com/rss/articles/CBMivAFBVV95cUxOYXkydGc4QmlKOXdqS1Z4eXFXdlhQSnN0LWdYdEN1VlRsdWQ0R2xNN0tsZ0JIX3BsSnd5M3YyTERzTXdFMnR0TEdDYWN3R05RWGg2NTdQbGY5T0FfRXl6NUNwbGp3MG1TNmpVZk44ZGI1ZzVFRERJMWVTZkNjMUJQVy1iSGVPeXV4ai1LbDFzUXkxVzNzdkZDX1FBZWpWbFZtWHo3VnFjcWRHUXdEd1hZOTZTS0ZDeU5XTjFuLQ?oc=5\",\n    \"published_at\": \"Tue, 17 Nov 2026 13:01:29 GMT\",\n    \"score\": 102.2,\n    \"matched_keywords\": \"能源與原物料:gold | 風險情緒／避險資金:gold | 變數:GOLD | 類型:BACKUP | 來源角色:WIRE_CONFIRMATION\"\n  },\n  {\n    \"rank\": 6,\n    \"theme\": \"Energy｜EIA Crude Inventories / 原油庫存\",\n    \"source\": \"鉅亨網\",\n    \"title\": \"〈能源盤後〉油輪遇襲、美國原油庫存料下降 原油上漲 唯供應過剩壓力縮限漲幅 - 鉅亨網\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiT0FVX3lxTE9oY3VXcVplZzRGT3pqX2hsWlVaMktHV21PVDVtMEpUWE1RUlN1SllrMnRXZjh4bjRyeVRKNUN3Tk5kSGRYMGM3aldWd2JDUE0?oc=5\",\n    \"published_at\": \"Tue, 17 Nov 2026 22:12:25 GMT\",\n    \"score\": 95.6,\n    \"matched_keywords\": \"能源與原物料:crude/energy | 變數:EIA_CRUDE | 類型:DATA | 來源角色:CNYES_MACRO\"\n  },\n  {\n    \"rank\": 7,\n    \"theme\": \"FX｜Dollar / FX / 美元與匯率\",\n    \"source\": \"鉅亨網\",\n    \"title\": \"耐克預計2031年將實現50億美元的增量收入增長，股價上漲5% - 鉅亨網\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiT0FVX3lxTFA2WFlmSmlIeDJWSDhzNmIyVGR6S2R4MnFOUmhXdXlMazJFcVZsT3p4cWgyaFliMzdtdzZId0IzaGFNcVJwSnA5Nmw1OF9Ba1k?oc=5\",\n    \"published_at\": \"Tue, 17 Nov 2026 16:09:39 GMT\",\n    \"score\": 94.6,\n    \"matched_keywords\": \"美元與亞洲匯率:dollar | 變數:DOLLAR_FX | 類型:DATA | 來源角色:CNYES_MACRO\"\n  },\n  {\n    \"rank\": 8,\n    \"theme\": \"FX｜Dollar / FX / 美元與匯率\",\n    \"source\": \"鉅亨網\",\n    \"title\": \"Anthropic最大空頭持倉突破5000萬美元，浮盈441萬美元 - 鉅亨網\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiT0FVX3lxTE1nQk5vMnBXcWdTN2VpTzlaTHJmSGg1cFAwOXBvWnJ3Z2xqQnJyLVpNLXFkT0lYYUZCN21DTklvRXBGVU1rWllHNkFwWndXa00?oc=5\",\n    \"published_at\": \"Tue, 17 Nov 2026 12:07:06 GMT\",\n    \"score\": 94.6,\n    \"matched_keywords\": \"美元與亞洲匯率:dollar | 變數:DOLLAR_FX | 類型:DATA | 來源角色:CNYES_MACRO\"\n  }\n]"
+    },
+    "raw_daily_summary_package": "日期：2026-11-17\n今日主線：通膨預期重估債券走強\n\nExecutive Summary：\n市場目前最重視油價地緣衝擊是否引發二次通膨，核心矛盾在於油價攀升但美國10年期公債殖利率反而回落。整體跨資產呈現部分連貫，避險公債買盤與成長就業降溫預期構成主要修正因子，壓過短期能源通膨定價。\n\n今日核心訊號：\n- 美債殖利率回落\n- 原油地緣走高\n- 美元指數轉弱\n\n核心資產重點：\nWTI｜85.61｜上行｜油價上行，增加能源成本與短期通膨預期的上行壓力；若非今日主線，應視為修正因子或並行訊號。\nUS10Y｜5.103%｜下行｜反映市場重新評估就業與成長降溫，避險買盤帶動長端利率走低。\nDXY｜103.55｜偏弱｜受殖利率回落壓抑，利差優勢邊際收斂，緩解部分亞幣壓力。\n\n矛盾 / 背離：\n今日關鍵背離在於油價上行但美債殖利率回落。主線由長端債券買盤與就業降溫預期主導，能源價格走高僅作為供給面修正因子，並未全面演變為二次通膨交易；金價則受高利率維持更久預期壓抑，資產定價多空拉鋸，傳導仍待觀察。\n\n總經傳導鏈：\n油輪遇襲推升原油但就業降溫修正 → 美國10年期公債殖利率回落至5.103% → 美元指數同步走弱至103.55 → 日圓走強、金價受高利率預期壓抑、台幣走勢待確認\n\n新聞佐證：\n- 地緣政治事件引發油輪遇襲且原油庫存預期下滑，帶動WTI走升至85.61美元、Brent達93.07美元。\n- 美國10年期公債殖利率回落至5.103%，顯示市場定價就業市場邊際降溫與公債買盤，未被能源通膨完全帶動。\n- 美元指數隨殖利率同步走弱至103.55，使日圓等部分亞幣獲得短線喘息空間。\n- 黃金下行至3851.90美元，反映市場仍受聯準會高利率維持更久預期壓抑，對實質利率與持有成本敏感。\n\n待觀察問題：\n- 追蹤中東油輪情勢與EIA原油庫存，觀察油價是否進一步推升短期綜合通膨預期。\n- 關注即將公布的零售銷售與就業相關數據，確認成長與就業降溫預期是否獲得硬數據佐證。\n- 留意聯準會官員最新公開談話，檢視對高利率維持時間與通膨路徑的定調是否重構美元主線。"
+  }
+}
