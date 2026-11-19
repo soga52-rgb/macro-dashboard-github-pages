@@ -1,170 +1,157 @@
 {
-  "generated_at": "2026-11-18T15:59:54+08:00",
-  "date": "2026-11-17",
+  "generated_at": "2026-11-19T16:00:17+08:00",
+  "date": "2026-11-18",
   "mode": "macro_pricing_logic_v4",
   "logic": {
     "pricing_context": {
-      "market_was_pricing": "聯準會高利率維持更久與地緣政治推升通膨風險之預期。",
-      "new_information": "中東油輪遇襲推升原油價格（WTI達85.61美元、Brent達93.07美元），但美國10年期公債殖利率反向回落至5.103%，美元指數同步走弱至103.55。",
-      "pricing_question": "在中東地緣政治衝擊推升油價的同時，公債殖利率與美元走弱是否代表市場正優先定價就業與經濟降溫預期？"
+      "market_was_pricing": "市場先前主要定價 Fed 維持高利率更久的政策預期。",
+      "new_information": "Fed 官員華勒發表鷹派言論支持緊縮，同時 WTI 油價回落至 81.89 美元，美國 20 年期公債標售需求平穩。",
+      "pricing_question": "在 Fed 官員發布鷹派言論推升美元之際，為何 10 年期美債殖利率未漲反跌至 5.066%？"
     },
     "input_material_mapping": {
       "inflation_materials": [
-        "地緣政治事件引發油輪遇襲及原油庫存預期下滑，帶動WTI走升至85.61美元、Brent達93.07美元",
-        "市場關注即將公布的零售銷售數據對通膨與需求之影響"
+        "WTI與Brent原油期貨同步下行，WTI跌至81.89美元，削弱短期能源通膨預期推力。"
       ],
       "rate_materials": [
-        "美國10年期公債殖利率回落至5.103%",
-        "市場定價就業市場邊際降溫與公債避險買盤",
-        "聯準會高利率維持更久預期持續存在"
+        "Fed鷹派官員華勒支持積極緊縮立場，強化高利率維持更久的預期。",
+        "美國20年期公債標售需求平穩，抑制長端公債供給溢酬，促使10年期公債殖利率回落至5.066%。"
       ],
       "dollar_materials": [
-        "美元指數隨殖利率同步走弱至103.55",
-        "美債殖利率回落削弱美元利差優勢"
+        "Fed鷹派官員華勒言論與利差優勢支撐美元指數走強至103.782。"
       ],
       "gold_materials": [
-        "黃金價格下行至3851.90美元",
-        "受聯準會高利率維持更久預期壓抑，對實質利率與持有成本敏感"
+        "金價在實質利率預期與強美元雙重壓迫下跌至3727.8美元。"
       ],
       "asia_fx_materials": [
-        "日圓受美元走弱帶動短線獲得喘息空間走強",
-        "台幣走勢尚待確認",
-        "韓圜無具體新聞與價格資料，狀況待確認"
+        "強美元格局對台幣構成偏弱壓力。",
+        "日圓獲得部分避險需求支撐。"
       ],
-      "mapping_summary": "地緣衝擊推升油價構成通膨潛在修正因子，但就業降溫預期與避險買盤主導長端債券殖利率與美元回落；黃金受高利率維持更久壓抑，亞幣獲得邊際喘息。"
+      "mapping_summary": "Fed 鷹派言論與利差推升美元並壓迫黃金與台幣；但油價下行與美債標售平穩成為修正因子，壓抑 10 年期美債殖利率，形成利率與美元的方向分歧。"
     },
     "inflation_expectation": {
       "energy": {
-        "direction": "up",
+        "direction": "down",
         "importance": "high",
         "evidence": [
-          "地緣政治事件引發油輪遇襲",
-          "原油庫存預期下滑",
-          "WTI升至85.61美元，Brent升至93.07美元"
+          "WTI原油跌至81.89美元，與Brent同步下行"
         ],
-        "judgment": "中東地緣突發風險與供給端庫存降幅推升短期能源通膨預期。"
+        "judgment": "油價走低直接削弱短期能源通膨的推升力道。"
       },
       "supply_chain": {
-        "direction": "mixed",
-        "importance": "medium",
-        "evidence": [
-          "油輪遇襲引發航道安全疑慮"
-        ],
-        "judgment": "供給端瓶頸風險上升，但目前影響仍集中於能源運輸。"
+        "direction": "unclear",
+        "importance": "low",
+        "evidence": [],
+        "judgment": "今日摘要未提供供應鏈或運價相關資料。"
       },
       "price_data": {
         "direction": "unclear",
         "importance": "low",
         "evidence": [],
-        "judgment": "今日未發布CPI、PPI或PCE等具體通膨數據，資料不足。"
+        "judgment": "今日尚未公布核心通膨硬數據，尚待後續驗證。"
       },
       "demand": {
-        "direction": "down",
+        "direction": "mixed",
         "importance": "medium",
         "evidence": [
-          "市場關注即將公布的零售銷售數據"
+          "油價下行可能隱含需求端成長降溫訊號"
         ],
-        "judgment": "市場預期高利率壓抑下消費需求呈現邊際放緩趨勢。"
+        "judgment": "若油價修正源於需求疲弱，可能代表實體經濟 demand 對通膨的拉動放緩。"
       },
       "labor_market": {
-        "direction": "down",
-        "importance": "high",
-        "evidence": [
-          "市場定價就業市場邊際降溫",
-          "關注即將公布的就業相關數據"
-        ],
-        "judgment": "就業市場放緩訊號壓抑長期薪資與綜合通膨預期。"
+        "direction": "unclear",
+        "importance": "low",
+        "evidence": [],
+        "judgment": "今日摘要未提供就業市場相關數據。"
       },
       "policy_expectation": {
         "direction": "up",
-        "importance": "medium",
+        "importance": "high",
         "evidence": [
-          "聯準會高利率維持更久預期",
-          "市場留意官員最新談話定調"
+          "Fed官員華勒發表鷹派言論支持積極緊縮"
         ],
-        "judgment": "央行偏鷹立場提供通膨預期之中期錨定壓制。"
+        "judgment": "官員談話強化市場對高利率維持更久的通膨防禦預期。"
       },
       "summary": {
         "overall_direction": "mixed",
         "strength": "medium",
-        "dominant_force": "地緣政治衝擊推升原油價格與能源通膨預期",
-        "offsetting_force": "就業市場邊際降溫預期減弱需求端通膨動能",
-        "judgment": "能源通膨預期受供給端拉升，但就業降溫預期形成抵銷，綜合通膨預期呈現多空交錯。"
+        "dominant_force": "Fed官員鷹派言論帶來的政策緊縮預期",
+        "offsetting_force": "國際油價下行緩和能源通膨壓力",
+        "judgment": "通膨預期呈現政策面偏向緊縮、但成本面（油價）出現降溫的交錯拉扯狀態。"
       }
     },
     "rate_pricing": {
       "direction": "down",
-      "link_with_inflation_expectation": "不同向。雖然能源通膨預期上行，但殖利率受到就業降溫與避險買盤驅動而下行。",
-      "fed_policy_signal": "聯準會高利率維持更久立場仍存，但未阻擋長端殖利率短線回落。",
-      "treasury_supply_demand": "中東地緣風險驅動資金流入公債避險，支撐長端債券需求。",
-      "term_premium": "地緣政治不確定性雖存，但避險配置買盤壓過期限溢價擴大壓力。",
-      "safe_haven_bond_buying": "地緣政治事件引發市場部分避險資金流入長端公債。",
-      "growth_concern_or_cut_expectation": "就業邊際降溫預期加深對經濟放緩之擔憂，拉動殖利率向下尋找支持。",
-      "dominant_force": "就業市場邊際降溫預期與避險買盤共同壓過能源通膨修正因子。",
-      "judgment": "美國10年期公債殖利率回落至5.103%，顯示成長放緩擔憂與避險流向成為驅動利率下行之主導力量。"
+      "link_with_inflation_expectation": "未完全同向。雖然政策面預期偏鷹，但通膨預期受油價下行壓抑，且債市供需面改善。",
+      "fed_policy_signal": "華勒鷹派言論強化高利率維持更久預期，理論上有推升殖利率壓力。",
+      "treasury_supply_demand": "美國20年期公債標售需求平穩，有效吸納市場供給壓力。",
+      "term_premium": "標售順利使長端公債供給溢酬受限。",
+      "safe_haven_bond_buying": "資料未指出顯著避險買債行為，主因為標售平穩。",
+      "growth_concern_or_cut_expectation": "油價下行帶出的成長降溫隱憂對長端殖利率形成壓制。",
+      "dominant_force": "美債標售需求平穩與油價下行對通膨預期的修正",
+      "judgment": "10年期美債殖利率回落至5.066%，顯示長端債市目前由債市供給流動性與能源通膨修正因子主導，暫時壓過 Fed 官員的鷹派政策傳導。"
     },
     "dollar_pricing": {
-      "direction": "down",
-      "link_with_rates": "同向。美債殖利率回落削弱美元美債之利差優勢，引導美元走弱。",
-      "safe_haven_dollar": "地緣避險需求今日優先轉向公債，美元未出現顯著避險買盤。",
-      "liquidity_demand": "今日市場無顯著美元流動性緊縮訊號。",
-      "other_currency_weakness": "非美貨幣如日圓因美元走弱而獲得短線喘息空間。",
-      "us_relative_growth_or_policy": "就業降溫預期邊際削弱美國相對經濟強韌之溢價。",
-      "dominant_force": "美債殖利率回落導致的美港/美日等美利差優勢邊際收斂。",
-      "judgment": "美元指數走弱至103.55，定價邏輯主要承接美債殖利率回落之傳導。"
+      "direction": "up",
+      "link_with_rates": "不同向。美債殖利率回落，但美元指數偏強升至103.782。",
+      "safe_haven_dollar": "主要由政策預期與利差支撐，資料未特別強調美元流動性避險需求。",
+      "liquidity_demand": "資料未提及市場出現極端流動性緊縮。",
+      "other_currency_weakness": "亞洲貨幣普遍承受偏弱壓力，相對凸顯美元強勢。",
+      "us_relative_growth_or_policy": "Fed官員鷹派立場維持美國與其他經濟體的相對利差優勢。",
+      "dominant_force": "Fed官員鷹派立場與相對利差優勢",
+      "judgment": "美元指數受到高利率預期與利差優勢支持走強至103.782，未受長端美債殖利率短線回落牽制。"
     },
     "gold_pricing": {
       "direction": "down",
-      "rate_or_real_rate_pressure": "聯準會高利率維持更久預期使實質利率維持高位，構成黃金顯著壓制。",
-      "dollar_effect": "美元走弱理論上提供支撐，但並未扭轉黃金下行趨勢。",
-      "safe_haven_demand": "地緣政治事件提供潛在避險買盤，惟主導性不足。",
-      "central_bank_buying": "今日無明確央行買盤數據更新。",
-      "geopolitical_risk": "油輪遇襲事件尚未觸發黃金的大幅避險溢價。",
-      "dominant_force": "高利率維持更久預期引發的實質利率與持有成本壓迫。",
-      "judgment": "黃金下行至3851.90美元，顯示高利率維持更久的持有成本考量仍壓過美元走弱與地緣避險因子。"
+      "rate_or_real_rate_pressure": "Fed鷹派預期維持高實質利率環境，對無息資產黃金形成重壓。",
+      "dollar_effect": "美元指數強勢突破103.782，加劇黃金計價上的下行壓力。",
+      "safe_haven_demand": "即便日圓獲得部分避險資金，黃金市場的避險買盤不足以抵禦強美元與實質利率壓力。",
+      "central_bank_buying": "今日資料未提及央行買盤力道。",
+      "geopolitical_risk": "今日資料未提及地緣政治推升黃金。",
+      "dominant_force": "強勢美元與高實質利率預期",
+      "judgment": "黃金受制於強美元與實質利率承壓，跌破3728美元至3727.8美元。"
     },
     "asia_fx_pricing": {
       "twd": {
-        "reaction": "走勢待確認",
-        "consistent_with_dollar_pressure": "unclear",
-        "local_correction_factor": "資料庫缺漏本地資金流與科技產業最新進展",
-        "judgment": "資料不足，台幣走勢尚待後續數據驗證。"
+        "reaction": "維持偏弱走勢",
+        "consistent_with_dollar_pressure": "yes",
+        "local_correction_factor": "無明顯抵銷因子，主要承接美元走強的壓力",
+        "judgment": "台幣匯價順應美元強勢格局而維持偏弱走勢。"
       },
       "jpy": {
-        "reaction": "短線走強",
-        "consistent_with_dollar_pressure": "yes",
-        "local_correction_factor": "美債殖利率與美元走弱減輕日圓利差貶值壓力",
-        "judgment": "日圓走強反映美元指數與美債殖利率回落帶來的壓力舒緩。"
+        "reaction": "獲部分避險支撐",
+        "consistent_with_dollar_pressure": "no",
+        "local_correction_factor": "市場避險需求流向日圓提供緩衝",
+        "judgment": "日圓雖面對強美元，但因部分避險資金流入而展現相對韌性。"
       },
       "krw": {
-        "reaction": "資料不足",
+        "reaction": "資料未提及",
         "consistent_with_dollar_pressure": "unclear",
-        "local_correction_factor": "缺乏具體韓圜價格與股市資金流資訊",
-        "judgment": "資料不足，韓圜定價狀況待確認。"
+        "local_correction_factor": "資料不足",
+        "judgment": "今日資料未涵蓋韓圜表現，無法給出明確判斷。"
       }
     },
     "market_contradiction": {
-      "baseline_expectation": "中東油輪遇襲推升原油（WTI 85.61美元）應推升通膨預期，帶動公債殖利率與美元走高。",
-      "actual_reaction": "美債殖利率反向回落至5.103%，美元指數走弱至103.55。",
-      "most_non_obvious_link": "油價大漲與美債殖利率回落同時發生，傳導出現明顯背離。",
-      "possible_explanation": "市場將油價上揚視為供給端地緣衝擊，同時就業邊際降溫預期與避險買盤佔據主導地位，壓過通膨溢價。",
-      "is_correction_or_new_mainline": "offsetting_force",
-      "how_to_integrate_into_main_theme": "將油價走高納為供給面通膨修正因子，主線則定調為就業降溫與避險買盤驅動殖利率及美元回落。",
+      "baseline_expectation": " Fed 官員發表鷹派言論時，高利率預期應同步推升美債殖利率與美元指數。",
+      "actual_reaction": "美元指數偏強升至 103.782，但 10 年期美債殖利率卻逆勢回落至 5.066%。",
+      "most_non_obvious_link": " Fed 鷹派政策立場與 10 年期美債殖利率走跌之間的傳導斷裂。",
+      "possible_explanation": "國際油價跌至 81.89 美元緩和了通膨預期，同時 20 年期美債標售平穩吸收了供給溢價，兩者共同壓制長端殖利率。",
+      "is_correction_or_new_mainline": "correction_factor",
+      "how_to_integrate_into_main_theme": "將油價回落與美債標售平穩視為對鷹派政策預期的「修正因子」；美元反映鷹派政策與利差，殖利率則反映通膨預期降溫與債市供需改善。",
       "presenter_story_angle": {
-        "opening_question": "為什麼地緣政治推升油價，美國10年期公債殖利率與美元反而雙雙走弱？",
-        "normal_script": "按基準傳導，油輪遇襲與庫存下滑帶動WTI原油走高，應激發通膨交易並推高美債殖利率。",
-        "where_it_breaks": "然而今日債市並未定價二次通膨，反而由就業降溫預期與避險買盤主導，推動10年期殖利率降至5.103%。",
-        "why_it_matters": "這代表市場認為經濟成長與就業放緩的風險高於短期供給面的油價衝擊，利差收斂也讓日圓等亞幣獲得短線喘息。",
-        "next_watch": "觀察即將公布的美國就業與零售銷售數據，驗證成長降溫預期是否具備硬數據支撐。"
+        "opening_question": "為什麼 Fed 官員喊出鷹派立場推升美元，美債殖利率卻不升反降？",
+        "normal_script": "按標準機制，鷹派言論應同時帶動殖利率與美元走高。",
+        "where_it_breaks": "今日 10 年期美債殖利率未跟進鷹派預期，反而下行至 5.066%。",
+        "why_it_matters": "因為油價跌至 81.89 美元修復了通膨預期，加上美債標售順利壓低了供給溢價。",
+        "next_watch": "後續需觀察美國核心通膨硬數據發布，確認殖利率回落是暫時修正還是趨勢轉向。"
       }
     },
     "pricing_assessment": {
-      "dominant_market_force": "就業市場邊際降溫預期與長端公債避險買盤。",
-      "offsetting_force": "中東地緣政治衝擊與原油庫存下滑所帶來的能源通膨預期。",
-      "most_non_obvious_signal": "WTI油價大漲（85.61美元）與美債殖利率回落（5.103%）之走勢背離。",
-      "market_question": "就業降溫預期能否持續壓抑殖利率下行，抑或能源價格持續走高終將引發二次通膨定價？",
-      "one_sentence_takeaway": "目前市場由就業降溫與避險買盤主導美債殖利率與美元回落，油價大漲暫被視為供給面抵銷力量而非新主線。",
-      "next_watch": "密切追蹤美國零售銷售與就業數據，並觀察中東情勢對油價與通膨預期的持續性影響。"
+      "dominant_market_force": "Fed 官員華勒鷹派言論帶動的高利率更久預期與強勢美元",
+      "offsetting_force": "WTI 油價回落至 81.89 美元與 20 年期美債標售平穩",
+      "most_non_obvious_signal": "10 年期美債殖利率在鷹派氛圍下逆勢回落至 5.066%",
+      "market_question": "長端美債殖利率的回落是油價帶來的短線通膨修正，還是反映對經濟成長降溫的隱憂？",
+      "one_sentence_takeaway": "鷹派立場支撐強美元並重壓黃金，但油價下行與美債標售平穩修正了長端殖利率走勢。",
+      "next_watch": "美國核心通膨硬數據發布，以及 WTI 油價是否持續疲弱。"
     }
   }
 }

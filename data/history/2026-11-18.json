@@ -1,0 +1,64 @@
+{
+  "generated_at": "2026-11-19T15:58:45+08:00",
+  "source": "Google Sheets Today Daily Source",
+  "mode": "today_daily_source",
+  "data_status": "complete",
+  "daily_summary": {
+    "date": "2026-11-18",
+    "headline": "鷹派支撐強美元債市油價修正",
+    "executive_summary": "市場目前最重視Fed維持高利率更久的預期，鷹派言論支撐美元指數走強並重壓黃金；然而美債標售平穩與油價下行使長期通膨預期獲得修正，壓制長端美債殖利率並造成利率與美元方向分歧。整體資產傳導呈現部分連貫，強美元格局仍對台幣等亞洲貨幣構成偏弱壓力。",
+    "market_signals": [
+      "美債殖利率回落",
+      "美元指數偏強",
+      "國際油價下行"
+    ],
+    "macro_chain": "[Fed官員鷹派言論與利差支撐] -> [公債標售平穩與油價下行壓制US10Y回落（傳導分歧）] -> [DXY維持強勢突破103.78] -> [黃金承壓跌破3728美元／台幣偏弱／日圓獲部分避險支撐]",
+    "divergence": "今日核心主線為Fed鷹派緊縮預期支撐美元並壓制黃金，但關鍵背離在於US10Y公債殖利率未漲反跌。背離主因為國際油價回落提供能源通膨降溫的修正因子，加上長端公債標售需求平穩所致，此分歧訊號後續是否收斂仍待觀察。",
+    "market_snapshot": "WTI｜81.89｜下行｜油價下行，可能緩和能源通膨壓力；若由需求疲弱造成，亦需視為成長降溫訊號。\nUS10Y｜5.066%｜下行｜美債標售需求平穩與能源通膨修正因子發酵，長端利率未跟進鷹派政策預期。\nDXY｜103.782｜偏強｜Fed鷹派緊縮立場與利差優勢支撐美元，壓迫黃金並使台幣承壓。",
+    "news_evidence": [
+      "Fed鷹派官員華勒支持積極緊縮立場，強化市場對高利率維持更久的預期，推升美元指數至103.78。",
+      "WTI與Brent原油期貨同步下行，WTI跌至81.89美元，削弱短期能源通膨預期推力。",
+      "美國20年期公債標售需求平穩，抑制長端公債供給溢酬，促使10年期公債殖利率回落至5.066%。",
+      "金價在實質利率預期與強美元雙重壓迫下跌至3727.8美元，台幣匯價亦隨強美元維持偏弱走勢。"
+    ],
+    "watchpoints": [
+      "美國核心通膨硬數據發布，驗證物價壓力是否推動長端美債殖利率補漲。",
+      "國際油價WTI是否持續疲弱，確認能源成本對通膨預期降溫的修正力道。",
+      "Fed後續官員對終端利率的談話共識，以及亞洲央行在整數關卡對匯率的干預動向。"
+    ],
+    "visual_note": {
+      "title": "鷹派強美元與能源通膨降溫拉鋸：交叉資產傳導分歧解讀",
+      "file_id": "1CvF5dvzFLucRhc1bo5JqSVNH4YZJTz4S",
+      "url": "https://drive.google.com/file/d/1CvF5dvzFLucRhc1bo5JqSVNH4YZJTz4S/view?usp=drivesdk",
+      "model": "gemini-3.1-flash-image"
+    },
+    "news_narrative": {
+      "title": "高利率維持更久與通膨預期重新評估",
+      "support_level": "中",
+      "cards": [
+        {
+          "label": "驗證結果",
+          "text": "部分支持"
+        },
+        {
+          "label": "摘要",
+          "text": "今日核心矛盾在於Fed鷹派表態推升美元，但美國10年期公債殖利率反而回落。主導因子為官員鷹派言論支撐美元強勢並重壓黃金；然而，油價下行與美債標售平穩成為關鍵修正因子，部分緩解長期通膨預期，限制了長端利率跟進上行的空間。"
+        },
+        {
+          "label": "支持新聞",
+          "text": "1. 新聞重點：Fed鷹派官員華勒等支持積極緊縮與升息言論，帶動美元指數走強至103.78，壓抑金價跌至3727.8美元。\n2. 市場影響：推高美元指數並拖累黃金表現，同時限制市場對降息節奏的樂觀期待。\n3. 驗證結論：強美元與弱黃金支持鷹派主線，但美國10年期公債殖利率回落與油價下行顯示長端利率傳導出現分歧。"
+        },
+        {
+          "label": "異常訊號",
+          "text": "1. 美國10年期公債殖利率下行與Fed鷹派升息論調分歧：美債20年期拍賣需求平穩，加上WTI與Brent原油價格下行，為市場帶來通膨降溫預期，成為壓抑長端殖利率的修正因子。\n2. 美元走強但亞洲貨幣走勢分化：台幣偏弱反映美元強勢，但日圓因避險資金流入限制走貶，顯示匯市除利差外亦受區域避險心理影響，屬待觀察訊號。"
+        },
+        {
+          "label": "觀察重點",
+          "text": "1. 後續美國核心PCE與CPI通膨數據，觀察物價硬數據是否推動長端美債殖利率補漲。\n2. 國際油價（WTI與Brent）能否持續回落，作為通膨預期下修的關鍵驗證點。\n3. Fed後續官員公開談話對終端利率路徑的共識強度，是否進一步收緊金融情勢。\n4. 亞洲貨幣在強美元環境下的干預風險，特別是日圓與台幣在整數關卡附近的震盪。"
+        }
+      ],
+      "news_links_json": "[\n  {\n    \"rank\": 1,\n    \"theme\": \"FX｜Dollar / FX / 美元與匯率\",\n    \"source\": \"鉅亨網\",\n    \"title\": \"〈紐約匯市〉美元走強 Fed鷹派官員支持採取積極行動 - 鉅亨網\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiT0FVX3lxTFByMnR1R0dObEZOSkQ5NnItYlZGRnRkWmhTbjhtRVpjdW1BQWl3LVQyY2ZxZ1FERTNZVVNaVmVhd2dWM2oxaE5IUzR2RXJHZWM?oc=5\",\n    \"published_at\": \"Wed, 18 Nov 2026 21:33:09 GMT\",\n    \"score\": 118.6,\n    \"matched_keywords\": \"聯準會政策:fed | 美元與亞洲匯率:dollar | 變數:DOLLAR_FX | 類型:DATA | 來源角色:CNYES_MACRO\"\n  },\n  {\n    \"rank\": 2,\n    \"theme\": \"Rates｜Treasury Yields / 美債殖利率\",\n    \"source\": \"MarketWatch\",\n    \"title\": \"U.S. 20-Year Treasury Auction Shows Stable Demand - MarketWatch\",\n    \"url\": \"https://news.google.com/rss/articles/CBMipgFBVV95cUxNelBlZmJwNmhlT3BHaXIwTlRwdmY2cXI3Mk1yWE54NnY0TmhrVXNrUnQ5Y0dsallJMkx2bnViSkZPaGZSTWFwRXZTTzNKNGRFS2l2LVNFMTY4dS1VbVVUZElLZ2lRZVJBT0RQbHV5T2RsdVF6Vjg5WmJKRnhGZS05aWJ1aWFVdFd2aFVicHFrRzY4VS1tQzFCV2NYMXg0NXFFNVVkM29B?oc=5\",\n    \"published_at\": \"Wed, 18 Nov 2026 20:07:00 GMT\",\n    \"score\": 115,\n    \"matched_keywords\": \"美債殖利率:treasury/yield/yields | 變數:TREASURY_YIELDS | 類型:REACTION | 來源角色:MARKET_REACTION\"\n  },\n  {\n    \"rank\": 3,\n    \"theme\": \"Fed Policy｜Fed / 聯準會\",\n    \"source\": \"鉅亨網\",\n    \"title\": \"12月升息2碼？Fed華勒：可能得讓大家「震撼一下」 - 鉅亨網\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiT0FVX3lxTE1aQldWRHlqbFJmek1Zc0YyY2MxRHZYVXFNcC1DNG1kOGphWXZzcEZ3WnpydWRDd19vRmlsZnlKMmZnNkVBRnVjZUdLYkt6eXM?oc=5\",\n    \"published_at\": \"Wed, 18 Nov 2026 13:32:05 GMT\",\n    \"score\": 112.4,\n    \"matched_keywords\": \"聯準會政策:fed | 變數:FED | 類型:DATA | 來源角色:CNYES_MACRO\"\n  },\n  {\n    \"rank\": 4,\n    \"theme\": \"Asset｜Gold / 黃金\",\n    \"source\": \"鉅亨網\",\n    \"title\": \"Bitunix分析師：主權債務風險重新定價，黃金短期承壓、長期配置需求仍在 - 鉅亨網\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiT0FVX3lxTE9CTnBraUlNTkZsaU9pZUhuSHVyTGRLelR3OHJVTFJhcFZmc3dFVzBaTS05ZG40cldoTjZEWTdIWWxTNkZiOUZCWjhQSnFfcHM?oc=5\",\n    \"published_at\": \"Wed, 18 Nov 2026 08:05:07 GMT\",\n    \"score\": 111.2,\n    \"matched_keywords\": \"能源與原物料:gold | 風險情緒／避險資金:gold | 變數:GOLD | 類型:DATA | 來源角色:CNYES_MACRO\"\n  },\n  {\n    \"rank\": 5,\n    \"theme\": \"Rates｜Treasury Yields / 美債殖利率\",\n    \"source\": \"MarketWatch\",\n    \"title\": \"Want to earn 5% on shorter-term Treasurys again? Watch for this shift. - MarketWatch\",\n    \"url\": \"https://news.google.com/rss/articles/CBMirwFBVV95cUxOdVpMUjliaFQ4eDZwRWRWeWZ6R0E3dTJ3ZUhpek4wQVNlbjBwN0RjSDBiMVZRTFotZ0VZV2UzTkd1cmxBc2I0YmQtMWxYRGkydHZEY1d2eWhFd0ZuSHJwWEMzdFE3QWlXenNhRFNRbTJvOUpCYl9FZThPYk40QnJ0U0llTkphTmdXYWRWVDZNZVpEd3lrWThkbmlJbm5ncFZWamtpbHB2Wk1UcGxuSE8w?oc=5\",\n    \"published_at\": \"Wed, 18 Nov 2026 13:24:00 GMT\",\n    \"score\": 111,\n    \"matched_keywords\": \"美債殖利率:treasury/yield/yields | 變數:TREASURY_YIELDS | 類型:REACTION | 來源角色:MARKET_REACTION\"\n  },\n  {\n    \"rank\": 6,\n    \"theme\": \"FX｜Dollar / FX / 美元與匯率\",\n    \"source\": \"鉅亨網\",\n    \"title\": \"〈台幣〉33元上下拋補激烈拉扯 國家隊蹲馬步穩台股匯市 - 鉅亨網\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiT0FVX3lxTE4ycW54bENVazEtRWV6dU4tODF6d3g4OXNTZG9xcUM2eXdhM0hFQ2g3ZVdUNFo1c09jRHdLQzRWcGtVcW8tQ0VZcUtWcENoakE?oc=5\",\n    \"published_at\": \"Wed, 18 Nov 2026 03:22:11 GMT\",\n    \"score\": 109.6,\n    \"matched_keywords\": \"美元與亞洲匯率:dollar | 變數:DOLLAR_FX | 類型:DATA | 來源角色:CNYES_MACRO\"\n  },\n  {\n    \"rank\": 7,\n    \"theme\": \"FX｜Dollar / FX / 美元與匯率\",\n    \"source\": \"鉅亨網\",\n    \"title\": \"【遠東商銀】傳避險資金湧入，限制日圓走貶 - 鉅亨網\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiT0FVX3lxTE9JektMVWRmY3RqWEJ5bmNwd0NHNEhXaXBiWVdkaW81bVdQV2JDY0NKQmNlZm9xY1dnR0FlcEZJeEdJUHBuNDFucjVQdzB5WGs?oc=5\",\n    \"published_at\": \"Wed, 18 Nov 2026 01:34:45 GMT\",\n    \"score\": 109.6,\n    \"matched_keywords\": \"美元與亞洲匯率:dollar | 變數:DOLLAR_FX | 類型:DATA | 來源角色:CNYES_MACRO\"\n  },\n  {\n    \"rank\": 8,\n    \"theme\": \"Asset｜Gold / 黃金\",\n    \"source\": \"Reuters\",\n    \"title\": \"Gold drops to 14-month low as dollar, yields rise on hawkish Fed rhetoric - Reuters\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiqAFBVV95cUxQVlk2MG4xbDV2emVoNk9vRVhTcTlRbkZLMDgwMjBMTEdVeXFDV21zX0NVdmF0YzQzRDZ4TkowaDJQQlZlTDBsbm9BWHFXNXpYZzVVejAtTGRZTTFHRjV4dllJV0ZxVzVvbVJCN1lxdk50NXVaNkRxTGJQbDYyZjhNNElTUElOWVU0eW0ySnBRMndSU1ZrTGE4ZlNMdDk0UXVmUjZLSEVfQlc?oc=5\",\n    \"published_at\": \"Wed, 18 Nov 2026 03:10:00 GMT\",\n    \"score\": 109.2,\n    \"matched_keywords\": \"聯準會政策:fed | 美債殖利率:yield/yields | 美元與亞洲匯率:dollar | 能源與原物料:gold | 風險情緒／避險資金:gold | 變數:GOLD | 類型:BACKUP | 來源角色:WIRE_CONFIRMATION\"\n  }\n]"
+    },
+    "raw_daily_summary_package": "日期：2026-11-18\n今日主線：鷹派支撐強美元債市油價修正\n\nExecutive Summary：\n市場目前最重視Fed維持高利率更久的預期，鷹派言論支撐美元指數走強並重壓黃金；然而美債標售平穩與油價下行使長期通膨預期獲得修正，壓制長端美債殖利率並造成利率與美元方向分歧。整體資產傳導呈現部分連貫，強美元格局仍對台幣等亞洲貨幣構成偏弱壓力。\n\n今日核心訊號：\n- 美債殖利率回落\n- 美元指數偏強\n- 國際油價下行\n\n核心資產重點：\nWTI｜81.89｜下行｜油價下行，可能緩和能源通膨壓力；若由需求疲弱造成，亦需視為成長降溫訊號。\nUS10Y｜5.066%｜下行｜美債標售需求平穩與能源通膨修正因子發酵，長端利率未跟進鷹派政策預期。\nDXY｜103.782｜偏強｜Fed鷹派緊縮立場與利差優勢支撐美元，壓迫黃金並使台幣承壓。\n\n矛盾 / 背離：\n今日核心主線為Fed鷹派緊縮預期支撐美元並壓制黃金，但關鍵背離在於US10Y公債殖利率未漲反跌。背離主因為國際油價回落提供能源通膨降溫的修正因子，加上長端公債標售需求平穩所致，此分歧訊號後續是否收斂仍待觀察。\n\n總經傳導鏈：\n[Fed官員鷹派言論與利差支撐] -> [公債標售平穩與油價下行壓制US10Y回落（傳導分歧）] -> [DXY維持強勢突破103.78] -> [黃金承壓跌破3728美元／台幣偏弱／日圓獲部分避險支撐]\n\n新聞佐證：\n- Fed鷹派官員華勒支持積極緊縮立場，強化市場對高利率維持更久的預期，推升美元指數至103.78。\n- WTI與Brent原油期貨同步下行，WTI跌至81.89美元，削弱短期能源通膨預期推力。\n- 美國20年期公債標售需求平穩，抑制長端公債供給溢酬，促使10年期公債殖利率回落至5.066%。\n- 金價在實質利率預期與強美元雙重壓迫下跌至3727.8美元，台幣匯價亦隨強美元維持偏弱走勢。\n\n待觀察問題：\n- 美國核心通膨硬數據發布，驗證物價壓力是否推動長端美債殖利率補漲。\n- 國際油價WTI是否持續疲弱，確認能源成本對通膨預期降溫的修正力道。\n- Fed後續官員對終端利率的談話共識，以及亞洲央行在整數關卡對匯率的干預動向。"
+  }
+}
