@@ -1,0 +1,168 @@
+{
+  "generated_at": "2026-11-20T15:49:24+08:00",
+  "date": "2026-11-19",
+  "mode": "macro_pricing_logic_v4",
+  "logic": {
+    "pricing_context": {
+      "market_was_pricing": "市場原先定價由國際原油價格上行帶動能源通膨預期與利率上行的傳導邏輯。",
+      "new_information": "美國上周續領失業金人數跳增7萬人，顯示就業市場尋職難度增加與勞動市場邊際轉弱。",
+      "pricing_question": "勞動降溫引發的成長疑慮與殖利率回落，能否壓過原油上行帶來的能源通膨預期，並解釋美元與殖利率的背離走勢？"
+    },
+    "input_material_mapping": {
+      "inflation_materials": [
+        "WTI原油升至83.16美元",
+        "Brent原油升至90.05美元",
+        "美國上周續領失業金人數跳增7萬人（隱含需求邊際降溫壓力）"
+      ],
+      "rate_materials": [
+        "美國上周續領失業金人數跳增7萬人引發成長降溫預期",
+        "美國10年期公債殖利率回落至5.052%",
+        "市場對Fed政策高利率維持更久的預期"
+      ],
+      "dollar_materials": [
+        "美元指數偏強升至103.93",
+        "市場對Fed政策高利率維持更久的預期與利差優勢",
+        "日圓與台幣等非美貨幣走弱"
+      ],
+      "gold_materials": [
+        "黃金價格承壓回落至3627.9美元",
+        "美元指數偏強升至103.93",
+        "Fed高利率維持更久的政策預期"
+      ],
+      "asia_fx_materials": [
+        "日圓走弱",
+        "台幣承壓",
+        "美元偏強持續施加亞幣壓力"
+      ],
+      "mapping_summary": "續領失業金數據跳增成為壓低美債殖利率的核心驅動，而原油走高則提供反向通膨修正訊號；美元在利差預期與非美貨幣弱勢支撐下逆勢偏強，壓制黃金與亞幣。"
+    },
+    "inflation_expectation": {
+      "energy": {
+        "direction": "up",
+        "importance": "high",
+        "evidence": [
+          "WTI原油升至83.16美元",
+          "Brent原油升至90.05美元"
+        ],
+        "judgment": "油價上行增加能源成本，構成短期通膨預期的上行拉力。"
+      },
+      "supply_chain": {
+        "direction": "unclear",
+        "importance": "low",
+        "evidence": [],
+        "judgment": "資料不足，摘要未提供供應鏈或瓶頸相關數據。"
+      },
+      "price_data": {
+        "direction": "unclear",
+        "importance": "low",
+        "evidence": [],
+        "judgment": "資料不足，摘要未提及最新CPI/PPI/PCE數據。"
+      },
+      "demand": {
+        "direction": "down",
+        "importance": "medium",
+        "evidence": [
+          "續領失業金人數跳增7萬人引發成長降溫預期"
+        ],
+        "judgment": "勞動市場放緩預期可能進一步削弱中長期終端消費需求。"
+      },
+      "labor_market": {
+        "direction": "down",
+        "importance": "high",
+        "evidence": [
+          "美國上周續領失業金人數跳增7萬人，顯示就業市場尋職難度增加"
+        ],
+        "judgment": "續領失業金跳增顯示就業市場邊際降溫，抑低薪資與需求端通膨動能。"
+      },
+      "policy_expectation": {
+        "direction": "up",
+        "importance": "medium",
+        "evidence": [
+          "市場對Fed政策高利率維持更久的預期"
+        ],
+        "judgment": "政策層面高利率維持更久的定價，抑低長期通膨失控風險。"
+      },
+      "summary": {
+        "overall_direction": "mixed",
+        "strength": "medium",
+        "dominant_force": "續領失業金人數跳增7萬人帶來的勞動與成長降溫預期",
+        "offsetting_force": "WTI升至83.16美元與Brent升至90.05美元之能源成本推升力量",
+        "judgment": "通膨預期呈現多空交錯，能源價格帶動短期成本推升，但勞動數據轉弱壓制需求端通膨擴散。"
+      }
+    },
+    "rate_pricing": {
+      "direction": "down",
+      "link_with_inflation_expectation": "利率走勢與能源通膨預期背離，但與勞動市場降溫通道一致。",
+      "fed_policy_signal": "市場持續消化Fed高利率維持更久的鷹派立場，為利率下行提供底部支撐。",
+      "treasury_supply_demand": "資料不足，未提供公債發行或具體供給數據。",
+      "term_premium": "資料不足，未提供期限溢價獨立數據。",
+      "safe_haven_bond_buying": "成長降溫疑慮觸發部分資金流入公債避險。",
+      "growth_concern_or_cut_expectation": "續領失業金人數跳增7萬人主導成長降溫預期，成為壓抑長端殖利率的主因。",
+      "dominant_force": "勞動市場尋職難度增加所引發的成長降溫疑慮",
+      "judgment": "美國10年期公債殖利率回落至5.052%，顯示市場短期優先定價就業降溫與成長疑慮，壓過原油上行的影響。"
+    },
+    "dollar_pricing": {
+      "direction": "up",
+      "link_with_rates": "美元與美債殖利率呈現非典型背離，殖利率回落但美元指數上揚。",
+      "safe_haven_dollar": "資料未顯示明顯因避險需求推升美元流動性。",
+      "liquidity_demand": "資料未提供流動性緊縮訊號。",
+      "other_currency_weakness": "日圓與台幣等非美貨幣走弱，為美元提供相對強勢動能。",
+      "us_relative_growth_or_policy": "市場定價Fed高利率維持更久，使美債利差優勢依然存在。",
+      "dominant_force": "Fed高利率維持更久的政策預期與日圓等非美貨幣相對弱勢",
+      "judgment": "美元指數逆勢升至103.93，主因利差預期與非美貨幣弱勢支撐，抵銷了美債長端殖利率回落的下行壓力。"
+    },
+    "gold_pricing": {
+      "direction": "down",
+      "rate_or_real_rate_pressure": "儘管美債殖利率回落，但Fed高利率維持更久的預期依然抑低黃金不帶息資產吸引力。",
+      "dollar_effect": "美元指數走高至103.93，直接對以美元計價的金價形成壓制。",
+      "safe_haven_demand": "就業降溫隱憂尚未轉化為足夠強烈的天險買盤。",
+      "central_bank_buying": "資料不足，未提供央行購金數據。",
+      "geopolitical_risk": "資料不足，未提供地緣政治風險相關變化。",
+      "dominant_force": "美元指數走強與高利率維持更久之預期壓制",
+      "judgment": "黃金價格承壓回落至3627.9美元，反映美元強勢與高利率環境維持更久的壓制力道，壓過殖利率下行的潛在利多。"
+    },
+    "asia_fx_pricing": {
+      "twd": {
+        "reaction": "承壓走弱",
+        "consistent_with_dollar_pressure": "yes",
+        "local_correction_factor": "待確認，資料未顯示本地資金流或央行政策修正",
+        "judgment": "台幣跟隨美元強勢而承壓，傳導路徑符合美元壓迫邏輯。"
+      },
+      "jpy": {
+        "reaction": "走弱",
+        "consistent_with_dollar_pressure": "yes",
+        "local_correction_factor": "日本自身政策立場與美日利差維持寬鬆結構",
+        "judgment": "日圓走弱推升美元指數走強，自身亦承受美元利差壓迫。"
+      },
+      "krw": {
+        "reaction": "待確認",
+        "consistent_with_dollar_pressure": "unclear",
+        "local_correction_factor": "資料不足，摘要未提及韓圜反應與數據",
+        "judgment": "缺乏具體數據，無法判斷韓圜今日定價細節。"
+      }
+    },
+    "market_contradiction": {
+      "baseline_expectation": "若勞動數據降溫壓低美債殖利率，正常傳導應使美元同步承壓；且油價大漲應同步推升通膨預期與殖利率。",
+      "actual_reaction": "10年期美債殖利率回落至5.052%，油價（WTI 83.16、Brent 90.05）大漲卻未阻止殖利率走低；同時美元指數逆勢升至103.93。",
+      "most_non_obvious_link": "「美債殖利率回落但美元走強」的雙向背離，以及「能源大漲但殖利率下跌」的分歧訊號。",
+      "possible_explanation": "債市優先反映續領失業金跳增帶來的成長降溫；匯市則優先定價Fed高利率維持更久的立場及日圓等非美貨幣弱勢。",
+      "is_correction_or_new_mainline": "offsetting_force",
+      "how_to_integrate_into_main_theme": "將勞動降溫視為壓低利率的主線，原油價格走強與美元利差優勢則作為限制市場過度定價降息的抵銷與修正力量。",
+      "presenter_story_angle": {
+        "opening_question": "當續領失業金跳增壓低美債殖利率時，為何美元指數與原油價格會同步強勢走高？",
+        "normal_script": "標準傳導中，勞動市場降溫應帶動公債殖利率與美元同步走弱。",
+        "where_it_breaks": "今日10年期美債殖利率回落至5.052%，美元指數卻逆勢升至103.93，且原油同步走揚。",
+        "why_it_matters": "這顯示債市優先定價成長疑慮，而匯市仍被Fed高利率維持更久的立場與非美貨幣弱勢所主導，市場傳導出現層次分化。",
+        "next_watch": "觀察即將公布的非農就業報告與失業率，以驗證勞動降溫是否能轉化為 Fed 政策轉向的實質動能。"
+      }
+    },
+    "pricing_assessment": {
+      "dominant_market_force": "續領失業金人數跳增7萬人引發的勞動市場邊際轉弱與成長降溫預期",
+      "offsetting_force": "WTI升至83.16美元及Brent升至90.05美元帶來的能源通膨預期，與Fed高利率維持更久的政策預期",
+      "most_non_obvious_signal": "美國10年期公債殖利率回落至5.052%的同時，美元指數逆勢走升至103.93",
+      "market_question": "勞動市場降溫訊號能否持續擴大，進而扭轉Fed高利率維持更久的政策定價並修正美元強勢？",
+      "one_sentence_takeaway": "勞動降溫主導美債殖利率回落，但原油走強與非美貨幣弱勢支撐美元維持強勢，呈現非典型定價傳導。",
+      "next_watch": "即將公布的非農就業報告與失業率數據、原油價格突破動能，以及Fed官員公開談話。"
+    }
+  }
+}
