@@ -1,162 +1,163 @@
 {
-  "generated_at": "2026-11-21T15:46:17+08:00",
+  "generated_at": "2026-11-23T16:17:42+08:00",
   "date": "2026-11-20",
   "mode": "macro_pricing_logic_v4",
   "logic": {
     "pricing_context": {
-      "market_was_pricing": "前期消化聯準會鷹派高利率維持更久的定價框架。",
-      "new_information": "科技股重挫觸發跨資產避險買盤湧入公債，壓低美債10年期殖利率至4.912%，美元指數同步回落至103.84；金價重挫破底至3539美元，原油走勢分歧（WTI漲至83.62美元，Brent降至89.87美元）。",
-      "pricing_question": "股市避險買盤主導的美債殖利率回落，能否壓過前期聯準會鷹派高利率定價？"
+      "market_was_pricing": "原油高檔震盪與高利率預期並存環境。",
+      "new_information": "全球科技股走跌引發避險潮，帶動資金流入美債，10年期美債殖利率降至4.912%；原油期貨走勢分歧（WTI 升至83.41、Brent 跌至89.95）；美元指數微幅走強至103.84；金價回落至3515.4；日圓（USDJPY 158.53）與台幣表現偏強。",
+      "pricing_question": "科技股引發的避險債券買盤能否持續主導盤面，抑或通膨數據公布後將回歸高利率與美債賣壓主線？"
     },
     "input_material_mapping": {
       "inflation_materials": [
-        "西德州原油（WTI）上行至83.62美元，增加短期能源成本壓力",
-        "布蘭特原油（Brent）下行至89.87美元，緩和能源通膨壓力",
-        "前期聯準會鷹派立場與高利率定價持續發酵"
+        "WTI原油升至83.41美元（油價上行）",
+        "Brent原油回落至89.95美元（油價下行）",
+        "即將公布的PCE物價指數（待驗證素材）"
       ],
       "rate_materials": [
-        "科技股重挫引發跨資產避險買盤，資金搶進政府公債，美債連續五日走揚",
-        "美國10年期公債殖利率降至4.912%"
+        "全球科技股重挫引發避險潮",
+        "美債連續五日上漲，10年期公債殖利率下行至4.912%"
       ],
       "dollar_materials": [
-        "美債殖利率回落削弱美元利差優勢",
-        "美元指數走軟至103.84"
+        "美元指數微升至103.84",
+        "利差與避險美元流動性支撐"
       ],
       "gold_materials": [
-        "前期聯準會鷹派論調與高實質利率陰霾壓制無孳息資產",
-        "現貨黃金價格跌破支撐至3539美元，避險屬性與公債顯現脫鉤"
+        "黃金走跌至3515.4美元",
+        "獲利了結壓力和強勢美元壓迫"
       ],
       "asia_fx_materials": [
-        "美債殖利率與美元指數回落，舒緩日圓與台幣貶壓",
-        "USDJPY降至158.51，美日利差擴大壓力減輕，日圓呈偏強反應"
+        "日圓（USDJPY 158.53）逆勢偏強",
+        "台幣在美債殖利率回落背景下展現韌性",
+        "韓圜無直接數據提供"
       ],
-      "mapping_summary": "科技股重挫引發的公債避險買盤成為主導力量，帶動殖利率與美元走軟並舒緩亞幣壓力；能源通膨訊號分歧，貴金屬因實質利率壓抑而破底，顯示高利率定價仍具影響力。"
+      "mapping_summary": "今日素材顯示科技股下挫帶動的債券避險買盤主導長端利率下行，能源訊號出現分歧削弱通膨預期推力，美元走強壓制金價，亞洲貨幣中日圓與台幣因美債殖利率回落而展現韌性。"
     },
     "inflation_expectation": {
       "energy": {
         "direction": "mixed",
-        "importance": "medium",
+        "importance": "high",
         "evidence": [
-          "WTI上行至83.62美元",
-          "Brent下行至89.87美元"
+          "WTI上漲至83.41美元",
+          "Brent原油下跌至89.95美元"
         ],
-        "judgment": "油價內部走勢分歧，西德州原油上行增加能源成本壓力，而布蘭特原油下行緩和整體通膨預期，兩者多空拉鋸。"
+        "judgment": "油價走勢呈現分歧，WTI上行增加短期通膨壓力，但Brent跌破90美元緩和能源通膨動能，整體對通膨預期形成互相抵銷效果。"
       },
       "supply_chain": {
         "direction": "unclear",
         "importance": "low",
         "evidence": [],
-        "judgment": "摘要中未提供供應鏈或運價相關新數據。"
+        "judgment": "今日資料未提供供應鏈瓶頸或運價相關新數據。"
       },
       "price_data": {
         "direction": "unclear",
-        "importance": "low",
-        "evidence": [],
-        "judgment": "摘要中未發布最新CPI、PPI或PCE數據。"
-      },
-      "demand": {
-        "direction": "down",
         "importance": "medium",
         "evidence": [
-          "科技股重挫引發避險需求"
+          "後續待公布PCE物價指數"
         ],
-        "judgment": "科技股顯著下挫可能隱含市場對權重企業獲利或宏觀需求的疑慮。"
+        "judgment": "目前缺乏最新通膨數據發布，市場處於等待PCE檢驗之觀望階段。"
       },
-      "labor_market": {
+      "demand": {
         "direction": "unclear",
         "importance": "low",
         "evidence": [],
-        "judgment": "摘要中未提供就業市場相關訊號。"
+        "judgment": "今日資料未提供PMI或零售銷售等需求端具體數據。"
       },
-      "policy_expectation": {
-        "direction": "up",
+      "labor_market": {
+        "direction": "down",
         "importance": "medium",
         "evidence": [
-          "前期聯準會偏鷹立場對高利率定價之延續"
+          "摘要提及就業降溫預期"
         ],
-        "judgment": "聯準會前期偏鷹訊號維持市場對利率在高位維持更久的警惕，支撐通膨風險預期。"
+        "judgment": "就業降溫預期成為緩和通膨預期的輔助因子。"
+      },
+      "policy_expectation": {
+        "direction": "unclear",
+        "importance": "low",
+        "evidence": [],
+        "judgment": "今日無明確Fed官員談話或央行政策變化訊息。"
       },
       "summary": {
         "overall_direction": "mixed",
         "strength": "weak",
-        "dominant_force": "原油內部多空分歧與缺乏新通膨數據，通膨預期暫無單向推升或大幅拉回之明確動能。",
-        "offsetting_force": "WTI能源價格上行與聯準會鷹派立場相互交錯。",
-        "judgment": "今日通膨預期呈現多空交錯且動能偏弱，非今日金融市場定價的主導核心。"
+        "dominant_force": "Brent原油回落與就業降溫預期削弱通膨動能",
+        "offsetting_force": "WTI原油微幅上行",
+        "judgment": "能源價格分歧加上市場缺乏最新物價數據，通膨預期呈現多空抵銷且強度有限，未構成今日資產價格的主導推力。"
       }
     },
     "rate_pricing": {
       "direction": "down",
-      "link_with_inflation_expectation": "與今日分歧且動能偏弱的通膨預期連結度較低，利率下行主要由跨資產避險驅動。",
-      "fed_policy_signal": "前期鷹派立場仍在，但短線對長端殖利率的推升作用被避險買盤覆蓋。",
-      "treasury_supply_demand": "跨資產避險資金搶進政府公債，推升美債價格連續五日上揚。",
-      "term_premium": "待確認，資料缺乏具體期限溢價數字。",
-      "safe_haven_bond_buying": "科技股重挫引發全球資金湧入公債避險，成為利率下行的最核心推力。",
-      "growth_concern_or_cut_expectation": "股市賣壓帶來的避險情緒壓過高利率維持更久的預期，帶動殖利率回落。",
-      "dominant_force": "科技股重挫引發的跨資產公債避險買盤。",
-      "judgment": "美債10年期殖利率降至4.912%，反映市場短線優先對股市避險進行定價，顯著壓過前期聯準會鷹派定價對殖利率的支撐。"
+      "link_with_inflation_expectation": "利率方向與分歧的通膨預期並不完全同向，顯現利率下行主要由自身避險需求驅動而非通膨預期降溫引導。",
+      "fed_policy_signal": "無新訊息",
+      "treasury_supply_demand": "美債出現連續五日買盤湧入，推升債價",
+      "term_premium": "資料不足以確定期限溢價變化",
+      "safe_haven_bond_buying": "科技股重挫誘發強烈避險買盤湧入美債，為主要推升力量",
+      "growth_concern_or_cut_expectation": "科技股賣壓引發市場對風險資產修正的擔憂，強化避險買債動機",
+      "dominant_force": "科技股下跌引發的公債避險買盤",
+      "judgment": "10年期美債殖利率下行至4.912%，主因為科技股大跌引發股市避險資金流入債市，此力量暫時壓過了高利率維持更久的結構性疑慮。"
     },
     "dollar_pricing": {
-      "direction": "down",
-      "link_with_rates": "同向，美債殖利率回落削弱美利差優勢，同步拉低美元。",
-      "safe_haven_dollar": "避險資金優先湧入公債而非美元，美元未能發揮避險資產屬性。",
-      "liquidity_demand": "未出現美元流動性緊縮買盤。",
-      "other_currency_weakness": "非美貨幣壓力獲舒緩，未能對美元形成被動推升。",
-      "us_relative_growth_or_policy": "美國科技股大幅拋售削弱相對經濟與資產樂觀情緒。",
-      "dominant_force": "美債10年期殖利率下滑帶動的美港/美外利差吸引力減弱。",
-      "judgment": "美元指數走軟至103.84，主要受美債殖利率拉回削弱利差優勢所主導。"
+      "direction": "up",
+      "link_with_rates": "美元與美債殖利率呈現方向分歧（美債殖利率下行，美元指數上揚至103.84），顯示美元未受美債殖利率拉回拖累。",
+      "safe_haven_dollar": "股市重挫帶動美元避險流動性需求增加",
+      "liquidity_demand": "科技股拋售潮中市場資金轉向美元現金與美債",
+      "other_currency_weakness": "整體非美貨幣受美元走強壓制，惟日圓與台幣展現區域韌性",
+      "us_relative_growth_or_policy": "美利差優勢仍提供底層支撐",
+      "dominant_force": "避險美元流動性需求與利差優勢",
+      "judgment": "美元指數微升至103.84，主要反映避險需求與利差保護，主導力量凌駕於美債殖利率單日拉回的負面影響。"
     },
     "gold_pricing": {
       "direction": "down",
-      "rate_or_real_rate_pressure": "前期聯準會鷹派論調與高實質利率環境對無孳息資產形成持續性壓制。",
-      "dollar_effect": "美元指數走軟本應構成支撐，但該正面因素完全被高實質利率壓制力道抵銷。",
-      "safe_haven_demand": "避險買盤選擇流向公債，黃金避險屬性暫時脫鉤。",
-      "central_bank_buying": "待確認，摘要未提及央行買盤資料。",
-      "geopolitical_risk": "待確認，摘要未提供地緣風險升溫之證據。",
-      "dominant_force": "聯準會前期高利率定價與高實質利率壓力。",
-      "judgment": "現貨黃金跌破支撐至3539美元，顯示無孳息資產對高實質利率的敏感度壓過了股市避險與美元走軟的推力。"
+      "rate_or_real_rate_pressure": "實質利率壓力雖因美債殖利率下行稍解，但未直接轉化為金價推力",
+      "dollar_effect": "美元指數升至103.84對計價貨幣形成壓制",
+      "safe_haven_demand": "避險買盘主要流向美債，未有效擴散至貴金屬",
+      "central_bank_buying": "資料不足",
+      "geopolitical_risk": "資料不足",
+      "dominant_force": "美元走強壓制與獲利了結賣壓",
+      "judgment": "金價下跌至3515.4美元，主因為強勢美元的直接壓迫與投資人獲利了結，避險屬性在今日被匯率壓制與資金優先流入美債所掩蓋。"
     },
     "asia_fx_pricing": {
       "twd": {
-        "reaction": "貶壓舒緩",
-        "consistent_with_dollar_pressure": "yes",
-        "local_correction_factor": "科技股重挫若影響台股外資動向，需觀察後續資金流出壓力是否成為修正因子。",
-        "judgment": "美債殖利率與美元拉回減輕外部壓力，台幣貶壓獲暫時舒緩。"
+        "reaction": "走勢偏強展現韌性",
+        "consistent_with_dollar_pressure": "no",
+        "local_correction_factor": "美債殖利率下行緩解資金外流壓力，本地資金流或區域因素提供支撐",
+        "judgment": "台幣未隨美元走強而走弱，顯示美債殖利率回落減緩了美台利差擴大壓力，為匯率提供修正支撐。"
       },
       "jpy": {
-        "reaction": "日圓偏強（USDJPY下降至158.51）",
-        "consistent_with_dollar_pressure": "yes",
-        "local_correction_factor": "美日長端利差隨美債殖利率回落而收窄。",
-        "judgment": "美債殖利率下滑與美元走軟減輕美日利差擴大壓力，推動USDJPY回落至158.51，日圓短線展現偏強韌性。"
+        "reaction": "日圓偏強（USDJPY 158.53）",
+        "consistent_with_dollar_pressure": "no",
+        "local_correction_factor": "美債殖利率下行顯著緩和美日利差壓力",
+        "judgment": "日圓逆勢偏強，反映市場對美債殖利率下行極為敏感，利差壓力減輕的主導力壓過了美元整體走強的效應。"
       },
       "krw": {
-        "reaction": "待確認",
+        "reaction": "資料不足",
         "consistent_with_dollar_pressure": "unclear",
-        "local_correction_factor": "摘要未提供韓圜具體數據。",
-        "judgment": "缺乏資料，定價影響待確認。"
+        "local_correction_factor": "待確認",
+        "judgment": "daily_summary 未提供韓圜數據，標示待確認。"
       }
     },
     "market_contradiction": {
-      "baseline_expectation": "若股市重挫引發跨資產避險情緒，傳統避險資產（美債與黃金）應同步獲得資金流入，帶動殖利率與金價呈反向或同步受惠演繹。",
-      "actual_reaction": "美債獲得顯著買盤壓低殖利率至4.912%，但黃金未受惠於避險及美元走軟，反而破底重挫至3539美元。",
-      "most_non_obvious_link": "美債避險買盤強勁與黃金破底重挫之間的背離脫鉤。",
-      "possible_explanation": "前期聯準會鷹派立場維持的高實質利率環境對無孳息資產形成強烈懲罰效應，其壓制力道顯著高於短線股市避險與美元拉回帶來的支撐。",
+      "baseline_expectation": "在避險情緒升溫且美債殖利率下行的環境下，黃金通常應同步受惠於避險買盤與利率壓力減輕而上漲；同時美元走強應全面壓制亞洲貨幣。",
+      "actual_reaction": "美債殖利率顯著下行（4.912%），但黃金卻受壓下跌（3515.4美元）；美元指數走強（103.84），但日圓與台幣卻逆勢展現韌性。",
+      "most_non_obvious_link": "避險資金高度集中於美債，並未擴散至黃金；且美債殖利率下行對日圓/台幣的利差舒緩效果壓過了美元走強的壓力。",
+      "possible_explanation": "科技股拋售誘發的避險強烈鎖定美債市場，而美元微升伴隨獲利了結賣壓直接打壓金價；亞洲貨幣方面，日圓對美債殖利率下行高度敏感，利差舒緩效果掩蓋了整體美元強勢。",
       "is_correction_or_new_mainline": "offsetting_force",
-      "how_to_integrate_into_main_theme": "今日主線為股市避險主導美債與美元下行，但黃金重挫作為抵銷力量與提醒因子，顯示高利率定價底色未變，避險資金傳導具有高度選擇性。",
+      "how_to_integrate_into_main_theme": "今日主線為「科技股避險驅動美債買盤」，黃金回落與亞幣分歧應視為避險傳導不完整及資產特性差異造成的抵銷修正力量，尚非新趨勢確立。",
       "presenter_story_angle": {
-        "opening_question": "當科技股重挫引發跨資產避險、美債與美元同步回落時，為什麼黃金沒有發揮避險功能反而重挫破底？",
-        "normal_script": "科技股拋售觸發跨資產避險，資金搶進公債帶動美債10年期殖利率降至4.912%，利差吸引力下降促使美元指數回落至103.84，進而舒緩了日圓與台幣的貶值壓力。",
-        "where_it_breaks": "然而傳統避險資產黃金卻跌破支撐重挫至3539美元，與美債走勢嚴重脫鉤。",
-        "why_it_matters": "這反映市場並未完全摒棄前期聯準會的鷹派高利率定價，高實質利率對無孳息資產的壓制力道依然顯著，避險資金目前僅集中於公債。",
-        "next_watch": "觀察科技股跌勢是否延續；若股市回穩，美債殖利率是否會迅速重新回歸鷹派高利率定價軌道。"
+        "opening_question": "為什麼科技股重挫引發避險潮、美債殖利率大跌，黃金卻沒有跟著大漲，反而下跌？",
+        "normal_script": "按照傳統避險劇本，股市暴跌會帶動資金湧入美債與黃金，推升兩者價格並壓低殖利率。",
+        "where_it_breaks": "今日避險資金幾乎全數被美債吸納，美元走強與黃金獲利了結壓制了金價；相反地，美債殖利率下行卻成功給予日圓與台幣支撐。",
+        "why_it_matters": "這代表當前跨資產避險傳導並不流暢，市場主要聚焦於特定資產的流動性與利差變化，而非全面性的避險狂熱。",
+        "next_watch": "觀察即將公布的美國PCE物價數據，以及科技股賣壓是否持續。"
       }
     },
     "pricing_assessment": {
-      "dominant_market_force": "科技股重挫引發跨資產避險買盤湧入美債，壓低長端殖利率與美元指數。",
-      "offsetting_force": "前期聯準會鷹派高利率定價，對無孳息資產（黃金）形成顯著高實質利率壓制。",
-      "most_non_obvious_signal": "黃金在避險情緒升溫與美元指數拉回雙重利多下依然破底重挫至3539美元。",
-      "market_question": "美債殖利率的回落是股市拋售帶來的短期避險偏離，還是高利率定價已經接近頂峰？",
-      "one_sentence_takeaway": "科技股重挫引發美債避險潮並壓低美元與利率，但黃金破底揭示高實質利率壓力仍未解除。",
-      "next_watch": "科技股跌勢續航力、WTI與Brent原油方向是否收斂，以及美債殖利率回落後日圓與台幣的反彈延續性。"
+      "dominant_market_force": "科技股重挫引發的公債避險買盤，驅動10年期美債殖利率降至4.912%。",
+      "offsetting_force": "美元走強（103.84）壓制金價（3515.4），以及原油期貨走勢分歧（WTI 83.41 vs Brent 89.95）。",
+      "most_non_obvious_signal": "美債殖利率下行與金價走跌並存，且日圓、台幣在強勢美元下逆勢展現韌性。",
+      "market_question": "科技股引發的債券避險買盤能否抵抗即將公布的PCE物價數據對高利率預期的檢驗？",
+      "one_sentence_takeaway": "今日市場由科技股避險潮主導美債買盤與殖利率回落，但資產傳導出現分歧，強勢美元壓制黃金，而亞幣則受惠利差壓力減輕。",
+      "next_watch": "美國即將公布的PCE物價指數、科技股賣壓是否延續，以及Brent原油是否重回90美元上方。"
     }
   }
 }
