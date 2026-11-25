@@ -1,0 +1,64 @@
+{
+  "generated_at": "2026-11-25T17:13:10+08:00",
+  "source": "Google Sheets Today Daily Source",
+  "mode": "today_daily_source",
+  "data_status": "complete",
+  "daily_summary": {
+    "date": "2026-11-24",
+    "headline": "通膨預期多空拉鋸",
+    "executive_summary": "市場目前最重視AI熱潮降溫與成長預期邊際走弱，避險買盤帶動美債殖利率滑落至4.904%，並壓抑美元指數走跌。儘管WTI與Brent原油反彈加劇能源通膨隱憂，但暫被視為反向修正因子，資產傳導鏈呈現利率與美元走弱、金價同步回檔的分歧格局。",
+    "market_signals": [
+      "美債殖利率降",
+      "美元指數滑落",
+      "國際油價反彈"
+    ],
+    "macro_chain": "AI動能降溫與避險買盤 → 美國10年期公債殖利率降至4.904% → 美元指數回落至103.84 → 原油上行構成通膨修正項，金價獲利了結走弱，日圓與台幣因報價落後呈分歧待觀察",
+    "divergence": "油價走強與美債殖利率下行形成顯著背離。主線由AI科技股承壓、市場風險偏好降溫帶動的公債避險買盤所主導；原油反彈則作為通膨上行修正因子，顯示市場正處於通膨黏性與景氣放緩預期的拉鋸階段，後續需觀察油價續航力是否會重新推升殖利率。",
+    "market_snapshot": "WTI｜81.69｜上行｜油價上行，增加能源成本與短期通膨預期的上行壓力；若非今日主線，應視為修正因子或並行訊號。\nUS10Y｜4.904%｜下行｜避險買盤與成長放緩疑慮壓低長端利率，削弱高利率維持更久的預期。\nDXY｜103.84｜偏弱｜美債利差優勢收斂拖累美元走弱，稍緩亞洲貨幣外部壓力。",
+    "news_evidence": [
+      "AI漲勢退燒導致科技股承壓，避險與成長降溫預期推升美債買盤，壓低10年期殖利率至4.904%。",
+      "利差優勢收斂帶動美元指數自高檔滑落至103.84，弱化市場對Fed持續緊縮的定價。",
+      "WTI與Brent原油雙雙上行，能源成本回升構成短期通膨預期的反向修正因子。",
+      "黃金回跌至3555美元，未即時反映美元走軟，顯示前期避險溢價消化與獲利了結壓力。"
+    ],
+    "watchpoints": [
+      "原油價格若持續突破走高，是否會迫使公債市場重新定價通膨風險並推升殖利率。",
+      "科技股承壓與避險情緒是否延續，進一步強化美債買盤並壓制美元。",
+      "即將公佈的PCE通膨數據與Fed官員談話，對利率維持高檔態度的鬆動程度。"
+    ],
+    "visual_note": {
+      "title": "通膨預期多空拉鋸：能源反彈與避險買盤碰撞",
+      "file_id": "1-d9d4AkcRORQMpf-a1fGvyZIZMwVN34L",
+      "url": "https://drive.google.com/file/d/1-d9d4AkcRORQMpf-a1fGvyZIZMwVN34L/view?usp=drivesdk",
+      "model": "gemini-3.1-flash-image"
+    },
+    "news_narrative": {
+      "title": "通膨預期多空拉鋸",
+      "support_level": "中",
+      "cards": [
+        {
+          "label": "驗證結果",
+          "text": "部分支持"
+        },
+        {
+          "label": "摘要",
+          "text": "市場呈現通膨壓力與成長放緩的多空拉鋸。儘管油價走升且通膨黏性仍在，但AI熱潮降溫拖累風險偏好，推動公債買盤，壓低美國10年期公債殖利率至4.904%。利差優勢收斂使美元指數回落至103.84，亞洲貨幣出現分歧，金價同步回檔則為反向修正因子。"
+        },
+        {
+          "label": "支持新聞",
+          "text": "1. 新聞重點：AI漲勢退燒導致美股承壓，美債殖利率因避險與成長預期降溫而走低，美元同步自高檔滑落。\n2. 市場影響：壓低美國10年期公債殖利率與美元指數，削弱高利率維持更久的預期，同時限制亞洲貨幣進一步貶值壓力。\n3. 驗證結論：資產走勢支持利率與美元同步走弱的傳導鏈，但油價上行與通膨新聞構成反向修正因子，整體呈現部分支持。"
+        },
+        {
+          "label": "異常訊號",
+          "text": "1. 油價與殖利率背離：WTI與Brent原油反彈，但殖利率未被通膨預期推高，顯示市場目前將AI動能冷卻與美債避險需求視為主導，能源推升通膨僅為反向修正因子。\n2. 黃金與美元同步下行：通常美元偏弱有利金價，但黃金跌至3555美元，反映市場在前期避險溢價後獲利了結，或受機構看空預期拖累，屬於分歧訊號。\n3. 亞洲貨幣反應滯後：韓元偏強貼合弱勢美元，但日圓與台幣報價資料落後，尚未即時完全反映美元指數下挫，方向待觀察。"
+        },
+        {
+          "label": "觀察重點",
+          "text": "1. 若原油價格持續突破走高，是否會重新迫使公債市場定價通膨風險並推升殖利率。\n2. 科技股與AI投資情緒是否進一步惡化，加劇景氣放緩擔憂並強化公債避險買盤。\n3. 聯準會官員最新談話對高利率維持更久的態度是否鬆動。\n4. 即將公布的美債標售需求與PCE通膨數據，能否為殖利率下行提供更明確的驗證。"
+        }
+      ],
+      "news_links_json": "[\n  {\n    \"rank\": 1,\n    \"theme\": \"Rates｜Treasury Yields / 美債殖利率\",\n    \"source\": \"MarketWatch\",\n    \"title\": \"U.S. Treasury Yields, European Bond Yields Fall as Oil Prices Remain Under Pressure -- Update - MarketWatch\",\n    \"url\": \"https://news.google.com/rss/articles/CBMi4wFBVV95cUxPeHRhMmdpTl9jYU5mbnI4YTBwa254NUJrRWFYUTVOb2NYa1l4UHMxN0FyQy1YQk9CVWpuZ2lHUjE0ckFDQzhpR3hxOWRyMlNXb1U3TkhsdXhWMDUycVUyMlNseHEteFZQSFdHcDZKcGVCVXlZTl9kekJaeE5odS14V0pBbDZDaDJoWm11bktZX1RldUFNMjJ4TEFsQTVGNHpGMDRIbU1TRTRrdDFtMnRhTVpzOE5BZ3lIcFJrTEl5VVRIeThUcEpNM1hwTEsxTGhBQVhNSFZvTkJ0TmswSllSajd5OA?oc=5\",\n    \"published_at\": \"Tue, 24 Nov 2026 12:26:00 GMT\",\n    \"score\": 119,\n    \"matched_keywords\": \"通膨數據:prices | 美債殖利率:treasury/yield/yields/bond | 能源與原物料:oil | 變數:TREASURY_YIELDS | 類型:REACTION | 來源角色:MARKET_REACTION\"\n  },\n  {\n    \"rank\": 2,\n    \"theme\": \"FX｜Dollar / FX / 美元與匯率\",\n    \"source\": \"鉅亨網\",\n    \"title\": \"〈紐約匯市〉美元回落 輝達帶動的AI漲勢退燒 - 鉅亨網\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiT0FVX3lxTE5DUmdwWk9iV1hobDlEWlM4UHYybWRYX2d6MUFOUS02Yjl5SUhDQUtXcmVyZEt2LVRGRlRhWnBESW41dlN3QThmTGpJLU9mOUU?oc=5\",\n    \"published_at\": \"Tue, 24 Nov 2026 21:31:03 GMT\",\n    \"score\": 116.6,\n    \"matched_keywords\": \"美元與亞洲匯率:dollar | 變數:DOLLAR_FX | 類型:DATA | 來源角色:CNYES_MACRO\"\n  },\n  {\n    \"rank\": 3,\n    \"theme\": \"Asset｜Gold / 黃金\",\n    \"source\": \"鉅亨網\",\n    \"title\": \"法國外貿銀行：金價反彈難持久 明年1月或下探3340美元 - 鉅亨網\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiT0FVX3lxTE1TMUwtNDR6ZTNMMU84TWJMbERwTjlFV3hCOWpMa3BsQVhWV2RlUVJ1SUdHenFiX0NTQi04NmVtUmVlR1g0ckNWV2hDLUxnQXM?oc=5\",\n    \"published_at\": \"Tue, 24 Nov 2026 09:10:05 GMT\",\n    \"score\": 111.2,\n    \"matched_keywords\": \"能源與原物料:gold | 風險情緒／避險資金:gold | 變數:GOLD | 類型:DATA | 來源角色:CNYES_MACRO\"\n  },\n  {\n    \"rank\": 4,\n    \"theme\": \"Rates｜Treasury Yields / 美債殖利率\",\n    \"source\": \"MarketWatch\",\n    \"title\": \"U.S. Treasury Yields Rise as Inflation Remains a Pain - MarketWatch\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiqwFBVV95cUxOVFl3cVFYT291bGpWQmU4MnF1QldxU2wzeUVDN3hBZWV6VUR5QXJ3UDdOYjRKZGlIbUw5eVZ5cTR6XzZFSTFBY0p1anZSak11UVhwTGU2MFdSbjR0TDR3MnpqbS1kdFNmcTB3THR2b2dDMlE2d25kbTVJaG1qVVE2QjJFQkRHZERfLUhUd05sTVd3cE90amlGR0s5NXJGUWRtd2NMZGpFVTFBTGM?oc=5\",\n    \"published_at\": \"Tue, 24 Nov 2026 06:53:00 GMT\",\n    \"score\": 110,\n    \"matched_keywords\": \"通膨數據:inflation | 美債殖利率:treasury/yield/yields | 變數:TREASURY_YIELDS | 類型:REACTION | 來源角色:MARKET_REACTION\"\n  },\n  {\n    \"rank\": 5,\n    \"theme\": \"FX｜Dollar / FX / 美元與匯率\",\n    \"source\": \"鉅亨網\",\n    \"title\": \"〈台幣〉美元指數強升衝破104大關 台幣終止連3升收在32.939元 - 鉅亨網\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiT0FVX3lxTE5pLVBZcUw0UlVZOHBLMjhmNU1sSU1ZdHQ3cjJ3Rnp2RWZoVERWQzM4QnpqcHFBWXFWLUxSWHd1clloVFdEa1BSeFVqTl9GQUk?oc=5\",\n    \"published_at\": \"Tue, 24 Nov 2026 10:02:52 GMT\",\n    \"score\": 109.6,\n    \"matched_keywords\": \"美元與亞洲匯率:dollar | 變數:DOLLAR_FX | 類型:DATA | 來源角色:CNYES_MACRO\"\n  },\n  {\n    \"rank\": 6,\n    \"theme\": \"FX｜Dollar / FX / 美元與匯率\",\n    \"source\": \"鉅亨網\",\n    \"title\": \"〈紐約匯市〉美元升至近20個月新高 AI投資熱潮再度點燃、帶動經濟展望 - 鉅亨網\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiT0FVX3lxTE9uQ19VS0stc2liek93YWVJbS10UHFpZGlwcElRTW5oTnV2Mjk4OFZMbTRna1dEOFNQdUM5TTJ2UmVmNC1YUGtmTHQ4VFF4ZkU?oc=5\",\n    \"published_at\": \"Mon, 23 Nov 2026 22:46:37 GMT\",\n    \"score\": 109.6,\n    \"matched_keywords\": \"美元與亞洲匯率:dollar | 變數:DOLLAR_FX | 類型:DATA | 來源角色:CNYES_MACRO\"\n  },\n  {\n    \"rank\": 7,\n    \"theme\": \"Rates｜Treasury Yields / 美債殖利率\",\n    \"source\": \"MarketWatch\",\n    \"title\": \"Treasury Yields Rise After Huang Returns as Nvidia CEO; European Bond Yields Slip - 2nd Update - MarketWatch\",\n    \"url\": \"https://news.google.com/rss/articles/CBMi5wFBVV95cUxQS3U3OU1TUVAzbHhpV3BJT2NocW13VVJnWEcxWVlrdFFzVnktTFF6U0J1MWNUSGZBRHlzXzQ2bWNrazJGRGJJeTRxbTVsVTZWWFMwa2hLcnZuVnBpT0UtYTd6UGNGQUNyRm44a0dNcXlNQjhWeWk2NjFjMERDeVYwUjVCZ2RIaVZidFdLeGItaXBGdWdlamFkQU1wOHNUOVZrVnFtRW1hWWRPajU1eDlKVmpyMGtZQlVJU2pMdmRDazJSY3BfTlBmMmtnVUxoYTFXNXlNdHFTS2hmWEpoZGFDU1MzYVhKNUk?oc=5\",\n    \"published_at\": \"Mon, 23 Nov 2026 21:10:00 GMT\",\n    \"score\": 108,\n    \"matched_keywords\": \"美債殖利率:treasury/yield/yields/bond | 變數:TREASURY_YIELDS | 類型:REACTION | 來源角色:MARKET_REACTION\"\n  },\n  {\n    \"rank\": 8,\n    \"theme\": \"Rates｜Treasury Yields / 美債殖利率\",\n    \"source\": \"MarketWatch\",\n    \"title\": \"U.S. 2-Year Treasury Auction Shows Solid Demand - MarketWatch\",\n    \"url\": \"https://news.google.com/rss/articles/CBMipgFBVV95cUxNVmt3YnhnM0RpVGRCMGxsNkdITC0tSjdydldkeXQyM1FrOThTSFB5Y0FmbnNSQ2d2eEtoQzJtZ0I4N0M3RUtULUJ5QTl3WGYzUnEyeEd6dEVBeDBnSUU4U1UxUWxDTDRhcVRjbW5BR2RQSHJMaURTR29XUjNrcXJLUFFudDZMZjFEMlNiR1pRQVdZb2VudkR0a1FFZkpDUFVzNHZRMWtB?oc=5\",\n    \"published_at\": \"Mon, 23 Nov 2026 18:29:00 GMT\",\n    \"score\": 105,\n    \"matched_keywords\": \"美債殖利率:treasury/yield/yields | 變數:TREASURY_YIELDS | 類型:REACTION | 來源角色:MARKET_REACTION\"\n  }\n]"
+    },
+    "raw_daily_summary_package": "日期：2026-11-24\n今日主線：通膨預期多空拉鋸\n\nExecutive Summary：\n市場目前最重視AI熱潮降溫與成長預期邊際走弱，避險買盤帶動美債殖利率滑落至4.904%，並壓抑美元指數走跌。儘管WTI與Brent原油反彈加劇能源通膨隱憂，但暫被視為反向修正因子，資產傳導鏈呈現利率與美元走弱、金價同步回檔的分歧格局。\n\n今日核心訊號：\n- 美債殖利率降\n- 美元指數滑落\n- 國際油價反彈\n\n核心資產重點：\nWTI｜81.69｜上行｜油價上行，增加能源成本與短期通膨預期的上行壓力；若非今日主線，應視為修正因子或並行訊號。\nUS10Y｜4.904%｜下行｜避險買盤與成長放緩疑慮壓低長端利率，削弱高利率維持更久的預期。\nDXY｜103.84｜偏弱｜美債利差優勢收斂拖累美元走弱，稍緩亞洲貨幣外部壓力。\n\n矛盾 / 背離：\n油價走強與美債殖利率下行形成顯著背離。主線由AI科技股承壓、市場風險偏好降溫帶動的公債避險買盤所主導；原油反彈則作為通膨上行修正因子，顯示市場正處於通膨黏性與景氣放緩預期的拉鋸階段，後續需觀察油價續航力是否會重新推升殖利率。\n\n總經傳導鏈：\nAI動能降溫與避險買盤 → 美國10年期公債殖利率降至4.904% → 美元指數回落至103.84 → 原油上行構成通膨修正項，金價獲利了結走弱，日圓與台幣因報價落後呈分歧待觀察\n\n新聞佐證：\n- AI漲勢退燒導致科技股承壓，避險與成長降溫預期推升美債買盤，壓低10年期殖利率至4.904%。\n- 利差優勢收斂帶動美元指數自高檔滑落至103.84，弱化市場對Fed持續緊縮的定價。\n- WTI與Brent原油雙雙上行，能源成本回升構成短期通膨預期的反向修正因子。\n- 黃金回跌至3555美元，未即時反映美元走軟，顯示前期避險溢價消化與獲利了結壓力。\n\n待觀察問題：\n- 原油價格若持續突破走高，是否會迫使公債市場重新定價通膨風險並推升殖利率。\n- 科技股承壓與避險情緒是否延續，進一步強化美債買盤並壓制美元。\n- 即將公佈的PCE通膨數據與Fed官員談話，對利率維持高檔態度的鬆動程度。"
+  }
+}
