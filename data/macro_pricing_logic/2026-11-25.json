@@ -1,0 +1,167 @@
+{
+  "generated_at": "2026-11-26T16:58:43+08:00",
+  "date": "2026-11-25",
+  "mode": "macro_pricing_logic_v4",
+  "logic": {
+    "pricing_context": {
+      "market_was_pricing": "市場原先承接通膨黏性與高利率環境，並評估硬數據對聯準會政策路徑的約束力。",
+      "new_information": "美國10月核心PCE年增3.3%創近3年新高，初領失業金降至18.9萬人，WTI原油升至84.15美元，布蘭特原油升至90.82美元；同時美股科技族群波動引發避險買盤，美國10年期公債殖利率降至4.848%，美元指數跌至103.705，黃金升至3617美元。",
+      "pricing_question": "在通膨數據與原油價格同步走高的環境下，為何美債殖利率與美元指數並未走高，反而由避險買盤驅動殖利率與美元回落？"
+    },
+    "input_material_mapping": {
+      "inflation_materials": [
+        "美國10月核心PCE年增3.3%創近3年新高",
+        "上周初領失業金降至18.9萬人",
+        "WTI原油升至84.15美元",
+        "布蘭特原油升至90.82美元"
+      ],
+      "rate_materials": [
+        "美股科技族群波動引發公債避險買盤",
+        "美國10年期公債殖利率降至4.848%"
+      ],
+      "dollar_materials": [
+        "美債殖利率回落削弱美債利差優勢",
+        "美元指數跌至103.705",
+        "避險資金流向日圓"
+      ],
+      "gold_materials": [
+        "黃金升至3617美元高檔",
+        "股市波動激發避險資產需求",
+        "弱勢美元與殖利率回落形成推力"
+      ],
+      "asia_fx_materials": [
+        "日圓偏強",
+        "台幣因資料落後仍顯疲弱"
+      ],
+      "mapping_summary": "通膨與就業硬數據偏強，但美股科技股波動誘發防禦性買盤，導致債券殖利率與美元回落，進而推升黃金與日圓。"
+    },
+    "inflation_expectation": {
+      "energy": {
+        "direction": "up",
+        "importance": "high",
+        "evidence": [
+          "WTI原油升至84.15美元",
+          "布蘭特原油升至90.82美元"
+        ],
+        "judgment": "油價上行持續對能源成本與短期通膨預期形成推升壓力。"
+      },
+      "supply_chain": {
+        "direction": "unclear",
+        "importance": "low",
+        "evidence": [],
+        "judgment": "資料未提供供應鏈相關數據，待確認。"
+      },
+      "price_data": {
+        "direction": "up",
+        "importance": "high",
+        "evidence": [
+          "10月核心PCE年增3.3%創近3年新高"
+        ],
+        "judgment": "通膨硬數據顯示物價黏性顯著，支持通膨預期上行。"
+      },
+      "demand": {
+        "direction": "unclear",
+        "importance": "low",
+        "evidence": [],
+        "judgment": "資料未提供終端需求或PMI數據，待確認。"
+      },
+      "labor_market": {
+        "direction": "up",
+        "importance": "medium",
+        "evidence": [
+          "上周初領失業金降至18.9萬人"
+        ],
+        "judgment": "就業市場表現強韌，削弱勞動市場冷卻帶來的降溫效果。"
+      },
+      "policy_expectation": {
+        "direction": "mixed",
+        "importance": "medium",
+        "evidence": [
+          "Fed官員近期公開談話尚待觀察"
+        ],
+        "judgment": "硬數據支持緊縮立場，但目前市場被股市避險情緒暫時遮蔽。"
+      },
+      "summary": {
+        "overall_direction": "up",
+        "strength": "strong",
+        "dominant_force": "核心PCE數據創高與能源價格上行",
+        "offsetting_force": "股市防禦需求暫時壓制債市殖利率對通膨的直接反應",
+        "judgment": "通膨預期實質偏強，能源與核心PCE數據共同構成實質通膨壓力。"
+      }
+    },
+    "rate_pricing": {
+      "direction": "down",
+      "link_with_inflation_expectation": "利率與通膨預期出現短期背離，通膨預期偏強但美債殖利率受股市波動引發的避險買盤壓制而走低。",
+      "fed_policy_signal": " Fed談話尚待驗證是否針對核心PCE做出進一步緊縮表態。",
+      "treasury_supply_demand": "美股科技族群波動促使資金轉入美債避險，公債買盤顯著增強。",
+      "term_premium": "市場暫時擱置高利率維持更久之預期，期限溢價受防禦買盤壓制。",
+      "safe_haven_bond_buying": "股市震盪引發的防禦性配置成為壓低長端殖利率的主導力量。",
+      "growth_concern_or_cut_expectation": "科技股動盪引發市場對資產價格波動的防禦需求。",
+      "dominant_force": "美股科技族群波動引發的公債避險買盤",
+      "judgment": "美國10年期公債殖利率降至4.848%，避險買盤成為壓制殖利率的關鍵修正因子，覆蓋了通膨數據的上行推力。"
+    },
+    "dollar_pricing": {
+      "direction": "down",
+      "link_with_rates": "美元與利率同向走弱，長端殖利率回落削弱美債利差優勢。",
+      "safe_haven_dollar": "資金在避險考量下優先選擇美債與日圓，而非直接流入美元。",
+      "liquidity_demand": "未出現流動性緊縮驅動的強勢美元現象。",
+      "other_currency_weakness": "日圓因避險買盤而偏強，美債利差優勢收窄削弱美元相對吸引力。",
+      "us_relative_growth_or_policy": "雖然就業與通膨數據強勁，但美債殖利率下滑直接削弱美元利差支持。",
+      "dominant_force": "美債殖利率回落帶來的利差優勢削弱",
+      "judgment": "美元指數跌至103.705，受美債殖利率回落與資金轉向日圓等避險資產牽引而偏弱。"
+    },
+    "gold_pricing": {
+      "direction": "up",
+      "rate_or_real_rate_pressure": "美國10年期公債殖利率下行至4.848%，減輕實質利率對黃金的持有成本壓力。",
+      "dollar_effect": "美元指數回落至103.705，提供計價上的支撐力道。",
+      "safe_haven_demand": "美股科技族群波動顯著激發避險配置需求。",
+      "central_bank_buying": "資料未提供央行買盤最新數據，標示待確認。",
+      "geopolitical_risk": "資料未提供具體地緣政治新事件，標示待確認。",
+      "dominant_force": "避險買盤與美債殖利率/美元同步回落之共振效益",
+      "judgment": "黃金推升至3617美元高檔，展現避險需求與弱美元共同作用下的強勢定價。"
+    },
+    "asia_fx_pricing": {
+      "twd": {
+        "reaction": "偏弱",
+        "consistent_with_dollar_pressure": "no",
+        "local_correction_factor": "資料落後與本地資金流向等因素干擾",
+        "judgment": "美元走弱背景下台幣表現相對滯後仍顯疲弱，反應本地因素修正。"
+      },
+      "jpy": {
+        "reaction": "偏強",
+        "consistent_with_dollar_pressure": "yes",
+        "local_correction_factor": "美債殖利率回落與避險資金流入",
+        "judgment": "日圓受益於美債殖利率下行與市場防禦資金流，表現偏強。"
+      },
+      "krw": {
+        "reaction": "待確認",
+        "consistent_with_dollar_pressure": "unclear",
+        "local_correction_factor": "資料不足，待確認",
+        "judgment": "daily_summary 未提供韓圜相關數據。"
+      }
+    },
+    "market_contradiction": {
+      "baseline_expectation": "核心PCE創近3年新高、油價攀升且就業強勁，基準傳導路徑應為升溫通膨預期、推升美債殖利率並支撐美元。",
+      "actual_reaction": "美債殖利率逆勢降至4.848%，美元指數同步回落至103.705，黃金受避險與弱美元推升至3617美元。",
+      "most_non_obvious_link": "通膨與就業硬數據偏熱，但長端利率與美元卻未反映緊縮預期，反而由股市避險買盤主導下行。",
+      "possible_explanation": "美股科技族群波動觸發資金防禦機制，大量避險資金流入債市，短線防禦買盤力道強於通膨數據對殖利率的重估壓力。",
+      "is_correction_or_new_mainline": "offsetting_force",
+      "how_to_integrate_into_main_theme": "將股市震盪引發的避險買盤視為壓制利率的主導修正因子，通膨硬數據則作為中長期利率與Fed政策立場的底線支撐，兩者共同構成當前市場矛盾。",
+      "presenter_story_angle": {
+        "opening_question": "當核心PCE創下近三年新高、油價逼近91美元時，為何美債殖利率與美元反而雙雙走跌？",
+        "normal_script": "按照傳統定價架構，通膨與就業數據強勁應強化Fed偏鷹預期，進而推升殖利率與美元。",
+        "where_it_breaks": "然而今日美股科技板塊劇烈波動，觸發市場轉向防禦配置，公債避險買盤大舉湧入，壓制長端利率。",
+        "why_it_matters": "這代表短期資金流與防禦需求暫時主導了市場，壓過了硬通膨數據對利率的推升力道。",
+        "next_watch": "後續需關注布蘭特原油若穩於90美元上方，是否會引發殖利率對通膨預期的報復性修正。"
+      }
+    },
+    "pricing_assessment": {
+      "dominant_market_force": "美股科技族群波動引發的美債與防禦資產避險買盤",
+      "offsetting_force": "核心PCE 3.3%與布蘭特原油90.82美元所代表的通膨硬數據壓力",
+      "most_non_obvious_signal": "通膨與就業強勁背景下，美國10年期公債殖利率降至4.848%與美元指數回落至103.705",
+      "market_question": "資產防禦引發的避險買盤能否持續掩蓋高通膨數據帶來的利率上行風險？",
+      "one_sentence_takeaway": "股市防禦需求暫時壓低美債殖利率與美元並推升黃金，但偏熱的核心通膨與油價仍埋下殖利率反彈壓力。",
+      "next_watch": "Fed官員公開談話對核心PCE的表態，以及布蘭特原油能否持續站穩90美元上方。"
+    }
+  }
+}

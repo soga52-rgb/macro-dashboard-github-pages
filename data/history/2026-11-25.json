@@ -1,0 +1,63 @@
+{
+  "generated_at": "2026-11-26T16:56:01+08:00",
+  "source": "Google Sheets Today Daily Source",
+  "mode": "today_daily_source",
+  "data_status": "complete",
+  "daily_summary": {
+    "date": "2026-11-25",
+    "headline": "通膨重評估與避險買盤",
+    "executive_summary": "市場核心矛盾在於核心PCE創高且油價同步攀升，但美國10年期公債殖利率反而回落至4.848%。目前市場最重視股市震盪下的資產防禦需求與長線降息押注，導致殖利率與美元走弱。避險買盤成為壓低美債利率的關鍵修正因子，並與通膨預期共同推升黃金至3617美元高檔。",
+    "market_signals": [
+      "美債殖利率回落",
+      "核心PCE偏熱",
+      "油價金價同步漲"
+    ],
+    "macro_chain": "核心PCE偏熱疊加原油走高與股市震盪避險 → 美國10年期公債殖利率受買盤壓制回落至4.848% → 美元指數同步走弱至103.705 → 避險與弱美元雙重推升黃金至3617美元、日圓偏強而台幣因資料落後仍顯疲弱",
+    "divergence": "今日關鍵背離在於「能源與硬通膨數據偏強，但美債殖利率與美元指數同步下滑」。通膨與油價走高理論上應強化Fed緊縮預期，但股市科技板塊動盪促使資金大舉轉入美債避險，使避險情緒成為壓制長端利率的主導修正因子。傳導鏈出現部分分歧，後續通膨預期能否被長線避險買盤完全壓制仍待觀察。",
+    "market_snapshot": "WTI｜84.15｜油價上行｜油價上行，增加能源成本與短期通膨預期的上行壓力；若非今日主線，應視為修正因子或並行訊號。\nUS10Y｜4.848%｜利率下行｜長端利率受股市震盪引發的避險配置買盤壓抑，反映市場暫時擱置高利率維持更久預期。\nDXY｜103.705｜美元偏弱｜殖利率回落削弱美債利差優勢，避險資金流向日圓，使亞洲貨幣承受之強美元壓力略有分歧緩解。",
+    "news_evidence": [
+      "美國10月核心PCE年增3.3%創近3年新高，上周初領失業金超預期降至18.9萬人，顯示通膨硬數據與就業仍具韌性。",
+      "WTI原油升至84.15美元、布蘭特原油升至90.82美元，能源通膨上行壓力持續對物價形成推力。",
+      "美股科技族群波動引發公債避險買盤，美國10年期公債殖利率逆勢降至4.848%，連帶拖累美元指數跌至103.705。"
+    ],
+    "watchpoints": [
+      "Fed官員近期公開談話，觀察是否對超預期的核心PCE做出進一步緊縮表態以推翻利率回落趨勢。",
+      "布蘭特原油若穩於90美元上方，能源通膨預期是否會迫使長端殖利率出現報復性反彈。",
+      "即將公布的非農就業報告與美股波動延續性，驗證避險買盤對債券殖利率壓制的效果能否持續。"
+    ],
+    "visual_note": {
+      "title": "通膨硬數據偏熱與避險降息預期之交叉拉鋸",
+      "file_id": "1Z_V-zBU9x-Z9JwgeOwiSueCaUsvm6No_",
+      "url": "https://drive.google.com/file/d/1Z_V-zBU9x-Z9JwgeOwiSueCaUsvm6No_/view?usp=drivesdk",
+      "model": "gemini-3.1-flash-image"
+    },
+    "news_narrative": {
+      "title": "通膨預期重新評估",
+      "support_level": "中",
+      "cards": [
+        {
+          "label": "驗證結果",
+          "text": "部分支持"
+        },
+        {
+          "label": "摘要",
+          "text": "核心矛盾在於PCE物價偏熱且就業具韌性，但美國10年期公債殖利率反而下行。主導因子為股市科技股震盪引發避險買盤流入公債市場，帶動美元指數同步走弱。交叉資產上，避險買盤與油價上行共同推高金價，但長端利率未反映升息壓力，顯示避險與長線降息押注成為關鍵修正因子。"
+        },
+        {
+          "label": "支持新聞",
+          "text": "1. 新聞重點：美國10月核心PCE年增3.3%創近3年新高，上周初領失業金超預期降至18.9萬人，但美股震盪引發避險資金湧入公債，交易員更著眼長線降息路徑。\n2. 市場影響：壓低美國10年期公債殖利率與美元指數，同時支撐黃金攀升至3617美元高檔，並使日圓等避險貨幣獲得提振。\n3. 驗證結論：部分支持，通膨硬數據雖偏熱，但資產走勢更反映避險情緒與債券配置需求，對單純通膨升息傳導形成分歧。"
+        },
+        {
+          "label": "異常訊號",
+          "text": "1. 通膨與利率脫鉤：核心PCE升至3.3%且就業韌性仍在，理論上應推升殖利率，但美國10年期公債殖利率降至4.848%，反映股市波動帶動避險買盤，屬典型反向壓力。\n2. 油價與利率分歧：WTI與布蘭特原油雙雙上行，疊加物價壓力，市場並未推升短端高利率維持更久的預期，而是將焦點轉向中長期成長防禦。\n3. 美元指數偏弱：儘管通膨偏熱支撐Fed升息押注，但套利交易平倉及資金轉入日圓避險，削弱美元利差優勢，呈現修正因子主導走勢。"
+        },
+        {
+          "label": "觀察重點",
+          "text": "1. 下一次FOMC會議前官員談話，觀察是否對超預期的核心PCE做出進一步緊縮表態。\n2. 即將公布的非農就業報告，驗證初領失業金偏低是否代表勞動市場全面再收緊。\n3. 美股科技族群波動是否延續，評估避險資金對公債買盤的支撐力道能否持續壓制殖利率。\n4. 布蘭特原油若站穩90美元上方，是否會加劇通膨預期並迫使公債殖利率出現報復性反彈。"
+        }
+      ],
+      "news_links_json": "[\n  {\n    \"rank\": 1,\n    \"theme\": \"Asset｜Gold / 黃金\",\n    \"source\": \"鉅亨網\",\n    \"title\": \"〈貴金屬盤後〉美PCE通膨進一步升溫 金價一度跌破3500美元 - 鉅亨網\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiT0FVX3lxTE4xQmZ1cWxBcGFmLTNCaGQyOUY4VWVHdnI1cDdJMDRmU1VhY2pOTVpoLVl4bDk5RU9kT2YtdUVfRGM5ZDZHaXpOcm1hQWRCd0E?oc=5\",\n    \"published_at\": \"Wed, 25 Nov 2026 22:34:50 GMT\",\n    \"score\": 120.2,\n    \"matched_keywords\": \"通膨數據:pce | 能源與原物料:gold | 風險情緒／避險資金:gold | 變數:GOLD | 類型:DATA | 來源角色:CNYES_MACRO\"\n  },\n  {\n    \"rank\": 2,\n    \"theme\": \"Rates｜Treasury Yields / 美債殖利率\",\n    \"source\": \"MarketWatch\",\n    \"title\": \"Stock Market News - Bond Market - Currencies Markets - MarketWatch\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiS0FVX3lxTE1WSk1SMEVJUWVGN1RIVTEtSThObVFxbkFHTE9ySmdyRUx4NjJMNWsta3lOaFBOVFF5eUEtN0lVaXc5QlFiTEdiQVZYSQ?oc=5\",\n    \"published_at\": \"Wed, 25 Nov 2026 21:33:39 GMT\",\n    \"score\": 118,\n    \"matched_keywords\": \"美債殖利率:treasury/yield/yields/bond | 變數:TREASURY_YIELDS | 類型:REACTION | 來源角色:MARKET_REACTION\"\n  },\n  {\n    \"rank\": 3,\n    \"theme\": \"FX｜Dollar / FX / 美元與匯率\",\n    \"source\": \"鉅亨網\",\n    \"title\": \"〈紐約匯市〉美元走弱 AI股震盪引發市場避險情緒推升日元、瑞郎 - 鉅亨網\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiT0FVX3lxTE94ay1PZ1dELVp3QWEzdERCeG10OWhsbXFZbHJFQzNQWmZFOVoxcXpaTmVZX0pQX0h6U3Zqc0l2eWgzNkZJcWhMc2ZsVjRIbG8?oc=5\",\n    \"published_at\": \"Wed, 25 Nov 2026 21:32:26 GMT\",\n    \"score\": 116.6,\n    \"matched_keywords\": \"美元與亞洲匯率:dollar | 變數:DOLLAR_FX | 類型:DATA | 來源角色:CNYES_MACRO\"\n  },\n  {\n    \"rank\": 4,\n    \"theme\": \"FX｜Dollar / FX / 美元與匯率\",\n    \"source\": \"鉅亨網\",\n    \"title\": \"〈台股盤前要聞〉匯市爆63.62億美元創第三大、鴻海印度子公司遭控欠款 - 鉅亨網\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiT0FVX3lxTE5ZeE93N1JDTW9MTnRsS3pUOHI0cE9EN0F0TmV0LVN6S2c4andkTFc0akQ2T1h3aWZJWG12c2FvR0oxU0NxQjVkNTJLbmRaWUU?oc=5\",\n    \"published_at\": \"Wed, 25 Nov 2026 21:10:52 GMT\",\n    \"score\": 116.6,\n    \"matched_keywords\": \"美元與亞洲匯率:dollar | 變數:DOLLAR_FX | 類型:DATA | 來源角色:CNYES_MACRO\"\n  },\n  {\n    \"rank\": 5,\n    \"theme\": \"Fed Policy｜Fed / 聯準會\",\n    \"source\": \"鉅亨網\",\n    \"title\": \"Fed該相信市場嗎？輝達暴漲暴跌 揭華許決策兩難 - 鉅亨網\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiT0FVX3lxTFBQb3lLLUZtdzJUUGJuZk10TXJuY3B6ZFdxeDJuUjRzVUlVbTlnNkxvc3hCcXRGc1IxdkdEMjdjQUZFU0dBNTk0R0tjbGQ4ZTA?oc=5\",\n    \"published_at\": \"Wed, 25 Nov 2026 21:39:17 GMT\",\n    \"score\": 116.4,\n    \"matched_keywords\": \"聯準會政策:fed | 變數:FED | 類型:DATA | 來源角色:CNYES_MACRO\"\n  },\n  {\n    \"rank\": 6,\n    \"theme\": \"FX｜Dollar / FX / 美元與匯率\",\n    \"source\": \"鉅亨網\",\n    \"title\": \"美股跌勢燒進匯市！套利交易甜頭縮水 華爾街提高警戒 - 鉅亨網\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiT0FVX3lxTE1DTmh1SjVKZm9YVzIwakZNSm44VmtETHEzclYwZWcza0ZFVnNlaXF1dFlJUXBCREdOeTkwQVM2eENkYUdCWkVJdmZpa0ZMVW8?oc=5\",\n    \"published_at\": \"Wed, 25 Nov 2026 18:02:37 GMT\",\n    \"score\": 114.6,\n    \"matched_keywords\": \"美元與亞洲匯率:dollar | 變數:DOLLAR_FX | 類型:DATA | 來源角色:CNYES_MACRO\"\n  },\n  {\n    \"rank\": 7,\n    \"theme\": \"Rates｜Treasury Yields / 美債殖利率\",\n    \"source\": \"MarketWatch\",\n    \"title\": \"TLT | iShares 20+ Year Treasury Bond ETF Overview - MarketWatch\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiWkFVX3lxTE9TYmJ6bVVlUnliem1HVFhsRlc5QWR2dFNVN3RZdzFlbmlpbkRtNVZyOTNuREZJaTFNb3JmRU01R0tuWUV4WXFyVGd2cVBOVnNJRGlPRFgxRHJGUQ?oc=5\",\n    \"published_at\": \"Wed, 25 Nov 2026 14:03:56 GMT\",\n    \"score\": 114,\n    \"matched_keywords\": \"美債殖利率:treasury/yield/yields/bond | 變數:TREASURY_YIELDS | 類型:REACTION | 來源角色:MARKET_REACTION\"\n  },\n  {\n    \"rank\": 8,\n    \"theme\": \"Fed Policy｜Fed / 聯準會\",\n    \"source\": \"鉅亨網\",\n    \"title\": \"市場預計聯準會持續升息之際 債券交易員卡位2028年激進降息 - 鉅亨網\",\n    \"url\": \"https://news.google.com/rss/articles/CBMiT0FVX3lxTE41Nno2NGdmOUpuQllMYzc0SktwNFAxZG5KUktjbmEzRTBMYlpyOTdiNnNiSlFCZ1lPcHJOYXhLbGk4bmRaVUdJeUNoTXlSQTg?oc=5\",\n    \"published_at\": \"Wed, 25 Nov 2026 06:20:04 GMT\",\n    \"score\": 109.4,\n    \"matched_keywords\": \"聯準會政策:fed | 變數:FED | 類型:DATA | 來源角色:CNYES_MACRO\"\n  }\n]"
+    },
+    "raw_daily_summary_package": "日期：2026-11-25\n今日主線：通膨重評估與避險買盤\n\nExecutive Summary：\n市場核心矛盾在於核心PCE創高且油價同步攀升，但美國10年期公債殖利率反而回落至4.848%。目前市場最重視股市震盪下的資產防禦需求與長線降息押注，導致殖利率與美元走弱。避險買盤成為壓低美債利率的關鍵修正因子，並與通膨預期共同推升黃金至3617美元高檔。\n\n今日核心訊號：\n- 美債殖利率回落\n- 核心PCE偏熱\n- 油價金價同步漲\n\n核心資產重點：\nWTI｜84.15｜油價上行｜油價上行，增加能源成本與短期通膨預期的上行壓力；若非今日主線，應視為修正因子或並行訊號。\nUS10Y｜4.848%｜利率下行｜長端利率受股市震盪引發的避險配置買盤壓抑，反映市場暫時擱置高利率維持更久預期。\nDXY｜103.705｜美元偏弱｜殖利率回落削弱美債利差優勢，避險資金流向日圓，使亞洲貨幣承受之強美元壓力略有分歧緩解。\n\n矛盾 / 背離：\n今日關鍵背離在於「能源與硬通膨數據偏強，但美債殖利率與美元指數同步下滑」。通膨與油價走高理論上應強化Fed緊縮預期，但股市科技板塊動盪促使資金大舉轉入美債避險，使避險情緒成為壓制長端利率的主導修正因子。傳導鏈出現部分分歧，後續通膨預期能否被長線避險買盤完全壓制仍待觀察。\n\n總經傳導鏈：\n核心PCE偏熱疊加原油走高與股市震盪避險 → 美國10年期公債殖利率受買盤壓制回落至4.848% → 美元指數同步走弱至103.705 → 避險與弱美元雙重推升黃金至3617美元、日圓偏強而台幣因資料落後仍顯疲弱\n\n新聞佐證：\n- 美國10月核心PCE年增3.3%創近3年新高，上周初領失業金超預期降至18.9萬人，顯示通膨硬數據與就業仍具韌性。\n- WTI原油升至84.15美元、布蘭特原油升至90.82美元，能源通膨上行壓力持續對物價形成推力。\n- 美股科技族群波動引發公債避險買盤，美國10年期公債殖利率逆勢降至4.848%，連帶拖累美元指數跌至103.705。\n\n待觀察問題：\n- Fed官員近期公開談話，觀察是否對超預期的核心PCE做出進一步緊縮表態以推翻利率回落趨勢。\n- 布蘭特原油若穩於90美元上方，能源通膨預期是否會迫使長端殖利率出現報復性反彈。\n- 即將公布的非農就業報告與美股波動延續性，驗證避險買盤對債券殖利率壓制的效果能否持續。"
+  }
+}
